@@ -1,14 +1,7 @@
-#priority 1000
 #Name: _baka943.zs
 #Author: baka943
 
-import crafttweaker.item.IIngredient;
-import crafttweaker.item.IItemStack;
 import crafttweaker.oredict.IOreDictEntry;
-
-import scripts.functions.addReplacements;
-
-import scripts.stages.stageUnused;
 
 //==================================
 ######## Ore DictEntry ########
@@ -55,26 +48,3 @@ plankBetween.add(
 	plankNibbletwig,
 	plankGiantRoot
 );
-
-//==================================
-######## Replace ########
-//==================================
-
-#Recipe replacements
-val replaceRecipes = {
-	<aetherworks:item_resource:2> : <embers:wildfire_core>
-} as IIngredient[IItemStack];
-
-for item, replace in replaceRecipes {
-	recipes.replaceAllOccurences(item, replace);
-}
-
-#Block replacements
-val defaultReplacements = {
-	stageUnused.stage : [
-		[<minecraft:stone>, <thebetweenlands:smooth_betweenstone>],
-		[<minecraft:cobblestone>, <thebetweenlands:betweenstone>]
-	]
-} as IIngredient[][][string];
-
-addReplacements(defaultReplacements, false);

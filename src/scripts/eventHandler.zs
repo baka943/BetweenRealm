@@ -47,10 +47,10 @@ static blockHarvestDrops as IItemStack[][string] = {
 		searedBrick * 4
 	],
 	"tconstruct:seared_slab" : [
-		searedBrick * 3
+		searedBrick * 2
 	],
 	"tconstruct:seared_slab2" : [
-		searedBrick * 3
+		searedBrick * 2
 	],
 	"tconstruct:seared_stairs_brick_cracked" : [
 		searedBrick * 6
@@ -105,17 +105,28 @@ static blockHarvestDrops as IItemStack[][string] = {
 	],
 	"tconstruct:channel" : [
 		searedBrick
+	],
+
+	//Minecraft
+	"minecraft:stone" : [
+		<thebetweenlands:smooth_betweenstone>
+	],
+	"minecraft:cobblestone" : [
+		betweenstone
 	]
 };
 
 events.onBlockHarvestDrops(function(event as BlockHarvestDropsEvent) {
+	var worldIn as string= event.world.getDimensionType();
 	var blockID = event.block.definition.id;
 
-	if(event.silkTouch) {
-		return;
-	}
+	if(worldIn == "betweenlands") {
+		if(event.silkTouch) {
+			return;
+		}
 
-	if(blockHarvestDrops has blockID) {
-		event.drops = blockHarvestDrops[blockID];
+		if(blockHarvestDrops has blockID) {
+			event.drops = blockHarvestDrops[blockID];
+		}
 	}
 });

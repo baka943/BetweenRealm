@@ -6,3 +6,4 @@
 
 #Wight
 <entity:thebetweenlands:wight>.addDrop(<minecraft:ghast_tear> % 30, 1, 2);
+<minecraft:ghast_tear>.addTooltip("Will Wight also cry?");

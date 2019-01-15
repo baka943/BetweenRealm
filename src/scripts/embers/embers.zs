@@ -10,8 +10,6 @@ import crafttweaker.data.IData;
 import crafttweaker.recipes.IRecipeFunction;
 import crafttweaker.recipes.IRecipeAction;
 
-import scripts.functions.addAlchemy;
-
 import mods.embers.Mixer;
 import mods.embers.Alchemy;
 import mods.embers.Stamper;
@@ -151,7 +149,9 @@ DawnstoneAnvil.add([<soot:sulfur_clump>], <thebetweenlands:sulfur_block>, null);
 ######## Alchemy ########
 //==================================
 
-#Inflictor Aspect
+#Add Aspectus
+Alchemy.addAspect("antimony", <soot:signet_antimony>);
+Alchemy.addAspect("emerald", <minecraft:emerald>);
 Alchemy.addAspect("inflictor", <embers:inflictor_gem>);
 
 #Exchange Alchemy recipes
@@ -249,10 +249,15 @@ val exchangeAlchemy = {
 			[emberCrystal, emberShard, emberShard, emberShard, emberShard]
 		]
 	},
+	<soot:alchemy_globe> : {
+		2 : [
+			[<embers:alchemy_tablet>, <ore:ingotLead>, <ore:blockGlass>, <ore:ingotLead>, <embers:archaic_circuit>]
+		]
+	},
 	<soot:signet_antimony> : {
 		2 : [
-			[emberCrystal, emberShard, <ore:plateAntimony>, emberShard, <ore:plateAntimony>],
-			[emberCrystal, <ore:plateAntimony>, emberShard, <ore:plateAntimony>, emberShard]
+			[emberCrystal, emberShard, <ore:ingotAntimony>, emberShard, <ore:ingotAntimony>],
+			[emberCrystal, <ore:ingotAntimony>, emberShard, <ore:ingotAntimony>, emberShard]
 		]
 	},
 
@@ -290,7 +295,7 @@ val exchangeAlchemy = {
 	}
 } as IIngredient[][][int][IItemStack];
 
-addAlchemy(exchangeAlchemy);
+embers.addAlchemy(exchangeAlchemy);
 
 #Armors and Tools
 recipes.removeByRecipeName("embers:ashen_cloak_head");
@@ -362,3 +367,4 @@ val hammerDef = <embers:tinker_hammer>.definition;
 hammerDef.setHarvestLevel("pickaxe", 2);
 hammerDef.setHarvestLevel("axe", 2);
 hammerDef.setHarvestLevel("shovel", 2);
+<embers:tinker_hammer>.addTooltip(format.darkPurple("If this's a pickaxe"));
