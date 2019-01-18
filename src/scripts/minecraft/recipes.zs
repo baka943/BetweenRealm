@@ -1,4 +1,4 @@
-#Name: scripts.minecraft.recipes.zs
+#Name: recipes.zs
 #Author: baka943
 
 import crafttweaker.item.IIngredient;
@@ -17,14 +17,14 @@ recipes.remove(<minecraft:leather>);
 
 val itemRecipes = {
 	<minecraft:piston> : [
-		[plankBetween, plankBetween, plankBetween],
+		[plankB, plankB, plankB],
 		[betweenstone, redstone, betweenstone],
 		[betweenstone, <ore:ingotIron>, betweenstone]
 	],
 	<minecraft:armor_stand> : [
 		[<ore:stickWood>, <ore:stickWood>, <ore:stickWood>],
 		[null, <ore:stickWood>],
-		[<ore:stickWood>, <thebetweenlands:smooth_betweenstone_slab>, <ore:stickWood>]
+		[<ore:stickWood>, smoothBSlab, <ore:stickWood>]
 	],
 	<minecraft:furnace> : [
 		[betweenstone, betweenstone, betweenstone],
@@ -48,7 +48,7 @@ for item, recipe in itemRecipes {
 }
 
 #Hopper
-recipes.addShaped(<minecraft:hopper>, [[<ore:ingotIron>, logBetween, <ore:ingotIron>], [<ore:ingotIron>, logBetween, <ore:ingotIron>], [null, <ore:ingotIron>]]);
+recipes.addShaped(<minecraft:hopper>, [[<ore:ingotIron>, logB, <ore:ingotIron>], [<ore:ingotIron>, logB, <ore:ingotIron>], [null, <ore:ingotIron>]]);
 
 //==================================
 ######## Shapeless ########
@@ -65,18 +65,18 @@ furnace.remove(<minecraft:emerald>);
 
 #Modify
 val furnaceRecipes = {
-	<minecraft:coal:1> : logBetween,
-	<minecraft:iron_ingot> : ironBetween,
-	<minecraft:gold_ingot> : goldBetween,
-	<minecraft:redstone> : redstoneBetween,
-	<minecraft:dye:4> : lapisBetween,
-	<minecraft:diamond> : diamondBetween,
-	<minecraft:quartz> : quartzBetween,
-	<embers:ingot_copper> : copperBetween,
-	<embers:ingot_tin> : tinBetween,
-	<embers:ingot_lead> : leadBetween,
-	<embers:ingot_nickel> : nickelBetween,
-	<embers:ingot_silver> : silverBetween
+	<minecraft:coal:1> : logB,
+	<minecraft:iron_ingot> : ironB,
+	<minecraft:gold_ingot> : goldB,
+	<minecraft:redstone> : redstoneB,
+	<minecraft:dye:4> : lapisB,
+	<minecraft:diamond> : diamondB,
+	<minecraft:quartz> : quartzB,
+	<embers:ingot_copper> : copperB,
+	<embers:ingot_tin> : tinB,
+	<embers:ingot_lead> : leadB,
+	<embers:ingot_nickel> : nickelB,
+	<embers:ingot_silver> : silverB
 } as IIngredient[IItemStack];
 
 for output, input in furnaceRecipes {

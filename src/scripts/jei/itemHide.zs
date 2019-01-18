@@ -1,4 +1,3 @@
-#priority 943
 #Name: itemHide.zs
 #Author: baka943
 
@@ -39,7 +38,4 @@ val ores = [
 	<tconstruct:ore:1>
 ] as IIngredient[];
 
-for ore in ores {
-	JEI.removeAndHide(ore);
-	ZenStager.getStage(stageUnused.stage).addIngredient(ore);
-}
+iRecipes.hideItems(ores, true);

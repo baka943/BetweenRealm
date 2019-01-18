@@ -1,5 +1,5 @@
-#priority 500
-#Name: scripts.classes.mods.embers.zs
+#priority 943
+#Name: embers.zs
 #Author: baka943
 
 import crafttweaker.item.IIngredient;
@@ -11,6 +11,7 @@ import mods.embers.Stamper;
 import mods.embers.Mixer;
 import mods.embers.Melter;
 import mods.embers.DawnstoneAnvil;
+import mods.embers.EmberGeneration;
 import mods.soot.AlchemicalMixer;
 
 zenClass Embers {
@@ -59,6 +60,10 @@ zenClass Embers {
 		for output in outputs {
 			Stamper.remove(output);
 		}
+	}
+
+	function removeStamper(output as IItemStack) {
+		Stamper.remove(output);
 	}
 
 	#Add Stamper recipes
@@ -124,14 +129,14 @@ zenClass Embers {
 	//==================================
 
 	#Remove Dawnstone Anvil recipes
-	function removeDAnvil(map as IItemStack[IItemStack]) {
+	function removeAnvil(map as IItemStack[IItemStack]) {
 		for bottom, top in map {
 			DawnstoneAnvil.remove(bottom, top);
 		}
 	}
 
 	#Add a Dawnstone Anvil recipe
-	function addDAnvil(outputs as IItemStack[], bottom as IIngredient, top as IIngredient) {
+	function addAnvil(outputs as IItemStack[], bottom as IIngredient, top as IIngredient) {
 		DawnstoneAnvil.add(outputs, bottom, top);
 	}
 	
@@ -141,7 +146,7 @@ zenClass Embers {
 	}
 
 	#Dawnstone Anvil Isolated Materia Repair Blacklist
-	function removeMateriaRepair(item as IIngredient) {
+	function removeRepairM(item as IIngredient) {
 		DawnstoneAnvil.blacklistMateriaRepair(item);
 	}
 
@@ -155,14 +160,14 @@ zenClass Embers {
 	//==================================
 	
 	#Remove Alchemical Mixer recipes
-	function removeMixerAlchemy(outputs as ILiquidStack[]) {
+	function removeAlchemyM(outputs as ILiquidStack[]) {
 		for output in outputs {
 			AlchemicalMixer.remove(output);
 		}
 	}
 
 	#Add Alchemical Mixer recipes
-	function addMixerAlchemy(map as ILiquidStack[][int][ILiquidStack]) {
+	function addAlchemyM(map as ILiquidStack[][int][ILiquidStack]) {
 		for output, mixerRecipes in map {
 			AlchemicalMixer.remove(output);
 
@@ -176,6 +181,49 @@ zenClass Embers {
 				}
 			}
 		}
+	}
+
+	//==================================
+	######## Ember Generation ########
+	//==================================
+
+	#Add Ember Fuel
+	function addEmberFuel(fuel as IIngredient, embers as double) {
+		var ember as IIngredient[] = [emberShard, emberCrystal, emberCluster];
+		
+		if(!(ember has fuel)) {
+			EmberGeneration.addEmberFuel(fuel, embers);
+		}
+		
+		fuel.addTooltip("Usable Embers: " ~ embers);
+	}
+	
+	#Add Catalysis Fuel
+	function addCatalysisFuel(fuel as IIngredient, multiple as double) {
+		var catalysis as IIngredient[] = [<minecraft:redstone>, <minecraft:gunpowder>, <minecraft:glowstone_dust>];
+
+		if(!(catalysis has fuel)) {
+			EmberGeneration.addCatalysisFuel(fuel, multiple);
+		}
+
+		fuel.addTooltip("Catalyst Level: x" ~ multiple);
+	}
+
+	#Add Combustion Fuel
+	function addCombustionFuel(fuel as IIngredient, multiple as double) {
+		var combustion as IIngredient[] = [<minecraft:coal>, <minecraft:coal:1>, <minecraft:netherbrick>, <minecraft:blaze_powder>];
+
+		if(!(combustion has fuel)) {
+			EmberGeneration.addCombustionFuel(fuel, multiple);
+		}
+
+		fuel.addTooltip("Power Level: x" ~ multiple);
+	}
+
+	#Add Metal Coefficient
+	function addMetalCoefficient(block as IIngredient, multiple as double) {
+		EmberGeneration.addMetalCoefficient(block, multiple);
+		block.addTooltip("Can also be placed under the Pressure Refinery");
 	}
 	
 }

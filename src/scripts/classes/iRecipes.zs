@@ -1,5 +1,5 @@
-#priority 500
-#Name: scripts.classes.iRecipes.zs
+#priority 943
+#Name: iRecipes.zs
 #Author: baka943
 
 import crafttweaker.item.IIngredient;
@@ -13,24 +13,10 @@ zenClass IRecipes {
 	zenConstructor() {}
 
 	#Handle Shapeless recipes
-	function addNamed(map as IIngredient[][][string][IItemStack]) {
-		for item, itemRecipes in map {
-			for name, inner in itemRecipes {
-				for i, recipe in inner {
-					var toName = name;
-					if(i > 0)
-						toName = toName ~ "_" ~ i;
-					
-					if(name == "nameless")
-						recipes.addShapeless(item, recipe);
-					else recipes.addShapeless(toName, item, recipe);
-				}
-			}
-		}
-	}
-
 	function add(map as IIngredient[][][IItemStack]) {
 		for item, itemRecipes in map {
+			recipes.remove(item);
+
 			for recipe in itemRecipes {
 				recipes.addShapeless(item, recipe);
 			}
@@ -38,34 +24,12 @@ zenClass IRecipes {
 	}
 
 	#Handle Shaped and Mirrored recipes
-	function addNamed(map as IIngredient[][][][string][IItemStack], isMirrored as bool) {
+	function add(map as IIngredient[][][][IItemStack]) {
 		for item, itemRecipes in map {
-			for name, inner in itemRecipes {
-				for i, recipe in inner {
-					var toName = name;
-					if(i > 0)
-						toName = toName ~ "_" ~ i;
-					
-					if(name == "nameless") {
-						if(isMirrored)
-							recipes.addShapedMirrored(item, recipe);
-						else recipes.addShaped(item, recipe);
-					} else {
-						if(isMirrored)
-							recipes.addShapedMirrored(toName, item, recipe);
-						else recipes.addShaped(toName, item, recipe);
-					}
-				}
-			}
-		}
-	}
+			recipes.remove(item);
 
-	function add(map as IIngredient[][][][IItemStack], isMirrored as bool) {
-		for item, itemRecipes in map {
 			for recipe in itemRecipes {
-				if(isMirrored)
-					recipes.addShapedMirrored(item, recipe);
-				else recipes.addShaped(item, recipe);
+				recipes.addShaped(item, recipe);
 			}
 		}
 	}

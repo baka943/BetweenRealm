@@ -23,7 +23,7 @@ mossCragrock.add(
 	mossyCragrockBottom
 );
 
-logBetween.add(
+logB.add(
 	logWeed,
 	logWeed1,
 	logWeed2,
@@ -41,7 +41,7 @@ logBetween.add(
 	logGiantRoot
 );
 
-plankBetween.add(
+plankB.add(
 	plankWeed,
 	plankRubber,
 	plankHearthgrove,

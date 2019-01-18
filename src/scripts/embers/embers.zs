@@ -59,7 +59,6 @@ recipes.addShaped(<embers:alchemy_tablet>, [[null, <ore:plateDawnstone>], [camin
 			}
 
 			var patched = {"alchemyTable": iData.alchemyTable.asInt() + 1} as IData;
-			patched = iData + patched;
 			player.update(patched);
 		}
 	} as IRecipeAction
@@ -67,25 +66,18 @@ recipes.addShaped(<embers:alchemy_tablet>, [[null, <ore:plateDawnstone>], [camin
 
 #Misc
 val shapeds = {
-	//Ember Gauge
 	<embers:ember_gauge> : [[null, <ore:ingotDawnstone>], [<ore:ingotDawnstone>, redstone, <ore:ingotDawnstone>], [null, <ore:ingotDawnstone>]],
 	
-	//Fluid Gauge
 	<embers:fluid_gauge> : [[null, <ore:ingotIron>], [<ore:ingotIron>, redstone, <ore:ingotIron>], [null, <ore:ingotIron>]],
 	
-	//Clockwork Attenuator
 	<embers:clockwork_attenuator> : [[null, <ore:ingotElectrum>], [<ore:ingotElectrum>, redstone, <ore:ingotElectrum>], [null, <ore:ingotElectrum>]],
-	
-	//Alchemy Gauge
+
 	<soot:alchemy_gauge> : [[null, <ore:ingotAntimony>], [<ore:ingotAntimony>, redstone, <ore:ingotAntimony>], [null, <ore:ingotAntimony>]],
-	
-	//Mech Core
+
 	<embers:mech_core> : [[<ore:ingotIron>, null, <ore:ingotIron>], [null, <ore:plateLead>], [<ore:ingotIron>, null, <ore:ingotIron>]],
-	
-	//Ashen Brick
+
 	<embers:ashen_brick> * 4 : [[<embers:ashen_stone>, <embers:ashen_stone>], [<embers:ashen_stone>, <embers:ashen_stone>]],
-	
-	//Scale
+
 	<soot:scale> : [[<ore:ingotSilver>, <embers:ember_gauge>, <ore:ingotSilver>], [null, <ore:ingotSilver>], [null, <embers:block_caminite_brick_slab>]]
 } as IIngredient[][][IItemStack];
 
@@ -93,6 +85,12 @@ for item, recipe in shapeds {
 	recipes.remove(item);
 	recipes.addShaped(item, recipe);	
 }
+
+#Armors and Tools
+recipes.removeByRecipeName("embers:ashen_cloak_head");
+recipes.removeByRecipeName("embers:ashen_cloak_chest");
+recipes.removeByRecipeName("embers:ashen_cloak_legs");
+recipes.removeByRecipeName("embers:ashen_cloak_boots");
 
 //==================================
 ######## Stamper ########
@@ -121,29 +119,23 @@ Mixer.add(<fluid:dawnstone> * 8, [<fluid:iron> * 4, <fluid:copper> * 4]);
 ######## Dawnstone Anvil ########
 //==================================
 
-#Dawnstone Anvil Blacklist
-val anvilBlacklist = [
-	//Ashen Armor
+#Ashen Armor
+val ashenArmor = [
 	<embers:ashen_cloak_head>,
 	<embers:ashen_cloak_chest>,
 	<embers:ashen_cloak_legs>,
-	<embers:ashen_cloak_boots>,
-
-	//Leather Armor
-	<minecraft:leather_helmet>,
-	<minecraft:leather_chestplate>,
-	<minecraft:leather_leggings>,
-	<minecraft:leather_boots>
+	<embers:ashen_cloak_boots>
 ] as IIngredient[];
 
-for item in anvilBlacklist {
-	DawnstoneAnvil.blacklistBreakdown(item);
-	DawnstoneAnvil.blacklistMateriaRepair(item);
-	DawnstoneAnvil.blacklistRepair(item);
+embers.removeRepair(ashenArmor);
+embers.removeRepairM(ashenArmor);
+
+for item in ashenArmor.itmes {
+	item.maxDamage = -1;
 }
 
 #Liver of Sulfur
-DawnstoneAnvil.add([<soot:sulfur_clump>], <thebetweenlands:sulfur_block>, null);
+embers.addAnvil([<soot:sulfur_clump>], <thebetweenlands:sulfur_block>, null);
 
 //==================================
 ######## Alchemy ########
@@ -152,7 +144,6 @@ DawnstoneAnvil.add([<soot:sulfur_clump>], <thebetweenlands:sulfur_block>, null);
 #Add Aspectus
 Alchemy.addAspect("antimony", <soot:signet_antimony>);
 Alchemy.addAspect("emerald", <minecraft:emerald>);
-Alchemy.addAspect("inflictor", <embers:inflictor_gem>);
 
 #Exchange Alchemy recipes
 val exchangeAlchemy = {
@@ -181,6 +172,11 @@ val exchangeAlchemy = {
 		1 : [
 			[redstone, betweenstone, ash, betweenstone, ash],
 			[redstone, ash, betweenstone, ash, betweenstone]
+		]
+	},
+	<embers:tyrfing> : {
+		1 : [
+			[<embers:sword_lead>, <embers:ashen_stone>, <embers:ashen_stone>, <ore:ingotLead>, <ore:ingotLead>]
 		]
 	},
 	<embers:aspectus_dawnstone> : {
@@ -280,83 +276,101 @@ val exchangeAlchemy = {
 			[<embers:archaic_circuit>, ash, <embers:archaic_brick>, ash, <embers:archaic_brick>]
 		]
 	},
+
+	//Lv.4
 	<embers:inflictor_gem> : {
-		3 : [
+		4 : [
 			[<soot:signet_antimony>, ash, <ore:plateDawnstone>, ash, <ore:plateDawnstone>],
 			[<soot:signet_antimony>, <ore:plateDawnstone>, ash, <ore:plateDawnstone>, ash]
 		]
 	},
-
-	//Lv.4
 	<embers:ashen_cloth> * 2 : {
 		4 : [
 			[<ore:string>, ash, ash, ash, ash]
+		]
+	},
+	<embers:ashen_cloak_head> : {
+		4 : [
+			[ashenHead, ashenCloth, <embers:inflictor_gem>, ashenCloth, <ore:ingotDawnstone>]
+		]
+	},
+	<embers:ashen_cloak_chest> : {
+		4 : [
+			[ashenChest, ashenCloth, <embers:inflictor_gem>, ashenCloth, <ore:ingotDawnstone>]
+		]
+	},
+	<embers:ashen_cloak_legs> : {
+		4 : [
+			[ashenLegs, ashenCloth, <embers:inflictor_gem>, ashenCloth, <ore:ingotDawnstone>]
+		]
+	},
+	<embers:ashen_cloak_boots> : {
+		4 : [
+			[ashenBoots, ashenCloth, <embers:inflictor_gem>, ashenCloth, <ore:ingotDawnstone>]
 		]
 	}
 } as IIngredient[][][int][IItemStack];
 
 embers.addAlchemy(exchangeAlchemy);
 
-#Armors and Tools
-recipes.removeByRecipeName("embers:ashen_cloak_head");
-recipes.removeByRecipeName("embers:ashen_cloak_chest");
-recipes.removeByRecipeName("embers:ashen_cloak_legs");
-recipes.removeByRecipeName("embers:ashen_cloak_boots");
-recipes.removeByRecipeName("embers:grandhammer");
-recipes.removeByRecipeName("embers:pickaxe_clockwork");
-recipes.removeByRecipeName("embers:axe_clockwork");
-Alchemy.remove(<embers:tyrfing>);
-
-val clockworks = {
-	<embers:ashen_cloak_head> : [<conarm:helmet_core>.withTag({Material: "ashenfabric"}), <embers:ashen_cloth>, <embers:inflictor_gem>, <embers:ashen_cloth>, <ore:ingotDawnstone>],
-	<embers:ashen_cloak_chest> : [<conarm:chest_core>.withTag({Material: "ashenfabric"}), <embers:ashen_cloth>, <embers:inflictor_gem>, <embers:ashen_cloth>, <ore:ingotDawnstone>],
-	<embers:ashen_cloak_legs> : [<conarm:leggings_core>.withTag({Material: "ashenfabric"}), <embers:ashen_cloth>, <embers:inflictor_gem>, <embers:ashen_cloth>, <ore:ingotDawnstone>],
-	<embers:ashen_cloak_boots> : [<conarm:boots_core>.withTag({Material: "ashenfabric"}), <embers:ashen_cloth>, <embers:inflictor_gem>, <embers:ashen_cloth>, <ore:ingotDawnstone>],
-	<embers:grandhammer> : [<embers:sword_dawnstone>, <ore:blockDawnstone>, <embers:ember_cluster>, <ore:blockDawnstone>, <embers:wildfire_core>],
-	<embers:pickaxe_clockwork> : [<embers:pickaxe_dawnstone>, <ore:ingotDawnstone>, <embers:ember_cluster>, <ore:ingotDawnstone>, <embers:wildfire_core>],
-	<embers:axe_clockwork> : [<embers:axe_dawnstone>, <ore:ingotDawnstone>, <embers:ember_cluster>, <ore:ingotDawnstone>, <embers:wildfire_core>],
-	<embers:tyrfing> : [<embers:sword_lead>, <embers:ashen_stone>, <embers:ashen_stone>, <ore:ingotLead>, <ore:ingotLead>]
-} as IIngredient[][IItemStack];
-
-for key, value in clockworks {
-	Alchemy.add(key, value, {"copper": 16 to 24, "dawnstone": 64 to 96, "antimony": 32 to 48, "inflictor": 0 to 8});
-	key.maxDamage = -1;
-}
-
 //==================================
 ######## Alchemical Mixer ########
 //==================================
 
-#Lava
-AlchemicalMixer.add(<fluid:lava> * 12, [<fluid:alchemical_redstone> * 4, <fluid:dawnstone> * 4, <fluid:copper> * 2], {"iron": 0 to 10, "dawnstone": 10 to 24});
+val alchemicalMixer = {
+	//Lv.0
+	<fluid:lava> * 12 : [
+		0 : [
+			<fluid:copper> * 2
+			<fluid:alchemical_redstone> * 4,
+			<fluid:dawnstone> * 4,
+		]
+	],
+	<fluid:antimony> * 12 : [
+		0 : [
+			<fluid:lava> * 8,
+			<fluid:lead> * 8
+		]
+	],
 
-#Antimony
-AlchemicalMixer.remove(<fluid:antimony> * 12);
-AlchemicalMixer.add(<fluid:antimony> * 12, [<fluid:lava> * 8, <fluid:lead> * 6], {"iron": 20 to 24, "copper": 10 to 12, "lead": 10 to 24});
+	//Lv.1
+	<fluid:ardite> * 16 : [
+		1 : [
+			<fluid:lava> * 8,
+			<fluid:copper> * 6,
+			<fluid:alchemical_redstone> * 4
+		]
+	],
+	<fluid:cobalt> * 12 : [
+		1 : [
+			<fluid:lava> * 8,
+			<fluid:ardite> * 6
+		]
+	]
+} as ILiquidStack[][int][ILiquidStack];
 
-#Ardite
-AlchemicalMixer.add(<fluid:ardite> * 16, [<fluid:lava> * 8, <fluid:copper> * 6, <fluid:alchemical_redstone> * 4], {"copper": 10 to 12, "silver": 20 to 32, "antimony": 10 to 24});
-
-#Cobalt
-AlchemicalMixer.add(<fluid:cobalt> * 12, [<fluid:lava> * 8, <fluid:ardite> * 6], {"iron": 20 to 24, "dawnstone": 0 to 12, "emerald": 10 to 24});
+embers.addAlchemyM(alchemicalMixer);
 
 //==================================
 ######## Ember Generation ########
 //==================================
 
 #Add Ember Fuel
-EmberGeneration.addEmberFuel(<minecraft:coal>, 250.0);
-EmberGeneration.addEmberFuel(<minecraft:coal:1>, 150.0);
-EmberGeneration.addEmberFuel(sulfur, 150.0);
+embers.addEmberFuel(emberShard, 400.0);
+embers.addEmberFuel(emberCrystal, 2400.0);
+embers.addEmberFuel(emberCluster, 3600.0);
+embers.addEmberFuel(<minecraft:coal>, 250.0);
+embers.addEmberFuel(<minecraft:coal:1>, 150.0);
+embers.addEmberFuel(sulfur, 150.0);
 
 #Add Catalysis Fuel
-EmberGeneration.addCatalysisFuel(<embers:dust_ember>, 2.0);
+embers.addCatalysisFuel(<embers:dust_ember>, 2.0);
 
 #Add Combustion Fuel
-EmberGeneration.addCombustionFuel(sulfur, 2.0);
+embers.addCombustionFuel(sulfur, 2.0);
 
 #Add Metal Coefficient
-EmberGeneration.addMetalCoefficient(<ore:blockDawnstone>, 2.0);
+embers.addMetalCoefficient(<ore:blockDawnstone>, 2.0);
 
 //==================================
 ######## Misc ########
@@ -367,4 +381,3 @@ val hammerDef = <embers:tinker_hammer>.definition;
 hammerDef.setHarvestLevel("pickaxe", 2);
 hammerDef.setHarvestLevel("axe", 2);
 hammerDef.setHarvestLevel("shovel", 2);
-<embers:tinker_hammer>.addTooltip(format.darkPurple("If this's a pickaxe"));

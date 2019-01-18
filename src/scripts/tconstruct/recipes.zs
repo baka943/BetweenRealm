@@ -6,11 +6,9 @@ import crafttweaker.item.IItemStack;
 
 import mods.tconstruct.Drying;
 
-import scripts.functions.addCompress;
-
 #Ball of Moss
 recipes.remove(mossBall);
-addCompress(mossBall, mossCragrock);
+recipes.addShaped(mossBall, [[mossCragrock, mossCragrock, mossCragrock], [mossCragrock, mossCragrock, mossCragrock], [mossCragrock, mossCragrock, mossCragrock]]);
 
 #Leather
 Drying.removeRecipe(<minecraft:leather>);

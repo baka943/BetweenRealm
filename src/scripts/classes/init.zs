@@ -1,5 +1,5 @@
-#priority 300
-#Name: scripts.classes.init.zs
+#priority 123
+#Name: init.zs
 #Author: baka943
 
 #Mods Init

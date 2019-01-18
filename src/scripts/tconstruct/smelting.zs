@@ -1,4 +1,4 @@
-#Name: scripts.tconstruct.smelting.zs
+#Name: smelting.zs
 #Author: baka943
 
 import mods.tconstruct.Melting;
