@@ -12,6 +12,8 @@ global reedRope as IItemStack = <thebetweenlands:items_misc:7>;
 global sulfur as IItemStack = <thebetweenlands:items_misc:18>;
 global mossyCragrockTop as IItemStack = <thebetweenlands:cragrock:1>;
 global mossyCragrockBottom as IItemStack = <thebetweenlands:cragrock:2>;
+global talisman as IItemStack = <thebetweenlands:swamp_talisman>;
+global stickWeed as IItemStack = <thebetweenlands:items_misc:20>;
 
 global logWeed as IItemStack = <thebetweenlands:log_weedwood>;
 global logWeed1 as IItemStack = <thebetweenlands:log_weedwood:12>;
@@ -40,7 +42,7 @@ global caminiteStairs as IItemStack = <embers:stairs_caminite_brick>;
 global caminiteBlock as IItemStack = <embers:block_caminite_brick>;
 global emberShard as IItemStack = <embers:shard_ember>;
 global emberCrystal as IItemStack = <embers:crystal_ember>;
-global emberCluster as IItemStack = <embers:shard_cluster>;
+global emberCluster as IItemStack = <embers:ember_cluster>;
 
 global searedBrick as IItemStack = <tconstruct:materials>;
 global mudBrick as IItemStack = <tconstruct:materials:1>;

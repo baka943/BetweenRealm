@@ -189,9 +189,9 @@ zenClass Embers {
 
 	#Add Ember Fuel
 	function addEmberFuel(fuel as IIngredient, embers as double) {
-		var ember as IIngredient[] = [emberShard, emberCrystal, emberCluster];
+		var default as IIngredient[] = [emberShard, emberCrystal, emberCluster];
 		
-		if(!(ember has fuel)) {
+		if(!(default has fuel)) {
 			EmberGeneration.addEmberFuel(fuel, embers);
 		}
 		
@@ -200,9 +200,9 @@ zenClass Embers {
 	
 	#Add Catalysis Fuel
 	function addCatalysisFuel(fuel as IIngredient, multiple as double) {
-		var catalysis as IIngredient[] = [<minecraft:redstone>, <minecraft:gunpowder>, <minecraft:glowstone_dust>];
+		var default as IIngredient[] = [<minecraft:redstone>, <minecraft:gunpowder>, <minecraft:glowstone_dust>];
 
-		if(!(catalysis has fuel)) {
+		if(!(default has fuel)) {
 			EmberGeneration.addCatalysisFuel(fuel, multiple);
 		}
 
@@ -211,9 +211,9 @@ zenClass Embers {
 
 	#Add Combustion Fuel
 	function addCombustionFuel(fuel as IIngredient, multiple as double) {
-		var combustion as IIngredient[] = [<minecraft:coal>, <minecraft:coal:1>, <minecraft:netherbrick>, <minecraft:blaze_powder>];
+		var default as IIngredient[] = [<minecraft:coal>, <minecraft:coal:1>, <minecraft:netherbrick>, <minecraft:blaze_powder>];
 
-		if(!(combustion has fuel)) {
+		if(!(default has fuel)) {
 			EmberGeneration.addCombustionFuel(fuel, multiple);
 		}
 

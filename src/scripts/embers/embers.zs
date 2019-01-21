@@ -127,12 +127,15 @@ val ashenArmor = [
 	<embers:ashen_cloak_boots>
 ] as IIngredient[];
 
-embers.removeRepair(ashenArmor);
-embers.removeRepairM(ashenArmor);
-
-for item in ashenArmor.itmes {
-	item.maxDamage = -1;
+for item in ashenArmor {
+	embers.removeRepair(item);
+	embers.removeRepairM(item);
 }
+
+<embers:ashen_cloak_head>.maxDamage = -1;
+<embers:ashen_cloak_chest>.maxDamage = -1;
+<embers:ashen_cloak_legs>.maxDamage = -1;
+<embers:ashen_cloak_boots>.maxDamage = -1;
 
 #Liver of Sulfur
 embers.addAnvil([<soot:sulfur_clump>], <thebetweenlands:sulfur_block>, null);
@@ -319,34 +322,34 @@ embers.addAlchemy(exchangeAlchemy);
 
 val alchemicalMixer = {
 	//Lv.0
-	<fluid:lava> * 12 : [
+	<fluid:lava> * 12 : {
 		0 : [
-			<fluid:copper> * 2
+			<fluid:copper> * 2,
 			<fluid:alchemical_redstone> * 4,
-			<fluid:dawnstone> * 4,
+			<fluid:dawnstone> * 4
 		]
-	],
-	<fluid:antimony> * 12 : [
+	},
+	<fluid:antimony> * 12 : {
 		0 : [
 			<fluid:lava> * 8,
 			<fluid:lead> * 8
 		]
-	],
+	},
 
 	//Lv.1
-	<fluid:ardite> * 16 : [
+	<fluid:ardite> * 16 : {
 		1 : [
 			<fluid:lava> * 8,
 			<fluid:copper> * 6,
 			<fluid:alchemical_redstone> * 4
 		]
-	],
-	<fluid:cobalt> * 12 : [
+	},
+	<fluid:cobalt> * 12 : {
 		1 : [
 			<fluid:lava> * 8,
 			<fluid:ardite> * 6
 		]
-	]
+	}
 } as ILiquidStack[][int][ILiquidStack];
 
 embers.addAlchemyM(alchemicalMixer);

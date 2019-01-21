@@ -4,47 +4,63 @@
 import crafttweaker.item.IItemStack;
 import crafttweaker.block.IBlock;
 import crafttweaker.data.IData;
+import crafttweaker.player.IPlayer;
 
 import crafttweaker.events.IEventManager;
 import crafttweaker.event.PlayerLoggedInEvent;
+import crafttweaker.event.PlayerTickEvent;
 import crafttweaker.event.PlayerChangedDimensionEvent;
 import crafttweaker.event.IBlockEvent;
 import crafttweaker.event.BlockHarvestDropsEvent;
 
-#Something on Player Logged in game where on The Betweenlands Dimension @Optional Event
+#Something on Player Logged in the Game
 events.onPlayerLoggedIn(function(event as PlayerLoggedInEvent) {
-	var worldIn as string = event.player.world.getDimensionType();
-	
-	var iData = {"loggedIn": 0} as IData;
+	var iData = {loggedIn : 0} as IData;
 	iData = iData + event.player.data;
 
-	if(iData.loggedIn == 0 & worldIn == "betweenlands") {
-		//Give Starting Items
+	if(iData.loggedIn == 0) {
 		event.player.give(<embers:codex>);
 		event.player.give(<embers:tinker_hammer>.withLore(["§5If this's a pickaxe...", "Why?"]));
-	
-		//Welcome Message
-		event.player.sendChat("Hello " ~ event.player.name ~ ", Welcome to the dark and mysterious realm!");
 	}
 
-	var patched = {"loggedIn": iData.loggedIn.asInt() + 1} as IData;
+	var patched = {loggedIn : iData.loggedIn.asInt() + 1} as IData;
 	event.player.update(patched);
 });
 
-#Something with Into The Betweenlands Dimension @Optional Event
+#Something with Changed Dimension
 events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
 	var worldTo as string = event.toWorld.getDimensionType();
 
 	if(worldTo == "betweenlands") {
-		var iData = {"toBetweenlands": 0} as IData;
+		var iData = {toBetweenlands : 0, hasTalisman : 0} as IData;
 		iData = iData + event.player.data;
 
 		if(iData.toBetweenlands == 0) {
 			event.player.sendChat("Hello " ~ event.player.name ~ ", Welcome to the dark and mysterious realm!");
+
+			if(iData.hasTalisman == 0) {
+				var mData = {modeIn: 1} as IData;
+				event.player.update(mData);
+			} else {
+				var mData = {modeIn: 0} as IData;
+				event.player.update(mData);
+			}
 		}
 
-		var patched = {"toBetweenlands": iData.toBetweenlands.asInt() + 1} as IData;
+		var patched = {toBetweenlands : iData.toBetweenlands.asInt() + 1} as IData;
 		event.player.update(patched);
+	}
+});
+
+#Something with Player Tick
+events.onPlayerTick(function(event as PlayerTickEvent) {
+	var stack as IItemStack = event.player.currentItem;
+
+	if(isNull(stack)) return;
+
+	if(talisman has stack) {
+		var iData = {hasTalisman : 1} as IData;
+		event.player.update(iData);
 	}
 });
 

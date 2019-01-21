@@ -24,12 +24,14 @@ zenClass IRecipes {
 	}
 
 	#Handle Shaped and Mirrored recipes
-	function add(map as IIngredient[][][][IItemStack]) {
+	function add(map as IIngredient[][][][IItemStack], isMirrored as bool) {
 		for item, itemRecipes in map {
 			recipes.remove(item);
 
 			for recipe in itemRecipes {
-				recipes.addShaped(item, recipe);
+				if(isMirrored) {
+					recipes.addShapedMirrored(item, recipe);
+				} else recipes.addShaped(item, recipe);
 			}
 		}
 	}
