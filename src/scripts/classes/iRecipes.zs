@@ -37,6 +37,10 @@ zenClass IRecipes {
 	}
 
 	#Remove recipes
+	function remove(removal as IItemStack) {
+		recipes.remove(removal);
+	}
+
 	function remove(removals as IItemStack[]) {
 		for toRemove in removals {
 			recipes.remove(toRemove);
@@ -52,6 +56,8 @@ zenClass IRecipes {
 	#Handle Furnace recipes
 	function addFurnace(toAdds as IIngredient[][IItemStack]) {
 		for output, inputs in toAdds {
+			furnace.remove(output);
+
 			for input in inputs {
 				furnace.addRecipe(output, input);
 			}

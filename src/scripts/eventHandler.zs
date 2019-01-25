@@ -13,6 +13,13 @@ import crafttweaker.event.PlayerChangedDimensionEvent;
 import crafttweaker.event.IBlockEvent;
 import crafttweaker.event.BlockHarvestDropsEvent;
 
+import scripts.stages.stageTree;
+import scripts.stages.stageSwamp;
+import scripts.stages.stageCave;
+import scripts.stages.stageTower;
+import scripts.stages.stageAsh;
+import scripts.stages.stageTinker;
+
 #Something on Player Logged in the Game
 events.onPlayerLoggedIn(function(event as PlayerLoggedInEvent) {
 	var iData = {loggedIn : 0} as IData;
@@ -27,7 +34,7 @@ events.onPlayerLoggedIn(function(event as PlayerLoggedInEvent) {
 	event.player.update(patched);
 });
 
-#Something with Changed Dimension
+#Something with Player Changed Dimension
 events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
 	var worldTo as string = event.toWorld.getDimensionType();
 
@@ -37,12 +44,14 @@ events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
 
 		if(iData.toBetweenlands == 0) {
 			event.player.sendChat("Hello " ~ event.player.name ~ ", Welcome to the dark and mysterious realm!");
+			event.player.addGameStage(stageSwamp.stage);
 
 			if(iData.hasTalisman == 0) {
-				var mData = {modeIn: 1} as IData;
+				var mData = {modeIn : 1} as IData;
 				event.player.update(mData);
+				event.player.addGameStage(stageTree.stage);
 			} else {
-				var mData = {modeIn: 0} as IData;
+				var mData = {modeIn : 0} as IData;
 				event.player.update(mData);
 			}
 		}
@@ -62,6 +71,10 @@ events.onPlayerTick(function(event as PlayerTickEvent) {
 		var iData = {hasTalisman : 1} as IData;
 		event.player.update(iData);
 	}
+
+	/* if(has stack & !(event.player.hasGameStage(stageCave.stage))) {
+		event.player.addGameStage(stageCave.stage);
+	} */
 });
 
 #Block Harvest Drops Handler on The Betweenlands Dimension

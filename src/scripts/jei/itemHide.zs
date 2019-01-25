@@ -18,14 +18,7 @@ for item in loadedMods["tombstone"].items {
 
 #Ores
 val ores = [
-	<minecraft:coal_ore>,
-	<minecraft:iron_ore>,
-	<minecraft:gold_ore>,
-	<minecraft:redstone_ore>,
-	<minecraft:lapis_ore>,
-	<minecraft:diamond_ore>,
 	<minecraft:emerald_ore>,
-	<minecraft:quartz_ore>,
 	<embers:ore_copper>,
 	<embers:ore_lead>,
 	<embers:ore_tin>,

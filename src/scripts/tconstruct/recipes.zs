@@ -7,7 +7,6 @@ import crafttweaker.item.IItemStack;
 import mods.tconstruct.Drying;
 
 #Ball of Moss
-recipes.remove(mossBall);
 recipes.addShaped(mossBall, [[mossCragrock, mossCragrock, mossCragrock], [mossCragrock, mossCragrock, mossCragrock], [mossCragrock, mossCragrock, mossCragrock]]);
 
 #Leather
