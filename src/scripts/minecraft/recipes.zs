@@ -16,31 +16,48 @@ iRecipes.remove(<minecraft:leather>);
 //==================================
 
 val shapedRecipes = {
-	<minecraft:armor_stand> : {
-		[[<ore:stickWood>, <ore:stickWood>, <ore:stickWood>],
-		[null, <ore:stickWood>],
-		[<ore:stickWood>, <ore:stone>, <ore:stickWood>]]
-	},
-	<minecraft:furnace> : {
-		[[<ore:cobblestone>, <ore:cobblestone>, <ore:cobblestone>],
-		[<ore:cobblestone>, null, <ore:cobblestone>],
-		[<ore:cobblestone>, <ore:cobblestone>, <ore:cobblestone>]]
-	},
-	<minecraft:compass> : {
-		[[null, <ore:plateIron>],
-		[<ore:plateIron>, redstone, <ore:plateIron>],
-		[null, <ore:plateIron>]]
-	},
-	<bonsaitrees:bonsaipot> : {
-		[[mudBrick, <ore:dirt>, mudBrick],
-		[mudBrick, mudBrick, mudBrick]]
-	}
+	<minecraft:armor_stand> : [
+		[
+			[<ore:stickWood>, <ore:stickWood>, <ore:stickWood>],
+			[null, <ore:stickWood>],
+			[<ore:stickWood>, <ore:stone>, <ore:stickWood>]
+		]
+	],
+	<minecraft:furnace> : [
+		[
+			[<ore:cobblestone>, <ore:cobblestone>, <ore:cobblestone>],
+			[<ore:cobblestone>, null, <ore:cobblestone>],
+			[<ore:cobblestone>, <ore:cobblestone>, <ore:cobblestone>]
+		]
+	],
+	<minecraft:compass> : [
+		[
+			[null, <ore:plateIron>],
+			[<ore:plateIron>, redstone, <ore:plateIron>],
+			[null, <ore:plateIron>]
+		]
+	],
+	<minecraft:hopper> : [
+		[
+			[<ore:ingotIron>, null, <ore:ingotIron>],
+			[<ore:ingotIron>, <ore:chestWood>, <ore:ingotIron>],
+			[null, <ore:ingotIron>]
+		],
+		[
+			[<ore:ingotIron>, <ore:logWood>, <ore:ingotIron>],
+			[<ore:ingotIron>, <ore:logWood>, <ore:ingotIron>],
+			[null, <ore:ingotIron>]
+		]
+	],
+	<bonsaitrees:bonsaipot> : [
+		[
+			[mudBrick, <ore:dirt>, mudBrick],
+			[mudBrick, mudBrick, mudBrick]
+		]
+	]
 } as IIngredient[][][][IItemStack];
 
 iRecipes.add(shapedRecipes, false);
-
-#Hopper
-recipes.addShaped(<minecraft:hopper>, [[<ore:ingotIron>, <ore:logWood>, <ore:ingotIron>], [<ore:ingotIron>, <ore:logWood>, <ore:ingotIron>], [null, <ore:ingotIron>]]);
 
 //==================================
 ######## Shapeless ########

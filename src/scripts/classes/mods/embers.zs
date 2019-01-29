@@ -18,8 +18,39 @@ zenClass Embers {
 	zenConstructor() {}
 
 	//==================================
+	######## Instance Variable ########
+	//==================================
+
+	#Default Ember Fuel
+	var defaultFuelE as IIngredient[] = [
+		emberShard,
+		emberCrystal,
+		emberCluster
+	];
+
+	#Default Catalysis Fuel
+	var defaultFuelC as IIngredient[] = [
+		<minecraft:redstone>,
+		<minecraft:gunpowder>,
+		<minecraft:glowstone_dust>
+	];
+
+	#Default Combustion Fuel
+	var defaultFuelP as IIngredient[] = [
+		<minecraft:coal>,
+		<minecraft:coal:1>,
+		<minecraft:netherbrick>,
+		<minecraft:blaze_powder>
+	];
+
+	//==================================
 	######## Exchange Table ########
 	//==================================
+
+	#Add new Aspect
+	function addAspect(name as string, aspect as IIngredient) {
+		Alchemy.addAspect(name, aspect);
+	}
 
 	#Remove Exchange Table recipes
 	function removeAlchemy(outputs as IItemStack[]) {
@@ -44,7 +75,7 @@ zenClass Embers {
 					} else if(level == 3) {
 						Alchemy.add(item, recipe, {"silver": 0 to 12, "dawnstone": 0 to 12, "antimony": 32 to 48});
 					} else {
-						Alchemy.add(item, recipe, {"dawnstone": 0 to 12, "antimony": 0 to 12, "emerald": 32 to 48});
+						Alchemy.add(item, recipe, {"dawnstone": 0 to 12, "antimony": 0 to 12, "inflictor": 32 to 48});
 					}
 				}
 			}
@@ -67,20 +98,17 @@ zenClass Embers {
 	}
 
 	#Add Stamper recipes
-	function addStamper(map as IIngredient[][IIngredient][ILiquidStack][IItemStack]) {
-		for output, outputRecipes in map {
-			Stamper.remove(output);
-
-			for liquid, inner in outputRecipes {
-				for stamp, inputs in inner {
-					for input in inputs {
-						Stamper.add(output, liquid, stamp, input);
-					}
+	function addStamper(map as IItemStack[ILiquidStack][IIngredient][IIngredient]) {
+		for stamp, inner in map {
+			for input, recipe in inner {
+				for liquid, output in recipe {
+					Stamper.remove(output);
+					Stamper.add(output, liquid, stamp, input);
 				}
 			}
 		}
 	}
-
+	
 	//==================================
 	######## Mixer ########
 	//==================================
@@ -93,6 +121,11 @@ zenClass Embers {
 	}
 
 	#Add Mixer recipes
+	function addMixer(output as ILiquidStack, inputs as ILiquidStack[]) {
+		Mixer.remove(output);
+		Mixer.add(output, inputs);
+	}
+	
 	function addMixer(map as ILiquidStack[][ILiquidStack]) {
 		for output, inputs in map {
 				Mixer.remove(output);
@@ -177,7 +210,7 @@ zenClass Embers {
 				} else if(level == 1) {
 					AlchemicalMixer.add(output, recipe, {"copper": 0 to 32, "silver": 0 to 32, "antimony": 48 to 64});
 				} else {
-					AlchemicalMixer.add(output, recipe, {"dawnstone": 0 to 32, "antimony": 0 to 32, "emerald": 48 to 64});
+					AlchemicalMixer.add(output, recipe, {"dawnstone": 0 to 32, "antimony": 0 to 32, "inflictor": 48 to 64});
 				}
 			}
 		}
@@ -188,10 +221,8 @@ zenClass Embers {
 	//==================================
 
 	#Add Ember Fuel
-	function addEmberFuel(fuel as IIngredient, embers as double) {
-		var default as IIngredient[] = [emberShard, emberCrystal, emberCluster];
-		
-		if(!(default has fuel)) {
+	function addFuelE(fuel as IIngredient, embers as double) {
+		if(!(defaultFuelE has fuel)) {
 			EmberGeneration.addEmberFuel(fuel, embers);
 		}
 		
@@ -199,10 +230,8 @@ zenClass Embers {
 	}
 	
 	#Add Catalysis Fuel
-	function addCatalysisFuel(fuel as IIngredient, multiple as double) {
-		var default as IIngredient[] = [<minecraft:redstone>, <minecraft:gunpowder>, <minecraft:glowstone_dust>];
-
-		if(!(default has fuel)) {
+	function addFuelC(fuel as IIngredient, multiple as double) {
+		if(!(defaultFuelC has fuel)) {
 			EmberGeneration.addCatalysisFuel(fuel, multiple);
 		}
 
@@ -210,10 +239,8 @@ zenClass Embers {
 	}
 
 	#Add Combustion Fuel
-	function addCombustionFuel(fuel as IIngredient, multiple as double) {
-		var default as IIngredient[] = [<minecraft:coal>, <minecraft:coal:1>, <minecraft:netherbrick>, <minecraft:blaze_powder>];
-
-		if(!(default has fuel)) {
+	function addFuelP(fuel as IIngredient, multiple as double) {
+		if(!(defaultFuelP has fuel)) {
 			EmberGeneration.addCombustionFuel(fuel, multiple);
 		}
 

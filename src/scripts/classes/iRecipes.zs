@@ -36,6 +36,10 @@ zenClass IRecipes {
 		}
 	}
 
+	function add(item as IItemStack, recipe as IIngredient[][]) {
+		recipes.addShaped(item, recipe);
+	}
+
 	#Remove recipes
 	function remove(removal as IItemStack) {
 		recipes.remove(removal);
