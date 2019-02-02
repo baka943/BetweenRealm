@@ -20,7 +20,7 @@ recipes.addShaped(<thebetweenlands:sulfur_torch> * 8,
 		var iData = {multiTorch : 0} as IData;
 		iData = iData + cInfo.player.data;
 
-		if(iData.modeIn == 1 | iData.multiTorch <= 15) {
+		if(iData.modeIn == 1 | iData.multiTorch < 16) {
 			return out;
 		}
 
@@ -37,8 +37,8 @@ recipes.addShaped(<thebetweenlands:sulfur_torch> * 8,
 			}
 
 			if(iData.modeIn == 0) {
-				var patched = {multiTorch : iData.multiTorch.asInt() + 1} as IData;
-				player.update(patched);
+				iData = {multiTorch : iData.multiTorch.asInt() + 1} as IData;
+				player.update(iData);
 			}
 		}
 	} as IRecipeAction

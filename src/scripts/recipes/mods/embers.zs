@@ -39,10 +39,10 @@ recipes.addShaped(<embers:alchemy_tablet>,
 			
 			if(iData.alchemyTable == 0) {
 				player.give(<minecraft:writable_book>.withLore(["§5To record any interesting thing..."]));
+			
+				iData = {alchemyTable : 1} as IData;
+				player.update(iData);
 			}
-
-			var patched = {alchemyTable : iData.alchemyTable.asInt() + 1} as IData;
-			player.update(patched);
 		}
 	} as IRecipeAction
 );

@@ -30,8 +30,8 @@ events.onPlayerLoggedIn(function(event as PlayerLoggedInEvent) {
 		player.executeCommand("gamerule sendCommandFeedback false");
 	}
 
-	var patched = {loggedIn : iData.loggedIn.asInt() + 1} as IData;
-	player.update(patched);
+	iData = {loggedIn : iData.loggedIn.asInt() + 1} as IData;
+	player.update(iData);
 });
 
 #Something with Player Changed Dimension
@@ -45,9 +45,9 @@ events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
 
 		if(iData.toBetweenlands == 0) {
 			player.sendChat("Hello " ~ player.name ~ ", Welcome to the dark and mysterious realm!");
-			player.addGameStage(stageSwamp.stage);
 			player.executeCommand("title " ~ player.name ~ " subtitle {\"text\":\"The dark and mysterious realm...\", \"color\":\"gray\", \"italic\":true}");
 			player.executeCommand("title " ~ player.name ~ " title {\"text\":\"Stage Swamp\", \"bold\":true}");
+			player.addGameStage(stageSwamp.stage);
 
 			if(iData.hasTalisman == 0) {
 				var mData = {modeIn : 1} as IData;
@@ -56,10 +56,10 @@ events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
 				var mData = {modeIn : 0} as IData;
 				player.update(mData);
 			}
-		}
 
-		var patched = {toBetweenlands : iData.toBetweenlands.asInt() + 1} as IData;
-		player.update(patched);
+			iData = {toBetweenlands : 1} as IData;
+			player.update(iData);
+		}
 	}
 });
 
@@ -80,15 +80,24 @@ events.onPlayerTick(function(event as PlayerTickEvent) {
 
 #Something with Player Fill Bucket
 events.onPlayerFillBucket(function(event as PlayerFillBucketEvent) {
-	var bucket as IItemStack = event.emptyBucket;
-	var blockID = event.block.definition.id;
 	var player as IPlayer = event.player;
-	var iData = {modeIn : 0} as IData;
+	var iData = {modeIn : 0, swampWater : 0} as IData;
 	iData = iData + player.data;
 
-	if((bucket has ironBucket) & (iData.modeIn == 1) & (blockID == "thebetweenlands:swamp_water")) {
-		event.result = <minecraft:water_bucket>;
-		
+	if(!event.world.isRemote() & iData.modeIn == 1) {
+		var bucket = event.emptyBucket;
+		var blockID = event.block.definition.id;
+
+		if((bucket has ironBucket) & (blockID == "thebetweenlands:swamp_water")) {
+			event.result = <minecraft:water_bucket>;
+			
+			if(iData.swampWater == 0) {
+				player.executeCommand("title " ~ player.name ~ " actionbar {\"text\":\"The swamp water, the water.\"}");
+
+				iData = {swampWater : 1} as IData;
+				player.update(iData);
+			}
+		}
 	}
 });
 

@@ -4,6 +4,9 @@
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 
+import crafttweaker.data.IData;
+import crafttweaker.recipes.IRecipeFunction;
+
 //==================================
 ######## Removals ########
 //==================================
@@ -63,7 +66,22 @@ iRecipes.add(shapedRecipes, false);
 ######## Shapeless ########
 //==================================
 
+#Water Bucket
+recipes.addShapeless(<minecraft:water_bucket>,
+	
+	[swampWaterBucket, <minecraft:coal:1>],
 
+	function(out, ins, cInfo) {
+		var iData = {modeIn : 0} as IData;
+		iData = iData + cInfo.player.data;
+
+		if(iData.modeIn == 0) {
+			return out;
+		}
+
+		return null;
+	} as IRecipeFunction
+);
 
 //==================================
 ######## Furnace ########
@@ -89,3 +107,6 @@ val furnaceRecipes as IIngredient[IItemStack] = {
 };
 
 iRecipes.addFurnace(furnaceRecipes);
+
+#Key Items
+static swampWaterBucket as IItemStack = <forge:bucketfilled>.withTag({FluidName: "swamp_water", Amount: 1000});
