@@ -51,6 +51,10 @@ zenClass IRecipes {
 		}
 	}
 
+	function remove(removal as string) {
+		recipes.removeByRegex(removal);
+	}
+	
 	function remove(removals as string[]) {
 		for toRemove in removals {
 			recipes.removeByRegex(toRemove);
@@ -58,17 +62,18 @@ zenClass IRecipes {
 	}
 
 	#Handle Furnace recipes
-	function addFurnace(toAdds as IIngredient[][IItemStack]) {
-		for output, inputs in toAdds {
+	function addFurnace(toAdds as IIngredient[IItemStack]) {
+		for output, input in toAdds {
 			furnace.remove(output);
-
-			for input in inputs {
-				furnace.addRecipe(output, input);
-			}
+			furnace.addRecipe(output, input);
 		}
 	}
 
 	#Remove Furnace recipes
+	function removeFurnace(removal as IIngredient) {
+		furnace.remove(removal);
+	}
+	
 	function removeFurnace(removals as IIngredient[]) {
 		for toRemove in removals {
 			furnace.remove(toRemove);

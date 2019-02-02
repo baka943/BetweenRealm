@@ -67,15 +67,34 @@ zenClass Embers {
 			for level, inner in itemRecipes {
 				for recipe in inner {
 					if(level == 0) {
-						Alchemy.add(item, recipe, {"iron": 0 to 24, "copper": 32 to 48});
+						Alchemy.add(item, recipe, {
+							"iron": 0 to 24,
+							"copper": 32 to 48
+						});
 					} else if(level == 1) {
-						Alchemy.add(item, recipe, {"copper": 0 to 12, "lead": 0 to 12, "silver": 32 to 48});
+						Alchemy.add(item, recipe, {
+							"copper": 0 to 12,
+							"lead": 0 to 12,
+							"silver": 32 to 48
+						});
 					} else if(level == 2) {
-						Alchemy.add(item, recipe, {"lead": 0 to 12, "silver": 0 to 12, "dawnstone": 32 to 48});
+						Alchemy.add(item, recipe, {
+							"lead": 0 to 12,
+							"silver": 0 to 12,
+							"dawnstone": 32 to 48
+						});
 					} else if(level == 3) {
-						Alchemy.add(item, recipe, {"silver": 0 to 12, "dawnstone": 0 to 12, "antimony": 32 to 48});
+						Alchemy.add(item, recipe, {
+							"silver": 0 to 12,
+							"dawnstone": 0 to 12,
+							"antimony": 32 to 48
+						});
 					} else {
-						Alchemy.add(item, recipe, {"dawnstone": 0 to 12, "antimony": 0 to 12, "inflictor": 32 to 48});
+						Alchemy.add(item, recipe, {
+							"dawnstone": 0 to 12,
+							"antimony": 0 to 12,
+							"inflictor": 32 to 48
+						});
 					}
 				}
 			}
@@ -206,11 +225,23 @@ zenClass Embers {
 
 			for level, recipe in mixerRecipes {
 				if(level == 0) {
-					AlchemicalMixer.add(output, recipe, {"iron": 0 to 32, "lead": 0 to 32, "dawnstone": 48 to 64});
+					AlchemicalMixer.add(output, recipe, {
+						"iron": 0 to 32,
+						"lead": 0 to 32,
+						"dawnstone": 48 to 64
+					});
 				} else if(level == 1) {
-					AlchemicalMixer.add(output, recipe, {"copper": 0 to 32, "silver": 0 to 32, "antimony": 48 to 64});
+					AlchemicalMixer.add(output, recipe, {
+						"copper": 0 to 32,
+						"silver": 0 to 32,
+						"antimony": 48 to 64
+					});
 				} else {
-					AlchemicalMixer.add(output, recipe, {"dawnstone": 0 to 32, "antimony": 0 to 32, "inflictor": 48 to 64});
+					AlchemicalMixer.add(output, recipe, {
+						"dawnstone": 0 to 32,
+						"antimony": 0 to 32,
+						"inflictor": 48 to 64
+					});
 				}
 			}
 		}
@@ -248,7 +279,7 @@ zenClass Embers {
 	}
 
 	#Add Metal Coefficient
-	function addMetalCoefficient(block as IIngredient, multiple as double) {
+	function addMetalCoef(block as IIngredient, multiple as double) {
 		EmberGeneration.addMetalCoefficient(block, multiple);
 		block.addTooltip("Can also be placed under the Pressure Refinery");
 	}

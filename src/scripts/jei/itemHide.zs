@@ -17,7 +17,7 @@ for item in loadedMods["tombstone"].items {
 }
 
 #Ores
-val ores = [
+val ores as IIngredient[] = [
 	<minecraft:emerald_ore>,
 	<embers:ore_copper>,
 	<embers:ore_lead>,
@@ -29,6 +29,6 @@ val ores = [
 	<aetherworks:aether_ore>,
 	<tconstruct:ore:0>,
 	<tconstruct:ore:1>
-] as IIngredient[];
+];
 
 iRecipes.hideItems(ores, true);

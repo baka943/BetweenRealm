@@ -6,109 +6,6 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.item.IItemDefinition;
 import crafttweaker.liquid.ILiquidStack;
 
-import crafttweaker.data.IData;
-import crafttweaker.recipes.IRecipeFunction;
-import crafttweaker.recipes.IRecipeAction;
-
-//==================================
-######## Recipes ########
-//==================================
-
-#Alchemy Tablet
-recipes.remove(<embers:alchemy_tablet>);
-recipes.addShaped(<embers:alchemy_tablet>,
-	[
-		[null, <ore:plateDawnstone>],
-		[caminiteStairs, <ore:plateBronze>, caminiteStairs],
-		[caminiteBlock, <ore:ingotDawnstone>, caminiteBlock]
-	],
-	null,
-	function(out, cInfo, player) {
-		if(!player.world.isRemote()) {
-			var iData = {alchemyTable : 0} as IData;
-			iData = iData + player.data;
-			
-			if(iData.alchemyTable == 0) {
-				player.give(<minecraft:writable_book>.withLore(["§5To record any interesting thing..."]));
-			}
-
-			var patched = {alchemyTable : iData.alchemyTable.asInt() + 1} as IData;
-			player.update(patched);
-		}
-	} as IRecipeAction
-);
-
-#Misc
-val shapedRecipes = {
-	<embers:ember_gauge> : [
-		[
-			[null, <ore:ingotDawnstone>],
-			[<ore:ingotDawnstone>, redstone, <ore:ingotDawnstone>],
-			[null, <ore:ingotDawnstone>]
-		]
-	],
-	<embers:fluid_gauge> : [
-		[
-			[null, <ore:ingotIron>],
-			[<ore:ingotIron>, redstone, <ore:ingotIron>],
-			[null, <ore:ingotIron>]
-		]
-	],
-	<embers:clockwork_attenuator> : [
-		[
-			[null, <ore:ingotElectrum>],
-			[<ore:ingotElectrum>, redstone, <ore:ingotElectrum>],
-			[null, <ore:ingotElectrum>]
-		]
-	],
-	<soot:alchemy_gauge> : [
-		[
-			[null, <ore:ingotAntimony>],
-			[<ore:ingotAntimony>, redstone, <ore:ingotAntimony>],
-			[null, <ore:ingotAntimony>]
-		]
-	],
-	<embers:mech_core> : [
-		[
-			[<ore:ingotIron>, null, <ore:ingotIron>],
-			[null, <ore:plateLead>],
-			[<ore:ingotIron>, null, <ore:ingotIron>]
-		]
-	],
-	<embers:ashen_brick> * 4 : [
-		[
-			[<embers:ashen_stone>, <embers:ashen_stone>],
-			[<embers:ashen_stone>, <embers:ashen_stone>]
-		]
-	],
-	<soot:scale> : [
-		[
-			[<ore:ingotSilver>, <embers:ember_gauge>, <ore:ingotSilver>],
-			[null, <ore:ingotSilver>],
-			[null, <embers:block_caminite_brick_slab>]
-		]
-	],
-	<aetherworks:heat_dial> : [
-		[
-			[null, <ore:ingotLead>],
-			[<ore:ingotLead>, redstone, <ore:ingotLead>],
-			[null, <ore:ingotLead>]
-		]
-	]
-} as IIngredient[][][][IItemStack];
-
-iRecipes.add(shapedRecipes, false);
-
-#Remove Armors
-val removeArmors = [
-	"embers:ashen_cloak_head",
-	"embers:ashen_cloak_chest",
-	"embers:ashen_cloak_legs",
-	"embers:ashen_cloak_boots"
-] as string[];
-
-iRecipes.remove(removeArmors);
-
 //==================================
 ######## Stamper ########
 //==================================
@@ -119,8 +16,8 @@ embers.removeStamper(<embers:aspectus_silver>);
 embers.removeStamper(<embers:aspectus_dawnstone>);
 embers.removeStamper(<soot:signet_antimony>);
 
-#Add Blocks
-val blocksStamper = {
+#Metal Stamper recipes
+val metalStamper as IItemStack[ILiquidStack][IIngredient][IIngredient] = {
 	<embers:stamp_flat> : {
 		null: {
 			<fluid:iron> * 1296 : <minecraft:iron_block>,
@@ -135,9 +32,9 @@ val blocksStamper = {
 			<fluid:electrum> * 1296 : <embers:block_electrum>
 		}
 	}
-} as IItemStack[ILiquidStack][IIngredient][IIngredient];
+};
 
-embers.addStamper(blocksStamper);
+embers.addStamper(metalStamper);
 
 //==================================
 ######## Mixer ########
@@ -151,12 +48,12 @@ embers.addMixer(<fluid:dawnstone> * 8, [<fluid:iron> * 4, <fluid:copper> * 4]);
 //==================================
 
 #Ashen Armor
-val ashenArmor = [
+val ashenArmor as IItemStack[] = [
 	<embers:ashen_cloak_head>,
 	<embers:ashen_cloak_chest>,
 	<embers:ashen_cloak_legs>,
 	<embers:ashen_cloak_boots>
-] as IItemStack[];
+];
 
 for item in ashenArmor {
 	embers.removeRepair(item);
@@ -176,7 +73,7 @@ embers.addAspect("antimony", <soot:signet_antimony>);
 embers.addAspect("inflictor", <embers:inflictor_gem>);
 
 #Exchange Alchemy recipes
-val exchangeAlchemy = {
+val exchangeAlchemy as IIngredient[][][int][IItemStack] = {
 	//Lv.0
 	<embers:adhesive> * 6 : {
 		0 : [
@@ -339,7 +236,7 @@ val exchangeAlchemy = {
 			[ashenBoots, ashenCloth, <embers:inflictor_gem>, ashenCloth, <ore:ingotDawnstone>]
 		]
 	}
-} as IIngredient[][][int][IItemStack];
+};
 
 embers.addAlchemy(exchangeAlchemy);
 
@@ -347,7 +244,7 @@ embers.addAlchemy(exchangeAlchemy);
 ######## Alchemical Mixer ########
 //==================================
 
-val alchemicalMixer = {
+val alchemicalMixer as ILiquidStack[][int][ILiquidStack] = {
 	//Lv.0
 	<fluid:lava> * 12 : {
 		0 : [
@@ -377,7 +274,7 @@ val alchemicalMixer = {
 			<fluid:ardite> * 6
 		]
 	}
-} as ILiquidStack[][int][ILiquidStack];
+};
 
 embers.addAlchemyM(alchemicalMixer);
 
@@ -407,7 +304,7 @@ embers.addFuelP(<minecraft:netherbrick>, 3.0);
 embers.addFuelP(<minecraft:blaze_powder>, 4.0);
 
 #Add Metal Coefficient
-embers.addMetalCoefficient(<ore:blockDawnstone>, 2.0);
+embers.addMetalCoef(<ore:blockDawnstone>, 2.0);
 
 //==================================
 ######## Misc ########

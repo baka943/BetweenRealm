@@ -8,8 +8,9 @@ import crafttweaker.player.IPlayer;
 
 import crafttweaker.events.IEventManager;
 import crafttweaker.event.PlayerLoggedInEvent;
-import crafttweaker.event.PlayerTickEvent;
 import crafttweaker.event.PlayerChangedDimensionEvent;
+import crafttweaker.event.PlayerTickEvent;
+import crafttweaker.event.PlayerFillBucketEvent;
 import crafttweaker.event.IBlockEvent;
 import crafttweaker.event.BlockHarvestDropsEvent;
 
@@ -19,59 +20,75 @@ import scripts.stages.stageAsh;
 
 #Something on Player Logged in the Game
 events.onPlayerLoggedIn(function(event as PlayerLoggedInEvent) {
+	var player as IPlayer = event.player;
 	var iData = {loggedIn : 0} as IData;
-	iData = iData + event.player.data;
+	iData = iData + player.data;
 
 	if(iData.loggedIn == 0) {
-		event.player.give(<embers:codex>);
-		event.player.give(<embers:tinker_hammer>.withLore(["§5If this's a pickaxe...", "Why?"]));
-		event.player.executeCommand("gamerule sendCommandFeedback false");
+		player.give(<embers:codex>);
+		player.give(<embers:tinker_hammer>.withLore(["§5If this's a pickaxe...", "Why?"]));
+		player.executeCommand("gamerule sendCommandFeedback false");
 	}
 
 	var patched = {loggedIn : iData.loggedIn.asInt() + 1} as IData;
-	event.player.update(patched);
+	player.update(patched);
 });
 
 #Something with Player Changed Dimension
 events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
 	var worldTo as string = event.toWorld.getDimensionType();
-	var iPlayer as IPlayer = event.player;
+	var player as IPlayer = event.player;
 
 	if(worldTo == "betweenlands") {
 		var iData = {toBetweenlands : 0, hasTalisman : 0} as IData;
-		iData = iData + iPlayer.data;
+		iData = iData + player.data;
 
 		if(iData.toBetweenlands == 0) {
-			iPlayer.sendChat("Hello " ~ iPlayer.name ~ ", Welcome to the dark and mysterious realm!");
-			iPlayer.addGameStage(stageSwamp.stage);
-			iPlayer.executeCommand("title " ~ iPlayer.name ~ " subtitle {\"text\":\"The dark and mysterious realm...\", \"color\":\"gray\", \"italic\":true}");
-			iPlayer.executeCommand("title " ~ iPlayer.name ~ " title {\"text\":\"Stage Swamp\", \"bold\":true}");
+			player.sendChat("Hello " ~ player.name ~ ", Welcome to the dark and mysterious realm!");
+			player.addGameStage(stageSwamp.stage);
+			player.executeCommand("title " ~ player.name ~ " subtitle {\"text\":\"The dark and mysterious realm...\", \"color\":\"gray\", \"italic\":true}");
+			player.executeCommand("title " ~ player.name ~ " title {\"text\":\"Stage Swamp\", \"bold\":true}");
 
 			if(iData.hasTalisman == 0) {
 				var mData = {modeIn : 1} as IData;
-				iPlayer.update(mData);
+				player.update(mData);
 			} else {
 				var mData = {modeIn : 0} as IData;
-				iPlayer.update(mData);
+				player.update(mData);
 			}
 		}
 
 		var patched = {toBetweenlands : iData.toBetweenlands.asInt() + 1} as IData;
-		iPlayer.update(patched);
+		player.update(patched);
 	}
 });
 
 #Something with Player Tick
 events.onPlayerTick(function(event as PlayerTickEvent) {
-	var stack as IItemStack = event.player.currentItem;
+	var player as IPlayer = event.player;
+	var stack as IItemStack = player.currentItem;
 	var iData = {hasTalisman : 0} as IData;
-	iData = iData + event.player.data;
+	iData = iData + player.data;
 
 	if(isNull(stack)) return;
 
 	if((talisman has stack) & (iData.hasTalisman == 0)) {
 		iData = {hasTalisman : 1} as IData;
-		event.player.update(iData);
+		player.update(iData);
+	}
+});
+
+#Something with Player Fill Bucket
+events.onPlayerFillBucket(function(event as PlayerFillBucketEvent) {
+	var bucket as IItemStack = event.emptyBucket;
+	var blockID = event.block.definition.id;
+	var player as IPlayer = event.player;
+	var iData = {modeIn : 0} as IData;
+	iData = iData + player.data;
+
+	if((bucket has ironBucket) & (iData.modeIn == 1) & (blockID == "thebetweenlands:swamp_water")) {
+		event.result = <minecraft:water_bucket>;
+		
 	}
 });
 
@@ -92,9 +109,10 @@ events.onBlockHarvestDrops(function(event as BlockHarvestDropsEvent) {
 
 });
 
-#Holding Items
+#Key Items
 static talisman as IItemStack = <thebetweenlands:swamp_talisman>;
 static lifeCrystal as IItemStack = <thebetweenlands:life_crystal>;
+static ironBucket as IItemStack = <minecraft:bucket>;
 
 #Block Harvest Drops List
 static blockHarvestDrops as IItemStack[][string] = {

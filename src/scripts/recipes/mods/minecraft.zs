@@ -1,11 +1,11 @@
-#Name: recipes.zs
+#Name: minecraft.zs
 #Author: baka943
 
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 
 //==================================
-######## Removal ########
+######## Removals ########
 //==================================
 
 #Leather
@@ -15,7 +15,7 @@ iRecipes.remove(<minecraft:leather>);
 ######## Shaped ########
 //==================================
 
-val shapedRecipes = {
+val shapedRecipes as IIngredient[][][][IItemStack] = {
 	<minecraft:armor_stand> : [
 		[
 			[<ore:stickWood>, <ore:stickWood>, <ore:stickWood>],
@@ -55,7 +55,7 @@ val shapedRecipes = {
 			[mudBrick, mudBrick, mudBrick]
 		]
 	]
-} as IIngredient[][][][IItemStack];
+};
 
 iRecipes.add(shapedRecipes, false);
 
@@ -70,22 +70,22 @@ iRecipes.add(shapedRecipes, false);
 //==================================
 
 #Remove Emerald
-furnace.remove(<minecraft:emerald>);
+iRecipes.removeFurnace(<minecraft:emerald>);
 
-#Modify
-val furnaceRecipes = {
-	<minecraft:coal:1> : [<ore:logWood>],
-	<minecraft:iron_ingot> : [<ore:oreIron>],
-	<minecraft:gold_ingot> : [<ore:oreGold>],
-	<minecraft:redstone> : [<ore:oreRedstone>],
-	<minecraft:dye:4> : [<ore:oreLapis>],
-	<minecraft:diamond> : [<ore:oreDiamond>],
-	<minecraft:quartz> : [<ore:oreQuartz>],
-	<embers:ingot_copper> : [<ore:oreCopper>],
-	<embers:ingot_tin> : [<ore:oreTin>],
-	<embers:ingot_lead> : [<ore:oreLead>],
-	<embers:ingot_nickel> : [<ore:oreNickel>],
-	<embers:ingot_silver> : [<ore:oreSilver>]
-} as IIngredient[][IItemStack];
+#Modify Ores recipes
+val furnaceRecipes as IIngredient[IItemStack] = {
+	<minecraft:coal:1> : <ore:logWood>,
+	<minecraft:iron_ingot> : <ore:oreIron>,
+	<minecraft:gold_ingot> : <ore:oreGold>,
+	<minecraft:redstone> : <ore:oreRedstone>,
+	<minecraft:dye:4> : <ore:oreLapis>,
+	<minecraft:diamond> : <ore:oreDiamond>,
+	<minecraft:quartz> : <ore:oreQuartz>,
+	<embers:ingot_copper> : <ore:oreCopper>,
+	<embers:ingot_tin> : <ore:oreTin>,
+	<embers:ingot_lead> : <ore:oreLead>,
+	<embers:ingot_nickel> : <ore:oreNickel>,
+	<embers:ingot_silver> : <ore:oreSilver>
+};
 
 iRecipes.addFurnace(furnaceRecipes);

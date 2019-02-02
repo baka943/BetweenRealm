@@ -1,10 +1,9 @@
-#Name: recipes.zs
+#Name: thebetweenlands.zs
 #Author: baka943
 
+import crafttweaker.data.IData;
 import crafttweaker.recipes.IRecipeFunction;
 import crafttweaker.recipes.IRecipeAction;
-
-import crafttweaker.data.IData;
 
 #Sulfur furnace
 iRecipes.add(<thebetweenlands:sulfur_furnace>, [[betweenstone, betweenstone, betweenstone], [betweenstone, sulfur, betweenstone], [betweenstone, betweenstone, betweenstone]]);
@@ -16,6 +15,7 @@ recipes.addShaped(<thebetweenlands:sulfur_torch> * 8,
 		[<minecraft:coal:1>],
 		[stickWeed]
 	],
+	
 	function(out, ins, cInfo) {
 		var iData = {multiTorch : 0} as IData;
 		iData = iData + cInfo.player.data;
@@ -26,6 +26,7 @@ recipes.addShaped(<thebetweenlands:sulfur_torch> * 8,
 
 		return null;
 	} as IRecipeFunction,
+
 	function(out, cInfo, player) {
 		if(!player.world.isRemote()) {
 			var iData = {multiTorch : 0} as IData;
