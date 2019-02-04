@@ -1,7 +1,7 @@
 #Name: alchemicalMixer.zs
 #Author: baka943
 
-import crafttweaker.liquid.ILquidStack;
+import crafttweaker.liquid.ILiquidStack;
 
 #Alchemical Mixer recipes
 val alchemicalMixer as ILiquidStack[][int][ILiquidStack] = {

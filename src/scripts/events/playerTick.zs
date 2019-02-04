@@ -6,6 +6,7 @@ import crafttweaker.event.PlayerTickEvent;
 
 import crafttweaker.item.IItemStack;
 import crafttweaker.data.IData;
+import crafttweaker.player.IPlayer;
 
 #Something with Player Tick
 events.onPlayerTick(function(event as PlayerTickEvent) {
@@ -19,7 +20,7 @@ events.onPlayerTick(function(event as PlayerTickEvent) {
 		player.update(iData);
 	}
 
-	iData = {alchemyTable : 0} as IData;
+	var iData = {alchemyTable : 0} as IData;
 	iData = iData + player.data;
 	if(iData.alchemyTable == 1) {
 		player.give(<minecraft:writable_book>.withLore(["§5To record any interesting thing..."]));

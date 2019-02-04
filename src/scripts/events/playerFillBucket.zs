@@ -6,6 +6,7 @@ import crafttweaker.event.PlayerFillBucketEvent;
 
 import crafttweaker.item.IItemStack;
 import crafttweaker.data.IData;
+import crafttweaker.player.IPlayer;
 
 #Something with Player Fill Bucket
 events.onPlayerFillBucket(function(event as PlayerFillBucketEvent) {

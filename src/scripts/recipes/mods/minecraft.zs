@@ -83,6 +83,8 @@ recipes.addShapeless(<minecraft:water_bucket>,
 	} as IRecipeFunction
 );
 
+static swampWaterBucket as IItemStack = <forge:bucketfilled>.withTag({FluidName: "swamp_water", Amount: 1000});
+
 //==================================
 ######## Furnace ########
 //==================================
@@ -107,6 +109,3 @@ val furnaceRecipes as IIngredient[IItemStack] = {
 };
 
 iRecipes.addFurnace(furnaceRecipes);
-
-#Key Items
-static swampWaterBucket as IItemStack = <forge:bucketfilled>.withTag({FluidName: "swamp_water", Amount: 1000});

@@ -5,6 +5,7 @@ import crafttweaker.events.IEventManager;
 import crafttweaker.event.PlayerLoggedInEvent;
 
 import crafttweaker.data.IData;
+import crafttweaker.player.IPlayer;
 
 #Something with Player Logged in the Game
 events.onPlayerLoggedIn(function(event as PlayerLoggedInEvent) {

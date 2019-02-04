@@ -5,6 +5,7 @@ import crafttweaker.events.IEventManager;
 import crafttweaker.event.PlayerChangedDimensionEvent;
 
 import crafttweaker.data.IData;
+import crafttweaker.player.IPlayer;
 
 import scripts.stages.stageSwamp;
 
