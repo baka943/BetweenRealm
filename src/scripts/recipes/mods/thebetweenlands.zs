@@ -17,10 +17,9 @@ recipes.addShaped(<thebetweenlands:sulfur_torch> * 8,
 	],
 	
 	function(out, ins, cInfo) {
-		var iData = {multiTorch : 0} as IData;
-		iData = iData + cInfo.player.data;
+		var data as IData = {multiTorch : 0, modeIn : 0} + cInfo.player.data;
 
-		if(iData.modeIn == 1 | iData.multiTorch < 16) {
+		if(data.modeIn == 1 | data.multiTorch < 16) {
 			return out;
 		}
 
@@ -29,16 +28,15 @@ recipes.addShaped(<thebetweenlands:sulfur_torch> * 8,
 
 	function(out, cInfo, player) {
 		if(!player.world.isRemote()) {
-			var iData = {multiTorch : 0} as IData;
-			iData = iData + player.data;
+			var data as IData = {multiTorch : 0, modeIn : 0} + player.data;
 
-			if(iData.multiTorch == 15) {
+			if(data.multiTorch == 15) {
 				player.sendChat("Now you can't make it anymore!");
 			}
 
-			if(iData.modeIn == 0) {
-				iData = {multiTorch : iData.multiTorch.asInt() + 1} as IData;
-				player.update(iData);
+			if(data.modeIn == 0) {
+				data = {multiTorch : data.multiTorch.asInt() + 1};
+				player.update(data);
 			}
 		}
 	} as IRecipeAction

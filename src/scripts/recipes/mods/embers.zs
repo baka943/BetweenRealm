@@ -36,12 +36,11 @@ recipes.addShaped(<embers:alchemy_tablet>,
 
 	function(out, cInfo, player) {
 		if(!player.world.isRemote()) {
-			var iData = {alchemyTable : 0} as IData;
-			iData = iData + player.data;
+			var data as IData = {alchemyTable : 0} + player.data;
 			
-			if(iData.alchemyTable == 0) {
-				iData = {alchemyTable : 1} as IData;
-				player.update(iData);
+			if(data.alchemyTable == 0) {
+				data = {alchemyTable : 1};
+				player.update(data);
 			}
 		}
 	} as IRecipeAction
@@ -109,4 +108,4 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 iRecipes.add(shapedRecipes, false);
 
 #Shapeless recipes
-iRecipes.add(<embers:blend_caminite> * 8, [<ore:sand>, boneMeal, boneMeal, boneMeal, rubberBall]);
+iRecipes.add(<embers:blend_caminite> * 8, [rubberBall, boneMeal, boneMeal, boneMeal, <ore:sand>]);

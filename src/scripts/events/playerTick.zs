@@ -12,22 +12,20 @@ import crafttweaker.player.IPlayer;
 events.onPlayerTick(function(event as PlayerTickEvent) {
 	var player as IPlayer = event.player;
 	var stack as IItemStack = player.currentItem;
+	var data as IData = null;
 
 	if(isNull(stack)) return;
 
-	if(talisman has stack) {
-		var iData = {hasTalisman : 1} as IData;
-		player.update(iData);
+	if(stack.matches(<thebetweenlands:swamp_talisman>)) {
+		data = {hasTalisman : 1};
+		player.update(data);
 	}
 
-	var iData = {alchemyTable : 0} as IData;
-	iData = iData + player.data;
-	if(iData.alchemyTable == 1) {
+	data = {alchemyTable : 0} + player.data;
+	if(data.alchemyTable == 1) {
 		player.give(<minecraft:writable_book>.withLore(["§5To record any interesting thing..."]));
 
-		iData = {alchemyTable : 2} as IData;
-		player.update(iData);
+		data = {alchemyTable : 2};
+		player.update(data);
 	}
 });
-
-static talisman as IItemStack = <thebetweenlands:swamp_talisman>;

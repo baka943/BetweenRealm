@@ -16,10 +16,9 @@ events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
 	var player as IPlayer = event.player;
 
 	if(worldTo == "betweenlands") {
-		var iData = {toBetweenlands : 0, hasTalisman : 0} as IData;
-		iData = iData + player.data;
+		var data as IData = {toBetweenlands : 0, hasTalisman : 0} + player.data;
 
-		if(iData.toBetweenlands == 0) {
+		if(data.toBetweenlands == 0) {
 			player.give(<thebetweenlands:empty_amate_map>);
 			player.sendChat("Hello " ~ player.name ~ ", Welcome to the dark and mysterious realm!");
 
@@ -28,18 +27,18 @@ events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
 			
 			player.addGameStage(stageSwamp.stage);
 
-			if(iData.hasTalisman == 0) {
-				iData = {modeIn : 1} as IData;
-				player.update(iData);
+			if(data.hasTalisman == 0) {
+				data = {modeIn : 1};
+				player.update(data);
 
 				player.addGameStage(stageTree.stage);
 			} else {
-				iData = {modeIn : 0} as IData;
-				player.update(iData);
+				data = {modeIn : 0};
+				player.update(data);
 			}
 
-			iData = {toBetweenlands : 1} as IData;
-			player.update(iData);
+			data = {toBetweenlands : 1};
+			player.update(data);
 		}
 	}
 });

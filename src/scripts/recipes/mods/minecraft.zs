@@ -66,11 +66,6 @@ iRecipes.add(shapedRecipes, false);
 ######## Shapeless ########
 //==================================
 
-#Water Bucket
-iRecipes.add(<minecraft:water_bucket>, [swampWaterBucket, <minecraft:coal:1>]);
-
-static swampWaterBucket as IItemStack = <forge:bucketfilled>.withTag({FluidName: "swamp_water", Amount: 1000});
-
 //==================================
 ######## Furnace ########
 //==================================

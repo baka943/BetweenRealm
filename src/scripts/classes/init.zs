@@ -7,3 +7,4 @@ global embers as scripts.classes.mods.embers.Embers = scripts.classes.mods.ember
 
 #Recipes Init
 global iRecipes as scripts.classes.iRecipes.IRecipes = scripts.classes.iRecipes.IRecipes();
+global utils as scripts.classes.utils.Utils = scripts.classes.utils.Utils();
