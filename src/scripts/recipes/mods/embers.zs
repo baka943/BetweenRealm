@@ -5,7 +5,6 @@ import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 
 import crafttweaker.data.IData;
-import crafttweaker.recipes.IRecipeFunction;
 import crafttweaker.recipes.IRecipeAction;
 
 //==================================
@@ -17,6 +16,9 @@ iRecipes.remove(<embers:alchemy_tablet>);
 
 #Ashen Cloak Armors
 iRecipes.remove("embers:ashen_cloak_.*");
+
+#Blend Caminite
+iRecipes.remove(<embers:blend_caminite>);
 
 //==================================
 ######## Recipes ########
@@ -105,3 +107,6 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 };
 
 iRecipes.add(shapedRecipes, false);
+
+#Shapeless recipes
+iRecipes.add(<embers:blend_caminite> * 8, [<ore:sand>, boneMeal, boneMeal, boneMeal, rubberBall]);

@@ -6,3 +6,6 @@ import mods.tconstruct.Melting;
 #Liquid Dirt
 Melting.removeRecipe(<liquid:dirt>, <minecraft:dirt:*>);
 Melting.addRecipe(<liquid:dirt> * 144, <ore:dirt>, 454);
+
+#Liquid Clay
+mods.tconstruct.Casting.addBasinRecipe(<minecraft:clay>, null, <liquid:clay>, 576);

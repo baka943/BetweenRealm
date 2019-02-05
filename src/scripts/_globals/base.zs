@@ -12,6 +12,7 @@ global sulfur as IItemStack = <thebetweenlands:items_misc:18>;
 global mossyCragrockTop as IItemStack = <thebetweenlands:cragrock:1>;
 global mossyCragrockBottom as IItemStack = <thebetweenlands:cragrock:2>;
 global stickWeed as IItemStack = <thebetweenlands:items_misc:20>;
+global rubberBall as IItemStack = <thebetweenlands:items_misc:23>;
 
 global ash as IItemStack = <embers:dust_ash>;
 global ashenCloth as IItemStack = <embers:ashen_cloth>;

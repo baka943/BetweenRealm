@@ -68,32 +68,32 @@ zenClass Embers {
 				for recipe in inner {
 					if(level == 0) {
 						Alchemy.add(item, recipe, {
-							"iron": 0 to 24,
-							"copper": 32 to 48
+							"iron": 0 .. 24,
+							"copper": 32 .. 48
 						});
 					} else if(level == 1) {
 						Alchemy.add(item, recipe, {
-							"copper": 0 to 12,
-							"lead": 0 to 12,
-							"silver": 32 to 48
+							"copper": 0 .. 12,
+							"lead": 0 .. 12,
+							"silver": 32 .. 48
 						});
 					} else if(level == 2) {
 						Alchemy.add(item, recipe, {
-							"lead": 0 to 12,
-							"silver": 0 to 12,
-							"dawnstone": 32 to 48
+							"lead": 0 .. 12,
+							"silver": 0 .. 12,
+							"dawnstone": 32 .. 48
 						});
 					} else if(level == 3) {
 						Alchemy.add(item, recipe, {
-							"silver": 0 to 12,
-							"dawnstone": 0 to 12,
-							"antimony": 32 to 48
+							"silver": 0 .. 12,
+							"dawnstone": 0 .. 12,
+							"antimony": 32 .. 48
 						});
 					} else {
 						Alchemy.add(item, recipe, {
-							"dawnstone": 0 to 12,
-							"antimony": 0 to 12,
-							"inflictor": 32 to 48
+							"dawnstone": 0 .. 12,
+							"antimony": 0 .. 12,
+							"inflictor": 32 .. 48
 						});
 					}
 				}
@@ -170,9 +170,11 @@ zenClass Embers {
 	}
 
 	#Add Melter recipes
-	function addMelter(map as IIngredient[ILiquidStack]) {
-		for output, input in map {
-			Melter.add(output, input);
+	function addMelter(map as IIngredient[][ILiquidStack]) {
+		for output, inputs in map {
+			for input in inputs {
+				Melter.add(output, input);
+			}
 		}
 	}
 
@@ -226,21 +228,21 @@ zenClass Embers {
 			for level, recipe in mixerRecipes {
 				if(level == 0) {
 					AlchemicalMixer.add(output, recipe, {
-						"iron": 0 to 32,
-						"lead": 0 to 32,
-						"dawnstone": 48 to 64
+						"iron": 0 .. 32,
+						"lead": 0 .. 32,
+						"dawnstone": 48 .. 64
 					});
 				} else if(level == 1) {
 					AlchemicalMixer.add(output, recipe, {
-						"copper": 0 to 32,
-						"silver": 0 to 32,
-						"antimony": 48 to 64
+						"copper": 0 .. 32,
+						"silver": 0 .. 32,
+						"antimony": 48 .. 64
 					});
 				} else {
 					AlchemicalMixer.add(output, recipe, {
-						"dawnstone": 0 to 32,
-						"antimony": 0 to 32,
-						"inflictor": 48 to 64
+						"dawnstone": 0 .. 32,
+						"antimony": 0 .. 32,
+						"inflictor": 48 .. 64
 					});
 				}
 			}

@@ -18,7 +18,6 @@ for item in loadedMods["tombstone"].items {
 
 #Ores
 val ores as IIngredient[] = [
-	<minecraft:emerald_ore>,
 	<embers:ore_copper>,
 	<embers:ore_lead>,
 	<embers:ore_tin>,

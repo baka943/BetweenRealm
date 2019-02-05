@@ -26,6 +26,11 @@ val metalStamper as IItemStack[ILiquidStack][IIngredient][IIngredient] = {
 			<fluid:bronze> * 1296 : <embers:block_bronze>,
 			<fluid:electrum> * 1296 : <embers:block_electrum>
 		}
+	},
+	<embers:stamp_bar> : {
+		null : {
+			<fluid:stone> * 72 : searedBrick
+		}
 	}
 };
 

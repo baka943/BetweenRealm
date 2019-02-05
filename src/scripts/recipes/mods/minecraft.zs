@@ -67,30 +67,13 @@ iRecipes.add(shapedRecipes, false);
 //==================================
 
 #Water Bucket
-recipes.addShapeless(<minecraft:water_bucket>,
-	
-	[swampWaterBucket, <minecraft:coal:1>],
-
-	function(out, ins, cInfo) {
-		var iData = {modeIn : 0} as IData;
-		iData = iData + cInfo.player.data;
-
-		if(iData.modeIn == 0) {
-			return out;
-		}
-
-		return null;
-	} as IRecipeFunction
-);
+iRecipes.add(<minecraft:water_bucket>, [swampWaterBucket, <minecraft:coal:1>]);
 
 static swampWaterBucket as IItemStack = <forge:bucketfilled>.withTag({FluidName: "swamp_water", Amount: 1000});
 
 //==================================
 ######## Furnace ########
 //==================================
-
-#Remove Emerald
-iRecipes.removeFurnace(<minecraft:emerald>);
 
 #Modify Ores recipes
 val furnaceRecipes as IIngredient[IItemStack] = {
@@ -100,12 +83,12 @@ val furnaceRecipes as IIngredient[IItemStack] = {
 	<minecraft:redstone> : <ore:oreRedstone>,
 	<minecraft:dye:4> : <ore:oreLapis>,
 	<minecraft:diamond> : <ore:oreDiamond>,
-	<minecraft:quartz> : <ore:oreQuartz>,
-	<embers:ingot_copper> : <ore:oreCopper>,
-	<embers:ingot_tin> : <ore:oreTin>,
-	<embers:ingot_lead> : <ore:oreLead>,
-	<embers:ingot_nickel> : <ore:oreNickel>,
-	<embers:ingot_silver> : <ore:oreSilver>
+	<minecraft:quartz> : <betweenores:between_quartz_ore> | <minecraft:quartz_ore>,
+	<embers:ingot_copper> : <betweenores:between_copper_ore>,
+	<embers:ingot_tin> : <betweenores:between_tin_ore>,
+	<embers:ingot_lead> : <betweenores:between_lead_ore>,
+	<embers:ingot_nickel> : <betweenores:between_nickel_ore>,
+	<embers:ingot_silver> : <betweenores:between_silver_ore>
 };
 
 iRecipes.addFurnace(furnaceRecipes);

@@ -31,10 +31,13 @@ val exchangeAlchemy as IIngredient[][][int][IItemStack] = {
 	},
 
 	//Lv.1
-	<minecraft:netherrack> : {
+	<minecraft:netherrack> * 2 : {
 		1 : [
 			[redstone, betweenstone, ash, betweenstone, ash],
 			[redstone, ash, betweenstone, ash, betweenstone]
+		],
+		2 : [
+			[<minecraft:netherrack>, null, null, null, null]
 		]
 	},
 	<embers:tyrfing> : {
@@ -59,24 +62,27 @@ val exchangeAlchemy as IIngredient[][][int][IItemStack] = {
 		2 : [
 			[<minecraft:coal:1>, sulfur, ash, sulfur, ash],
 			[<minecraft:coal:1>, ash, sulfur, ash, sulfur]
-		]
-	},
-	<minecraft:string> * 3 : {
-		2 : [
-			[<minecraft:paper>, reedRope, <ore:sugarcane>, reedRope, <ore:sugarcane>],
-			[<minecraft:paper>, <ore:sugarcane>, reedRope, <ore:sugarcane>, reedRope]
+		],
+		3 : [
+			[<minecraft:coal>, null, null, null, null]
 		]
 	},
 	<minecraft:gunpowder> * 3 : {
 		2 : [
 			[redstone, sulfur, <ore:coal>, sulfur, <ore:coal>],
 			[redstone, <ore:coal>, sulfur, <ore:coal>, sulfur]
+		],
+		3 : [
+			[<minecraft:gunpowder>, null, null, null, null]
 		]
 	},
 	<minecraft:glowstone_dust> * 3 : {
 		2 : [
 			[redstone, emberShard, <ore:gunpowder>, emberShard, <ore:gunpowder>],
 			[redstone, <ore:gunpowder>, emberShard, <ore:gunpowder>, emberShard]
+		],
+		3 : [
+			[<minecraft:glowstone_dust>, null, null, null, null]
 		]
 	},
 	<embers:archaic_brick> * 4 : {
@@ -125,12 +131,18 @@ val exchangeAlchemy as IIngredient[][][int][IItemStack] = {
 		3 : [
 			[<minecraft:diamond>, <ore:plateGold>, <ore:ingotAntimony>, <ore:plateGold>, <ore:ingotAntimony>],
 			[<minecraft:diamond>, <ore:ingotAntimony>, <ore:plateGold>, <ore:ingotAntimony>, <ore:plateGold>]
+		],
+		4 : [
+			[<minecraft:emerald>, null, null, null, null]
 		]
 	},
 	<minecraft:blaze_powder> * 3 : {
 		3 : [
 			[<embers:dust_ember>, redstone, <ore:gunpowder>, redstone, <ore:gunpowder>],
 			[<embers:dust_ember>, <ore:gunpowder>, redstone, <ore:gunpowder>, redstone]
+		],
+		4 : [
+			[<minecraft:blaze_powder>, null, null, null, null]
 		]
 	},
 	<embers:eldritch_insignia> : {

@@ -23,6 +23,10 @@ zenClass IRecipes {
 		}
 	}
 
+	function add(item as IItemStack, recipe as IIngredient[]) {
+		recipes.addShapeless(item, recipe);
+	}
+
 	#Handle Shaped and Mirrored recipes
 	function add(map as IIngredient[][][][IItemStack], isMirrored as bool) {
 		for item, itemRecipes in map {
@@ -36,8 +40,10 @@ zenClass IRecipes {
 		}
 	}
 
-	function add(item as IItemStack, recipe as IIngredient[][]) {
-		recipes.addShaped(item, recipe);
+	function add(item as IItemStack, recipe as IIngredient[][], isMirrored as bool) {
+		if(isMirrored) {
+			recipes.addShapedMirrored(item, recipe);
+		} else recipes.addShaped(item, recipe);
 	}
 
 	#Remove recipes
