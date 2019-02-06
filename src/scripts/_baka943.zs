@@ -12,3 +12,5 @@ mossCragrock.add(
 	mossyCragrockTop,
 	mossyCragrockBottom
 );
+
+hopper.add(<thebetweenlands:syrmorite_hopper>);

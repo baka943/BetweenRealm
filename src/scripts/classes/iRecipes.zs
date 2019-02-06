@@ -101,7 +101,7 @@ zenClass IRecipes {
 		if (removeRecipe) {
 			for toHide in removals {
 				mods.jei.JEI.removeAndHide(toHide);
-				ZenStager.getStage(stageUnused.stage).addIngredient(toHide, false);
+				ZenStager.getStage(stageUnused.stage).addIngredient(toHide);
 			}
 		} else {
 			for toHide in removals {

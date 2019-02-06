@@ -14,7 +14,7 @@ events.onPlayerLoggedIn(function(event as PlayerLoggedInEvent) {
 
 	if(data.loggedIn == 0) {
 		player.give(<embers:codex>);
-		player.give(<embers:tinker_hammer>.withLore(["§5If this's a pickaxe...", "Why?"]));
+		player.give(<embers:tinker_hammer>.withLore(["§5Why?"]));
 		player.executeCommand("gamerule sendCommandFeedback false");
 	}
 

@@ -6,7 +6,14 @@ import crafttweaker.recipes.IRecipeFunction;
 import crafttweaker.recipes.IRecipeAction;
 
 #Sulfur furnace
-iRecipes.add(<thebetweenlands:sulfur_furnace>, [[betweenstone, betweenstone, betweenstone], [betweenstone, sulfur, betweenstone], [betweenstone, betweenstone, betweenstone]], false);
+iRecipes.add(<thebetweenlands:sulfur_furnace>,
+	[
+		[betweenstone, betweenstone, betweenstone],
+		[betweenstone, sulfur, betweenstone],
+		[betweenstone, betweenstone, betweenstone]
+	],
+	false
+);
 
 #Sulfur Torch
 recipes.addShaped(<thebetweenlands:sulfur_torch> * 8,

@@ -3,14 +3,10 @@
 
 import crafttweaker.item.IItemStack;
 
-#Water Bucket recipes
-val buckets as IItemStack[] = [
-	<forge:bucketfilled>,
-	<thebetweenlands:bl_bucket:0>,
-	<thebetweenlands:bl_bucket:1>
-];
+import scripts.recipes.utils.allBuckets;
 
-for bucket in buckets {
+#Water Bucket recipes
+for bucket in allBuckets {
 	var output as IItemStack = utils.formatBucket(bucket, "water");
 	var input as IItemStack = utils.formatBucket(bucket, "swamp_water");
 

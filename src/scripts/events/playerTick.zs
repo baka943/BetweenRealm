@@ -10,9 +10,9 @@ import crafttweaker.player.IPlayer;
 
 #Something with Player Tick
 events.onPlayerTick(function(event as PlayerTickEvent) {
+	var data as IData = null;
 	var player as IPlayer = event.player;
 	var stack as IItemStack = player.currentItem;
-	var data as IData = null;
 
 	if(isNull(stack)) return;
 

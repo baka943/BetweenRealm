@@ -54,8 +54,14 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 	],
 	<bonsaitrees:bonsaipot> : [
 		[
-			[mudBrick, <ore:dirt>, mudBrick],
-			[mudBrick, mudBrick, mudBrick]
+			[caminiteBrick, null, caminiteBrick],
+			[caminiteBrick, caminiteBrick, caminiteBrick]
+		]
+	],
+	<bonsaitrees:bonsaipot:1> : [
+		[
+			[<bonsaitrees:bonsaipot>],
+			[hopper]
 		]
 	]
 };
@@ -77,7 +83,7 @@ val furnaceRecipes as IIngredient[IItemStack] = {
 	<minecraft:gold_ingot> : <ore:oreGold>,
 	<minecraft:redstone> : <ore:oreRedstone>,
 	<minecraft:dye:4> : <ore:oreLapis>,
-	<minecraft:diamond> : <ore:oreDiamond>,
+	diamond : <ore:oreDiamond>,
 	<minecraft:quartz> : <betweenores:between_quartz_ore> | <minecraft:quartz_ore>,
 	<embers:ingot_copper> : <betweenores:between_copper_ore>,
 	<embers:ingot_tin> : <betweenores:between_tin_ore>,

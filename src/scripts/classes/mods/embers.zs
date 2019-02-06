@@ -131,20 +131,8 @@ zenClass Embers {
 	//==================================
 	######## Mixer ########
 	//==================================
-	
-	#Remove Mixer recipes
-	function removeMixer(outputs as ILiquidStack[]) {
-		for fluid in outputs {
-			Mixer.remove(fluid);
-		}
-	}
 
 	#Add Mixer recipes
-	function addMixer(output as ILiquidStack, inputs as ILiquidStack[]) {
-		Mixer.remove(output);
-		Mixer.add(output, inputs);
-	}
-	
 	function addMixer(map as ILiquidStack[][ILiquidStack]) {
 		for output, inputs in map {
 				Mixer.remove(output);
@@ -170,10 +158,12 @@ zenClass Embers {
 	}
 
 	#Add Melter recipes
-	function addMelter(map as IIngredient[][ILiquidStack]) {
-		for output, inputs in map {
-			for input in inputs {
-				Melter.add(output, input);
+	function addMelter(map as IIngredient[][int][ILiquidStack]) {
+		for output, recipes in map {
+			for amount, inputs in recipes {
+				for input in inputs {
+					Melter.add(output * amount, input);
+				}
 			}
 		}
 	}

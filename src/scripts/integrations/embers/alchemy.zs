@@ -109,7 +109,7 @@ val exchangeAlchemy as IIngredient[][][int][IItemStack] = {
 			[<ore:gemQuartz>, emberShard, emberShard, emberShard, emberShard]
 		]
 	},
-	<embers:ember_cluster> : {
+	emberCluster : {
 		2 : [
 			[emberCrystal, emberShard, emberShard, emberShard, emberShard]
 		]
@@ -127,13 +127,13 @@ val exchangeAlchemy as IIngredient[][][int][IItemStack] = {
 	},
 
 	//Lv.3
-	<minecraft:emerald> : {
+	emerald : {
 		3 : [
-			[<minecraft:diamond>, <ore:plateGold>, <ore:ingotAntimony>, <ore:plateGold>, <ore:ingotAntimony>],
-			[<minecraft:diamond>, <ore:ingotAntimony>, <ore:plateGold>, <ore:ingotAntimony>, <ore:plateGold>]
+			[diamond, <ore:plateGold>, <ore:ingotAntimony>, <ore:plateGold>, <ore:ingotAntimony>],
+			[diamond, <ore:ingotAntimony>, <ore:plateGold>, <ore:ingotAntimony>, <ore:plateGold>]
 		],
 		4 : [
-			[<minecraft:emerald>, null, null, null, null]
+			[emerald, null, null, null, null]
 		]
 	},
 	<minecraft:blaze_powder> * 3 : {
@@ -183,7 +183,23 @@ val exchangeAlchemy as IIngredient[][][int][IItemStack] = {
 		4 : [
 			[ashenBoots, ashenCloth, <embers:inflictor_gem>, ashenCloth, <ore:ingotDawnstone>]
 		]
+	},
+	aetheriumShard : {
+		4 : [
+			[diamond, emerald, emerald, emerald, emerald]
+		]
+	},
+	focusCrystal : {
+		4 : [
+			[emberCluster, emberCrystal, emberCrystal, emberCrystal, emberCrystal]
+		]
 	}
 };
 
 embers.addAlchemy(exchangeAlchemy);
+
+#Ashen Armor Core
+static ashenHead as IItemStack = <conarm:helmet_core>.withTag({Material: "ashenfabric"});
+static ashenChest as IItemStack = <conarm:chest_core>.withTag({Material: "ashenfabric"});
+static ashenLegs as IItemStack = <conarm:leggings_core>.withTag({Material: "ashenfabric"});
+static ashenBoots as IItemStack = <conarm:boots_core>.withTag({Material: "ashenfabric"});
