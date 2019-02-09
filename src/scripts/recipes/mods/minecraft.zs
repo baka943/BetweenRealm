@@ -83,7 +83,7 @@ val furnaceRecipes as IIngredient[IItemStack] = {
 	<minecraft:gold_ingot> : <ore:oreGold>,
 	<minecraft:redstone> : <ore:oreRedstone>,
 	<minecraft:dye:4> : <ore:oreLapis>,
-	diamond : <ore:oreDiamond>,
+	<minecraft:diamond> : <ore:oreDiamond>,
 	<minecraft:quartz> : <betweenores:between_quartz_ore> | <minecraft:quartz_ore>,
 	<embers:ingot_copper> : <betweenores:between_copper_ore>,
 	<embers:ingot_tin> : <betweenores:between_tin_ore>,

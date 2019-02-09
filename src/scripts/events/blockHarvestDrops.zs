@@ -24,7 +24,7 @@ events.onBlockHarvestDrops(function(event as BlockHarvestDropsEvent) {
 
 		if(blockID == "thebetweenlands:swamp_tallgrass") {
 			event.drops = [<minecraft:wheat_seeds>, <minecraft:carrot>, <minecraft:potato>];
-			event.dropChance = 0.2F;
+			event.dropChance = 0.1F;
 		}
 	}
 

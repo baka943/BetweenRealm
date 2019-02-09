@@ -103,7 +103,7 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 			[null, <ore:ingotLead>]
 		]
 	],
-	aetheriumLens : [
+	<aetherworks:item_resource:2> : [
 		[
 			[null, <ore:ingotBronze>],
 			[<ore:ingotBronze>, aetheriumShard, <ore:ingotBronze>],

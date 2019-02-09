@@ -22,12 +22,20 @@ global emberShard as IItemStack = <embers:shard_ember>;
 global emberCrystal as IItemStack = <embers:crystal_ember>;
 global emberCluster as IItemStack = <embers:ember_cluster>;
 
-global aetheriumShard as IItemStack = <item:aetherworks:item_resource>;
-global focusCrystal as IItemStack = <item:aetherworks:item_resource:1>;
-global aetheriumLens as IItemStack = <item:aetherworks:item_resource:2>;
+global aetheriumShard as IItemStack = <aetherworks:item_resource>;
+global focusCrystal as IItemStack = <aetherworks:item_resource:1>;
+global aetheriumLens as IItemStack = <aetherworks:item_resource:2>;
 
 global searedBrick as IItemStack = <tconstruct:materials>;
+global mudBrick as IItemStack = <tconstruct:materials:1>;
+global driedBrick as IItemStack = <tconstruct:materials:2>;
 global mossBall as IItemStack = <tconstruct:materials:18>;
+global blockCobalt as IItemStack = <tconstruct:metal>;
+global blockArdite as IItemStack = <tconstruct:metal:1>;
+global blockManyullyn as IItemStack = <tconstruct:metal:2>;
+global ingotCobalt as IItemStack = <tconstruct:ingots>;
+global ingotArdite as IItemStack = <tconstruct:ingots:1>;
+global ingotManyullyn as IItemStack = <tconstruct:ingots:2>;
 
 global boneMeal as IItemStack = <minecraft:dye:15>;
 global clayBall as IItemStack = <minecraft:clay_ball>;
@@ -36,4 +44,12 @@ global diamond as IItemStack = <minecraft:diamond>;
 global emerald as IItemStack = <minecraft:emerald>;
 
 global redstone as IOreDictEntry = <ore:dustRedstone>;
+global hopper as IOreDictEntry = <ore:hopper>;
 global mossCragrock as IOreDictEntry = <ore:mossCragrock>;
+
+#All the Buckets in this pack
+global buckets as IItemStack[] = [
+	<forge:bucketfilled>,
+	<thebetweenlands:bl_bucket>,
+	<thebetweenlands:bl_bucket:1>
+];

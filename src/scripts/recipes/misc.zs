@@ -3,12 +3,10 @@
 
 import crafttweaker.item.IItemStack;
 
-import scripts.recipes.utils.allBuckets;
-
 #Water Bucket recipes
-for bucket in allBuckets {
-	var output as IItemStack = utils.formatBucket(bucket, "water");
-	var input as IItemStack = utils.formatBucket(bucket, "swamp_water");
+for bucket in buckets {
+	var output as IItemStack = scripts.utils.formatBucket(bucket, "water");
+	var input as IItemStack = scripts.utils.formatBucket(bucket, "swamp_water");
 
-	iRecipes.add(ouput, [input, <minecraft:coal:1>]);
+	iRecipes.add(output, [input, <minecraft:coal:1>]);
 }

@@ -2,35 +2,40 @@
 #Name: utils.zs
 #Author: baka943
 
+import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
-
 import crafttweaker.data.IData;
+
+import mods.zenstages.ZenStager;
+import mods.recipestages.Recipes;
+
+import scripts.stages.stageUnused;
 
 zenClass Utils {
 	zenConstructor() {}
 
-	#Format the Bucket with liquid NBT
-	function formatBucket(bucket as IItemStack, liquidName as string) as IItemStack {
-		var data as IData = null;
+	#Hide Items with JEI
+	function hideItems(removals as IIngredient[]) {
+		hideItems(removals, false);
+	}
 
-		if(bucket.matches(<thebetweenlands:bl_bucket:1>) | bucket.matches(<thebetweenlands:bl_bucket:0>)) {
-			data = {Fluid: {FluidName: liquidName, Amount: 1000}};
+	function hideItems(removals as IIngredient[], removeRecipe as bool) {
+		if (removeRecipe) {
+			for toHide in removals {
+				mods.jei.JEI.removeAndHide(toHide);
+				ZenStager.getStage(stageUnused.stage).addIngredient(toHide);
+			}
 		} else {
-			data = {FluidName: liquidName, Amount: 1000};
-		}
-
-		if (bucket.definition.owner == "forge") {
-			if (liquidName == "lava") {
-				return <minecraft:lava_bucket:0>;
-			} else if (liquidName == "milk") {
-				return <minecraft:milk_bucket:0>;
-			} else if (liquidName == "water") {
-				return <minecraft:water_bucket:0>;
+			for toHide in removals {
+				for toHideItem in toHide.items {
+					mods.jei.JEI.hide(toHideItem);
+				}
 			}
 		}
+	}
 
-		if((liquidName == "milk") & (bucket.definition.owner == "thebetweenlands")) return null;
-
-		return bucket.withTag(data);
+	#Set the stage of a non staged recipe
+	function addStage(stageName as string, stack as IItemStack) {
+		Recipes.setRecipeStage(stageName, stack);
 	}
 }

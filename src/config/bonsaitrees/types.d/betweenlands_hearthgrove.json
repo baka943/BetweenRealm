@@ -17,5 +17,6 @@
             "data": 0,
             "type": "SAPLING"
         }
-    ]
+	],
+	"compatibleSoilTags": ["swamp_dirt"]
 }

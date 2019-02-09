@@ -5,17 +5,20 @@
         "name": "thebetweenlands:sapling_weedwood",
         "data": 0
     },
-    "growTimeMultiplier": 1.5,
+    "growTimeMultiplier": 3.5,
     "drops": [
         {
             "name": "thebetweenlands:log_weedwood",
             "data": 0,
-            "type": "WOOD"
+			"type": "CUSTOM",
+			"count": 64,
+			"chance": 1.0
         },
         {
             "name": "thebetweenlands:sapling_weedwood",
             "data": 0,
             "type": "SAPLING"
         }
-    ]
+    ],
+	"compatibleSoilTags": ["swamp_dirt"]
 }

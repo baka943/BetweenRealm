@@ -22,5 +22,6 @@
             "data": 0,
             "type": "FRUIT"
         }
-    ]
+    ],
+	"compatibleSoilTags": ["swamp_dirt"]
 }

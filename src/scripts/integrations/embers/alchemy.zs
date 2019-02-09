@@ -109,7 +109,7 @@ val exchangeAlchemy as IIngredient[][][int][IItemStack] = {
 			[<ore:gemQuartz>, emberShard, emberShard, emberShard, emberShard]
 		]
 	},
-	emberCluster : {
+	<embers:ember_cluster> : {
 		2 : [
 			[emberCrystal, emberShard, emberShard, emberShard, emberShard]
 		]
@@ -127,7 +127,7 @@ val exchangeAlchemy as IIngredient[][][int][IItemStack] = {
 	},
 
 	//Lv.3
-	emerald : {
+	<minecraft:emerald> : {
 		3 : [
 			[diamond, <ore:plateGold>, <ore:ingotAntimony>, <ore:plateGold>, <ore:ingotAntimony>],
 			[diamond, <ore:ingotAntimony>, <ore:plateGold>, <ore:ingotAntimony>, <ore:plateGold>]
@@ -184,12 +184,12 @@ val exchangeAlchemy as IIngredient[][][int][IItemStack] = {
 			[ashenBoots, ashenCloth, <embers:inflictor_gem>, ashenCloth, <ore:ingotDawnstone>]
 		]
 	},
-	aetheriumShard : {
+	<aetherworks:item_resource> : {
 		4 : [
 			[diamond, emerald, emerald, emerald, emerald]
 		]
 	},
-	focusCrystal : {
+	<aetherworks:item_resource:1> : {
 		4 : [
 			[emberCluster, emberCrystal, emberCrystal, emberCrystal, emberCrystal]
 		]

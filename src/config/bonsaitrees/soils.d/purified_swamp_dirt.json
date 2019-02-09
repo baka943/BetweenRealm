@@ -1,0 +1,14 @@
+{
+	"name": "betweenlands:purified_swamp_dirt",
+	"mod": "thebetweenlands",
+	"soil": {
+		"name": "thebetweenlands:purified_swamp_dirt",
+		"data": 0,
+		"ignoreMeta": false
+	},
+	"modifiers": {
+		"growTime": 0.8,
+		"dropChance": 1.1
+	},
+	"providedTags": ["swamp_dirt"]
+}

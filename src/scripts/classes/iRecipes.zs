@@ -7,8 +7,6 @@ import crafttweaker.item.IItemStack;
 
 import mods.zenstages.ZenStager;
 
-import scripts.stages.stageUnused;
-
 zenClass IRecipes {
 	zenConstructor() {}
 
@@ -44,6 +42,33 @@ zenClass IRecipes {
 		if(isMirrored) {
 			recipes.addShapedMirrored(item, recipe);
 		} else recipes.addShaped(item, recipe);
+	}
+
+	#Add a Shapeless recipe that is lockde behind a stage
+	function addStage(map as IIngredient[][string][IItemStack][string]) {
+		for stage, itemRecipes in map {
+			for item, inner in itemRecipes {
+				for name, recipe in inner {
+					recipes.addShapeless(name, item, recipe);
+					ZenStager.getStage(stage).addRecipeName("crafttweaker:" ~ name);
+				}
+			}
+		}
+	}
+
+	#Add a Shaped/Mirrored recipe that is lockde behind a stage
+	function addStage(map as IIngredient[][][string][IItemStack][string], isMirrored as bool) {
+		for stage, itemRecipes in map {
+			for item, inner in itemRecipes {
+				for name, recipe in inner {
+					if(isMirrored) {
+						recipes.addShapedMirrored(name, item, recipe);
+					} else recipes.addShaped(name, item, recipe);
+
+					ZenStager.getStage(stage).addRecipeName("crafttweaker:" ~ name);
+				}
+			}
+		}
 	}
 
 	#Remove recipes
@@ -89,26 +114,6 @@ zenClass IRecipes {
 	function removeFurnace(removals as IIngredient[IIngredient]) {
 		for output, input in removals {
 			furnace.remove(output, input);
-		}
-	}
-
-	#Hide Items with JEI
-	function hideItems(removals as IIngredient[]) {
-		hideItems(removals, false);
-	}
-
-	function hideItems(removals as IIngredient[], removeRecipe as bool) {
-		if (removeRecipe) {
-			for toHide in removals {
-				mods.jei.JEI.removeAndHide(toHide);
-				ZenStager.getStage(stageUnused.stage).addIngredient(toHide);
-			}
-		} else {
-			for toHide in removals {
-				for toHideItem in toHide.items {
-					mods.jei.JEI.hide(toHideItem);
-				}
-			}
 		}
 	}
 }

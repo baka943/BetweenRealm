@@ -117,13 +117,11 @@ zenClass Embers {
 	}
 
 	#Add Stamper recipes
-	function addStamper(map as IItemStack[ILiquidStack][IIngredient][IIngredient]) {
-		for stamp, inner in map {
-			for input, recipe in inner {
-				for liquid, output in recipe {
-					Stamper.remove(output);
-					Stamper.add(output, liquid, stamp, input);
-				}
+	function addStamper(map as IItemStack[ILiquidStack][IIngredient]) {
+		for stamp, recipe in map {
+			for liquid, output in recipe {
+				Stamper.remove(output);
+				Stamper.add(output, liquid, stamp, null);
 			}
 		}
 	}

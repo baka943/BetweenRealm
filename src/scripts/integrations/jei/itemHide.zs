@@ -30,4 +30,4 @@ val ores as IIngredient[] = [
 	<tconstruct:ore:1>
 ];
 
-iRecipes.hideItems(ores, true);
+utils.hideItems(ores, true);
