@@ -12,7 +12,7 @@ embers.removeStamper(<embers:aspectus_dawnstone>);
 embers.removeStamper(<soot:signet_antimony>);
 embers.removeStamper(focusCrystal);
 
-#Metal Stamper recipes
+#Metal recipes
 val metalStamper as IItemStack[ILiquidStack][IIngredient] = {
 	<embers:stamp_flat> : {
 		<fluid:clay> * 576 : <minecraft:clay>,
@@ -46,11 +46,15 @@ val metalStamper as IItemStack[ILiquidStack][IIngredient] = {
 	<embers:stamp_gear> : {
 		<fluid:iron> * 576 : <mysticalmechanics:gear_iron>,
 		<fluid:gold> * 576 : <mysticalmechanics:gear_gold>,
-		<fluid:dawnstoen> * 576 : <embers:gear_dawnstone>
-	},
-	<tconstruct:cast>.withTag({PartType: "tconstruct:pick_head"}) : {
-		<fluid:cobalt> * 288 : <tconstruct:pick_head>.withTag({Material: "cobalt"})
+		<fluid:dawnstone> * 576 : <embers:gear_dawnstone>
 	}
 };
 
-embers.addStamper(metalStamper);
+embers.addStamperM(metalStamper);
+
+#Tool part recipes
+val partStamper as IItemStack[ILiquidStack] = {
+	<fluid:cobalt> : <tconstruct:nuggets>
+};
+
+embers.addStamperP(partStamper);
