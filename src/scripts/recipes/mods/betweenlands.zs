@@ -1,4 +1,4 @@
-#Name: thebetweenlands.zs
+#Name: betweenlands.zs
 #Author: baka943
 
 import crafttweaker.data.IData;

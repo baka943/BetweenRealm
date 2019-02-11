@@ -16,37 +16,37 @@ embers.removeStamper(focusCrystal);
 val metalStamper as IItemStack[ILiquidStack][IIngredient] = {
 	<embers:stamp_flat> : {
 		<fluid:clay> * 576 : <minecraft:clay>,
-		<fluid:iron> * 1296 : <minecraft:iron_block>,
-		<fluid:gold> * 1296 : <minecraft:gold_block>,
-		<fluid:copper> * 1296 : <embers:block_copper>,
-		<fluid:tin> * 1296 : <embers:block_tin>,
-		<fluid:lead> * 1296 : <embers:block_lead>,
-		<fluid:nickel> * 1296 : <embers:block_nickel>,
-		<fluid:silver> * 1296 : <embers:block_silver>,
-		<fluid:dawnstone> * 1296 : <embers:block_dawnstone>,
-		<fluid:bronze> * 1296 : <embers:block_bronze>,
-		<fluid:electrum> * 1296 : <embers:block_electrum>,
-		<fluid:cobalt> * 1296 : blockCobalt,
-		<fluid:ardite> * 1296 : blockArdite,
-		<fluid:manyullyn> * 1296 : blockManyullyn,
-		<fluid:octine> * 1296 : <thebetweenlands:octine_block>,
-		<fluid:syrmorite> * 1296 : <thebetweenlands:syrmorite_block>
+		<fluid:iron> * 1296 : metals.iron.block,
+		<fluid:gold> * 1296 : metals.gold.block,
+		<fluid:copper> * 1296 : metals.copper.block,
+		<fluid:tin> * 1296 : metals.tin.block,
+		<fluid:lead> * 1296 : metals.lead.block,
+		<fluid:nickel> * 1296 : metals.nickel.block,
+		<fluid:silver> * 1296 : metals.silver.block,
+		<fluid:dawnstone> * 1296 : metals.dawnstone.block,
+		<fluid:bronze> * 1296 : metals.bronze.block,
+		<fluid:electrum> * 1296 : metals.electrum.block,
+		<fluid:cobalt> * 1296 : metals.cobalt.block,
+		<fluid:ardite> * 1296 : metals.ardite.block,
+		<fluid:manyullyn> * 1296 : metals.manyullyn.block,
+		<fluid:octine> * 1296 : metals.octine.block,
+		<fluid:syrmorite> * 1296 : metals.syrmorite.block
 	},
 	<embers:stamp_bar> : {
 		<fluid:stone> * 72 : searedBrick,
 		<fluid:dirt> * 144 : mudBrick,
 		<fluid:clay> * 144 : driedBrick,
-		<fluid:cobalt> * 144 : ingotCobalt,
-		<fluid:ardite> * 144 : ingotArdite,
-		<fluid:manyullyn> * 144 : ingotManyullyn,
-		<fluid:octine> * 144 : <thebetweenlands:octine_ingot>,
-		<fluid:syrmorite> * 144 : <thebetweenlands:items_misc:11>,
+		<fluid:cobalt> * 144 : metals.cobalt.ingot,
+		<fluid:ardite> * 144 : metals.ardite.ingot,
+		<fluid:manyullyn> * 144 : metals.manyullyn.ingot,
+		<fluid:octine> * 144 : metals.octine.ingot,
+		<fluid:syrmorite> * 144 : metals.syrmorite.ingot,
 		<fluid:ember> * 144 : emberCrystal
 	},
 	<embers:stamp_gear> : {
-		<fluid:iron> * 576 : <mysticalmechanics:gear_iron>,
-		<fluid:gold> * 576 : <mysticalmechanics:gear_gold>,
-		<fluid:dawnstone> * 576 : <embers:gear_dawnstone>
+		<fluid:iron> * 576 : metals.iron.gear,
+		<fluid:gold> * 576 : metals.gold.gear,
+		<fluid:dawnstone> * 576 : metals.dawnstone.gear
 	}
 };
 
@@ -54,7 +54,7 @@ embers.addStamperM(metalStamper);
 
 #Tool part recipes
 val partStamper as IItemStack[ILiquidStack] = {
-	<fluid:cobalt> : <tconstruct:nuggets>
+	<fluid:cobalt> : metals.cobalt.nugget
 };
 
 embers.addStamperP(partStamper);

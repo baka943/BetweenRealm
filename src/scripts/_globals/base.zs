@@ -30,12 +30,6 @@ global searedBrick as IItemStack = <tconstruct:materials>;
 global mudBrick as IItemStack = <tconstruct:materials:1>;
 global driedBrick as IItemStack = <tconstruct:materials:2>;
 global mossBall as IItemStack = <tconstruct:materials:18>;
-global blockCobalt as IItemStack = <tconstruct:metal>;
-global blockArdite as IItemStack = <tconstruct:metal:1>;
-global blockManyullyn as IItemStack = <tconstruct:metal:2>;
-global ingotCobalt as IItemStack = <tconstruct:ingots>;
-global ingotArdite as IItemStack = <tconstruct:ingots:1>;
-global ingotManyullyn as IItemStack = <tconstruct:ingots:2>;
 
 global boneMeal as IItemStack = <minecraft:dye:15>;
 global clayBall as IItemStack = <minecraft:clay_ball>;
