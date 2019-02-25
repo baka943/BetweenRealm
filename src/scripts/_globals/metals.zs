@@ -67,6 +67,16 @@ global metal as IItemStack[string][string] = {
 		nugget : <embers:nugget_dawnstone>,
 		gear : <embers:gear_dawnstone>
 	},
+	pigiron : {
+		block : <tconstruct:metal:4>,
+		ingot : <tconstruct:ingots:4>,
+		nugget : <tconstruct:nuggets:4>
+	},
+	knightslime : {
+		block : <tconstruct:metal:3>,
+		ingot : <tconstruct:ingots:3>,
+		nugget : <tconstruct:nuggets:3>
+	},
 	ardite : {
 		block : <tconstruct:metal:1>,
 		ingot : <tconstruct:ingots:1>,
