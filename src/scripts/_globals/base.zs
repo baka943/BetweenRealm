@@ -21,6 +21,7 @@ global caminiteBlock as IItemStack = <embers:block_caminite_brick>;
 global emberShard as IItemStack = <embers:shard_ember>;
 global emberCrystal as IItemStack = <embers:crystal_ember>;
 global emberCluster as IItemStack = <embers:ember_cluster>;
+global emberDust as IItemStack = <embers:dust_ember>;
 
 global aetheriumShard as IItemStack = <aetherworks:item_resource>;
 global focusCrystal as IItemStack = <aetherworks:item_resource:1>;
@@ -36,14 +37,11 @@ global clayBall as IItemStack = <minecraft:clay_ball>;
 global soulSand as IItemStack = <minecraft:soul_sand>;
 global diamond as IItemStack = <minecraft:diamond>;
 global emerald as IItemStack = <minecraft:emerald>;
+global coal as IItemStack = <minecraft:coal>;
+global charCoal as IItemStack = <minecraft:coal:1>;
 
 global redstone as IOreDictEntry = <ore:dustRedstone>;
+global gunpowder as IOreDictEntry = <ore:gunpowder>;
+global glowstone as IOreDictEntry = <ore:dustGlowstone>;
 global hopper as IOreDictEntry = <ore:hopper>;
 global mossCragrock as IOreDictEntry = <ore:mossCragrock>;
-
-#All the Buckets in this pack
-global buckets as IItemStack[] = [
-	<forge:bucketfilled>,
-	<thebetweenlands:bl_bucket>,
-	<thebetweenlands:bl_bucket:1>
-];

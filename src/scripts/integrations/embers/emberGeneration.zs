@@ -1,26 +1,46 @@
 #Name: emberGeneration.zs
 #Author: baka943
 
+import crafttweaker.item.IIngredient;
+
 #Add Ember Fuel
-embers.addFuelE(emberShard, 400.0);
-embers.addFuelE(emberCrystal, 2400.0);
-embers.addFuelE(emberCluster, 3600.0);
-embers.addFuelE(<minecraft:coal>, 350.0);
-embers.addFuelE(<minecraft:coal:1>, 250.0);
-embers.addFuelE(sulfur, 250.0);
+val emberFuels as double[IIngredient] = {
+	emberShard : 400.0,
+	emberCrystal : 2400.0,
+	emberCluster : 3600.0,
+	coal : 350.0,
+	charCoal : 250.0,
+	sulfur : 250.0
+};
+
+for fuel, ember in emberFuels {
+	embers.addFuelE(fuel, ember);
+}
 
 #Add Catalysis Fuel
-embers.addFuelC(<embers:dust_ember>, 2.0);
-embers.addFuelC(<minecraft:redstone>, 2.0);
-embers.addFuelC(<minecraft:gunpowder>, 3.0);
-embers.addFuelC(<minecraft:glowstone_dust>, 4.0);
+val catalysisFuels as double[IIngredient] = {
+	emberDust : 1.5,
+	redstone : 2.0,
+	gunpowder : 3.0,
+	glowstone : 4.0
+};
+
+for fuel, multiple in catalysisFuels {
+	embers.addFuelC(fuel, multiple);
+}
 
 #Add Combustion Fuel
-embers.addFuelP(sulfur, 2.0);
-embers.addFuelP(<minecraft:coal>, 2.0);
-embers.addFuelP(<minecraft:coal:1>, 2.0);
-embers.addFuelP(<minecraft:netherbrick>, 3.0);
-embers.addFuelP(<minecraft:blaze_powder>, 4.0);
+var combustionFuels as double[IIngredient] = {
+	sulfur : 1.5,
+	charCoal : 1.5,
+	coal : 2.0,
+	<minecraft:netherbrick> : 3.0,
+	<minecraft:blaze_powder> : 4.0
+};
+
+for fuel, multiple in combustionFuels {
+	embers.addFuelP(fuel, multiple);
+}
 
 #Add Metal Coefficient
 embers.addMetalCoef(<ore:blockDawnstone>, 2.0);

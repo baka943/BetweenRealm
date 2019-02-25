@@ -2,11 +2,4 @@
 #Author: baka943
 
 #Ball of Moss
-iRecipes.add(mossBall,
-	[
-		[mossCragrock, mossCragrock, mossCragrock],
-		[mossCragrock, mossCragrock, mossCragrock],
-		[mossCragrock, mossCragrock, mossCragrock]
-	],
-	false
-);
+utils.addCompress(mossBall, mossCragrock, 3);

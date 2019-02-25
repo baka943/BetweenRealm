@@ -22,29 +22,29 @@ zenClass Embers {
 	//==================================
 
 	#Default Ember Fuel
-	var defaultFuelE as IIngredient[] = [
+	val defaultFuelE as IIngredient[] = [
 		emberShard,
 		emberCrystal,
 		emberCluster
 	];
 
 	#Default Catalysis Fuel
-	var defaultFuelC as IIngredient[] = [
-		<minecraft:redstone>,
-		<minecraft:gunpowder>,
-		<minecraft:glowstone_dust>
+	val defaultFuelC as IIngredient[] = [
+		redstone,
+		gunpowder,
+		glowstone
 	];
 
 	#Default Combustion Fuel
-	var defaultFuelP as IIngredient[] = [
-		<minecraft:coal>,
-		<minecraft:coal:1>,
+	val defaultFuelP as IIngredient[] = [
+		coal,
+		charCoal,
 		<minecraft:netherbrick>,
 		<minecraft:blaze_powder>
 	];
 
 	#Tool part types from Tinker's construct
-	var partTypes as int[IItemStack] = {
+	val partTypes as int[IItemStack] = {
 		<tconstruct:hammer_head> : 1136,
 		<tconstruct:tough_tool_rod> : 416,
 		<tconstruct:binding> : 128,
@@ -163,7 +163,7 @@ zenClass Embers {
 	}
 
 	function addStamperP(map as IIngredient[ILiquidStack]) {
-		for material, stack in map {
+		for liquid, stack in map {
 			var material = liquid.name;
 
 			for part, amount in partTypes {

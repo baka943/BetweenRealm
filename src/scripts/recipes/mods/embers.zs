@@ -7,29 +7,12 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.data.IData;
 import crafttweaker.recipes.IRecipeAction;
 
-//==================================
-######## Removals ########
-//==================================
-
-#Alchemy Tablet
-iRecipes.remove(<embers:alchemy_tablet>);
-
-#Ashen Cloak Armors
-iRecipes.remove("embers:ashen_cloak_.*");
-
-#Blend Caminite
-iRecipes.remove(<embers:blend_caminite>);
-
-//==================================
-######## Recipes ########
-//==================================
-
 #Alchemy Tablet
 recipes.addShaped(<embers:alchemy_tablet>,
 	[
-		[null, <ore:plateDawnstone>],
-		[caminiteStairs, <ore:plateBronze>, caminiteStairs],
-		[caminiteBlock, <ore:ingotDawnstone>, caminiteBlock]
+		[null, plate.dawnstone],
+		[caminiteStairs, plate.bronze, caminiteStairs],
+		[caminiteBlock, ingot.dawnstone, caminiteBlock]
 	],
 	
 	null,
@@ -50,37 +33,37 @@ recipes.addShaped(<embers:alchemy_tablet>,
 val shapedRecipes as IIngredient[][][][IItemStack] = {
 	<embers:ember_gauge> : [
 		[
-			[null, <ore:ingotDawnstone>],
-			[<ore:ingotDawnstone>, redstone, <ore:ingotDawnstone>],
-			[null, <ore:ingotDawnstone>]
+			[null, ingot.dawnstone],
+			[ingot.dawnstone, redstone, ingot.dawnstone],
+			[null, ingot.dawnstone]
 		]
 	],
 	<embers:fluid_gauge> : [
 		[
-			[null, <ore:ingotIron>],
-			[<ore:ingotIron>, redstone, <ore:ingotIron>],
-			[null, <ore:ingotIron>]
+			[null, ingot.iron],
+			[ingot.iron, redstone, ingot.iron],
+			[null, ingot.iron]
 		]
 	],
 	<embers:clockwork_attenuator> : [
 		[
-			[null, <ore:ingotElectrum>],
-			[<ore:ingotElectrum>, redstone, <ore:ingotElectrum>],
-			[null, <ore:ingotElectrum>]
+			[null, ingot.electrum],
+			[ingot.electrum, redstone, ingot.electrum],
+			[null, ingot.electrum]
 		]
 	],
 	<soot:alchemy_gauge> : [
 		[
-			[null, <ore:ingotAntimony>],
-			[<ore:ingotAntimony>, redstone, <ore:ingotAntimony>],
-			[null, <ore:ingotAntimony>]
+			[null, ingot.antimony],
+			[ingot.antimony, redstone, ingot.antimony],
+			[null, ingot.antimony]
 		]
 	],
 	<embers:mech_core> : [
 		[
-			[<ore:ingotIron>, null, <ore:ingotIron>],
-			[null, <ore:plateLead>],
-			[<ore:ingotIron>, null, <ore:ingotIron>]
+			[ingot.iron, null, ingot.iron],
+			[null, plate.lead],
+			[ingot.iron, null, ingot.iron]
 		]
 	],
 	<embers:ashen_brick> * 4 : [
@@ -91,23 +74,23 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 	],
 	<soot:scale> : [
 		[
-			[<ore:ingotSilver>, <embers:ember_gauge>, <ore:ingotSilver>],
-			[null, <ore:ingotSilver>],
+			[ingot.silver, <embers:ember_gauge>, ingot.silver],
+			[null, ingot.silver],
 			[null, <embers:block_caminite_brick_slab>]
 		]
 	],
 	<aetherworks:heat_dial> : [
 		[
-			[null, <ore:ingotLead>],
-			[<ore:ingotLead>, redstone, <ore:ingotLead>],
-			[null, <ore:ingotLead>]
+			[null, ingot.lead],
+			[ingot.lead, redstone, ingot.lead],
+			[null, ingot.lead]
 		]
 	],
 	<aetherworks:item_resource:2> : [
 		[
-			[null, <ore:ingotBronze>],
-			[<ore:ingotBronze>, aetheriumShard, <ore:ingotBronze>],
-			[null, <ore:ingotBronze>]
+			[null, ingot.bronze],
+			[ingot.bronze, aetheriumShard, ingot.bronze],
+			[null, ingot.bronze]
 		]
 	]
 };

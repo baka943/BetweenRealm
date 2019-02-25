@@ -10,7 +10,10 @@ import mods.zenstages.ZenStager;
 zenClass IRecipes {
 	zenConstructor() {}
 
-	#Handle Shapeless recipes
+	//==================================
+	######## Shapeless Recipes ########
+	//==================================
+
 	function add(map as IIngredient[][][IItemStack]) {
 		for item, itemRecipes in map {
 			recipes.remove(item);
@@ -25,7 +28,10 @@ zenClass IRecipes {
 		recipes.addShapeless(item, recipe);
 	}
 
-	#Handle Shaped and Mirrored recipes
+	//==================================
+	######## Shaped/Mirrored Recipes ########
+	//==================================
+
 	function add(map as IIngredient[][][][IItemStack], isMirrored as bool) {
 		for item, itemRecipes in map {
 			recipes.remove(item);
@@ -43,6 +49,11 @@ zenClass IRecipes {
 			recipes.addShapedMirrored(item, recipe);
 		} else recipes.addShaped(item, recipe);
 	}
+
+
+	//==================================
+	######## Stage Recipes ########
+	//==================================
 
 	#Add a Shapeless recipe that is lockde behind a stage
 	function addStage(map as IIngredient[][string][IItemStack][string]) {
@@ -71,7 +82,10 @@ zenClass IRecipes {
 		}
 	}
 
-	#Remove recipes
+	//==================================
+	######## Remove Recipes ########
+	//==================================
+
 	function remove(removal as IItemStack) {
 		recipes.remove(removal);
 	}
@@ -92,28 +106,15 @@ zenClass IRecipes {
 		}
 	}
 
-	#Handle Furnace recipes
-	function addFurnace(toAdds as IIngredient[IItemStack]) {
-		for output, input in toAdds {
+	//==================================
+	######## Furnace Recipes ########
+	//==================================
+
+	function addFurnace(map as IIngredient[IItemStack]) {
+		for output, input in map {
 			furnace.remove(output);
 			furnace.addRecipe(output, input);
 		}
 	}
-
-	#Remove Furnace recipes
-	function removeFurnace(removal as IIngredient) {
-		furnace.remove(removal);
-	}
 	
-	function removeFurnace(removals as IIngredient[]) {
-		for toRemove in removals {
-			furnace.remove(toRemove);
-		}
-	}
-
-	function removeFurnace(removals as IIngredient[IIngredient]) {
-		for output, input in removals {
-			furnace.remove(output, input);
-		}
-	}
 }

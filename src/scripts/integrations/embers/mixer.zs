@@ -9,28 +9,28 @@ var mixerRecipes as ILiquidStack[][ILiquidStack] = {
 		<fluid:iron> * 4,
 		<fluid:copper> * 4
 	],
-	<fluid:obsidian> * 36 : [
-		<fluid:water> * 125,
-		<fluid:lava> * 125
+	<fluid:obsidian> * 3 : [
+		<fluid:water> * 10,
+		<fluid:lava> * 10
 	],
-	<fluid:clay> * 144 : [
-		<fluid:water> * 250,
-		<fluid:stone> * 72,
-		<fluid:dirt> * 144
+	<fluid:clay> * 6 : [
+		<fluid:water> * 10,
+		<fluid:stone> * 3,
+		<fluid:dirt> * 6
 	],
-	<fluid:knightslime> * 72 : [
-		<fluid:iron> * 72,
-		<fluid:purpleslime> * 125,
-		<fluid:stone> * 144
+	<fluid:knightslime> * 4 : [
+		<fluid:iron> * 4,
+		<fluid:purpleslime> * 6,
+		<fluid:stone> * 8
 	],
-	<fluid:pigiron> * 144 : [
-		<fluid:iron> * 144,
-		<fluid:blood> * 40,
-		<fluid:clay> * 72
+	<fluid:pigiron> * 8 : [
+		<fluid:iron> * 8,
+		<fluid:blood> * 2,
+		<fluid:clay> * 4
 	],
-	<fluid:manyullyn> * 2 : [
-		<fluid:cobalt> * 2,
-		<fluid:ardite> * 2
+	<fluid:manyullyn> * 8 : [
+		<fluid:cobalt> * 4,
+		<fluid:ardite> * 4
 	]
 };
 

@@ -19,14 +19,14 @@ val exchangeAlchemy as IIngredient[][][int][IItemStack] = {
 	},
 	<embers:aspectus_lead> : {
 		0 : [
-			[emberCrystal, emberShard, <ore:plateLead>, emberShard, <ore:plateLead>],
-			[emberCrystal, <ore:plateLead>, emberShard, <ore:plateLead>, emberShard]
+			[emberCrystal, emberShard, plate.lead, emberShard, plate.lead],
+			[emberCrystal, plate.lead, emberShard, plate.lead, emberShard]
 		]
 	},
 	<embers:aspectus_silver> : {
 		0 : [
-			[emberCrystal, emberShard, <ore:plateSilver>, emberShard, <ore:plateSilver>],
-			[emberCrystal, <ore:plateSilver>, emberShard, <ore:plateSilver>, emberShard]
+			[emberCrystal, emberShard, plate.silver, emberShard, plate.silver],
+			[emberCrystal, plate.silver, emberShard, plate.silver, emberShard]
 		]
 	},
 
@@ -42,13 +42,13 @@ val exchangeAlchemy as IIngredient[][][int][IItemStack] = {
 	},
 	<embers:tyrfing> : {
 		1 : [
-			[<embers:sword_lead>, <embers:ashen_stone>, <embers:ashen_stone>, <ore:ingotLead>, <ore:ingotLead>]
+			[<embers:sword_lead>, <embers:ashen_stone>, <embers:ashen_stone>, ingot.lead, ingot.lead]
 		]
 	},
 	<embers:aspectus_dawnstone> : {
 		1 : [
-			[emberCrystal, emberShard, <ore:plateDawnstone>, emberShard, <ore:plateDawnstone>],
-			[emberCrystal, <ore:plateDawnstone>, emberShard, <ore:plateDawnstone>, emberShard]
+			[emberCrystal, emberShard, plate.dawnstone, emberShard, plate.dawnstone],
+			[emberCrystal, plate.dawnstone, emberShard, plate.dawnstone, emberShard]
 		]
 	},
 
@@ -60,11 +60,11 @@ val exchangeAlchemy as IIngredient[][][int][IItemStack] = {
 	},
 	<minecraft:coal> * 2 : {
 		2 : [
-			[<minecraft:coal:1>, sulfur, ash, sulfur, ash],
-			[<minecraft:coal:1>, ash, sulfur, ash, sulfur]
+			[charCoal, sulfur, ash, sulfur, ash],
+			[charCoal, ash, sulfur, ash, sulfur]
 		],
 		3 : [
-			[<minecraft:coal>, null, null, null, null]
+			[coal, null, null, null, null]
 		]
 	},
 	<minecraft:gunpowder> * 3 : {
@@ -73,21 +73,21 @@ val exchangeAlchemy as IIngredient[][][int][IItemStack] = {
 			[redstone, <ore:coal>, sulfur, <ore:coal>, sulfur]
 		],
 		3 : [
-			[<minecraft:gunpowder>, null, null, null, null]
+			[gunpowder, null, null, null, null]
 		]
 	},
 	<minecraft:glowstone_dust> * 3 : {
 		2 : [
-			[redstone, emberShard, <ore:gunpowder>, emberShard, <ore:gunpowder>],
-			[redstone, <ore:gunpowder>, emberShard, <ore:gunpowder>, emberShard]
+			[redstone, emberShard, gunpowder, emberShard, gunpowder],
+			[redstone, gunpowder, emberShard, gunpowder, emberShard]
 		],
 		3 : [
-			[<minecraft:glowstone_dust>, null, null, null, null]
+			[glowstone, null, null, null, null]
 		]
 	},
 	<embers:archaic_brick> * 4 : {
 		2 : [
-			[<ore:ingotDawnstone>, soulSand, soulSand, soulSand, soulSand]
+			[ingot.dawnstone, soulSand, soulSand, soulSand, soulSand]
 		],
 		3 : [
 			[<embers:archaic_brick>, null, null, null, null]
@@ -116,21 +116,21 @@ val exchangeAlchemy as IIngredient[][][int][IItemStack] = {
 	},
 	<soot:alchemy_globe> : {
 		2 : [
-			[<embers:alchemy_tablet>, <ore:ingotLead>, <ore:blockGlass>, <ore:ingotLead>, <embers:archaic_circuit>]
+			[<embers:alchemy_tablet>, ingot.lead, <ore:blockGlass>, ingot.lead, <embers:archaic_circuit>]
 		]
 	},
 	<soot:signet_antimony> : {
 		2 : [
-			[emberCrystal, emberShard, <ore:ingotAntimony>, emberShard, <ore:ingotAntimony>],
-			[emberCrystal, <ore:ingotAntimony>, emberShard, <ore:ingotAntimony>, emberShard]
+			[emberCrystal, emberShard, ingot.antimony, emberShard, ingot.antimony],
+			[emberCrystal, ingot.antimony, emberShard, ingot.antimony, emberShard]
 		]
 	},
 
 	//Lv.3
 	<minecraft:emerald> : {
 		3 : [
-			[diamond, <ore:plateGold>, <ore:ingotAntimony>, <ore:plateGold>, <ore:ingotAntimony>],
-			[diamond, <ore:ingotAntimony>, <ore:plateGold>, <ore:ingotAntimony>, <ore:plateGold>]
+			[diamond, plate.gold, ingot.antimony, plate.gold, ingot.antimony],
+			[diamond, ingot.antimony, plate.gold, ingot.antimony, plate.gold]
 		],
 		4 : [
 			[emerald, null, null, null, null]
@@ -138,8 +138,8 @@ val exchangeAlchemy as IIngredient[][][int][IItemStack] = {
 	},
 	<minecraft:blaze_powder> * 3 : {
 		3 : [
-			[<embers:dust_ember>, redstone, <ore:gunpowder>, redstone, <ore:gunpowder>],
-			[<embers:dust_ember>, <ore:gunpowder>, redstone, <ore:gunpowder>, redstone]
+			[emberDust, redstone, <ore:gunpowder>, redstone, <ore:gunpowder>],
+			[emberDust, <ore:gunpowder>, redstone, <ore:gunpowder>, redstone]
 		],
 		4 : [
 			[<minecraft:blaze_powder>, null, null, null, null]
@@ -153,8 +153,8 @@ val exchangeAlchemy as IIngredient[][][int][IItemStack] = {
 	},
 	<embers:inflictor_gem> : {
 		3 : [
-			[<soot:signet_antimony>, ash, <ore:plateDawnstone>, ash, <ore:plateDawnstone>],
-			[<soot:signet_antimony>, <ore:plateDawnstone>, ash, <ore:plateDawnstone>, ash]
+			[<soot:signet_antimony>, ash, plate.dawnstone, ash, plate.dawnstone],
+			[<soot:signet_antimony>, plate.dawnstone, ash, plate.dawnstone, ash]
 		]
 	},
 
@@ -166,22 +166,22 @@ val exchangeAlchemy as IIngredient[][][int][IItemStack] = {
 	},
 	<embers:ashen_cloak_head> : {
 		4 : [
-			[ashenHead, ashenCloth, <embers:inflictor_gem>, ashenCloth, <ore:ingotDawnstone>]
+			[ashen.head, ashenCloth, <embers:inflictor_gem>, ashenCloth, ingot.dawnstone]
 		]
 	},
 	<embers:ashen_cloak_chest> : {
 		4 : [
-			[ashenChest, ashenCloth, <embers:inflictor_gem>, ashenCloth, <ore:ingotDawnstone>]
+			[ashen.chest, ashenCloth, <embers:inflictor_gem>, ashenCloth, ingot.dawnstone]
 		]
 	},
 	<embers:ashen_cloak_legs> : {
 		4 : [
-			[ashenLegs, ashenCloth, <embers:inflictor_gem>, ashenCloth, <ore:ingotDawnstone>]
+			[ashen.legs, ashenCloth, <embers:inflictor_gem>, ashenCloth, ingot.dawnstone]
 		]
 	},
 	<embers:ashen_cloak_boots> : {
 		4 : [
-			[ashenBoots, ashenCloth, <embers:inflictor_gem>, ashenCloth, <ore:ingotDawnstone>]
+			[ashen.boots, ashenCloth, <embers:inflictor_gem>, ashenCloth, ingot.dawnstone]
 		]
 	},
 	<aetherworks:item_resource> : {
@@ -199,7 +199,9 @@ val exchangeAlchemy as IIngredient[][][int][IItemStack] = {
 embers.addAlchemy(exchangeAlchemy);
 
 #Ashen Armor Core
-static ashenHead as IItemStack = <conarm:helmet_core>.withTag({Material: "ashenfabric"});
-static ashenChest as IItemStack = <conarm:chest_core>.withTag({Material: "ashenfabric"});
-static ashenLegs as IItemStack = <conarm:leggings_core>.withTag({Material: "ashenfabric"});
-static ashenBoots as IItemStack = <conarm:boots_core>.withTag({Material: "ashenfabric"});
+static ashen as IItemStack[string] = {
+	head : <conarm:helmet_core>.withTag({Material: "ashenfabric"}),
+	chest : <conarm:chest_core>.withTag({Material: "ashenfabric"}),
+	legs : <conarm:leggings_core>.withTag({Material: "ashenfabric"}),
+	boots : <conarm:boots_core>.withTag({Material: "ashenfabric"})
+};

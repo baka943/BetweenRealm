@@ -4,7 +4,6 @@
 
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
-import crafttweaker.data.IData;
 
 import mods.zenstages.ZenStager;
 import mods.recipestages.Recipes;
@@ -14,7 +13,10 @@ import scripts.stages.stageUnused;
 zenClass Utils {
 	zenConstructor() {}
 
-	#Hide Items with JEI
+	//==================================
+	######## Hide Items ########
+	//==================================
+
 	function hideItems(removals as IIngredient[]) {
 		hideItems(removals, false);
 	}
@@ -34,8 +36,23 @@ zenClass Utils {
 		}
 	}
 
-	#Set the stage of a non staged recipe
+	//==================================
+	######## Stage Recipes ########
+	//==================================
+
 	function addStage(stageName as string, stack as IItemStack) {
 		Recipes.setRecipeStage(stageName, stack);
+	}
+	
+	//==================================
+	######## Compressed Recipes ########
+	//==================================
+
+	function addCompress(output as IItemStack, input as IIngredient, multiple as int) {
+		if(multiple == 2) {
+			recipes.addShaped(output, [[input, input], [input, input]]);
+		} else if(multiple == 3) {
+			recipes.addShaped(output, [[input, input, input], [input, input, input], [input, input, input]]);
+		}
 	}
 }
