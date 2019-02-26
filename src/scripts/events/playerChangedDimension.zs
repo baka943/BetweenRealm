@@ -7,8 +7,6 @@ import crafttweaker.event.PlayerChangedDimensionEvent;
 import crafttweaker.data.IData;
 import crafttweaker.player.IPlayer;
 
-import scripts.stages.stageSwamp;
-
 #Something with Player Changed Dimension
 events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
 	var worldTo as string = event.toWorld.getDimensionType();
@@ -26,8 +24,6 @@ events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
 			player.executeCommand("title " ~ player.name ~ " subtitle {\"text\":\"The dark and mysterious realm...\", \"color\":\"gray\", \"italic\":true}");
 			player.executeCommand("title " ~ player.name ~ " title {\"text\":\"Stage Swamp\", \"bold\":true}");
 			
-			player.addGameStage(stageSwamp.stage);
-
 			data = {toBetweenlands : 1};
 			player.update(data);
 		}

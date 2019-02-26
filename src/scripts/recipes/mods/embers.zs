@@ -78,20 +78,6 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 			[null, ingot.silver],
 			[null, <embers:block_caminite_brick_slab>]
 		]
-	],
-	<aetherworks:heat_dial> : [
-		[
-			[null, ingot.lead],
-			[ingot.lead, redstone, ingot.lead],
-			[null, ingot.lead]
-		]
-	],
-	<aetherworks:item_resource:2> : [
-		[
-			[null, ingot.bronze],
-			[ingot.bronze, aetheriumShard, ingot.bronze],
-			[null, ingot.bronze]
-		]
 	]
 };
 

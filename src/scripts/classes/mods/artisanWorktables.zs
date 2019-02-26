@@ -35,7 +35,9 @@ zenClass ArtisanWorktables {
 
 				if(!isNull(recipes.fluids)) {
 					for fluid in recipes.fluids {
-						builder.setFluid(fluid);
+						for liquid in fluid.liquids {
+							builder.setFluid(liquid);
+						}
 					}
 				}
 
@@ -69,7 +71,9 @@ zenClass ArtisanWorktables {
 
 				if(!isNull(recipes.fluids)) {
 					for fluid in recipes.fluids[0] {
-						builder.setFluid(fluid);
+						for liquid in fluid.liquids {
+							builder.setFluid(liquid);
+						}
 					}
 				}
 

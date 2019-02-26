@@ -26,30 +26,6 @@ val melterRecipes as IIngredient[][int][ILiquidStack] = {
 			<tconstruct:deco_ground>
 		]
 	},
-	<fluid:cobalt> : {
-		144 : [
-			<ore:ingotCobalt>
-		],
-		1296 : [
-			<ore:blockCobalt>
-		]
-	},
-	<fluid:ardite> : {
-		144 : [
-			<ore:ingotArdite>
-		],
-		1296 : [
-			<ore:blockArdite>
-		]
-	},
-	<fluid:manyullyn> : {
-		144 : [
-			<ore:ingotManyullyn>
-		],
-		1296 : [
-			<ore:blockManyullyn>
-		]
-	},
 	<fluid:octine> : {
 		144 : [
 			<ore:ingotOctine>

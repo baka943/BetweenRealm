@@ -69,8 +69,8 @@ val exchangeAlchemy as IIngredient[][][int][IItemStack] = {
 	},
 	<minecraft:gunpowder> * 3 : {
 		2 : [
-			[redstone, sulfur, <ore:coal>, sulfur, <ore:coal>],
-			[redstone, <ore:coal>, sulfur, <ore:coal>, sulfur]
+			[redstone, sulfur, coal, sulfur, coal],
+			[redstone, coal, sulfur, coal, sulfur]
 		],
 		3 : [
 			[gunpowder, null, null, null, null]
@@ -182,16 +182,6 @@ val exchangeAlchemy as IIngredient[][][int][IItemStack] = {
 	<embers:ashen_cloak_boots> : {
 		4 : [
 			[ashen.boots, ashenCloth, <embers:inflictor_gem>, ashenCloth, ingot.dawnstone]
-		]
-	},
-	<aetherworks:item_resource> : {
-		4 : [
-			[diamond, emerald, emerald, emerald, emerald]
-		]
-	},
-	<aetherworks:item_resource:1> : {
-		4 : [
-			[emberCluster, emberCrystal, emberCrystal, emberCrystal, emberCrystal]
 		]
 	}
 };

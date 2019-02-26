@@ -2,14 +2,17 @@
 #Name: remove.zs
 #Author: baka943
 
-#Leather
-iRecipes.remove(<minecraft:leather>);
+import crafttweaker.item.IItemStack;
 
-#Alchemy Tablet
-iRecipes.remove(<embers:alchemy_tablet>);
+#Remove Items
+val removeItems as IItemStack[] = [
+	<minecraft:leather>,
+	<embers:alchemy_tablet>,
+	<embers:blend_caminite>,
+	<tconstruct:materials:18>
+];
 
-#Ashen Cloak Armors
+iRecipes.remove(removeItems);
+
+#Remove Ashen Armors
 iRecipes.remove("embers:ashen_cloak_.*");
-
-#Blend Caminite
-iRecipes.remove(<embers:blend_caminite>);

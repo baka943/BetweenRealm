@@ -21,28 +21,6 @@ zenClass Embers {
 	######## Instance Variable ########
 	//==================================
 
-	#Default Ember Fuel
-	val defaultFuelE as IIngredient[] = [
-		emberShard,
-		emberCrystal,
-		emberCluster
-	];
-
-	#Default Catalysis Fuel
-	val defaultFuelC as IIngredient[] = [
-		redstone,
-		gunpowder,
-		glowstone
-	];
-
-	#Default Combustion Fuel
-	val defaultFuelP as IIngredient[] = [
-		coal,
-		charCoal,
-		<minecraft:netherbrick>,
-		<minecraft:blaze_powder>
-	];
-
 	#Tool part types from Tinker's construct
 	val partTypes as int[IItemStack] = {
 		<tconstruct:hammer_head> : 1136,
@@ -288,33 +266,6 @@ zenClass Embers {
 	//==================================
 	######## Ember Generation ########
 	//==================================
-
-	#Add Ember Fuel
-	function addFuelE(fuel as IIngredient, embers as double) {
-		if(!(defaultFuelE has fuel)) {
-			EmberGeneration.addEmberFuel(fuel, embers);
-		}
-		
-		fuel.addTooltip("Usable Embers: " ~ embers);
-	}
-	
-	#Add Catalysis Fuel
-	function addFuelC(fuel as IIngredient, multiple as double) {
-		if(!(defaultFuelC has fuel)) {
-			EmberGeneration.addCatalysisFuel(fuel, multiple);
-		}
-
-		fuel.addTooltip("Catalyst Level: x" ~ multiple);
-	}
-
-	#Add Combustion Fuel
-	function addFuelP(fuel as IIngredient, multiple as double) {
-		if(!(defaultFuelP has fuel)) {
-			EmberGeneration.addCombustionFuel(fuel, multiple);
-		}
-
-		fuel.addTooltip("Power Level: x" ~ multiple);
-	}
 
 	#Add Metal Coefficient
 	function addMetalCoef(block as IIngredient, multiple as double) {

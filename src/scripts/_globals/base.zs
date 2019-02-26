@@ -8,8 +8,6 @@ import crafttweaker.oredict.IOreDictEntry;
 global betweenstone as IItemStack = <thebetweenlands:betweenstone>;
 global smoothBetweenstone as IItemStack = <thebetweenlands:smooth_betweenstone>;
 global sulfur as IItemStack = <thebetweenlands:items_misc:18>;
-global mossyCragrockTop as IItemStack = <thebetweenlands:cragrock:1>;
-global mossyCragrockBottom as IItemStack = <thebetweenlands:cragrock:2>;
 global stickWeed as IItemStack = <thebetweenlands:items_misc:20>;
 global rubberBall as IItemStack = <thebetweenlands:items_misc:23>;
 
@@ -23,10 +21,6 @@ global emberCrystal as IItemStack = <embers:crystal_ember>;
 global emberCluster as IItemStack = <embers:ember_cluster>;
 global emberDust as IItemStack = <embers:dust_ember>;
 
-global aetheriumShard as IItemStack = <aetherworks:item_resource>;
-global focusCrystal as IItemStack = <aetherworks:item_resource:1>;
-global aetheriumLens as IItemStack = <aetherworks:item_resource:2>;
-
 global searedBrick as IItemStack = <tconstruct:materials>;
 global mudBrick as IItemStack = <tconstruct:materials:1>;
 global driedBrick as IItemStack = <tconstruct:materials:2>;
@@ -37,11 +31,10 @@ global clayBall as IItemStack = <minecraft:clay_ball>;
 global soulSand as IItemStack = <minecraft:soul_sand>;
 global diamond as IItemStack = <minecraft:diamond>;
 global emerald as IItemStack = <minecraft:emerald>;
-global coal as IItemStack = <minecraft:coal>;
+global coal as IItemStack = <minecraft:coal:0>;
 global charCoal as IItemStack = <minecraft:coal:1>;
 
 global redstone as IOreDictEntry = <ore:dustRedstone>;
 global gunpowder as IOreDictEntry = <ore:gunpowder>;
 global glowstone as IOreDictEntry = <ore:dustGlowstone>;
 global hopper as IOreDictEntry = <ore:hopper>;
-global mossCragrock as IOreDictEntry = <ore:mossCragrock>;

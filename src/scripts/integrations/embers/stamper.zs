@@ -10,7 +10,6 @@ embers.removeStamper(<embers:aspectus_lead>);
 embers.removeStamper(<embers:aspectus_silver>);
 embers.removeStamper(<embers:aspectus_dawnstone>);
 embers.removeStamper(<soot:signet_antimony>);
-embers.removeStamper(focusCrystal);
 
 #Metal recipes
 val metalStamper as IItemStack[ILiquidStack][IIngredient] = {

@@ -5,8 +5,6 @@
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 
-import mods.zenstages.ZenStager;
-
 zenClass IRecipes {
 	zenConstructor() {}
 
@@ -48,38 +46,6 @@ zenClass IRecipes {
 		if(isMirrored) {
 			recipes.addShapedMirrored(item, recipe);
 		} else recipes.addShaped(item, recipe);
-	}
-
-
-	//==================================
-	######## Stage Recipes ########
-	//==================================
-
-	#Add a Shapeless recipe that is lockde behind a stage
-	function addStage(map as IIngredient[][string][IItemStack][string]) {
-		for stage, itemRecipes in map {
-			for item, inner in itemRecipes {
-				for name, recipe in inner {
-					recipes.addShapeless(name, item, recipe);
-					ZenStager.getStage(stage).addRecipeName("crafttweaker:" ~ name);
-				}
-			}
-		}
-	}
-
-	#Add a Shaped/Mirrored recipe that is lockde behind a stage
-	function addStage(map as IIngredient[][][string][IItemStack][string], isMirrored as bool) {
-		for stage, itemRecipes in map {
-			for item, inner in itemRecipes {
-				for name, recipe in inner {
-					if(isMirrored) {
-						recipes.addShapedMirrored(name, item, recipe);
-					} else recipes.addShaped(name, item, recipe);
-
-					ZenStager.getStage(stage).addRecipeName("crafttweaker:" ~ name);
-				}
-			}
-		}
 	}
 
 	//==================================
