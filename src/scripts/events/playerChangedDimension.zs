@@ -22,7 +22,7 @@ events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
 
 			player.executeCommand("gamerule sendCommandFeedback false");
 			player.executeCommand("title " ~ player.name ~ " subtitle {\"text\":\"The dark and mysterious realm...\", \"color\":\"gray\", \"italic\":true}");
-			player.executeCommand("title " ~ player.name ~ " title {\"text\":\"Stage Swamp\", \"bold\":true}");
+			player.executeCommand("title " ~ player.name ~ " title {\"text\":\"Chapter I\", \"bold\":true}");
 			
 			data = {toBetweenlands : 1};
 			player.update(data);

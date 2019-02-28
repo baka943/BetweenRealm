@@ -9,10 +9,15 @@ val removeItems as IItemStack[] = [
 	<minecraft:leather>,
 	<embers:alchemy_tablet>,
 	<embers:blend_caminite>,
-	<tconstruct:materials:18>
+	<tconstruct:materials:18>,
+	<tconstruct:soil>,
+	<thebetweenlands:swamp_talisman>
 ];
 
 iRecipes.remove(removeItems);
 
 #Remove Ashen Armors
 iRecipes.remove("embers:ashen_cloak_.*");
+
+#Remove Furnace recipes
+iRecipes.removeFurnace(searedBrick);

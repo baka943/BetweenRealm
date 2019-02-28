@@ -4,15 +4,11 @@
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 
-#Shaped recipes
+//==================================
+######## Shaped Recipes ########
+//==================================
+
 val shapedRecipes as IIngredient[][][][IItemStack] = {
-	<minecraft:armor_stand> : [
-		[
-			[<ore:stickWood>, <ore:stickWood>, <ore:stickWood>],
-			[null, <ore:stickWood>],
-			[<ore:stickWood>, <ore:stone>, <ore:stickWood>]
-		]
-	],
 	<minecraft:furnace> : [
 		[
 			[<ore:cobblestone>, <ore:cobblestone>, <ore:cobblestone>],
@@ -54,6 +50,10 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 };
 
 iRecipes.add(shapedRecipes, false);
+
+//==================================
+######## Furnace Recipes ########
+//==================================
 
 #Modify Ores recipes
 val furnaceRecipes as IIngredient[IItemStack] = {

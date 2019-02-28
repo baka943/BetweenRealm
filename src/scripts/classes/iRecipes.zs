@@ -76,6 +76,10 @@ zenClass IRecipes {
 	######## Furnace Recipes ########
 	//==================================
 
+	function removeFurnace(output as IItemStack) {
+		furnace.remove(output);
+	}
+
 	function addFurnace(map as IIngredient[IItemStack]) {
 		for output, input in map {
 			furnace.remove(output);

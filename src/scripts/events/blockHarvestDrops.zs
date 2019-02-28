@@ -5,7 +5,7 @@ import crafttweaker.events.IEventManager;
 import crafttweaker.event.IBlockEvent;
 import crafttweaker.event.BlockHarvestDropsEvent;
 
-import crafttweaker.item.IItemStack;
+import crafttweaker.item.WeightedItemStack;
 import crafttweaker.block.IBlock;
 
 #Block Harvest Drops Handler on The Betweenlands Dimension
@@ -21,18 +21,14 @@ events.onBlockHarvestDrops(function(event as BlockHarvestDropsEvent) {
 		if(harvestDrops has blockID) {
 			event.drops = harvestDrops[blockID];
 		}
-
-		if(blockID == "thebetweenlands:swamp_tallgrass") {
-			event.drops = [<minecraft:wheat_seeds>, <minecraft:carrot>, <minecraft:potato>];
-			event.dropChance = 0.1F;
-		}
 	}
-
 });
 
 #Block Harvest Drops List
-static harvestDrops as IItemStack[][string] = {
-	//Minecraft
-	"minecraft:stone" : [smoothBetweenstone],
-	"minecraft:cobblestone" : [betweenstone]
+static harvestDrops as WeightedItemStack[][string] = {
+	"thebetweenlands:swamp_tallgrass" : [
+		<minecraft:wheat_seeds> % 10,
+		<minecraft:carrot> % 5,
+		<minecraft:potato> % 5
+	]
 };

@@ -10,8 +10,7 @@ val melterRecipes as IIngredient[][int][ILiquidStack] = {
 		72 : [
 			<ore:stone>,
 			<ore:cobblestone>,
-			searedBrick,
-			<tconstruct:soil>
+			searedBrick
 		],
 		288 : [
 			<ore:blockSeared>

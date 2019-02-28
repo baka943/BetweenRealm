@@ -15,7 +15,7 @@ zenClass ArtisanWorktables {
 	//==================================
 
 	#Add Shapeless recipes
-	function add(map as IIngredient[][string][IItemStack][string]) {
+	function addProcess(map as IIngredient[][string][IItemStack][string]) {
 		for tableType, itemRecipes in map {
 			var builder = RecipeBuilder.get(tableType);
 
@@ -51,7 +51,7 @@ zenClass ArtisanWorktables {
 	}
 
 	#Add Shaped/Mirrored recipes
-	function add(map as IIngredient[][][string][IItemStack][string], isMirrored as bool) {
+	function addProcess(map as IIngredient[][][string][IItemStack][string], isMirrored as bool) {
 		for tableType, itemRecipes in map {
 			var builder = RecipeBuilder.get(tableType);
 

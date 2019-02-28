@@ -1,0 +1,56 @@
+{
+	"animator": [
+		{
+			"input": {
+				"item": {
+					"id": "minecraft:ender_pearl"
+				},
+				"fuel": 8,
+				"life": 4
+			},
+			"output_entity": {
+				"id": "thebetweenlands:dark_druid"
+			},
+			"rendered_entity": "thebetweenlands:dark_druid"
+		},
+		{
+			"input": {
+				"item": {
+					"id": "minecraft:fish"
+				},
+				"fuel": 8,
+				"life": 4
+			},
+			"output_entity": {
+				"id": "minecraft:guardian"
+			},
+			"rendered_entity": "minecraft:guardian"
+		},
+		{
+			"input": {
+				"item": {
+					"id": "minecraft:blaze_powder"
+				},
+				"fuel": 8,
+				"life": 4
+			},
+			"output_entity": {
+				"id": "minecraft:blaze"
+			},
+			"rendered_entity": "minecraft:blaze"
+		},
+		{
+			"input": {
+				"item": {
+					"id": "thebetweenlands:wight_heart"
+				},
+				"fuel": 8,
+				"life": 4
+			},
+			"output_entity": {
+				"id": "minecraft:ghast"
+			},
+			"rendered_entity": "minecraft:ghast"
+		}
+	]
+}

@@ -33,6 +33,15 @@ val alchemicalMixer as ILiquidStack[][int][ILiquidStack] = {
 			<fluid:lava> * 8,
 			<fluid:ardite> * 6
 		]
+	},
+
+	//Lv.2
+	<fluid:ender_pearl> * 8 : {
+		2 : [
+			<fluid:antimony> * 8,
+			<fluid:water> * 2,
+			<fluid:alchemical_redstone> * 6
+		]
 	}
 };
 
