@@ -43,8 +43,7 @@ val metalStamper as IItemStack[ILiquidStack][IIngredient] = {
 		<fluid:cobalt> * 144 : metal.cobalt.ingot,
 		<fluid:manyullyn> * 144 : metal.manyullyn.ingot,
 		<fluid:octine> * 144 : metal.octine.ingot,
-		<fluid:syrmorite> * 144 : metal.syrmorite.ingot,
-		<fluid:ember> * 144 : emberCrystal
+		<fluid:syrmorite> * 144 : metal.syrmorite.ingot
 	},
 	<embers:stamp_gear> : {
 		<fluid:iron> * 576 : metal.iron.gear,
@@ -80,8 +79,7 @@ val partStamper as IItemStack[ILiquidStack] = {
 	<fluid:cobalt> : metal.cobalt.nugget,
 	<fluid:manyullyn> : metal.manyullyn.nugget,
 	<fluid:octine> : metal.octine.nugget,
-	<fluid:syrmorite> : metal.syrmorite.nugget,
-	<fluid:ember> : emberShard
+	<fluid:syrmorite> : metal.syrmorite.nugget
 };
 
 embers.addStamperP(partStamper);
