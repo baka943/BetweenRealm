@@ -27,8 +27,9 @@ events.onBlockHarvestDrops(function(event as BlockHarvestDropsEvent) {
 #Block Harvest Drops List
 static harvestDrops as WeightedItemStack[][string] = {
 	"thebetweenlands:swamp_tallgrass" : [
-		<minecraft:wheat_seeds> % 10,
-		<minecraft:carrot> % 5,
-		<minecraft:potato> % 5
+		<minecraft:wheat_seeds> % 9,
+		<minecraft:carrot> % 3,
+		<minecraft:potato> % 3,
+		<minecraft:beetroot_seeds> % 3
 	]
 };

@@ -3,7 +3,19 @@
 		{
 			"input": {
 				"item": {
-					"id": "minecraft:ender_pearl"
+					"id": "minecraft:wheat_seeds"
+				},
+				"fuel": 8,
+				"life": 4
+			},
+			"output": {
+				"id": "minecraft:nether_wart"	
+			}
+		},
+		{
+			"input": {
+				"item": {
+					"id": "minecraft:ender_eye"
 				},
 				"fuel": 8,
 				"life": 4
