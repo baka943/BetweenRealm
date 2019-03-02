@@ -30,6 +30,8 @@ static harvestDrops as WeightedItemStack[][string] = {
 		<minecraft:wheat_seeds> % 9,
 		<minecraft:carrot> % 3,
 		<minecraft:potato> % 3,
-		<minecraft:beetroot_seeds> % 3
+		<minecraft:beetroot_seeds> % 3,
+		<minecraft:melon_seeds> % 1, 
+		<minecraft:pumpkin_seeds> % 1
 	]
 };
