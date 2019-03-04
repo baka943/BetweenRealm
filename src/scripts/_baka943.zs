@@ -5,7 +5,6 @@
 ######## Ore DictEntry ########
 //==================================
 
-#Add items
 <ore:blockMossy>.add(
 	<thebetweenlands:cragrock:1>,
 	<thebetweenlands:cragrock:2>,
@@ -15,3 +14,9 @@
 );
 
 hopper.add(<thebetweenlands:syrmorite_hopper>);
+
+//==================================
+######## Entity Drop ########
+//==================================
+
+<entity:thebetweenlands:gas_cloud>.addDrop(<minecraft:ender_pearl> % 50, 1, 2);
