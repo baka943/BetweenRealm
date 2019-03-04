@@ -8,3 +8,6 @@ JEI.addDescription([<thebetweenlands:swamp_tallgrass>, <minecraft:wheat_seeds>, 
 
 #Ender Pearl description
 JEI.addDescription(<minecraft:ender_pearl>, ["Mysterious objects in the fog floating in the Swamp, no one knows what it is."]);
+
+#Water Bucket description
+JEI.addDescription(<minecraft:water_bucket>, ["Maybe, you can try to use the Iron bucket to fill the Swamp water."]);
