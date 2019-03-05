@@ -7,7 +7,7 @@ import crafttweaker.event.PlayerTickEvent;
 import crafttweaker.data.IData;
 import crafttweaker.player.IPlayer;
 
-#Something with Player Tick
+#Somethings with Player Tick
 events.onPlayerTick(function(event as PlayerTickEvent) {
 	var player as IPlayer = event.player;
 	var data as IData = {alchemyTable : 0} + player.data;

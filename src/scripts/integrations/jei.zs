@@ -12,5 +12,5 @@ JEI.addDescription(<minecraft:ender_pearl>, ["Mysterious objects in the fog floa
 #Water Bucket description
 JEI.addDescription(<minecraft:water_bucket>, ["Maybe, you can try to use the Iron bucket to fill the Swamp water."]);
 
-#Beacon description
-JEI.addDescription(<minecraft:beacon>, ["Seems to be able to open links between dimensions."]);
+#Custom portals description
+JEI.addDescription([<minecraft:nether_wart>, <minecraft:beacon>], ["Seems to be able to open links between dimensions."]);
