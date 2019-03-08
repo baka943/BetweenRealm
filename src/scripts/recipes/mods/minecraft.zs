@@ -34,18 +34,6 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 			[ingot.iron, <ore:logWood>, ingot.iron],
 			[null, ingot.iron]
 		]
-	],
-	<bonsaitrees:bonsaipot> : [
-		[
-			[caminiteBrick, null, caminiteBrick],
-			[caminiteBrick, caminiteBrick, caminiteBrick]
-		]
-	],
-	<bonsaitrees:bonsaipot:1> : [
-		[
-			[<bonsaitrees:bonsaipot>],
-			[hopper]
-		]
 	]
 };
 
