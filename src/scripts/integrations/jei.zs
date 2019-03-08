@@ -9,8 +9,5 @@ JEI.addDescription([<minecraft:wheat_seeds>, <minecraft:beetroot_seeds>, <minecr
 #Ender Pearl description
 JEI.addDescription(<minecraft:ender_pearl>, ["Mysterious objects in the fog floating in the Swamp, no one knows what it is."]);
 
-#Water Bucket description
-JEI.addDescription(<minecraft:water_bucket>, ["Maybe, you can try to use the Iron bucket to fill the Swamp water."]);
-
 #Custom portals description
 JEI.addDescription([<minecraft:nether_wart>, <minecraft:beacon>], ["Seems to be able to open links between dimensions."]);

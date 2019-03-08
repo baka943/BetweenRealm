@@ -52,6 +52,19 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 iRecipes.add(shapedRecipes, false);
 
 //==================================
+######## Shapeless Recipes ########
+//==================================
+
+iRecipes.add(<minecraft:water_bucket>,
+	[
+		swampBucket.noReturn(),
+		charCoal
+	]
+);
+
+static swampBucket as IItemStack = <forge:bucketfilled>.withTag({FluidName: "swamp_water", Amount: 1000});
+
+//==================================
 ######## Furnace Recipes ########
 //==================================
 
