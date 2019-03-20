@@ -90,7 +90,7 @@ val exchangeAlchemy as IIngredient[][][int][IItemStack] = {
 			[ingot.dawnstone, soulSand, soulSand, soulSand, soulSand]
 		],
 		3 : [
-			[<embers:archaic_brick>, null, null, null, null]
+			[archaicBrick, null, null, null, null]
 		]
 	},
 	<embers:isolated_materia> * 4 : {
@@ -112,6 +112,16 @@ val exchangeAlchemy as IIngredient[][][int][IItemStack] = {
 	<embers:ember_cluster> : {
 		2 : [
 			[emberCrystal, emberShard, emberShard, emberShard, emberShard]
+		]
+	},
+	<embers:ancient_motive_core> * 4 : {
+		2 : [
+			[<embers:ancient_motive_core>, null, null, null, null]
+		]
+	},
+	<embers:explosion_charm> : {
+		2 : [
+			[<embers:ancient_motive_core>, archaicBrick, <ore:leather>, archaicBrick, archaicBrick]
 		]
 	},
 	<soot:alchemy_globe> : {

@@ -11,8 +11,7 @@ val removeItems as IItemStack[] = [
 	<embers:alchemy_tablet>,
 	<embers:blend_caminite>,
 	<tconstruct:materials:18>,
-	<tconstruct:soil>,
-	<thebetweenlands:swamp_talisman>
+	<tconstruct:soil>
 ];
 
 iRecipes.remove(removeItems);

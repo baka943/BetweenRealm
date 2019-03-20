@@ -35,6 +35,13 @@ recipes.addShaped(<embers:alchemy_tablet>,
 
 #Shaped recipes
 val shapedRecipes as IIngredient[][][][IItemStack] = {
+	<embers:codex> : [
+		[
+			[caminiteBrick],
+			[ingot.octine],
+			[caminiteBrick]
+		]
+	],
 	<embers:block_furnace> : [
 		[
 			[caminiteBrick, caminitePlate, caminiteBrick],

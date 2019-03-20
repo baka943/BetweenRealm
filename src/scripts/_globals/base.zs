@@ -29,6 +29,7 @@ global emberShard as IItemStack = <embers:shard_ember>;
 global emberCrystal as IItemStack = <embers:crystal_ember>;
 global emberCluster as IItemStack = <embers:ember_cluster>;
 global emberDust as IItemStack = <embers:dust_ember>;
+global archaicBrick as IItemStack = <embers:archaic_brick>;
 
 //==================================
 ######## Tinkers' Construct ########

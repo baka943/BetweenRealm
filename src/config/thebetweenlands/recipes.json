@@ -50,6 +50,19 @@
 				"id": "minecraft:ghast"
 			},
 			"rendered_entity": "minecraft:ghast"
+		},
+		{
+			"input": {
+				"item": {
+					"id": "embers:archaic_brick"
+				},
+				"fuel": 8,
+				"life": 4
+			},
+			"output_entity": {
+				"id": "embers:ancient_golem"
+			},
+			"rendered_entity": "embers:ancient_golem"
 		}
 	]
 }
