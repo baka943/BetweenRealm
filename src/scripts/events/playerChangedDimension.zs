@@ -21,7 +21,7 @@ events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
 			player.give(<thebetweenlands:empty_amate_map>);
 			player.give(<thebetweenlands:swamp_talisman>);
 
-			player.sendChat(player.name ~ "Welcome to The Dark and Mysterious Realm");
+			player.sendChat(player.name ~ ", Welcome to The Dark and Mysterious Realm");
 
 			data = {toBetweenlands : 1};
 			player.update(data);
