@@ -7,6 +7,10 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.data.IData;
 import crafttweaker.recipes.IRecipeAction;
 
+//==================================
+######## Shaped Recipes ########
+//==================================
+
 #Alchemy Tablet
 recipes.addShaped(<embers:alchemy_tablet>,
 	[
@@ -31,6 +35,34 @@ recipes.addShaped(<embers:alchemy_tablet>,
 
 #Shaped recipes
 val shapedRecipes as IIngredient[][][][IItemStack] = {
+	<embers:block_furnace> : [
+		[
+			[caminiteBrick, caminitePlate, caminiteBrick],
+			[caminiteBrick, ingot.copper, caminiteBrick],
+			[ingot.iron, emberCrystal, ingot.iron]
+		]
+	],
+	<embers:ember_activator> : [
+		[
+			[ingot.copper, plate.copper, ingot.copper],
+			[ingot.copper, plate.copper, ingot.copper],
+			[plate.iron, emberCrystal, plate.iron]
+		]
+	],
+	<embers:boiler> : [
+		[
+			[ingot.copper, null, ingot.copper],
+			[plate.iron, <embers:ember_activator>, plate.iron],
+			[plate.iron, block.copper, plate.iron]
+		]
+	],
+	<embers:cinder_plinth> : [
+		[
+			[null, plate.lead],
+			[ingot.silver, emberCrystal, ingot.silver],
+			[plate.lead, caminiteBlock, plate.lead]
+		]
+	],
 	<embers:ember_gauge> : [
 		[
 			[null, ingot.dawnstone],
@@ -59,13 +91,6 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 			[null, ingot.antimony]
 		]
 	],
-	<embers:mech_core> : [
-		[
-			[ingot.iron, null, ingot.iron],
-			[null, plate.lead],
-			[ingot.iron, null, ingot.iron]
-		]
-	],
 	<embers:ashen_brick> * 4 : [
 		[
 			[<embers:ashen_stone>, <embers:ashen_stone>],
@@ -83,5 +108,8 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 
 iRecipes.add(shapedRecipes, false);
 
-#Shapeless recipes
+//==================================
+######## Shapeless Recipes ########
+//==================================
+
 iRecipes.add(<embers:blend_caminite> * 8, [rubberBall, boneMeal, boneMeal, boneMeal, <ore:sand>]);

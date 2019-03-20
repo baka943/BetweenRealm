@@ -4,7 +4,11 @@
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 
-var shapedRecipes as IIngredient[][][][IItemStack] = {
+//==================================
+######## Shaped Recipes ########
+//==================================
+
+val shapedRecipes as IIngredient[][][][IItemStack] = {
 	<bonsaitrees:bonsaipot> : [
 		[
 			[caminiteBrick, null, caminiteBrick],
@@ -19,4 +23,4 @@ var shapedRecipes as IIngredient[][][][IItemStack] = {
 	]
 };
 
-iRecipes.add(shapedRecipes);
+iRecipes.add(shapedRecipes, false);

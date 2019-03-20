@@ -10,4 +10,4 @@ JEI.addDescription([<minecraft:wheat_seeds>, <minecraft:beetroot_seeds>, <minecr
 JEI.addDescription(<minecraft:ender_pearl>, ["Mysterious objects in the fog floating in the Swamp, no one knows what it is."]);
 
 #Custom portals description
-JEI.addDescription([<minecraft:nether_wart>, <minecraft:beacon>], ["Seems to be able to open links between dimensions."]);
+JEI.addDescription([<thebetweenlands:swamp_talisman>, <minecraft:nether_wart>, <minecraft:beacon>, <minecraft:end_rod>], ["Seems to be able to open links between dimensions."]);

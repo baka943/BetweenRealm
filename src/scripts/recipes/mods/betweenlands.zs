@@ -4,7 +4,10 @@
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 
-#Shaped Recipes
+//==================================
+######## Shaped Recipes ########
+//==================================
+
 val shapedRecipes as IIngredient[][][][IItemStack] = {
 	<thebetweenlands:sulfur_furnace> : [
 		[

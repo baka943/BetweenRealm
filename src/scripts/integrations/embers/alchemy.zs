@@ -183,11 +183,6 @@ val exchangeAlchemy as IIngredient[][][int][IItemStack] = {
 		4 : [
 			[ashen.boots, ashenCloth, <embers:inflictor_gem>, ashenCloth, ingot.dawnstone]
 		]
-	},
-	<thebetweenlands:druid_altar> : {
-		4 : [
-			[<minecraft:enchanting_table> , null, null, null, null]
-		]
 	}
 };
 
