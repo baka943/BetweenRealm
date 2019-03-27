@@ -1,4 +1,4 @@
-#Name: emberGeneration.zs
+#Name: generation.zs
 #Author: baka943
 
 #Add Metal Coefficient

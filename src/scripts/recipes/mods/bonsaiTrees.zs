@@ -18,7 +18,7 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 	<bonsaitrees:bonsaipot:1> : [
 		[
 			[<bonsaitrees:bonsaipot>],
-			[hopper]
+			[<ore:hopper>]
 		]
 	]
 };

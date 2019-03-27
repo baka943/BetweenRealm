@@ -13,7 +13,7 @@
 	<thebetweenlands:mossy_smooth_betweenstone>
 );
 
-hopper.add(<thebetweenlands:syrmorite_hopper>);
+<ore:hopper>.add(<thebetweenlands:syrmorite_hopper>);
 
 //==================================
 ######## Entity Drop ########

@@ -12,44 +12,44 @@ global metal as IItemStack[string][string] = {
 		ingot : <minecraft:iron_ingot>,
 		nugget : <minecraft:iron_nugget>,
 		gear : <mysticalmechanics:gear_iron>,
-		ore : <betweenores:between_iron_ore>
+		ore : <betweenores:iron_ore>
 	},
 	gold : {
 		block : <minecraft:gold_block>,
 		ingot : <minecraft:gold_ingot>,
 		nugget : <minecraft:gold_nugget>,
 		gear : <mysticalmechanics:gear_gold>,
-		ore : <betweenores:between_gold_ore>
+		ore : <betweenores:gold_ore>
 	},
 	copper : {
 		block : <embers:block_copper>,
 		ingot : <embers:ingot_copper>,
 		nugget : <embers:nugget_copper>,
-		ore : <betweenores:between_copper_ore>
+		ore : <betweenores:copper_ore>
 	},
 	tin : {
 		block : <embers:block_tin>,
 		ingot : <embers:ingot_tin>,
 		nugget : <embers:nugget_tin>,
-		ore : <betweenores:between_tin_ore>
+		ore : <betweenores:tin_ore>
 	},
 	lead : {
 		block : <embers:block_lead>,
 		ingot : <embers:ingot_lead>,
 		nugget : <embers:nugget_lead>,
-		ore : <betweenores:between_lead_ore>
+		ore : <betweenores:lead_ore>
 	},
 	nickel : {
 		block : <embers:block_nickel>,
 		ingot : <embers:ingot_nickel>,
 		nugget : <embers:nugget_nickel>,
-		ore : <betweenores:between_nickel_ore>
+		ore : <betweenores:nickel_ore>
 	},
 	silver : {
 		block : <embers:block_silver>,
 		ingot : <embers:ingot_silver>,
 		nugget : <embers:nugget_silver>,
-		ore : <betweenores:between_silver_ore>
+		ore : <betweenores:silver_ore>
 	},
 	bronze : {
 		block : <embers:block_bronze>,
