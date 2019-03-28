@@ -19,9 +19,8 @@ events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
 		if(data.toBetweenlands == 0) {
 			player.give(<embers:tinker_hammer>.withLore(["§5I need a wrench more."]));
 			player.give(<thebetweenlands:empty_amate_map>);
-			player.give(<thebetweenlands:swamp_talisman>);
 
-			player.sendChat(player.name ~ ", Welcome to The Dark and Mysterious Realm");
+			player.sendChat(player.name ~ ", Welcome to The Dank and Mysterious Realm");
 
 			data = {toBetweenlands : 1};
 			player.update(data);
