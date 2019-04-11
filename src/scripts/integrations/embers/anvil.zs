@@ -4,23 +4,8 @@
 import crafttweaker.item.IItemStack;
 
 #Repair blacklist
-val blacklist as IItemStack[] = [
-	<embers:ashen_cloak_head>,
-	<embers:ashen_cloak_chest>,
-	<embers:ashen_cloak_legs>,
-	<embers:ashen_cloak_boots>,
-	<thebetweenlands:life_crystal>
-];
-
-for item in blacklist {
-	embers.removeRepair(item);
-	embers.removeRepairM(item);
-
-	if(item.definition.creativeTab.tabLabel == "embers") {
-		item.definition.setNoRepair();
-		item.maxDamage = -1;
-	}
-}
+embers.removeRepair(<thebetweenlands:life_crystal>);
+embers.removeRepairM(<thebetweenlands:life_crystal>);
 
 #Liver of Sulfur
 embers.addAnvil([<soot:sulfur_clump>], <thebetweenlands:sulfur_block>, null);

@@ -16,14 +16,7 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 			[betweenstone, betweenstone, betweenstone]
 		]
 	],
-	<thebetweenlands:sulfur_torch> * 8 : [
-		[
-			[sulfur],
-			[charCoal],
-			[stickWeed]
-		]
-	],
-	<thebetweenlands:sulfur_torch> * 4 : [
+	<thebetweenlands:sulfur_torch> * 6 : [
 		[
 			[sulfur],
 			[stickWeed]

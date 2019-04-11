@@ -268,9 +268,14 @@ zenClass Embers {
 	//==================================
 
 	#Add Metal Coefficient
-	function addMetalCoef(block as IIngredient, multiple as double) {
-		EmberGeneration.addMetalCoefficient(block, multiple);
+	function addMetalCoef(block as IIngredient, multiplier as double) {
+		EmberGeneration.addMetalCoefficient(block, multiplier);
 		block.addTooltip("Can also be placed under the Pressure Refinery");
+	}
+
+	#Add Boiler fluids
+	function addBoiler(fluid as ILiquidStack, multiplier as double) {
+		EmberGeneration.addBoilerFluid(fluid, <fluid:steam>, multiplier);
 	}
 	
 }

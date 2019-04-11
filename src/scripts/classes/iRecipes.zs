@@ -16,14 +16,18 @@ zenClass IRecipes {
 		for item, itemRecipes in map {
 			recipes.remove(item);
 
-			for recipe in itemRecipes {
-				recipes.addShapeless(item, recipe);
+			for i, recipe in itemRecipes {
+				var name as string = getName(item);
+
+				if(i > 0) name = name ~ "_" ~ i;
+
+				recipes.addShapeless(name, item, recipe);
 			}
 		}
 	}
 
 	function add(item as IItemStack, recipe as IIngredient[]) {
-		recipes.addShapeless(item, recipe);
+		recipes.addShapeless(getName(item), item, recipe);
 	}
 
 	//==================================
@@ -34,18 +38,22 @@ zenClass IRecipes {
 		for item, itemRecipes in map {
 			recipes.remove(item);
 
-			for recipe in itemRecipes {
+			for i, recipe in itemRecipes {
+				var name as string = getName(item);
+
+				if(i > 0) name = name ~ "_" ~ i;
+				
 				if(isMirrored) {
-					recipes.addShapedMirrored(item, recipe);
-				} else recipes.addShaped(item, recipe);
+					recipes.addShapedMirrored(name, item, recipe);
+				} else recipes.addShaped(name, item, recipe);
 			}
 		}
 	}
 
 	function add(item as IItemStack, recipe as IIngredient[][], isMirrored as bool) {
 		if(isMirrored) {
-			recipes.addShapedMirrored(item, recipe);
-		} else recipes.addShaped(item, recipe);
+			recipes.addShapedMirrored(getName(item), item, recipe);
+		} else recipes.addShaped(getName(item), item, recipe);
 	}
 
 	//==================================
@@ -87,4 +95,11 @@ zenClass IRecipes {
 		}
 	}
 	
+	//==================================
+	######## Utils ########
+	//==================================
+	function getName(item as IItemStack) as string {
+		return item.displayName.replace(' ', '_');
+	}
+
 }

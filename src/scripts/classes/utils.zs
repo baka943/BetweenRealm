@@ -13,10 +13,12 @@ zenClass Utils {
 	######## Compressed Recipes ########
 	//==================================
 
-	function addCompress(output as IItemStack, input as IIngredient, multiple as int) {
-		if(multiple == 2) {
+	function addCompress(output as IItemStack, input as IIngredient, multiplier as int) {
+		if(multiplier == 1) {
+			recipes.addShaped(output, [[input]]);
+		} else if(multiplier == 2) {
 			recipes.addShaped(output, [[input, input], [input, input]]);
-		} else if(multiple == 3) {
+		} else {
 			recipes.addShaped(output, [[input, input, input], [input, input, input], [input, input, input]]);
 		}
 	}
