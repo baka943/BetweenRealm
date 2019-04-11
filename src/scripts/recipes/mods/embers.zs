@@ -33,6 +33,9 @@ recipes.addShaped(<embers:alchemy_tablet>,
 	} as IRecipeAction
 );
 
+#Ashen Brick
+utils.addCompress(<embers:ashen_brick> * 4, <embers:ashen_stone>, 2);
+
 #Shaped recipes
 val shapedRecipes as IIngredient[][][][IItemStack] = {
 	<embers:codex> : [
@@ -96,12 +99,6 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 			[null, ingot.antimony],
 			[ingot.antimony, redstone, ingot.antimony],
 			[null, ingot.antimony]
-		]
-	],
-	<embers:ashen_brick> * 4 : [
-		[
-			[<embers:ashen_stone>, <embers:ashen_stone>],
-			[<embers:ashen_stone>, <embers:ashen_stone>]
 		]
 	],
 	<soot:scale> : [

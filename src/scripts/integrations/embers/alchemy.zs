@@ -148,8 +148,8 @@ val exchangeAlchemy as IIngredient[][][int][IItemStack] = {
 	},
 	<minecraft:blaze_powder> * 3 : {
 		3 : [
-			[emberDust, redstone, <ore:gunpowder>, redstone, <ore:gunpowder>],
-			[emberDust, <ore:gunpowder>, redstone, <ore:gunpowder>, redstone]
+			[emberDust, redstone, gunpowder, redstone, gunpowder],
+			[emberDust, gunpowder, redstone, gunpowder, redstone]
 		],
 		4 : [
 			[<minecraft:blaze_powder>, null, null, null, null]
