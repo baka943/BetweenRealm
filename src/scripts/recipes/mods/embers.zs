@@ -23,10 +23,10 @@ recipes.addShaped(<embers:alchemy_tablet>,
 
 	function(out, cInfo, player) {
 		if(!player.world.isRemote()) {
-			var data as IData = {alchemyTable : 0} + player.data;
+			var data as IData = {PlayerPersisted : {alchemyTable : 0}} + player.data;
 			
-			if(data.alchemyTable == 0) {
-				data = {alchemyTable : 1};
+			if(data.PlayerPersisted.alchemyTable == 0) {
+				data = {PlayerPersisted : {alchemyTable : 1}};
 				player.update(data);
 			}
 		}

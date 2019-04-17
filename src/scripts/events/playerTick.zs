@@ -10,12 +10,12 @@ import crafttweaker.player.IPlayer;
 #Somethings with Player Tick
 events.onPlayerTick(function(event as PlayerTickEvent) {
 	var player as IPlayer = event.player;
-	var data as IData = {alchemyTable : 0} + player.data;
+	var data as IData = {PlayerPersisted : {alchemyTable : 0}} + player.data;
 
-	if(data.alchemyTable == 1) {
+	if(data.PlayerPersisted.alchemyTable == 1) {
 		player.give(<minecraft:writable_book>.withLore(["§5To record any Interesting thing..."]));
 
-		data = {alchemyTable : 2};
+		data = {PlayerPersisted : {alchemyTable : 2}};
 		player.update(data);
 	}
 });

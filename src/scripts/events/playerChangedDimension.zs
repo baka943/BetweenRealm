@@ -14,16 +14,13 @@ events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
 	var data as IData = null;
 
 	if(worldTo == "betweenlands") {
-		data = {toBetweenlands : 0} + player.data;
+		data = {PlayerPersisted : {thebetweenlands : {not_first_join : 0}}} + player.data;
 
-		if(data.toBetweenlands == 0) {
+		if(data.PlayerPersisted.thebetweenlands.not_first_join == 0) {
 			player.give(<embers:tinker_hammer>.withLore(["§5I need a wrench more."]));
 			player.give(<thebetweenlands:empty_amate_map>);
 
 			player.sendChat(player.name ~ ", Welcome to The Dank and Mysterious Realm");
-
-			data = {toBetweenlands : 1};
-			player.update(data);
 		}
 	}
 
