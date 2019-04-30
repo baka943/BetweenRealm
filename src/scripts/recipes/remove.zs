@@ -13,7 +13,10 @@ val removeItems as IItemStack[] = [
 	<tconstruct:soil>,
 	<thebetweenlands:sulfur_torch>,
 	<minecraft:brewing_stand>,
-	<minecraft:leather>
+	<minecraft:chest>,
+	<minecraft:crafting_table>,
+	<minecraft:leather>,
+	<minecraft:stick>
 ];
 
 iRecipes.remove(removeItems);
