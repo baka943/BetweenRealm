@@ -35,9 +35,9 @@ iRecipes.add(shapedRecipes, false);
 #Wooden Item/Block
 for item in <ore:plankWood>.items {
 	if(item.definition.owner == "minecraft") {
-		iRecipes.add(<minecraft:crafting_table>, [[item, item], [item, item]], false);
-		iRecipes.add(<minecraft:chest>, [[item, item, item], [item, null, item], [item, item, item]], false);
 		iRecipes.add(<minecraft:stick>, [[item], [item]], false);
+		utils.addCompress(<minecraft:crafting_table>, item, 2);
+		iRecipes.add(<minecraft:chest>, [[item, item, item], [item, null, item], [item, item, item]], false);
 	}
 }
 

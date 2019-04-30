@@ -15,6 +15,7 @@ import mods.embers.EmberGeneration;
 import mods.soot.AlchemicalMixer;
 
 zenClass Embers {
+	
 	zenConstructor() {}
 
 	//==================================

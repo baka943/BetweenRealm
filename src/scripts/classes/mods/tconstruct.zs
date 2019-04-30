@@ -3,5 +3,7 @@
 #Author: baka943
 
 zenClass TConstruct {
+	
 	zenConstructor() {}
+	
 }

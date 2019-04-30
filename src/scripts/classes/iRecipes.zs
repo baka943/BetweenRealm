@@ -6,6 +6,7 @@ import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 
 zenClass IRecipes {
+	
 	zenConstructor() {}
 
 	//==================================
@@ -17,7 +18,7 @@ zenClass IRecipes {
 			recipes.remove(item);
 
 			for i, recipe in itemRecipes {
-				var name as string = getName(item);
+				var name as string = this.getItemName(item);
 
 				if(i > 0) name = name ~ "_" ~ i;
 
@@ -27,7 +28,7 @@ zenClass IRecipes {
 	}
 
 	function add(item as IItemStack, recipe as IIngredient[]) {
-		recipes.addShapeless(getName(item), item, recipe);
+		recipes.addShapeless(this.getItemName(item), item, recipe);
 	}
 
 	//==================================
@@ -39,7 +40,7 @@ zenClass IRecipes {
 			recipes.remove(item);
 
 			for i, recipe in itemRecipes {
-				var name as string = getName(item);
+				var name as string = this.getItemName(item);
 
 				if(i > 0) name = name ~ "_" ~ i;
 				
@@ -52,8 +53,8 @@ zenClass IRecipes {
 
 	function add(item as IItemStack, recipe as IIngredient[][], isMirrored as bool) {
 		if(isMirrored) {
-			recipes.addShapedMirrored(getName(item), item, recipe);
-		} else recipes.addShaped(getName(item), item, recipe);
+			recipes.addShapedMirrored(this.getItemName(item), item, recipe);
+		} else recipes.addShaped(this.getItemName(item), item, recipe);
 	}
 
 	//==================================
@@ -98,7 +99,7 @@ zenClass IRecipes {
 	//==================================
 	######## Utils ########
 	//==================================
-	function getName(item as IItemStack) as string {
+	function getItemName(item as IItemStack) as string {
 		return item.displayName.replace(' ', '_');
 	}
 
