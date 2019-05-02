@@ -29,7 +29,7 @@ iRecipes.add(shapedRecipes, false);
 for item in <ore:plankWood>.items {
 	if(item.definition.owner == "minecraft") {
 		iRecipes.add(<minecraft:stick>, [[item], [item]], false);
-		utils.addCompress(<minecraft:crafting_table>, item, 2);
+		iRecipes.addCompress(<minecraft:crafting_table>, item, 2);
 		iRecipes.add(<minecraft:chest>, [[item, item, item], [item, null, item], [item, item, item]], false);
 	}
 }

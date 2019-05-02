@@ -4,6 +4,7 @@
 
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
+import crafttweaker.item.IItemDefinition;
 
 zenClass IRecipes {
 	
@@ -58,6 +59,22 @@ zenClass IRecipes {
 	}
 
 	//==================================
+	######## Compressed Recipes ########
+	//==================================
+
+	function addCompress(output as IItemStack, input as IIngredient) {
+		this.add(output, [[input, input, input], [input, input, input], [input, input, input]], false);
+	}
+
+	function addCompress(output as IItemStack, input as IIngredient, multiplier as int) {
+		if(multiplier == 1) {
+			this.add(output, [[input]], false);
+		} else if(multiplier == 2) {
+			this.add(output, [[input, input], [input, input]], false);
+		}
+	}
+
+	//==================================
 	######## Remove Recipes ########
 	//==================================
 
@@ -97,10 +114,17 @@ zenClass IRecipes {
 	}
 	
 	//==================================
-	######## Utils ########
+	######## Util Method ########
 	//==================================
 	function getItemName(item as IItemStack) as string {
-		return item.displayName.replace(' ', '_');
+		var itemDef as IItemDefinition = item.definition;
+		var meta as int = item.metadata;
+		
+		var itemName as string = itemDef.id.replace(itemDef.owner + ':', '');
+
+		if(meta == 0) {
+			return itemName;
+		} else return itemName + meta;
 	}
 
 }

@@ -2,4 +2,4 @@
 #Author: baka943
 
 #Ball of Moss
-utils.addCompress(mossBall, <ore:blockMossy>);
+iRecipes.addCompress(mossBall, <ore:blockMossy>);

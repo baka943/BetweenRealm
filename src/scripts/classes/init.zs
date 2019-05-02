@@ -8,4 +8,6 @@ global tic as scripts.classes.mods.tconstruct.TConstruct = scripts.classes.mods.
 
 #Recipes Init
 global iRecipes as scripts.classes.iRecipes.IRecipes = scripts.classes.iRecipes.IRecipes();
+
+#Utils Init
 global utils as scripts.classes.utils.Utils = scripts.classes.utils.Utils();
