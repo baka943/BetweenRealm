@@ -75,23 +75,23 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 	],
 	<embers:ember_gauge> : [
 		[
-			[null, ingot.dawnstone],
-			[ingot.dawnstone, redstone, ingot.dawnstone],
-			[null, ingot.dawnstone]
+			[null, plate.dawnstone],
+			[plate.dawnstone, redstone, plate.dawnstone],
+			[null, plate.dawnstone]
 		]
 	],
 	<embers:fluid_gauge> : [
 		[
-			[null, ingot.iron],
-			[ingot.iron, redstone, ingot.iron],
-			[null, ingot.iron]
+			[null, plate.iron],
+			[plate.iron, redstone, plate.iron],
+			[null, plate.iron]
 		]
 	],
 	<embers:clockwork_attenuator> : [
 		[
-			[null, ingot.electrum],
-			[ingot.electrum, redstone, ingot.electrum],
-			[null, ingot.electrum]
+			[null, plate.electrum],
+			[plate.electrum, redstone, plate.electrum],
+			[null, plate.electrum]
 		]
 	],
 	<soot:alchemy_gauge> : [

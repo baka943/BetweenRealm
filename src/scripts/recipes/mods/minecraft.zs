@@ -9,13 +9,6 @@ import crafttweaker.item.IItemStack;
 //==================================
 
 val shapedRecipes as IIngredient[][][][IItemStack] = {
-	<minecraft:compass> : [
-		[
-			[null, plate.iron],
-			[plate.iron, redstone, plate.iron],
-			[null, plate.iron]
-		]
-	],
 	<minecraft:hopper> : [
 		[
 			[ingot.iron, null, ingot.iron],
