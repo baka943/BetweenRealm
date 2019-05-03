@@ -38,13 +38,6 @@ iRecipes.addCompress(<embers:ashen_brick> * 4, <embers:ashen_stone>, 2);
 
 #Shaped recipes
 val shapedRecipes as IIngredient[][][][IItemStack] = {
-	<embers:codex> : [
-		[
-			[caminiteBrick],
-			[ingot.octine],
-			[caminiteBrick]
-		]
-	],
 	<embers:block_furnace> : [
 		[
 			[caminiteBrick, caminitePlate, caminiteBrick],

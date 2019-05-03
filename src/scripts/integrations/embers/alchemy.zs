@@ -116,12 +116,21 @@ val exchangeAlchemy as IIngredient[][][int][IItemStack] = {
 	},
 	<embers:ancient_motive_core> * 4 : {
 		2 : [
+			[emberCluster, archaicBrick, archaicBrick, archaicBrick, archaicBrick]
+		],
+		3 : [
 			[<embers:ancient_motive_core>, null, null, null, null]
 		]
 	},
 	<embers:explosion_charm> : {
 		2 : [
 			[<embers:ancient_motive_core>, archaicBrick, <ore:leather>, archaicBrick, archaicBrick]
+		]
+	},
+	<embers:wildfire_core> : {
+		2 : [
+			[emberCluster, ingot.dawnstone, ingot.bronze, ingot.dawnstone, ingot.bronze],
+			[emberCluster, ingot.bronze, ingot.dawnstone, ingot.bronze, ingot.dawnstone]
 		]
 	},
 	<soot:alchemy_globe> : {
@@ -137,6 +146,11 @@ val exchangeAlchemy as IIngredient[][][int][IItemStack] = {
 	},
 
 	//Lv.3
+	<embers:dust_metallurgic> : {
+		3 : [
+			[diamond, null, null, null, null]
+		]
+	},
 	<minecraft:emerald> : {
 		3 : [
 			[diamond, plate.gold, ingot.antimony, plate.gold, ingot.antimony],
