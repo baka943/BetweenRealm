@@ -120,7 +120,7 @@ zenClass IRecipes {
 		var itemDef as IItemDefinition = item.definition;
 		var meta as int = item.metadata;
 		
-		var itemName as string = itemDef.id.replace(itemDef.owner + ':', '');
+		var itemName as string = itemDef.id.split(":")[1];
 
 		if(meta == 0) {
 			return itemName;
