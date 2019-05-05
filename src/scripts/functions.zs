@@ -5,7 +5,7 @@
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IItemDefinition;
 
-#Get Item name
+#Get Item Name
 function getItemName(item as IItemStack) as string {
 	var itemDef as IItemDefinition = item.definition;
 	var meta as int = item.metadata;
@@ -23,7 +23,7 @@ function isModItem(item as IItemStack, modid as string, itemName as string) as b
 	var owner as string = itemDef.owner;
 	var itemID as string = itemDef.id;
 
-	if(modid.equals(owner) & itemID.contains(itemName)) {
+	if(modid.matches(owner) & itemID.contains(itemName)) {
 		return true;
 	} else return false;
 }
