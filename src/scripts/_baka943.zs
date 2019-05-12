@@ -14,9 +14,3 @@
 );
 
 <ore:hopper>.add(<minecraft:hopper>, <thebetweenlands:syrmorite_hopper>);
-
-//==================================
-######## Entity Drop ########
-//==================================
-
-<entity:thebetweenlands:gas_cloud>.addDrop(<minecraft:ender_pearl> % 50, 1, 2);

@@ -1,11 +1,10 @@
 #Name: playerChangeDimension.zs
 #Author: baka943
 
-import crafttweaker.events.IEventManager;
-import crafttweaker.event.PlayerChangedDimensionEvent;
-
 import crafttweaker.data.IData;
 import crafttweaker.player.IPlayer;
+
+import crafttweaker.event.PlayerChangedDimensionEvent;
 
 #Somethings with Player Changed Dimension
 events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
@@ -23,5 +22,4 @@ events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
 			player.update(data);
 		}
 	}
-
 });

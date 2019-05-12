@@ -1,16 +1,14 @@
 #Name: blockHarvestDrops.zs
 #Author: baka943
 
-import crafttweaker.events.IEventManager;
-import crafttweaker.event.IBlockEvent;
-import crafttweaker.event.BlockHarvestDropsEvent;
-
 import crafttweaker.item.WeightedItemStack;
 import crafttweaker.block.IBlock;
 
+import crafttweaker.event.BlockHarvestDropsEvent;
+
 #Block Harvest Drops Handler on The Betweenlands Dimension
 events.onBlockHarvestDrops(function(event as BlockHarvestDropsEvent) {
-	var blockID = event.block.definition.id;
+	var blockID as string = event.block.definition.id;
 
 	if(event.silkTouch) return;
 

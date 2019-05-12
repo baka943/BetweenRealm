@@ -18,12 +18,21 @@ function getItemName(item as IItemStack) as string {
 }
 
 #I don't know what it is
-function isModItem(item as IItemStack, modid as string, itemName as string) as bool {
+function isModItems(item as IItemStack, modid as string, key as string) as bool {
 	var itemDef as IItemDefinition = item.definition;
 	var owner as string = itemDef.owner;
+	var itemName as string = getItemName(item);
+
+	if(modid.matches(owner) & itemName.contains(key)) {
+		return true;
+	} else return false;
+}
+
+function isModItem(item as IItemStack, key as string) as bool{
+	var itemDef as IItemDefinition = item.definition;
 	var itemID as string = itemDef.id;
 
-	if(modid.matches(owner) & itemID.contains(itemName)) {
+	if(itemID.contains(key)) {
 		return true;
 	} else return false;
 }

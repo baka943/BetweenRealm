@@ -11,33 +11,15 @@ import crafttweaker.recipes.IRecipeAction;
 ######## Shaped Recipes ########
 //==================================
 
-#Alchemy Tablet
-recipes.addShaped(<embers:alchemy_tablet>,
-	[
-		[null, plate.dawnstone],
-		[caminiteStairs, plate.bronze, caminiteStairs],
-		[caminiteBlock, ingot.dawnstone, caminiteBlock]
-	],
-	
-	null,
-
-	function(out, cInfo, player) {
-		if(!player.world.isRemote()) {
-			var data as IData = {PlayerPersisted : {alchemyTable : 0}} + player.data;
-			
-			if(data.PlayerPersisted.alchemyTable == 0) {
-				data = {PlayerPersisted : {alchemyTable : 1}};
-				player.update(data);
-			}
-		}
-	} as IRecipeAction
-);
-
-#Ashen Brick
-iRecipes.addCompress(<embers:ashen_brick> * 4, <embers:ashen_stone>, 2);
-
 #Shaped recipes
 val shapedRecipes as IIngredient[][][][IItemStack] = {
+	<embers:alchemy_tablet> : [
+		[
+			[null, plate.dawnstone],
+			[caminiteStairs, plate.bronze, caminiteStairs],
+			[caminiteBlock, ingot.dawnstone, caminiteBlock]
+		]
+	],
 	<embers:block_furnace> : [
 		[
 			[caminiteBrick, caminitePlate, caminiteBrick],
@@ -104,6 +86,9 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 };
 
 iRecipes.add(shapedRecipes, false);
+
+#Ashen Brick
+iRecipes.addCompress(<embers:ashen_brick> * 4, <embers:ashen_stone>, 2);
 
 //==================================
 ######## Shapeless Recipes ########
