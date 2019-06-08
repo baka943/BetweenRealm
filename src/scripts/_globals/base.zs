@@ -32,15 +32,6 @@ global emberDust as IItemStack = <embers:dust_ember>;
 global archaicBrick as IItemStack = <embers:archaic_brick>;
 
 //==================================
-######## Tinkers' Construct ########
-//==================================
-
-global searedBrick as IItemStack = <tconstruct:materials>;
-global mudBrick as IItemStack = <tconstruct:materials:1>;
-global driedBrick as IItemStack = <tconstruct:materials:2>;
-global mossBall as IItemStack = <tconstruct:materials:18>;
-
-//==================================
 ######## Minecraft ########
 //==================================
 

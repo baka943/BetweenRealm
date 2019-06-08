@@ -67,31 +67,6 @@ global metal as IItemStack[string][string] = {
 		nugget : <embers:nugget_dawnstone>,
 		gear : <embers:gear_dawnstone>
 	},
-	pigiron : {
-		block : <tconstruct:metal:4>,
-		ingot : <tconstruct:ingots:4>,
-		nugget : <tconstruct:nuggets:4>
-	},
-	knightslime : {
-		block : <tconstruct:metal:3>,
-		ingot : <tconstruct:ingots:3>,
-		nugget : <tconstruct:nuggets:3>
-	},
-	ardite : {
-		block : <tconstruct:metal:1>,
-		ingot : <tconstruct:ingots:1>,
-		nugget : <tconstruct:nuggets:1>
-	},
-	cobalt : {
-		block : <tconstruct:metal>,
-		ingot : <tconstruct:ingots>,
-		nugget : <tconstruct:nuggets>
-	},
-	manyullyn : {
-		block : <tconstruct:metal:2>,
-		ingot : <tconstruct:ingots:2>,
-		nugget : <tconstruct:nuggets:2>
-	},
 	octine : {
 		block : <thebetweenlands:octine_block>,
 		ingot : <thebetweenlands:octine_ingot>,
@@ -117,9 +92,6 @@ global ingot as IIngredient[string] = {
 	dawnstone : <ore:ingotDawnstone>,
 	bronze : <ore:ingotBronze>,
 	electrum : <ore:ingotElectrum>,
-	ardite : <ore:ingotArdite>,
-	cobalt : <ore:ingotCobalt>,
-	manyullyn : <ore:ingotManyullyn>,
 	octine : <ore:ingotOctine>,
 	syrmorite : <ore:ingotSyrmorite>,
 	antimony : <ore:ingotAntimony>
@@ -136,9 +108,6 @@ global block as IIngredient[string] = {
 	dawnstone : <ore:blockDawnstone>,
 	bronze : <ore:blockBronze>,
 	electrum : <ore:blockElectrum>,
-	ardite : <ore:blockArdite>,
-	cobalt : <ore:blockCobalt>,
-	manyullyn : <ore:blockManyullyn>,
 	octine : <ore:blockOctine>,
 	syrmorite : <ore:blockSyrmorite>
 };

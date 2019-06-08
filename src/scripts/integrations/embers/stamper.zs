@@ -25,23 +25,10 @@ val metalStamper as IItemStack[ILiquidStack][IIngredient] = {
 		<fluid:dawnstone> * 1296 : metal.dawnstone.block,
 		<fluid:bronze> * 1296 : metal.bronze.block,
 		<fluid:electrum> * 1296 : metal.electrum.block,
-		<fluid:pigiron> * 1296 : metal.pigiron.block,
-		<fluid:knightslime> * 1296 : metal.knightslime.block,
-		<fluid:ardite> * 1296 : metal.ardite.block,
-		<fluid:cobalt> * 1296 : metal.cobalt.block,
-		<fluid:manyullyn> * 1296 : metal.manyullyn.block,
 		<fluid:octine> * 1296 : metal.octine.block,
 		<fluid:syrmorite> * 1296 : metal.syrmorite.block
 	},
 	<embers:stamp_bar> : {
-		<fluid:stone> * 72 : searedBrick,
-		<fluid:dirt> * 144 : mudBrick,
-		<fluid:clay> * 144 : driedBrick,
-		<fluid:pigiron> * 144 : metal.pigiron.ingot,
-		<fluid:knightslime> * 144 : metal.knightslime.ingot,
-		<fluid:ardite> * 144 : metal.ardite.ingot,
-		<fluid:cobalt> * 144 : metal.cobalt.ingot,
-		<fluid:manyullyn> * 144 : metal.manyullyn.ingot,
 		<fluid:octine> * 144 : metal.octine.ingot,
 		<fluid:syrmorite> * 144 : metal.syrmorite.ingot
 	},
@@ -51,35 +38,9 @@ val metalStamper as IItemStack[ILiquidStack][IIngredient] = {
 		<fluid:dawnstone> * 576 : metal.dawnstone.gear
 	},
 	<soot:stamp_nugget> : {
-		<fluid:pigiron> * 16 : metal.pigiron.nugget,
-		<fluid:knightslime> * 16 : metal.knightslime.nugget,
-		<fluid:ardite> * 16 : metal.ardite.nugget,
-		<fluid:cobalt> * 16 : metal.cobalt.nugget,
-		<fluid:manyullyn> * 16 : metal.manyullyn.nugget,
 		<fluid:octine> * 16 : metal.octine.nugget,
 		<fluid:syrmorite> * 16 : metal.syrmorite.nugget
 	}
 };
 
-embers.addStamperM(metalStamper);
-
-#Tool part recipes
-val partStamper as IItemStack[ILiquidStack] = {
-	<fluid:iron> : metal.iron.nugget,
-	<fluid:copper> : metal.copper.nugget,
-	<fluid:lead> : metal.lead.nugget,
-	<fluid:silver> : metal.silver.nugget,
-	<fluid:dawnstone> : metal.dawnstone.nugget,
-	<fluid:bronze> : metal.bronze.nugget,
-	<fluid:electrum> : metal.electrum.nugget,
-	<fluid:pigiron> : metal.pigiron.nugget,
-	<fluid:knightslime> : metal.knightslime.nugget,
-	<fluid:obsidian> : ash,
-	<fluid:ardite> : metal.ardite.nugget,
-	<fluid:cobalt> : metal.cobalt.nugget,
-	<fluid:manyullyn> : metal.manyullyn.nugget,
-	<fluid:octine> : metal.octine.nugget,
-	<fluid:syrmorite> : metal.syrmorite.nugget
-};
-
-embers.addStamperP(partStamper);
+embers.addStamper(metalStamper);

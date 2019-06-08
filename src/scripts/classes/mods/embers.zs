@@ -19,46 +19,6 @@ zenClass Embers {
 	zenConstructor() {}
 
 	//==================================
-	######## Instance Variable ########
-	//==================================
-
-	#Tool part types from Tinker's construct
-	val partTypes as int[IItemStack] = {
-		<tconstruct:hammer_head> : 1136,
-		<tconstruct:tough_tool_rod> : 416,
-		<tconstruct:binding> : 128,
-		<tconstruct:sharpening_kit> : 272,
-		<tconstruct:knife_blade> : 128,
-		<tconstruct:hand_guard> : 128,
-		<tconstruct:shovel_head> : 272,
-		<tconstruct:wide_guard> : 128,
-		<tconstruct:pick_head> : 272,
-		<tconstruct:sword_blade> : 272,
-		<tconstruct:tough_binding> : 416,
-		<tconstruct:shard> : 56,
-		<tconstruct:arrow_head> : 272,
-		<tconstruct:scythe_head> : 1136,
-		<tconstruct:broad_axe_head> : 1136,
-		<tconstruct:cross_guard> : 128,
-		<tconstruct:tool_rod> : 128,
-		<tconstruct:excavator_head> : 1136,
-		<tconstruct:axe_head> : 272,
-		<tconstruct:large_sword_blade> : 1136,
-		<tconstruct:kama_head> : 272,
-		<tconstruct:sign_head> : 416,
-		<tconstruct:pan_head> : 416,
-		<tconstruct:large_plate> : 1136,
-		<tconstruct:bow_limb> : 416,
-		<conarm:helmet_core> : 560,
-		<conarm:chest_core> : 848,
-		<conarm:leggings_core> : 704,
-		<conarm:boots_core> : 560,
-		<conarm:armor_trim> : 128,
-		<conarm:armor_plate> : 416,
-		<conarm:polishing_kit> : 272
-	};
-
-	//==================================
 	######## Exchange Table ########
 	//==================================
 
@@ -132,7 +92,7 @@ zenClass Embers {
 	}
 
 	#Add Stamper recipes
-	function addStamperM(map as IItemStack[ILiquidStack][IIngredient]) {
+	function addStamper(map as IItemStack[ILiquidStack][IIngredient]) {
 		for stamp, recipe in map {
 			for liquid, output in recipe {
 				Stamper.remove(output);
@@ -141,18 +101,6 @@ zenClass Embers {
 		}
 	}
 
-	function addStamperP(map as IIngredient[ILiquidStack]) {
-		for liquid, stack in map {
-			var material = liquid.name;
-
-			for part, amount in partTypes {
-				var type = part.definition.id;
-				
-				Stamper.add(part.withTag({Material: material}), liquid * amount, <tconstruct:cast>.withTag({PartType: type}), stack);
-			}
-		}
-	}
-	
 	//==================================
 	######## Mixer ########
 	//==================================

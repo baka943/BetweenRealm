@@ -6,26 +6,10 @@ import crafttweaker.liquid.ILiquidStack;
 
 #Melter recipes
 val melterRecipes as IIngredient[][int][ILiquidStack] = {
-	<fluid:stone> : {
-		72 : [
-			<ore:stone>,
-			<ore:cobblestone>,
-			searedBrick
-		],
-		288 : [
-			<ore:blockSeared>
-		]
-	},
-	<fluid:dirt> : {
-		144 : [
-			<ore:dirt>,
-			<tconstruct:materials:1>
-		],
-		576 : [
-			<tconstruct:deco_ground>
-		]
-	},
 	<fluid:octine> : {
+		16 : [
+			<ore:nuggetOctine>
+		],
 		144 : [
 			<ore:ingotOctine>
 		],
@@ -37,6 +21,9 @@ val melterRecipes as IIngredient[][int][ILiquidStack] = {
 		]
 	},
 	<fluid:syrmorite> : {
+		16 : [
+			<ore:nuggetSyrmorite>
+		],
 		144 : [
 			<ore:ingotSyrmorite>
 		],
