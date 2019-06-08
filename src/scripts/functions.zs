@@ -16,23 +16,3 @@ function getItemName(item as IItemStack) as string {
 		return itemName;
 	} else return itemName + meta;
 }
-
-#I don't know what it is
-function isModItems(item as IItemStack, modid as string, key as string) as bool {
-	var itemDef as IItemDefinition = item.definition;
-	var owner as string = itemDef.owner;
-	var itemName as string = getItemName(item);
-
-	if(modid.matches(owner) & itemName.contains(key)) {
-		return true;
-	} else return false;
-}
-
-function isModItem(item as IItemStack, key as string) as bool{
-	var itemDef as IItemDefinition = item.definition;
-	var itemID as string = itemDef.id;
-
-	if(itemID.contains(key)) {
-		return true;
-	} else return false;
-}
