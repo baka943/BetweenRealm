@@ -25,12 +25,19 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 
 iRecipes.add(shapedRecipes, false);
 
-#Wooden Item/Block
+#Fixed Vanilla Items/Blocks
 for item in <ore:plankWood>.items {
 	if(item.definition.owner == "minecraft") {
 		iRecipes.add(<minecraft:stick>, [[item], [item]], false);
 		iRecipes.addCompress(<minecraft:crafting_table>, item, 2);
 		iRecipes.add(<minecraft:chest>, [[item, item, item], [item, null, item], [item, item, item]], false);
+		iRecipes.add(<minecraft:wooden_pickaxe>, [[item, item, item], [null, <ore:stickWood>, null], [null, <ore:stickWood>, null]]);
+	}
+}
+
+for item in <ore:cobblestone>.items {
+	if(item.definition.owner == "minecraft") {
+		iRecipes.add(<minecraft:stone_pickaxe>, [[item, item, item], [null, <ore:stickWood>, null], [null, <ore:stickWood>, null]]);
 	}
 }
 

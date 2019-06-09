@@ -14,7 +14,9 @@ val removeItems as IItemStack[] = [
 	<minecraft:chest>,
 	<minecraft:crafting_table>,
 	<minecraft:leather>,
-	<minecraft:stick>
+	<minecraft:stick>,
+	<minecraft:wooden_pickaxe>,
+	<minecraft:stone_pickaxe>
 ];
 
 iRecipes.remove(removeItems);
