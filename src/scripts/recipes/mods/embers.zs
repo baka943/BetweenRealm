@@ -13,6 +13,13 @@ import crafttweaker.recipes.IRecipeAction;
 
 #Shaped recipes
 val shapedRecipes as IIngredient[][][][IItemStack] = {
+	<embers:codex> : [
+		[
+			[archaicBrick],
+			[emberCrystal],
+			[archaicBrick]
+		]
+	],
 	<embers:alchemy_tablet> : [
 		[
 			[null, plate.dawnstone],

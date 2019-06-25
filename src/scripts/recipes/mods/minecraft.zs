@@ -31,13 +31,6 @@ for item in <ore:plankWood>.items {
 		iRecipes.add(<minecraft:stick>, [[item], [item]], false);
 		iRecipes.addCompress(<minecraft:crafting_table>, item, 2);
 		iRecipes.add(<minecraft:chest>, [[item, item, item], [item, null, item], [item, item, item]], false);
-		iRecipes.add(<minecraft:wooden_pickaxe>, [[item, item, item], [null, <ore:stickWood>, null], [null, <ore:stickWood>, null]]);
-	}
-}
-
-for item in <ore:cobblestone>.items {
-	if(item.definition.owner == "minecraft") {
-		iRecipes.add(<minecraft:stone_pickaxe>, [[item, item, item], [null, <ore:stickWood>, null], [null, <ore:stickWood>, null]]);
 	}
 }
 
@@ -53,19 +46,3 @@ iRecipes.add(<minecraft:water_bucket>,
 );
 
 static swampBucket as IItemStack = <forge:bucketfilled>.withTag({FluidName: "swamp_water", Amount: 1000});
-
-//==================================
-######## Furnace Recipes ########
-//==================================
-
-#Modify Ores recipes
-val furnaceRecipes as IIngredient[IItemStack] = {
-	<minecraft:coal:1> : <ore:logWood>,
-	<embers:ingot_copper> : metal.copper.ore,
-	<embers:ingot_tin> : metal.tin.ore,
-	<embers:ingot_lead> : metal.lead.ore,
-	<embers:ingot_nickel> : metal.nickel.ore,
-	<embers:ingot_silver> : metal.silver.ore
-};
-
-iRecipes.addFurnace(furnaceRecipes);

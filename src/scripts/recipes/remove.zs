@@ -4,19 +4,16 @@
 
 import crafttweaker.item.IItemStack;
 
-#Remove Items
+#Remove Items/Blocks
 val removeItems as IItemStack[] = [
 	<embers:alchemy_tablet>,
 	<embers:ashen_brick>,
 	<embers:blend_caminite>,
-	<thebetweenlands:sulfur_torch>,
 	<minecraft:brewing_stand>,
 	<minecraft:chest>,
 	<minecraft:crafting_table>,
 	<minecraft:leather>,
-	<minecraft:stick>,
-	<minecraft:wooden_pickaxe>,
-	<minecraft:stone_pickaxe>
+	<minecraft:stick>
 ];
 
 iRecipes.remove(removeItems);
