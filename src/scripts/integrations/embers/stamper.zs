@@ -14,7 +14,6 @@ embers.removeStamper(<soot:signet_antimony>);
 #Metal recipes
 val metalStamper as IItemStack[ILiquidStack][IIngredient] = {
 	<embers:stamp_flat> : {
-		<fluid:clay> * 576 : <minecraft:clay>,
 		<fluid:iron> * 1296 : metal.iron.block,
 		<fluid:gold> * 1296 : metal.gold.block,
 		<fluid:copper> * 1296 : metal.copper.block,

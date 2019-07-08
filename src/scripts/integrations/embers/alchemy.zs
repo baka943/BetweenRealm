@@ -190,32 +190,24 @@ val exchangeAlchemy as IIngredient[][][int][IItemStack] = {
 	},
 	<embers:ashen_cloak_head> : {
 		4 : [
-			[ashen.head, ashenCloth, <embers:inflictor_gem>, ashenCloth, ingot.dawnstone]
+			[<minecraft:iron_helmet>, ashenCloth, <embers:inflictor_gem>, ashenCloth, ingot.dawnstone]
 		]
 	},
 	<embers:ashen_cloak_chest> : {
 		4 : [
-			[ashen.chest, ashenCloth, <embers:inflictor_gem>, ashenCloth, ingot.dawnstone]
+			[<minecraft:iron_chestplate>, ashenCloth, <embers:inflictor_gem>, ashenCloth, ingot.dawnstone]
 		]
 	},
 	<embers:ashen_cloak_legs> : {
 		4 : [
-			[ashen.legs, ashenCloth, <embers:inflictor_gem>, ashenCloth, ingot.dawnstone]
+			[<minecraft:iron_leggings>, ashenCloth, <embers:inflictor_gem>, ashenCloth, ingot.dawnstone]
 		]
 	},
 	<embers:ashen_cloak_boots> : {
 		4 : [
-			[ashen.boots, ashenCloth, <embers:inflictor_gem>, ashenCloth, ingot.dawnstone]
+			[<minecraft:iron_boots>, ashenCloth, <embers:inflictor_gem>, ashenCloth, ingot.dawnstone]
 		]
 	}
 };
 
 embers.addAlchemy(exchangeAlchemy);
-
-#Ashen Armor Core
-static ashen as IItemStack[string] = {
-	head : <conarm:helmet_core>.withTag({Material: "ashenfabric"}),
-	chest : <conarm:chest_core>.withTag({Material: "ashenfabric"}),
-	legs : <conarm:leggings_core>.withTag({Material: "ashenfabric"}),
-	boots : <conarm:boots_core>.withTag({Material: "ashenfabric"})
-};
