@@ -6,32 +6,6 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.oredict.IOreDictEntry;
 
 //==================================
-######## The Betweenlands ########
-//==================================
-
-global betweenstone as IItemStack = <thebetweenlands:betweenstone>;
-global smoothBetweenstone as IItemStack = <thebetweenlands:smooth_betweenstone>;
-global sulfur as IItemStack = <thebetweenlands:items_misc:18>;
-global stickWeed as IItemStack = <thebetweenlands:items_misc:20>;
-global rubberBall as IItemStack = <thebetweenlands:items_misc:23>;
-
-//==================================
-######## Embers ########
-//==================================
-
-global ash as IItemStack = <embers:dust_ash>;
-global ashenCloth as IItemStack = <embers:ashen_cloth>;
-global caminiteBrick as IItemStack = <embers:brick_caminite>;
-global caminitePlate as IItemStack = <embers:plate_caminite>;
-global caminiteStairs as IItemStack = <embers:stairs_caminite_brick>;
-global caminiteBlock as IItemStack = <embers:block_caminite_brick>;
-global emberShard as IItemStack = <embers:shard_ember>;
-global emberCrystal as IItemStack = <embers:crystal_ember>;
-global emberCluster as IItemStack = <embers:ember_cluster>;
-global emberDust as IItemStack = <embers:dust_ember>;
-global archaicBrick as IItemStack = <embers:archaic_brick>;
-
-//==================================
 ######## Minecraft ########
 //==================================
 

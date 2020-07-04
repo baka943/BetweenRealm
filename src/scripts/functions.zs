@@ -3,16 +3,14 @@
 #Author: baka943
 
 import crafttweaker.item.IItemStack;
-import crafttweaker.item.IItemDefinition;
 
 #Get Item Name
 function getItemName(item as IItemStack) as string {
-	var itemDef as IItemDefinition = item.definition;
-	var meta as int = item.metadata;
-	
-	var itemName as string = itemDef.id.split(":")[1];
+	var itemName as string = item.definition.id.split(":")[1];
 
-	if(meta == 0) {
-		return itemName;
-	} else return itemName + meta;
+	if(item.metadata != 0) {
+		itemName += "_" ~ item.metadata;
+	}
+
+	return itemName;
 }

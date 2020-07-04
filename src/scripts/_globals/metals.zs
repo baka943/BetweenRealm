@@ -5,80 +5,16 @@
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 
-#Metal Unification
-global metal as IItemStack[string][string] = {
-	iron : {
-		block : <minecraft:iron_block>,
-		ingot : <minecraft:iron_ingot>,
-		nugget : <minecraft:iron_nugget>,
-		gear : <mysticalmechanics:gear_iron>,
-		ore : <betweenores:iron_ore>
-	},
-	gold : {
-		block : <minecraft:gold_block>,
-		ingot : <minecraft:gold_ingot>,
-		nugget : <minecraft:gold_nugget>,
-		gear : <mysticalmechanics:gear_gold>,
-		ore : <betweenores:gold_ore>
-	},
-	copper : {
-		block : <embers:block_copper>,
-		ingot : <embers:ingot_copper>,
-		nugget : <embers:nugget_copper>,
-		ore : <betweenores:copper_ore>
-	},
-	tin : {
-		block : <embers:block_tin>,
-		ingot : <embers:ingot_tin>,
-		nugget : <embers:nugget_tin>,
-		ore : <betweenores:tin_ore>
-	},
-	lead : {
-		block : <embers:block_lead>,
-		ingot : <embers:ingot_lead>,
-		nugget : <embers:nugget_lead>,
-		ore : <betweenores:lead_ore>
-	},
-	nickel : {
-		block : <embers:block_nickel>,
-		ingot : <embers:ingot_nickel>,
-		nugget : <embers:nugget_nickel>,
-		ore : <betweenores:nickel_ore>
-	},
-	silver : {
-		block : <embers:block_silver>,
-		ingot : <embers:ingot_silver>,
-		nugget : <embers:nugget_silver>,
-		ore : <betweenores:silver_ore>
-	},
-	bronze : {
-		block : <embers:block_bronze>,
-		ingot : <embers:ingot_bronze>,
-		nugget : <embers:nugget_bronze>
-	},
-	electrum : {
-		block : <embers:block_electrum>,
-		ingot : <embers:ingot_electrum>,
-		nugget : <embers:nugget_electrum>
-	},
-	dawnstone : {
-		block : <embers:block_dawnstone>,
-		ingot : <embers:ingot_dawnstone>,
-		nugget : <embers:nugget_dawnstone>,
-		gear : <embers:gear_dawnstone>
-	},
-	octine : {
-		block : <thebetweenlands:octine_block>,
-		ingot : <thebetweenlands:octine_ingot>,
-		nugget : <betweenores:octine_nugget>,
-		ore : <thebetweenlands:octine_ore>
-	},
-	syrmorite : {
-		block : <thebetweenlands:syrmorite_block>,
-		ingot : <thebetweenlands:items_misc:11>,
-		nugget : <betweenores:syrmorite_nugget>,
-		ore : <thebetweenlands:syrmorite_ore>
-	}
+global ore as IIngredient[string] = {
+	iron : <ore:oreIron>,
+	gold : <ore:oreGold>,
+	copper : <ore:oreCopper>,
+	tin : <ore:oreTin>,
+	lead : <ore:oreLead>,
+	nickel : <ore:oreNickel>,
+	silver : <ore:oreSilver>,
+	octine : <ore:oreOctine>,
+	syrmorite : <ore:oreSyrmorite>
 };
 
 global ingot as IIngredient[string] = {

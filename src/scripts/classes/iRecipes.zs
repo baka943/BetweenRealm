@@ -23,7 +23,7 @@ zenClass IRecipes {
 			for i, recipe in itemRecipes {
 				var name as string = getItemName(item);
 
-				if(i > 0) name = name ~ "_" ~ i;
+				if(i > 0) name += "_recipe_" ~ i;
 
 				recipes.addShapeless(name, item, recipe);
 			}
@@ -47,7 +47,7 @@ zenClass IRecipes {
 			for i, recipe in itemRecipes {
 				var name as string = getItemName(item);
 
-				if(i > 0) name = name ~ "_" ~ i;
+				if(i > 0) name += "_recipe_" ~ i;
 				
 				if(isMirrored) {
 					recipes.addShapedMirrored(name, item, recipe);
@@ -105,3 +105,6 @@ zenClass IRecipes {
 	}
 
 }
+
+#init
+global iRecipes as IRecipes = IRecipes();

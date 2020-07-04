@@ -5,10 +5,32 @@ import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 
 //==================================
+######## Remove Recipes ########
+//==================================
+
+#Remove Items/Blocks
+val removeItems as IItemStack[] = [
+	<minecraft:brewing_stand>,
+	<minecraft:chest>,
+	<minecraft:crafting_table>,
+	<minecraft:leather>,
+	<minecraft:stick>
+];
+
+iRecipes.remove(removeItems);
+
+//==================================
 ######## Shaped Recipes ########
 //==================================
 
 val shapedRecipes as IIngredient[][][][IItemStack] = {
+	<minecraft:furnace> : [
+		[
+			[<minecraft:cobblestone>, <minecraft:cobblestone>, <minecraft:cobblestone>],
+			[<minecraft:cobblestone>, null, <minecraft:cobblestone>],
+			[<minecraft:cobblestone>, <minecraft:cobblestone>, <minecraft:cobblestone>]
+		]
+	],
 	<minecraft:hopper> : [
 		[
 			[ingot.iron, null, ingot.iron],
@@ -33,16 +55,3 @@ for item in <ore:plankWood>.items {
 		iRecipes.add(<minecraft:chest>, [[item, item, item], [item, null, item], [item, item, item]], false);
 	}
 }
-
-//==================================
-######## Shapeless Recipes ########
-//==================================
-
-iRecipes.add(<minecraft:water_bucket>,
-	[
-		swampBucket.noReturn(),
-		charCoal
-	]
-);
-
-static swampBucket as IItemStack = <forge:bucketfilled>.withTag({FluidName: "swamp_water", Amount: 1000});

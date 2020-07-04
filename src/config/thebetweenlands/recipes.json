@@ -3,13 +3,13 @@
 		{
 			"input": {
 				"item": {
-					"id": "minecraft:wheat_seeds"
+					"id": "thebetweenlands:swamp_talisman"
 				},
 				"fuel": 8,
 				"life": 4
 			},
 			"output": {
-				"id": "minecraft:nether_wart"	
+				"id": "realmtweaks:realm_talisman"	
 			}
 		},
 		{

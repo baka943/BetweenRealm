@@ -1,11 +1,25 @@
 #Name: embers.zs
 #Author: baka943
+#modloaded embers
 
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 
-import crafttweaker.data.IData;
-import crafttweaker.recipes.IRecipeAction;
+//==================================
+######## Remove Recipes ########
+//==================================
+
+#Remove Items/Blocks
+val removeItems as IItemStack[] = [
+	<embers:alchemy_tablet>,
+	<embers:ashen_brick>,
+	<embers:blend_caminite>
+];
+
+iRecipes.remove(removeItems);
+
+#Remove Ashen Armors
+iRecipes.remove("embers:ashen_cloak_.*");
 
 //==================================
 ######## Shaped Recipes ########

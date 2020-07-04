@@ -1,5 +1,6 @@
 #Name: bonsaiTrees.zs
 #Author: baka943
+#modloaded bonsaitrees embers
 
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;

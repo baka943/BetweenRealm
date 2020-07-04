@@ -1,5 +1,6 @@
 #Name: melter.zs
 #Author: baka943
+#modloaded embers
 
 import crafttweaker.item.IIngredient;
 import crafttweaker.liquid.ILiquidStack;

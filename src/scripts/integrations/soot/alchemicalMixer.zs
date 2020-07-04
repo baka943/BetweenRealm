@@ -1,5 +1,6 @@
 #Name: alchemicalMixer.zs
 #Author: baka943
+#modloaded soot
 
 import crafttweaker.liquid.ILiquidStack;
 
@@ -14,4 +15,4 @@ val alchemicalMixer as ILiquidStack[][int][ILiquidStack] = {
 	}
 };
 
-embers.addAlchemyM(alchemicalMixer);
+soot.addAlchemyM(alchemicalMixer);

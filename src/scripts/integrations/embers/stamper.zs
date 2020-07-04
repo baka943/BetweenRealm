@@ -1,5 +1,6 @@
 #Name: stamper.zs
 #Author: baka943
+#modloaded embers
 
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
@@ -14,27 +15,13 @@ embers.removeStamper(<soot:signet_antimony>);
 #Metal recipes
 val metalStamper as IItemStack[ILiquidStack][IIngredient] = {
 	<embers:stamp_flat> : {
-		<fluid:iron> * 1296 : metal.iron.block,
-		<fluid:gold> * 1296 : metal.gold.block,
-		<fluid:copper> * 1296 : metal.copper.block,
-		<fluid:tin> * 1296 : metal.tin.block,
-		<fluid:lead> * 1296 : metal.lead.block,
-		<fluid:nickel> * 1296 : metal.nickel.block,
-		<fluid:silver> * 1296 : metal.silver.block,
 		<fluid:dawnstone> * 1296 : metal.dawnstone.block,
-		<fluid:bronze> * 1296 : metal.bronze.block,
-		<fluid:electrum> * 1296 : metal.electrum.block,
 		<fluid:octine> * 1296 : metal.octine.block,
 		<fluid:syrmorite> * 1296 : metal.syrmorite.block
 	},
 	<embers:stamp_bar> : {
 		<fluid:octine> * 144 : metal.octine.ingot,
 		<fluid:syrmorite> * 144 : metal.syrmorite.ingot
-	},
-	<embers:stamp_gear> : {
-		<fluid:iron> * 576 : metal.iron.gear,
-		<fluid:gold> * 576 : metal.gold.gear,
-		<fluid:dawnstone> * 576 : metal.dawnstone.gear
 	},
 	<soot:stamp_nugget> : {
 		<fluid:octine> * 16 : metal.octine.nugget,
