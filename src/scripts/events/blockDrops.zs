@@ -2,11 +2,9 @@
 #Author: baka943
 
 import crafttweaker.events.IEventManager;
-//import crafttweaker.event.IBlockEvent;
 import crafttweaker.event.BlockHarvestDropsEvent;
 
 import crafttweaker.item.WeightedItemStack;
-//import crafttweaker.block.IBlock;
 
 #Block Harvest Drops Handler
 events.onBlockHarvestDrops(function(event as BlockHarvestDropsEvent) {
@@ -29,12 +27,8 @@ events.onBlockHarvestDrops(function(event as BlockHarvestDropsEvent) {
 
 #Drops List
 static blockDrops as WeightedItemStack[][string] = {
-	"thebetweenlands:swamp_tallgrass" : [
-		<minecraft:wheat_seeds> % 9,
-		<minecraft:carrot> % 3,
-		<minecraft:potato> % 3,
-		<minecraft:beetroot_seeds> % 3,
-		<minecraft:melon_seeds> % 1, 
-		<minecraft:pumpkin_seeds> % 1
-	]
+	##Example
+	// "thebetweenlands:swamp_tallgrass" : [
+	// 	<roots:wildroot> % 12
+	// ]
 };

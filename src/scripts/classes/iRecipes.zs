@@ -33,6 +33,7 @@ zenClass IRecipes {
 	function add(item as IItemStack, recipe as IIngredient[]) {
 		var name as string = getItemName(item);
 
+		recipes.remove(item);
 		recipes.addShapeless(name, item, recipe);
 	}
 
@@ -59,6 +60,8 @@ zenClass IRecipes {
 	function add(item as IItemStack, recipe as IIngredient[][], isMirrored as bool) {
 		var name as string = getItemName(item);
 
+		recipes.remove(item);
+
 		if(isMirrored) {
 			recipes.addShapedMirrored(name, item, recipe);
 		} else recipes.addShaped(name, item, recipe);
@@ -77,6 +80,8 @@ zenClass IRecipes {
 			this.add(output, [[input]], false);
 		} else if(multiplier == 2) {
 			this.add(output, [[input, input], [input, input]], false);
+		} else {
+			this.add(output, [[input, input, input], [input, input, input], [input, input, input]], false);
 		}
 	}
 

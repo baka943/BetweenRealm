@@ -44,7 +44,7 @@ zenClass Botania {
 	#Remvoe Elven Trade recipes
 	function removeElven(outputs as IIngredient[]) {
 		for output in outputs {
-			ElvenTrade.remvoeRecipe(output);
+			ElvenTrade.removeRecipe(output);
 		}
 	}
 
@@ -62,7 +62,7 @@ zenClass Botania {
 	//==================================
 
 	#Remove Mana Infusion recipes
-	function removeManaPool(outputs as IIngredinet[]) {
+	function removeManaPool(outputs as IIngredient[]) {
 		for output in outputs {
 			ManaInfusion.removeRecipe(output);
 		}
@@ -119,8 +119,10 @@ zenClass Botania {
 	}
 
 	#Add Petal Apothecary recipes
-	function addApothecary(map as IIngredient[][][string]) {
-		for name, inner in map {
+	function addApothecaryN(recipes as IIngredient[][][string]) {
+		for name, inner in recipes {
+			Apothecary.removeRecipe(name);
+
 			for inputs in inner {
 				Apothecary.addRecipe(name, inputs);
 			}

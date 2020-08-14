@@ -6,6 +6,7 @@
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 import crafttweaker.entity.IEntityDefinition;
+import crafttweaker.block.IBlockState;
 
 import mods.roots.Bark;
 import mods.roots.Fey;
@@ -39,7 +40,7 @@ zenClass Roots {
 	#Add Bark recipes
 	function addBark(map as IItemStack[][IItemStack]) {
 		for bark, woodLogs in map {
-			Brak.removeRecipe(bark);
+			Bark.removeRecipe(bark);
 
 			for i, woodLog in woodLogs {
 				var name as string = getItemName(bark);
@@ -63,18 +64,16 @@ zenClass Roots {
 	}
 
 	#Add Fey recipes
-	function addFey(map as IIngredient[][][IItemStack][int]) {
-		for xp, recipes in map {
-			for output, inner in recipes {
-				Fey.removeRecipe(output);
+	function addFey(recipes as IIngredient[][][IItemStack]) {
+		for output, inner in recipes {
+			Fey.removeRecipe(output);
 
-				for i, inputs in inner {
-					var name as string = getItemName(output);
+			for i, inputs in inner {
+				var name as string = getItemName(output);
 
-					if(i > 0) name += "_recipe_" ~ i;
+				if(i > 0) name += "_recipe_" ~ i;
 
-					Fey.addRecipe(name, output, inputs, xp);
-				}
+				Fey.addRecipe(name, output, inputs, 0);
 			}
 		}
 	}
@@ -116,24 +115,31 @@ zenClass Roots {
 
 	#Remove Pyre recipes
 	function removePyre(outputs as IItemStack[]) {
-		for output in output {
+		for output in outputs {
 			Pyre.removeRecipe(output);
 		}
 	}
 
 	#Add Pyre recipes
-	function addPyre(map as IIngredient[][][IItemStack][int]) {
-		for xp, recipes in map {
-			for output, inner in recipes {
-				Pyre.removeRecipe(output);
+	function addPyre(recipes as IIngredient[][][IItemStack]) {
+		for output, inner in recipes {
+			Pyre.removeRecipe(output);
 
-				for i, inputs in inner {
-					var name as string = getItemName(output);
+			for i, inputs in inner {
+				var name as string = getItemName(output);
 
-					if(i > 0) name += "_recipe_" ~ i;
+				if(i > 0) name += "_recipe_" ~ i;
 
-					Pyre.addRecipe(name, output, inputs, xp);
-				}
+				Pyre.addRecipe(name, output, inputs, 0);
+			}
+		}
+	}
+
+	#Modify Ritual
+	function modifyRitual(map as IIngredient[][][string]) {
+		for name, inner in map {
+			for inputs in inner {
+				Ritual.modifyRitual(name, inputs);
 			}
 		}
 	}
@@ -145,14 +151,14 @@ zenClass Roots {
 	#Remove Runic Shear recipes
 	function removeShearR(outputs as IItemStack[]) {
 		for output in outputs {
-			RunicShear.removeRecipe(output);
+			RunicShears.removeRecipe(output);
 		}
 	}
 
 	#Add Runic Shear recipes
-	function addShear(map as IItemStack[][IItemstack][IItemStack]) {
+	function addShear(map as IItemStack[][IItemStack][IItemStack]) {
 		for output, recipes in map {
-			RunicShear.removeRecipe(output);
+			RunicShears.removeRecipe(output);
 
 			for replacement, inner in recipes {
 				for i, input in inner {
@@ -160,14 +166,14 @@ zenClass Roots {
 
 					if(i > 0) name += "_recipe_" ~ i;
 
-					RunicShear.addRecip(name, output, replacement, input, input);
+					RunicShears.addRecipe(name, output, replacement, input, input);
 				}
 			}
 		}
 	}
 
 	#Add Entity recipes
-	function addShear(map as IEntityDefinition[][IItemStack][int]) {
+	function addShearE(recipes as IEntityDefinition[][IItemStack][int]) {
 		for cooldown, inner in recipes {
 			for output, entities in inner {
 				for i, entity in entities {
@@ -175,21 +181,8 @@ zenClass Roots {
 
 					if(i > 0) name += "_recipe_" ~ i;
 
-					RunicShear.addEntityRecipe(name, output, entity, cooldown);
+					RunicShears.addEntityRecipe(name, output, entity, cooldown);
 				}
-			}
-		}
-	}
-
-	//==================================
-	######## Pyre Ritual Recipes ########
-	//==================================
-
-	#Modify Ritual
-	function modifyRitual(map as IIngredient[][][string]) {
-		for name, inner in map {
-			for inputs in inner {
-				Ritual.modifyRitual(name, inputs);
 			}
 		}
 	}
@@ -230,26 +223,26 @@ zenClass Roots {
 		}
 	}
 
-	#Remove Fishes
-	function removeFish(fishes as IItemStack[]) {
-		for fish in fishes {
-			AnimalHarvest.removeFish(fish);
-		}
-	}
+	// #Remove Fishes
+	// function removeFish(fishes as IItemStack[]) {
+	// 	for fish in fishes {
+	// 		AnimalHarvest.removeFish(fish);
+	// 	}
+	// }
 
-	#Add Fishes
-	function addFish(map as IItemStack[][int]) {
-		for weight, fishes in inner {
-			for i, fish in fishes {
-				var name as string = getItemName(fish);
+	// #Add Fishes
+	// function addFish(inner as IItemStack[][int]) {
+	// 	for weight, fishes in inner {
+	// 		for i, fish in fishes {
+	// 			var name as string = getItemName(fish);
 
-				if(i > 0) name += "_recipe_" ~ i;
+	// 			if(i > 0) name += "_recipe_" ~ i;
 
-				AnimalHarvest.removeFish(fish);
-				AnimalHarvest.addFish(name, fish, weight);
-			}
-		}
-	}
+	// 			AnimalHarvest.removeFish(fish);
+	// 			AnimalHarvest.addFish(name, fish, weight);
+	// 		}
+	// 	}
+	// }
 
 	//==================================
 	######## Flower Growth Ritual ########
@@ -263,7 +256,7 @@ zenClass Roots {
 	}
 
 	#Add Flowers
-	function addFlowerS(map as IBlockState[string]) {
+	function addFlower(map as IBlockState[string]) {
 		for name, state in map {
 			FlowerGrowth.addRecipeBlockState(name, state);
 		}
@@ -315,15 +308,17 @@ zenClass Roots {
 	#Remove Transmutations
 	function removeTrans(names as string[]) {
 		for name in names {
-			Transmutation.removeReicpe(name);
+			Transmutation.removeRecipe(name);
 		}
 	}
 
 	#Add Transmutations
-	function addTrans(map as IBlockState[][IBlockState][string]) {
-		for name, recipes in map {
+	function addTransB(map as IBlockState[][IBlockState][string]) {
+		for recipeName, recipes in map {
 			for replacement, originals in recipes {
 				for i, original in originals {
+					var name as string = recipeName;
+
 					if(i > 0) name += "_recipe_" ~ i;
 
 					Transmutation.addBlockToBlockRecipe(name, original, replacement);
@@ -332,10 +327,12 @@ zenClass Roots {
 		}
 	}
 
-	function addTrans(map as IBlockState[][IItemStack][string]) {
-		for name, recipes in map {
+	function addTransI(map as IBlockState[][IItemStack][string]) {
+		for recipeName, recipes in map {
 			for output, originals in recipes {
 				for i, original in originals {
+					var name as string = recipeName;
+
 					if(i > 0) name += "_recipe_" ~ i;
 
 					Transmutation.addBlockToItemRecipe(name, original, output);

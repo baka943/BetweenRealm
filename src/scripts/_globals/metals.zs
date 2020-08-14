@@ -3,7 +3,6 @@
 #Author: baka943
 
 import crafttweaker.item.IIngredient;
-import crafttweaker.item.IItemStack;
 
 global ore as IIngredient[string] = {
 	iron : <ore:oreIron>,
@@ -30,7 +29,28 @@ global ingot as IIngredient[string] = {
 	electrum : <ore:ingotElectrum>,
 	octine : <ore:ingotOctine>,
 	syrmorite : <ore:ingotSyrmorite>,
-	antimony : <ore:ingotAntimony>
+	antimony : <ore:ingotAntimony>,
+	manasteel : <ore:ingotManasteel>,
+	elven : <ore:ingotElvenElementium>,
+	terrasteel : <ore:ingotTerrasteel>
+};
+
+global nugget as IIngredient[string] = {
+	iron : <ore:nuggetIron>,
+	gold : <ore:nuggetGold>,
+	copper : <ore:nuggetCopper>,
+	tin : <ore:nuggetTin>,
+	lead : <ore:nuggetLead>,
+	nickel : <ore:nuggetNickel>,
+	silver : <ore:nuggetSilver>,
+	dawnstone : <ore:nuggetDawnstone>,
+	bronze : <ore:nuggetBronze>,
+	electrum : <ore:nuggetElectrum>,
+	octine : <ore:nuggetOctine>,
+	syrmorite : <ore:nuggetSyrmorite>,
+	manasteel : <ore:nuggetManasteel>,
+	elven : <ore:nuggetElvenElementium>,
+	terrasteel : <ore:nuggetTerrasteel>
 };
 
 global block as IIngredient[string] = {
@@ -45,7 +65,10 @@ global block as IIngredient[string] = {
 	bronze : <ore:blockBronze>,
 	electrum : <ore:blockElectrum>,
 	octine : <ore:blockOctine>,
-	syrmorite : <ore:blockSyrmorite>
+	syrmorite : <ore:blockSyrmorite>,
+	manasteel : <botania:storage>,
+	elven : <botania:storage:2>,
+	terrasteel : <botania:storage:1>
 };
 
 global plate as IIngredient[string] = {

@@ -11,9 +11,7 @@ import crafttweaker.item.IItemStack;
 
 #Remove Items/Blocks
 val removeItems as IItemStack[] = [
-	<embers:alchemy_tablet>,
-	<embers:ashen_brick>,
-	<embers:blend_caminite>
+
 ];
 
 iRecipes.remove(removeItems);
@@ -89,20 +87,6 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 			[plate.electrum, redstone, plate.electrum],
 			[null, plate.electrum]
 		]
-	],
-	<soot:alchemy_gauge> : [
-		[
-			[null, ingot.antimony],
-			[ingot.antimony, redstone, ingot.antimony],
-			[null, ingot.antimony]
-		]
-	],
-	<soot:scale> : [
-		[
-			[ingot.silver, <embers:ember_gauge>, ingot.silver],
-			[null, ingot.silver],
-			[null, <embers:block_caminite_brick_slab>]
-		]
 	]
 };
 
@@ -110,9 +94,3 @@ iRecipes.add(shapedRecipes, false);
 
 #Ashen Brick
 iRecipes.addCompress(<embers:ashen_brick> * 4, <embers:ashen_stone>, 2);
-
-//==================================
-######## Shapeless Recipes ########
-//==================================
-
-iRecipes.add(<embers:blend_caminite> * 8, [rubberBall, boneMeal, boneMeal, boneMeal, <ore:sand>]);

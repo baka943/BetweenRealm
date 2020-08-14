@@ -3,13 +3,25 @@
 		{
 			"input": {
 				"item": {
-					"id": "thebetweenlands:swamp_talisman"
+					"id": "minecraft:pumpkin"
 				},
 				"fuel": 8,
 				"life": 4
 			},
 			"output": {
-				"id": "realmtweaks:realm_talisman"	
+				"id": "botania:felpumpkin"	
+			}
+		},
+		{
+			"input": {
+				"item": {
+					"id": "minecraft:paper"
+				},
+				"fuel": 8,
+				"life": 4
+			},
+			"output": {
+				"id": "botania:lexicon"	
 			}
 		},
 		{
@@ -50,19 +62,6 @@
 				"id": "minecraft:ghast"
 			},
 			"rendered_entity": "minecraft:ghast"
-		},
-		{
-			"input": {
-				"item": {
-					"id": "embers:archaic_brick"
-				},
-				"fuel": 8,
-				"life": 4
-			},
-			"output_entity": {
-				"id": "embers:ancient_golem"
-			},
-			"rendered_entity": "embers:ancient_golem"
 		}
 	]
 }
