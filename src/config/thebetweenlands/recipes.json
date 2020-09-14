@@ -21,7 +21,7 @@
 				"life": 4
 			},
 			"output": {
-				"id": "botania:lexicon"	
+				"id": "botania:lexicon"
 			}
 		},
 		{
@@ -63,5 +63,8 @@
 			},
 			"rendered_entity": "minecraft:ghast"
 		}
+	],
+	"pestle_and_mortar": [
+		
 	]
 }

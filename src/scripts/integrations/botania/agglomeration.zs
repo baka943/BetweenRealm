@@ -6,13 +6,13 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 
 //==================================
-######## Remove Agglomeration Recipes ########
+######## Remove Agglomeration recipes ########
 //==================================
 
 botaniaTweaks.removeAgglomeration();
 
 //==================================
-######## Agglomeration Recipes ########
+######## Add Agglomeration recipes ########
 //==================================
 
 var recipes as IIngredient[][int][IItemStack][string] = {
@@ -21,7 +21,7 @@ var recipes as IIngredient[][int][IItemStack][string] = {
 			500000 : [ingot.manasteel, <ore:manaPearl>, <ore:manaDiamond>]
 		}
 	},
-	reverse_default : {
+	reverse : {
 		<botania:manaresource:4> : {
 			50000 : [ingot.manasteel, <ore:manaPearl>, <ore:manaDiamond>]
 		}

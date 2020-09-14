@@ -5,6 +5,10 @@
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 
+//==================================
+######## Add Apothecary recipes ########
+//==================================
+
 val apothecaryRecipes as IIngredient[][][IItemStack] = {
 
 };

@@ -83,3 +83,17 @@ global plate as IIngredient[string] = {
 	bronze : <ore:plateBronze>,
 	electrum : <ore:plateElectrum>
 };
+
+global gem as IIngredient[string] = {
+	lapis : <ore:gemLapis>,
+	diamond : <ore:gemDiamond>,
+	emerald : <ore:gemEmerald>,
+	quartz : <ore:gemQuartz>,
+	prismarine : <ore:gemPrismarine>,
+	amethyst : <ore:gemAmethyst>,
+	scabyst : <ore:gemScabyst>,
+	valonite : <ore:gemValonite>,
+	aqua : <ore:gemAquaMiddleGem>,
+	crimson : <ore:gemCrimsonMiddleGem>,
+	green : <ore:gemGreenMiddleGem>
+};

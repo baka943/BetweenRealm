@@ -15,4 +15,4 @@ val alchemicalMixer as ILiquidStack[][int][ILiquidStack] = {
 	}
 };
 
-soot.addAlchemyM(alchemicalMixer);
+soot.addAlchemy(alchemicalMixer);

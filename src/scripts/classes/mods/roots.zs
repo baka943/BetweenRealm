@@ -45,7 +45,7 @@ zenClass Roots {
 			for i, woodLog in woodLogs {
 				var name as string = getItemName(bark);
 
-				if(i > 0) name += "_recipe_" ~ i;
+				if(i > 0) name += "/" ~ i;
 
 				Bark.addRecipe(name, woodLog, bark);
 			}
@@ -71,7 +71,7 @@ zenClass Roots {
 			for i, inputs in inner {
 				var name as string = getItemName(output);
 
-				if(i > 0) name += "_recipe_" ~ i;
+				if(i > 0) name += "/" ~ i;
 
 				Fey.addRecipe(name, output, inputs, 0);
 			}
@@ -128,7 +128,7 @@ zenClass Roots {
 			for i, inputs in inner {
 				var name as string = getItemName(output);
 
-				if(i > 0) name += "_recipe_" ~ i;
+				if(i > 0) name += "/" ~ i;
 
 				Pyre.addRecipe(name, output, inputs, 0);
 			}
@@ -145,7 +145,7 @@ zenClass Roots {
 	}
 
 	//==================================
-	######## Runic Shear Recipes ########
+	######## Runic Shear recipes ########
 	//==================================
 
 	#Remove Runic Shear recipes
@@ -164,7 +164,7 @@ zenClass Roots {
 				for i, input in inner {
 					var name as string = getItemName(output);
 
-					if(i > 0) name += "_recipe_" ~ i;
+					if(i > 0) name += "/" ~ i;
 
 					RunicShears.addRecipe(name, output, replacement, input, input);
 				}
@@ -179,7 +179,7 @@ zenClass Roots {
 				for i, entity in entities {
 					var name as string = getItemName(output);
 
-					if(i > 0) name += "_recipe_" ~ i;
+					if(i > 0) name += "/" ~ i;
 
 					RunicShears.addEntityRecipe(name, output, entity, cooldown);
 				}
@@ -236,7 +236,7 @@ zenClass Roots {
 	// 		for i, fish in fishes {
 	// 			var name as string = getItemName(fish);
 
-	// 			if(i > 0) name += "_recipe_" ~ i;
+	// 			if(i > 0) name += "/" ~ i;
 
 	// 			AnimalHarvest.removeFish(fish);
 	// 			AnimalHarvest.addFish(name, fish, weight);
@@ -319,7 +319,7 @@ zenClass Roots {
 				for i, original in originals {
 					var name as string = recipeName;
 
-					if(i > 0) name += "_recipe_" ~ i;
+					if(i > 0) name += "/" ~ i;
 
 					Transmutation.addBlockToBlockRecipe(name, original, replacement);
 				}
@@ -333,7 +333,7 @@ zenClass Roots {
 				for i, original in originals {
 					var name as string = recipeName;
 
-					if(i > 0) name += "_recipe_" ~ i;
+					if(i > 0) name += "/" ~ i;
 
 					Transmutation.addBlockToItemRecipe(name, original, output);
 				}

@@ -13,7 +13,7 @@ zenClass ArtisanWorktables {
 	zenConstructor() {}
 
 	//==================================
-	######## Basic Recipes ########
+	######## Basic recipes ########
 	//==================================
 
 	#Add Shapeless recipes

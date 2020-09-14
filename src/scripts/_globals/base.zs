@@ -12,8 +12,6 @@ import crafttweaker.oredict.IOreDictEntry;
 global boneMeal as IItemStack = <minecraft:dye:15>;
 global clayBall as IItemStack = <minecraft:clay_ball>;
 global soulSand as IItemStack = <minecraft:soul_sand>;
-global diamond as IItemStack = <minecraft:diamond>;
-global emerald as IItemStack = <minecraft:emerald>;
 global coal as IItemStack = <minecraft:coal:0>;
 global charCoal as IItemStack = <minecraft:coal:1>;
 

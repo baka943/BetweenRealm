@@ -18,13 +18,23 @@ zenClass Embers {
 
 	zenConstructor() {}
 
+	#Add Aspectus
+	val aspects as IIngredient[string] = {
+		antimony : <soot:signet_antimony>,
+		inflictor : <embers:inflictor_gem>
+	};
+
+	this.addAspect(aspects);
+
 	//==================================
 	######## Exchange Table ########
 	//==================================
 
 	#Add new Aspect
-	function addAspect(name as string, aspect as IIngredient) {
-		Alchemy.addAspect(name, aspect);
+	function addAspect(aspects as IIngredient[string]) {
+		for name, aspect in aspects {
+			Alchemy.addAspect(name, aspect);
+		}
 	}
 
 	#Remove Exchange Table recipes
@@ -43,32 +53,32 @@ zenClass Embers {
 				for recipe in inner {
 					if(level == 0) {
 						Alchemy.add(item, recipe, {
-							"iron": 0 .. 24,
-							"copper": 32 .. 48
+							iron : 0 .. 24,
+							copper : 32 .. 48
 						});
 					} else if(level == 1) {
 						Alchemy.add(item, recipe, {
-							"copper": 0 .. 12,
-							"lead": 0 .. 12,
-							"silver": 32 .. 48
+							copper : 0 .. 12,
+							lead : 0 .. 12,
+							silver : 32 .. 48
 						});
 					} else if(level == 2) {
 						Alchemy.add(item, recipe, {
-							"lead": 0 .. 12,
-							"silver": 0 .. 12,
-							"dawnstone": 32 .. 48
+							lead : 0 .. 12,
+							silver : 0 .. 12,
+							dawnstone : 32 .. 48
 						});
 					} else if(level == 3) {
 						Alchemy.add(item, recipe, {
-							"silver": 0 .. 12,
-							"dawnstone": 0 .. 12,
-							"antimony": 32 .. 48
+							silver : 0 .. 12,
+							dawnstone : 0 .. 12,
+							antimony : 32 .. 48
 						});
 					} else {
 						Alchemy.add(item, recipe, {
-							"dawnstone": 0 .. 12,
-							"antimony": 0 .. 12,
-							"inflictor": 32 .. 48
+							dawnstone : 0 .. 12,
+							antimony : 0 .. 12,
+							inflictor : 32 .. 48
 						});
 					}
 				}

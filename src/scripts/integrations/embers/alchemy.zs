@@ -5,11 +5,11 @@
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 
-#Add Aspectus
-embers.addAspect("antimony", <soot:signet_antimony>);
-embers.addAspect("inflictor", <embers:inflictor_gem>);
 
-#Exchange Alchemy recipes
+//==================================
+######## Add Alchemy recipes ########
+//==================================
+
 val exchangeAlchemy as IIngredient[][][int][IItemStack] = {
 	//Lv.0
 	<embers:adhesive> * 6 : {
@@ -96,8 +96,8 @@ val exchangeAlchemy as IIngredient[][][int][IItemStack] = {
 	},
 	<embers:isolated_materia> * 4 : {
 		2 : [
-			[<embers:ancient_motive_core>, <ore:gemLapis>, <embers:adhesive>, <ore:gemLapis>, <embers:adhesive>],
-			[<embers:ancient_motive_core>, <embers:adhesive>, <ore:gemLapis>, <embers:adhesive>, <ore:gemLapis>]
+			[<embers:ancient_motive_core>, gem.lapis, <embers:adhesive>, gem.lapis, <embers:adhesive>],
+			[<embers:ancient_motive_core>, <embers:adhesive>, gem.lapis, <embers:adhesive>, gem.lapis]
 		]
 	},
 	<embers:winding_gears> : {
@@ -107,7 +107,7 @@ val exchangeAlchemy as IIngredient[][][int][IItemStack] = {
 	},
 	<embers:glimmer_shard> : {
 		2 : [
-			[<ore:gemQuartz>, emberShard, emberShard, emberShard, emberShard]
+			[gem.quartz, emberShard, emberShard, emberShard, emberShard]
 		]
 	},
 	<embers:ember_cluster> : {
@@ -149,16 +149,16 @@ val exchangeAlchemy as IIngredient[][][int][IItemStack] = {
 	//Lv.3
 	<embers:dust_metallurgic> : {
 		3 : [
-			[diamond, null, null, null, null]
+			[gem.diamond, null, null, null, null]
 		]
 	},
 	<minecraft:emerald> : {
 		3 : [
-			[diamond, plate.gold, ingot.antimony, plate.gold, ingot.antimony],
-			[diamond, ingot.antimony, plate.gold, ingot.antimony, plate.gold]
+			[gem.diamond, plate.gold, ingot.antimony, plate.gold, ingot.antimony],
+			[gem.diamond, ingot.antimony, plate.gold, ingot.antimony, plate.gold]
 		],
 		4 : [
-			[emerald, null, null, null, null]
+			[gem.emerald, null, null, null, null]
 		]
 	},
 	<minecraft:blaze_powder> * 3 : {

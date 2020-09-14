@@ -13,7 +13,7 @@ zenClass IRecipes {
 	zenConstructor() {}
 
 	//==================================
-	######## Shapeless Recipes ########
+	######## Shapeless recipes ########
 	//==================================
 
 	function add(map as IIngredient[][][IItemStack]) {
@@ -23,7 +23,7 @@ zenClass IRecipes {
 			for i, recipe in itemRecipes {
 				var name as string = getItemName(item);
 
-				if(i > 0) name += "_recipe_" ~ i;
+				if(i > 0) name += "/" ~ i;
 
 				recipes.addShapeless(name, item, recipe);
 			}
@@ -38,7 +38,7 @@ zenClass IRecipes {
 	}
 
 	//==================================
-	######## Shaped/Mirrored Recipes ########
+	######## Shaped/Mirrored recipes ########
 	//==================================
 
 	function add(map as IIngredient[][][][IItemStack], isMirrored as bool) {
@@ -48,7 +48,7 @@ zenClass IRecipes {
 			for i, recipe in itemRecipes {
 				var name as string = getItemName(item);
 
-				if(i > 0) name += "_recipe_" ~ i;
+				if(i > 0) name += "/" ~ i;
 				
 				if(isMirrored) {
 					recipes.addShapedMirrored(name, item, recipe);
@@ -68,7 +68,7 @@ zenClass IRecipes {
 	}
 
 	//==================================
-	######## Compressed Recipes ########
+	######## Compressed recipes ########
 	//==================================
 
 	function addCompress(output as IItemStack, input as IIngredient) {
@@ -86,7 +86,7 @@ zenClass IRecipes {
 	}
 
 	//==================================
-	######## Remove Recipes ########
+	######## Remove recipes ########
 	//==================================
 
 	function remove(removal as IItemStack) {
@@ -106,6 +106,30 @@ zenClass IRecipes {
 	function remove(removals as string[]) {
 		for toRemove in removals {
 			recipes.removeByRegex(toRemove);
+		}
+	}
+
+	//==================================
+	######## Brewing recipes ########
+	//==================================
+
+	#Remove Brewing recipes
+	function removeBrewing(recipes as IItemStack[][IItemStack]) {
+		for ingredient, inputs in recipes {
+			for input in inputs {
+				brewing.removeRecipe(input, ingredient);
+			}
+		}
+	}
+
+	#Add Brewing recipes
+	function addBrewing(recipes as IIngredient[][string][IItemStack][bool]) {
+		for hidden, recipe in recipes {
+			for output, inner in recipe {
+				for input in inner.input {
+					brewing.addBrew(input, inner.ingredient, output, hidden);
+				}
+			}
 		}
 	}
 

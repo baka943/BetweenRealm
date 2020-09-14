@@ -21,3 +21,5 @@
 // LootTables.getTable("minecraft:chests/end_city_treasure").getPool("main").removeEntry("minecraft:diamond_horse_armor");
 
 ///give @p minecraft:skull 1 3 {SkullOwner:"NotEduardo"}
+
+//

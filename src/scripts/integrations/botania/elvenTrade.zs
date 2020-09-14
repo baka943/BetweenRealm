@@ -5,7 +5,7 @@
 import crafttweaker.item.IIngredient;
 
 //==================================
-######## Elven Trade Recipes ########
+######## Add Elven Trade recipes ########
 //==================================
 
 val elvenTradeRecipes as IIngredient[][][IIngredient[]] = {

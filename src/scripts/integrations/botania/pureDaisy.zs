@@ -6,22 +6,30 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 
 //==================================
-######## Remove Pure Daisy Recipes ########
+######## Remove Pure Daisy recipes ########
 //==================================
 
 val removeRecipes as IItemStack[] = [
-	<minecraft:cobblestone>,
-	<minecraft:packed_ice>,
+	livingrock,
+	livingwood,
 	<minecraft:sand>
 ];
 
 botania.removePure(removeRecipes);
 
 //==================================
-######## Pure Daisy Recipes ########
+######## Add Pure Daisy recipes ########
 //==================================
 
 val pureDaisyRecipes as IIngredient[][IItemStack][int] = {
+	0 : {
+		<botania:livingrock> : [
+			betweenstone
+		],
+		<botania:livingwood> : [
+			<ore:logWeedwood>
+		]
+	},
 	80 : {
 		<minecraft:slime> : [
 			<thebetweenlands:rubber_block>

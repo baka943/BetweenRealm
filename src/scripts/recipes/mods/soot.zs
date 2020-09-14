@@ -6,10 +6,9 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 
 //==================================
-######## Shaped Recipes ########
+######## Shaped recipes ########
 //==================================
 
-#Shaped recipes
 val shapedRecipes as IIngredient[][][][IItemStack] = {
 	<soot:alchemy_gauge> : [
 		[

@@ -5,7 +5,10 @@
 import crafttweaker.item.IIngredient;
 import crafttweaker.liquid.ILiquidStack;
 
-#Melter recipes
+//==================================
+######## Add Melter recipes ########
+//==================================
+
 val melterRecipes as IIngredient[][int][ILiquidStack] = {
 	<fluid:octine> : {
 		16 : [

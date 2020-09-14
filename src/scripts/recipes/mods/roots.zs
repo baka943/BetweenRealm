@@ -6,7 +6,7 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 
 //==================================
-######## Remove Recipes ########
+######## Remove recipes ########
 //==================================
 
 val removeRecipes as string[] = [
@@ -16,13 +16,13 @@ val removeRecipes as string[] = [
 iRecipes.remove(removeRecipes);
 
 //==================================
-######## Shaped Recipes ########
+######## Shaped recipes ########
 //==================================
 
 val shapedRecipes as IIngredient[][][][IItemStack] = {
 	<mysticalworld:pelt> * 2 : [
 		[
-			[lurkerSkin]
+			[<thebetweenlands:items_misc:4>]
 		]
 	],
 	<roots:bonfire> : [
@@ -53,9 +53,9 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 	],
 	<roots:imbuer> : [
 		[
-			[stickWeedwood, null, stickWeedwood],
+			[<ore:stickWeed>, null, <ore:stickWeed>],
 			[null, betweenstone],
-			[stickWeedwood, null, stickWeedwood]
+			[<ore:stickWeed>, null, <ore:stickWeed>]
 		]
 	],
 	<roots:grove_stone> : [
@@ -68,43 +68,43 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 	<roots:staff> : [
 		[
 			[null, <ore:logWeedwood>, wildroot],
-			[null, stickWeedwood, <ore:logWeedwood>],
-			[stickWeedwood]
+			[null, <ore:stickWeed>, <ore:logWeedwood>],
+			[<ore:stickWeed>]
 		]
 	],
 	<roots:wood_knife> : [
 		[
-			[null, null, plankWeedwood],
-			[null, plankWeedwood],
-			[stickWeedwood]
+			[null, null, <ore:betweenPlank>],
+			[null, <ore:betweenPlank>],
+			[<ore:stickWeed>]
 		]
 	],
 	<roots:stone_knife> : [
 		[
 			[null, null, betweenstone],
 			[null, betweenstone],
-			[stickWeedwood]
+			[<ore:stickWeed>]
 		]
 	],
 	<roots:iron_knife> : [
 		[
-			[null, null, ingot.iron],
-			[null, ingot.iron],
-			[stickWeedwood]
+			[null, null, ingot.syrmorite],
+			[null, ingot.syrmorite],
+			[<ore:stickWeed>]
 		]
 	],
 	<roots:gold_knife> : [
 		[
-			[null, null, ingot.gold],
-			[null, ingot.gold],
-			[stickWeedwood]
+			[null, null, ingot.octine],
+			[null, ingot.octine],
+			[<ore:stickWeed>]
 		]
 	],
 	<roots:diamond_knife> : [
 		[
-			[null, null, diamond],
-			[null, diamond],
-			[stickWeedwood]
+			[null, null, gem.valonite],
+			[null, gem.valonite],
+			[<ore:stickWeed>]
 		]
 	],
 	<roots:component_pouch> : [

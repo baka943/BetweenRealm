@@ -15,17 +15,17 @@ zenClass BotaniaTweaks {
 	zenConstructor() {}
 
 	#Agglomeration Multi Blocks
-	var multiblocks as AgglomerationMultiblock[string] = {
+	val multiblocks as AgglomerationMultiblock[string] = {
 		default : AgglomerationMultiblock.create()
-			.checker(<botania:livingrock>, <minecraft:lapis_block>)
-			.checkerReplace(<minecraft:lapis_block>, <botania:livingrock>),
-		reverse_default : AgglomerationMultiblock.create()
-			.checker(<minecraft:lapis_block>, <botania:livingrock>)
-			.checkerReplace(<botania:livingrock>, <minecraft:lapis_block>)
+			.checker(livingrock, <minecraft:lapis_block>)
+			.checkerReplace(<minecraft:lapis_block>, livingrock),
+		reverse : AgglomerationMultiblock.create()
+			.checker(<minecraft:lapis_block>, livingrock)
+			.checkerReplace(livingrock, <minecraft:lapis_block>)
 	};
 
 	//==================================
-	######## Agglomeration Recipes ########
+	######## Agglomeration recipes ########
 	//==================================
 
 	#Remove Agglomeration recipes

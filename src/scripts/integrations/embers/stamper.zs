@@ -6,17 +6,23 @@ import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 import crafttweaker.liquid.ILiquidStack;
 
-#Remove Aspectus
-var aspectus as IItemStack[] = [
+//==================================
+######## Remove Stamper recipes ########
+//==================================
+
+var removeRecipes as IItemStack[] = [
 	<embers:aspectus_dawnstone>,
 	<embers:aspectus_lead>,
 	<embers:aspectus_silver>,
 	<soot:signet_antimony>
 ];
 
-embers.removeStamper(aspectus);
+embers.removeStamper(removeRecipes);
 
-#Metal recipes
+//==================================
+######## Add Stamper recipes ########
+//==================================
+
 val metalStamper as IItemStack[ILiquidStack][IIngredient] = {
 	<embers:stamp_flat> : {
 		<fluid:dawnstone> * 1296 : metal.dawnstone.block,

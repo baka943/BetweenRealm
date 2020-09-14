@@ -4,6 +4,9 @@
 
 import crafttweaker.item.IItemStack;
 
-#Repair blacklist
+//==================================
+######## Remove Anvil recipes ########
+//==================================
+
 embers.removeRepair(<thebetweenlands:life_crystal>);
 embers.removeRepairM(<thebetweenlands:life_crystal>);

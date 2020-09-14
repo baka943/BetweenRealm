@@ -6,7 +6,7 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 
 //==================================
-######## Remove Altar Recipes ########
+######## Remove Altar recipes ########
 //==================================
 
 val removeRecipes as IIngredient[] = [
@@ -23,7 +23,7 @@ val removeRecipes as IIngredient[] = [
 botania.removeAltar(removeRecipes);
 
 //==================================
-######## Altar Recipes ########
+######## Add Altar recipes ########
 //==================================
 
 val altarRecipes as IIngredient[][][IItemStack][int] = {

@@ -6,7 +6,7 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 
 //==================================
-######## Remove Recipes ########
+######## Remove recipes ########
 //==================================
 
 val removeRecipes as IIngredient[] = [
@@ -14,13 +14,14 @@ val removeRecipes as IIngredient[] = [
 	<botania:grassseeds>,
 	<botania:grassseeds:1>,
 	<botania:grassseeds:2>,
+	<botania:manaresource>,
 	<botania:manaresource:1>
 ];
 
 botania.removeManaPool(removeRecipes);
 
 //==================================
-######## Mana Infusions ########
+######## Add Mana Infusion recipes ########
 //==================================
 
 val infusionRecipes as IIngredient[][IItemStack][int] = {
@@ -37,9 +38,14 @@ val infusionRecipes as IIngredient[][IItemStack][int] = {
 			<thebetweenlands:dead_weedwood_bush>
 		]
 	},
+	3000 : {
+		<botania:manaresource> : [
+			ingot.syrmorite
+		]
+	},
 	6000 : {
 		<botania:manaresource:1> : [
-			<thebetweenlands:items_misc:19>
+			gem.valonite
 		]
 	},
 	6500 : {
@@ -52,18 +58,18 @@ val infusionRecipes as IIngredient[][IItemStack][int] = {
 botania.addManaPoolI(infusionRecipes);
 
 //==================================
-######## Mana Alchemy ########
+######## Add Mana Alchemy recipes ########
 //==================================
 
 val alchemyRecipes as IIngredient[][IItemStack][int] = {
 	500 : {
 		<minecraft:prismarine_crystals> : [
-			<minecraft:prismarine_shard>
+			gem.prismarine
 		]
 	},
 	1000 : {
 		<minecraft:prismarine_shard> : [
-			<ore:gemQuartz>
+			gem.quartz
 		]
 	}
 };

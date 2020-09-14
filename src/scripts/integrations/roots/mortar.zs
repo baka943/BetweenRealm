@@ -6,12 +6,15 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 
 //==================================
-######## Mortar Recipes ########
+######## Add Mortar recipes ########
 //==================================
 
 val mortarRecipes as IIngredient[][][IItemStack] = {
 	<minecraft:gravel> : [
 		[betweenstone]
+	],
+	<thebetweenlands:items_crushed:17> : [
+		[<thebetweenlands:items_misc:6>]
 	]
 };
 
@@ -29,7 +32,7 @@ val changeSpell as IIngredient[][][string] = {
 		[<ore:dyeOrange>, coal, gunpowder, infernalBulb, <minecraft:tnt>]
 	],
 	spell_magnetism : [
-		[ingot.iron, redstone, <ore:paper>, wildroot, <ore:gemLapis>]
+		[ingot.iron, redstone, <ore:paper>, wildroot, gem.lapis]
 	],
 	spell_shatter : [
 		[<minecraft:flint>, <thebetweenlands:valonite_pickaxe>, stalicripe, <minecraft:tnt>, betweenstone]
@@ -41,7 +44,7 @@ val changeSpell as IIngredient[][][string] = {
 		[<minecraft:armor_stand>, pereskia, <thebetweenlands:wight_heart>, <ore:rootsBark>, wildroot]
 	],
 	spell_second_wind : [
-		[dewgonia, swampReed, clayBall, <ore:dentrothystVial>, ingot.iron]
+		[dewgonia, swampReed, clayBall, <ore:dentrothystVial>, ingot.syrmorite]
 	],
 	spell_sky_soarer : [
 		[<thebetweenlands:weedwood_ladder>, petals, <thebetweenlands:angler_tooth_arrow>, <roots:wildewheet_seed>, cloudBerry]
@@ -50,7 +53,7 @@ val changeSpell as IIngredient[][][string] = {
 		[spiritHerb, moonglowLeaf, <roots:wildewheet>, wildroot, nugget.gold]
 	],
 	spell_dandelion_winds : [
-		[<thebetweenlands:items_plant_drop:20>, <ore:treeLeaves>, <roots:runic_dust>, cloudBerry, <roots:spirit_herb_seed>]
+		[<thebetweenlands:items_plant_drop:20>, <ore:betweenLeaves>, <roots:runic_dust>, cloudBerry, <roots:spirit_herb_seed>]
 	],
 	spell_growth_infusion : [
 		[saplingWeedwood, saplingWeedwood, terraMoss, wildroot, <roots:wildewheet>]

@@ -6,7 +6,7 @@ import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 
 //==================================
-######## Remove Recipes ########
+######## Remove recipes ########
 //==================================
 
 val removeRecipes as IItemStack[] = [
@@ -18,7 +18,7 @@ val removeRecipes as IItemStack[] = [
 iRecipes.remove(removeRecipes);
 
 //==================================
-######## Shaped Recipes ########
+######## Shaped recipes ########
 //==================================
 
 val shapedRecipes as IIngredient[][][][IItemStack] = {
@@ -32,7 +32,7 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 	<thebetweenlands:weedwood_ladder> * 8 : [
 		[
 			[reedRope, null, reedRope],
-			[stickWeedwood, stickWeedwood, stickWeedwood],
+			[<ore:stickWeed>, <ore:stickWeed>, <ore:stickWeed>],
 			[reedRope, null, reedRope]
 		]
 	],
@@ -47,7 +47,7 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 		[
 			[<ore:runestone>, null, <ore:runestone>],
 			[<ore:runestone>, <ore:runestone>, <ore:runestone>],
-			[stickWeedwood, null, stickWeedwood]
+			[<ore:stickWeed>, null, <ore:stickWeed>]
 		]
 	],
 	<thebetweenlands:alembic> : [
@@ -59,37 +59,37 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 	],
 	<thebetweenlands:pestle> : [
 		[
-			[stickWeedwood],
-			[<ore:runestone>],
+			[null, null, <ore:stickWeed>],
+			[null, <ore:runestone>],
 			[<ore:runestone>]
 		]
 	],
 	<thebetweenlands:repeller> : [
 		[
-			[stickWeedwood, <ore:dentrothystVial>],
-			[stickWeedwood],
+			[<ore:stickWeed>, <ore:dentrothystVial>],
+			[<ore:stickWeed>],
 			[<ore:runestone>]
 		]
 	],
 	<minecraft:fishing_rod> : [
 		[
-			[null, null, stickWeedwood],
-			[null, stickWeedwood, reedRope],
-			[stickWeedwood, null, reedRope]
+			[null, null, <ore:stickWeed>],
+			[null, <ore:stickWeed>, reedRope],
+			[<ore:stickWeed>, null, reedRope]
 		]
 	],
 	<minecraft:armor_stand> : [
 		[
-			[stickWeedwood, stickWeedwood, stickWeedwood],
-			[null, stickWeedwood],
-			[stickWeedwood, betweenstoneSlab, stickWeedwood]
+			[<ore:stickWeed>, <ore:stickWeed>, <ore:stickWeed>],
+			[null, <ore:stickWeed>],
+			[<ore:stickWeed>, betweenstoneSlab, <ore:stickWeed>]
 		]
 	],
 	<minecraft:beacon> : [
 		[
 			[siltGlass, siltGlass, siltGlass],
-			[siltGlass, <minecraft:sea_lantern>, siltGlass],
-			[<ore:obsidian>, <ore:obsidian>, <ore:obsidian>]
+			[siltGlass, <thebetweenlands:glowing_betweenstone_tile>, siltGlass],
+			[<roots:runestone_brick>, <roots:runestone_brick>, <roots:runestone_brick>]
 		]
 	]
 };
@@ -97,7 +97,7 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 iRecipes.add(shapedRecipes, false);
 
 //==================================
-######## Shapeless Recipes ########
+######## Shapeless recipes ########
 //==================================
 
 val shapelessRecipes as IIngredient[][][IItemStack] = {

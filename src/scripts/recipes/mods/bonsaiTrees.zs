@@ -6,7 +6,7 @@ import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 
 //==================================
-######## Shaped Recipes ########
+######## Shaped recipes ########
 //==================================
 
 val shapedRecipes as IIngredient[][][][IItemStack] = {

@@ -19,7 +19,6 @@ global stalicripe as IItemStack = <roots:stalicripe>;
 global petals as IItemStack = <roots:petals>;
 global moonglowLeaf as IItemStack = <roots:moonglow_leaf>;
 global pelt as IItemStack = <mysticalworld:pelt>;
-global feyLeather as IItemStack = <roots:fey_leather>;
 
 global bark as IIngredient[string] = {
 	weedwood : <realmtweaks:bark_weedwood>,
@@ -30,5 +29,12 @@ global bark as IIngredient[string] = {
 for item in <ore:rootsBark>.items {
 	if(item.definition.owner == "roots" && !item.matches(<roots:bark_wildwood>)) {
 		<ore:rootsBark>.remove(item);
+	}
+}
+
+for item in <ore:leather>.items {
+	if(item.definition.owner == "roots") {
+		<ore:leather>.remove(item);
+		<ore:feyLeather>.add(item);
 	}
 }

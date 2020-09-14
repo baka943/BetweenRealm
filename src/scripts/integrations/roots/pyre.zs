@@ -6,7 +6,7 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 
 //==================================
-######## Remove Pyre Recipes ########
+######## Remove Pyre recipes ########
 //==================================
 
 val removeRecipes as IItemStack[] = [
@@ -28,7 +28,7 @@ val removeRecipes as IItemStack[] = [
 roots.removePyre(removeRecipes);
 
 //==================================
-######## Pyre Recipes ########
+######## Add Pyre recipes ########
 //==================================
 
 val pyreRecipes as IIngredient[][][IItemStack] = {
@@ -36,22 +36,22 @@ val pyreRecipes as IIngredient[][][IItemStack] = {
 		[boneMeal, petals, petals, petals, petals]
 	],
 	<roots:moonglow_leaf> * 3 : [
-		[<ore:treeLeaves>, <ore:blockGlass>, <ore:gemQuartz>, <ore:rootsBark>, <ore:rootsBark>]
+		[<ore:betweenLeaves>, <ore:dentrothystShard>, <thebetweenlands:weeping_blue_petal>, <ore:rootsBark>, <ore:rootsBark>]
 	],
 	<roots:cloud_berry> * 3 : [
-		[<ore:treeLeaves>, swampTallgrass, <ore:wool>, terraMoss, terraMoss]
+		[swampTallgrass, <thebetweenlands:items_plant_drop:11>, <roots:runic_dust>, terraMoss, terraMoss]
 	],
 	<roots:infernal_bulb> * 3 : [
-		[wildroot, <minecraft:magma_cream>, gunpowder, <minecraft:lava_bucket>, glowstone]
+		[wildroot, <thebetweenlands:items_plant_drop:15>, <roots:runic_dust>, nugget.octine, redstone]
 	],
 	<roots:dewgonia> * 3 : [
-		[swampTallgrass, <minecraft:sugar>, <ore:gemLapis>, terraMoss, terraMoss]
+		[swampTallgrass, <thebetweenlands:items_plant_drop:4>, <roots:runic_dust>, terraMoss, terraMoss]
 	],
 	<roots:stalicripe> * 3 : [
-		[<minecraft:flint>, betweenstone, ingot.iron, wildroot, redstone]
+		[<minecraft:flint>, <thebetweenlands:items_plant_drop:14>, <roots:runic_dust>, wildroot, redstone]
 	],
 	<roots:pereskia> * 3 : [
-		[wildroot, <ore:dentrothystShard>, redstone, <ore:snailShell>, swampReed]
+		[wildroot, <ore:dentrothystShard>, redstone, <thebetweenlands:items_plant_drop:31>, swampReed]
 	],
 	<roots:baffle_cap_mushroom> * 3 : [
 		[terraMoss, <minecraft:fermented_spider_eye>, <roots:wildewheet_seed>, <ore:foodMushroom>, <ore:foodMushroom>]
@@ -66,7 +66,7 @@ roots.addPyre(pyreRecipes);
 
 val modifyRituals as IIngredient[][][string] = {
 	ritual_heavy_storms : [
-		[wildroot, dewgonia, <ore:vine>, cloudBerry, <roots:wildewheet_seed>]
+		[wildroot, dewgonia, <ore:betweenVine>, cloudBerry, <roots:wildewheet_seed>]
 	],
 	ritual_divine_protection : [
 		[pereskia, cloudBerry, <ore:rootsBark>, <ore:rootsBark>, glowstone]
@@ -75,7 +75,7 @@ val modifyRituals as IIngredient[][][string] = {
 		[infernalBulb, <ore:rootsBark>, coal, <ore:rootsBark>, <ore:powderBlaze>]
 	],
 	ritual_spreading_forest : [
-		[terraMoss, spiritHerb, <ore:rootsBark>, <ore:treeSapling>, <ore:treeSapling>]
+		[terraMoss, spiritHerb, <ore:rootsBark>, <ore:betweenSapling>, <ore:betweenSapling>]
 	],
 	ritual_windwall : [
 		[cloudBerry, moonglowLeaf, <ore:rootsBark>, <ore:rootsBark>, <thebetweenlands:items_misc:3>]
@@ -102,13 +102,13 @@ val modifyRituals as IIngredient[][][string] = {
 		[wildroot, <ore:rootsBark>, <ore:rootsBark>, spiritHerb, spiritHerb]
 	],
 	ritual_flower_growth : [
-		[petals, wildroot, terraMoss, petals, petals]
+		[boneMeal, wildroot, terraMoss, petals, stalicripe]
 	],
 	ritual_transmutation : [
 		[<ore:rootsBark>, <roots:runestone>, <roots:runestone>, cloudBerry, stalicripe]
 	],
 	ritual_gathering : [
-		[<roots:wildewheet>, <roots:wildewheet>, <roots:wildewheet_seed>, ingot.iron, redstone]
+		[<roots:wildewheet>, <roots:wildewheet>, <roots:wildewheet_seed>, <ore:hopper>, redstone]
 	]
 };
 

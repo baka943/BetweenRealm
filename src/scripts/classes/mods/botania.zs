@@ -31,6 +31,8 @@ zenClass Botania {
 	#Add Brew recipes
 	function addBrew(map as IIngredient[][][string]) {
 		for brewName, inner in map {
+			Brew.removeRecipe(brewName);
+
 			for inputs in inner {
 				Brew.addRecipe(inputs, brewName);
 			}

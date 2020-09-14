@@ -6,20 +6,21 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 
 //==================================
-######## Remove Recipes ########
+######## Remove recipes ########
 //==================================
 
 val removeRecipes as IItemStack[] = [
 	<botania:manaresource:12>,
 	<botania:felpumpkin>,
 	<botania:lexicon>,
-	<botania:corporeaspark>
+	<botania:corporeaspark>,
+	<botania:spark>
 ];
 
 iRecipes.remove(removeRecipes);
 
 //==================================
-######## Shaped Recipes ########
+######## Shaped recipes ########
 //==================================
 
 val shapedRecipes as IIngredient[][][][IItemStack] = {
@@ -38,8 +39,8 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 	],
 	<botania:pestleandmortar> : [
 		[
-			[null, stickWeedwood],
-			[plankWeedwood],
+			[null, <ore:stickWeed>],
+			[<ore:betweenPlank>],
 			[<thebetweenlands:items_misc:22>]
 		]
 	],
@@ -93,7 +94,7 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 	<botania:spreader> : [
 		[
 			[livingwood, livingwood, livingwood],
-			[ingot.iron, petals],
+			[ingot.octine, petals],
 			[livingwood, livingwood, livingwood]
 		]
 	],
@@ -106,16 +107,16 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 	],
 	<botania:travelbelt> : [
 		[
-			[<ore:runeEarthB>, feyLeather],
-			[feyLeather, null, feyLeather],
-			[ingot.manasteel, feyLeather, <ore:runeAirB>]
+			[<ore:runeEarthB>, <ore:feyLeather>],
+			[<ore:feyLeather>, null, <ore:feyLeather>],
+			[ingot.manasteel, <ore:feyLeather>, <ore:runeAirB>]
 		]
 	],
 	<botania:knockbackbelt> : [
 		[
-			[<ore:runeFireB>, feyLeather],
-			[feyLeather, null, feyLeather],
-			[ingot.manasteel, feyLeather, <ore:runeEarthB>]
+			[<ore:runeFireB>, <ore:feyLeather>],
+			[<ore:feyLeather>, null, <ore:feyLeather>],
+			[ingot.manasteel, <ore:feyLeather>, <ore:runeEarthB>]
 		]
 	],
 	<botania:grasshorn> : [
@@ -127,36 +128,36 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 	],
 	<botania:forestdrum> : [
 		[
-			[livingwood, feyLeather, livingwood],
+			[livingwood, <ore:feyLeather>, livingwood],
 			[livingwood, <botania:grasshorn>, livingwood],
-			[livingwood, feyLeather, livingwood]
+			[livingwood, <ore:feyLeather>, livingwood]
 		]
 	],
 	<botania:forestdrum:1> : [
 		[
-			[<ore:dreamwood>, feyLeather, <ore:dreamwood>],
+			[<ore:dreamwood>, <ore:feyLeather>, <ore:dreamwood>],
 			[<ore:dreamwood>, ingot.elven, <ore:dreamwood>],
-			[<ore:dreamwood>, feyLeather, <ore:dreamwood>]
+			[<ore:dreamwood>, <ore:feyLeather>, <ore:dreamwood>]
 		]
 	],
 	<botania:forestdrum:2> : [
 		[
-			[livingwood, feyLeather, livingwood],
+			[livingwood, <ore:feyLeather>, livingwood],
 			[livingwood, <botania:grasshorn:1>, livingwood],
-			[livingwood, feyLeather, livingwood]
+			[livingwood, <ore:feyLeather>, livingwood]
 		]
 	],
 	<botania:enderhand> : [
 		[
-			[<ore:manaPearl>, feyLeather, <ore:obsidian>],
-			[feyLeather, <minecraft:ender_chest>, feyLeather],
-			[<ore:obsidian>, feyLeather]
+			[<ore:manaPearl>, <ore:feyLeather>, <ore:obsidian>],
+			[<ore:feyLeather>, <minecraft:ender_chest>, <ore:feyLeather>],
+			[<ore:obsidian>, <ore:feyLeather>]
 		]
 	],
 	<botania:bellows> : [
 		[
 			[<botania:livingwood0slab>, <botania:livingwood0slab>, <botania:livingwood0slab>],
-			[<ore:runeAirB>, feyLeather],
+			[<ore:runeAirB>, <ore:feyLeather>],
 			[<botania:livingwood0slab>, <botania:livingwood0slab>, <botania:livingwood0slab>]
 		]
 	],
@@ -180,16 +181,40 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 			[null, <ore:livingwoodTwig>],
 			[<ore:runeAirB>]
 		]
+	],
+	<botania:spark> * 2 : [
+		[
+			[null, <botania:petal:*>],
+			[nugget.octine, infernalBulb, nugget.octine],
+			[null, <botania:petal:*>]
+		],
+		[
+			[null, nugget.octine],
+			[<botania:petal:*>, infernalBulb, <botania:petal:*>],
+			[null, nugget.octine]
+		]
 	]
 };
 
 iRecipes.add(shapedRecipes, false);
 
 #Vine Ball
-iRecipes.addCompress(<botania:vineball>, <ore:vine>);
+iRecipes.addCompress(<botania:vineball>, <ore:betweenVine>);
+
+#Floating flowers
+for i in 0 .. 16 {
+	iRecipes.add(<botania:miniisland>.definition.makeStack(i),
+		[
+			[<botania:shinyflower>.definition.makeStack(i)],
+			[<botania:grassseeds>],
+			[<thebetweenlands:swamp_dirt>]
+		],
+		false
+	);
+}
 
 //==================================
-######## Shapeless Recipes ########
+######## Shapeless recipes ########
 //==================================
 
 val shapelessRecipes as IIngredient[][][IItemStack] = {

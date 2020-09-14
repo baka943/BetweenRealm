@@ -2,13 +2,17 @@
 #Author: baka943
 #modloaded roots
 
-import mods.jei.JEI;
+import crafttweaker.item.IItemStack;
 
-JEI.removeAndHide(<roots:ritual_overgrowth>);
-JEI.removeAndHide(<roots:ritual_healing_aura>);
-JEI.removeAndHide(<roots:bark_oak>);
-JEI.removeAndHide(<roots:bark_spruce>);
-JEI.removeAndHide(<roots:bark_birch>);
-JEI.removeAndHide(<roots:bark_jungle>);
-JEI.removeAndHide(<roots:bark_acacia>);
-JEI.removeAndHide(<roots:bark_dark_oak>);
+val removeList as IItemStack[] = [
+	<roots:ritual_overgrowth>,
+	<roots:ritual_healing_aura>,
+	<roots:bark_oak>,
+	<roots:bark_spruce>,
+	<roots:bark_birch>,
+	<roots:bark_jungle>,
+	<roots:bark_acacia>,
+	<roots:bark_dark_oak>
+];
+
+jei.hide(removeList);

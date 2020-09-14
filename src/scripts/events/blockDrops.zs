@@ -30,5 +30,8 @@ static blockDrops as WeightedItemStack[][string] = {
 	##Example
 	// "thebetweenlands:swamp_tallgrass" : [
 	// 	<roots:wildroot> % 12
+	// ],
+	// "minecraft:end_stone" : [
+	// 	<minecraft:diamond> % 100
 	// ]
 };

@@ -6,21 +6,21 @@ import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 
 //==================================
-######## Remove Recipes ########
+######## Remove recipes ########
 //==================================
 
 #Remove Items/Blocks
-val removeItems as IItemStack[] = [
+val removeRecipes as IItemStack[] = [
 
 ];
 
-iRecipes.remove(removeItems);
+iRecipes.remove(removeRecipes);
 
 #Remove Ashen Armors
 iRecipes.remove("embers:ashen_cloak_.*");
 
 //==================================
-######## Shaped Recipes ########
+######## Shaped recipes ########
 //==================================
 
 #Shaped recipes
