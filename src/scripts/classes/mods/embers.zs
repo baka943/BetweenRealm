@@ -18,14 +18,6 @@ zenClass Embers {
 
 	zenConstructor() {}
 
-	#Add Aspectus
-	val aspects as IIngredient[string] = {
-		antimony : <soot:signet_antimony>,
-		inflictor : <embers:inflictor_gem>
-	};
-
-	this.addAspect(aspects);
-
 	//==================================
 	######## Exchange Table ########
 	//==================================
@@ -141,13 +133,11 @@ zenClass Embers {
 	}
 
 	#Add Melter recipes
-	function addMelter(map as IIngredient[][int][ILiquidStack]) {
-		for output, recipes in map {
-			for amount, inputs in recipes {
-				for input in inputs {
-					Melter.add(output * amount, input);
-				}
-			}
+	function addMelter(map as ILiquidStack[string][IIngredient]) {
+		for input, inner in map {
+			if(isNull(inner.bonus)) {
+				Melter.add(inner.output, input);
+			} Melter.add(inner.output, input, inner.bonus);
 		}
 	}
 

@@ -54,7 +54,7 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 	<botania:tinyplanet> : [
 		[
 			[livingrock, betweenstone, livingrock],
-			[betweenstone, <ore:manaPearl>, betweenstone],
+			[betweenstone, mana.valonite, betweenstone],
 			[livingrock, betweenstone, livingrock]
 		]
 	],
@@ -81,14 +81,14 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 	],
 	<botania:lens> : [
 		[
-			[null, ingot.manasteel],
-			[ingot.manasteel, siltGlass, ingot.manasteel],
-			[null, ingot.manasteel]
+			[null, mana.steel],
+			[mana.steel, siltGlass, mana.steel],
+			[null, mana.steel]
 		],
 		[
-			[null, ingot.manasteel],
-			[ingot.manasteel, <thebetweenlands:silt_glass_pane>, ingot.manasteel],
-			[null, ingot.manasteel]
+			[null, mana.steel],
+			[mana.steel, <thebetweenlands:silt_glass_pane>, mana.steel],
+			[null, mana.steel]
 		]
 	],
 	<botania:spreader> : [
@@ -109,14 +109,14 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 		[
 			[<ore:runeEarthB>, <ore:feyLeather>],
 			[<ore:feyLeather>, null, <ore:feyLeather>],
-			[ingot.manasteel, <ore:feyLeather>, <ore:runeAirB>]
+			[mana.steel, <ore:feyLeather>, <ore:runeAirB>]
 		]
 	],
 	<botania:knockbackbelt> : [
 		[
 			[<ore:runeFireB>, <ore:feyLeather>],
 			[<ore:feyLeather>, null, <ore:feyLeather>],
-			[ingot.manasteel, <ore:feyLeather>, <ore:runeEarthB>]
+			[mana.steel, <ore:feyLeather>, <ore:runeEarthB>]
 		]
 	],
 	<botania:grasshorn> : [
@@ -149,7 +149,7 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 	],
 	<botania:enderhand> : [
 		[
-			[<ore:manaPearl>, <ore:feyLeather>, <ore:obsidian>],
+			[mana.valonite, <ore:feyLeather>, <ore:obsidian>],
 			[<ore:feyLeather>, <minecraft:ender_chest>, <ore:feyLeather>],
 			[<ore:obsidian>, <ore:feyLeather>]
 		]
@@ -170,9 +170,9 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 	],
 	<botania:miningring> : [
 		[
-			[<ore:runeEarthB>, ingot.manasteel, <thebetweenlands:valonite_pickaxe>],
-			[ingot.manasteel, null, ingot.manasteel],
-			[null, ingot.manasteel]
+			[<ore:runeEarthB>, mana.steel, <thebetweenlands:valonite_pickaxe>],
+			[mana.steel, null, mana.steel],
+			[null, mana.steel]
 		]
 	],
 	<botania:tornadorod> : [
@@ -192,6 +192,41 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 			[null, nugget.octine],
 			[<botania:petal:*>, infernalBulb, <botania:petal:*>],
 			[null, nugget.octine]
+		]
+	],
+	<botania:redstringcontainer> : [
+		[
+			[livingrock, livingrock, livingrock],
+			[livingrock, <ore:chestWeed>, <ore:bRedString>],
+			[livingrock, livingrock, livingrock]
+		]
+	],
+	<botania:baublebox> : [
+		[
+			[null, mana.steel],
+			[mana.steel, <ore:chestWeed>, ingot.gold],
+			[null, mana.steel]
+		]
+	],
+	<botania:redstringinterceptor> : [
+		[
+			[livingrock, livingrock, livingrock],
+			[livingrock, <thebetweenlands:betweenstone_button>, <ore:bRedString>],
+			[livingrock, livingrock, livingrock]
+		]
+	],
+	<botania:redstringdispenser> : [
+		[
+			[livingrock, livingrock, livingrock],
+			[livingrock, <botania:spreader:1>, <ore:bRedString>],
+			[livingrock, livingrock, livingrock]
+		]
+	],
+	<botania:redstringcomparator> : [
+		[
+			[livingrock, livingrock, livingrock],
+			[livingrock, redstone, <ore:bRedString>],
+			[livingrock, livingrock, livingrock]
 		]
 	]
 };
@@ -244,6 +279,15 @@ val shapelessRecipes as IIngredient[][][IItemStack] = {
 	],
 	<botania:lightrelay:3> : [
 		[<botania:lightrelay>, <botania:animatedtorch>]
+	],
+	<botania:corporearetainer> : [
+		[<ore:chestWeed>, <botania:corporeaspark>]
+	],
+	<botania:lightrelay> : [
+		[<ore:bRedString>, <botania:corporeaspark>]
+	],
+	<botania:corporeafunnel> : [
+		[<botania:opencrate>, <botania:corporeaspark>]
 	]
 };
 

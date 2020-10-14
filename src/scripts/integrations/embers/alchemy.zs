@@ -5,6 +5,16 @@
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 
+//==================================
+######## Add Aspectus ########
+//==================================
+
+val aspects as IIngredient[string] = {
+	antimony : <soot:signet_antimony>,
+	inflictor : <embers:inflictor_gem>
+};
+
+embers.addAspect(aspects);
 
 //==================================
 ######## Add Alchemy recipes ########

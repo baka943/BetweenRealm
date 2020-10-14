@@ -50,3 +50,9 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 };
 
 iRecipes.add(shapedRecipes, false);
+
+//==================================
+######## Furnace recipes ########
+//==================================
+
+furnace.remove(charCoal);

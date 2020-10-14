@@ -63,6 +63,15 @@ val feyCrafterRecipes as IIngredient[][][IItemStack] = {
 	],
 	<roots:wildwood_boots> : [
 		[<thebetweenlands:syrmorite_boots>, bark.wildwood, bark.wildwood, <roots:wildwood_planks>, gem.valonite]
+	],
+	<roots:living_arrow> * 6 : [
+		[<ore:betweenLeaves>, <ore:betweenLeaves>, <ore:rootsBark>, wildroot, <thebetweenlands:items_misc:21>]
+	],
+	<roots:elemental_soil> * 4 : [
+		[<thebetweenlands:swamp_dirt>, terraMoss, wildroot, <thebetweenlands:silt>, boneMeal]
+	],
+	<roots:wildwood_quiver> : [
+		[<ore:chestWeed>, <roots:bark_wildwood>, <roots:bark_wildwood>, terraMoss, spiritHerb]
 	]
 };
 

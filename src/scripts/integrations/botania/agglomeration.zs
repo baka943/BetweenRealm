@@ -18,12 +18,12 @@ botaniaTweaks.removeAgglomeration();
 var recipes as IIngredient[][int][IItemStack][string] = {
 	default : {
 		<botania:manaresource:4> : {
-			500000 : [ingot.manasteel, <ore:manaPearl>, <ore:manaDiamond>]
+			500000 : [mana.steel, mana.valonite, mana.diamond]
 		}
 	},
 	reverse : {
 		<botania:manaresource:4> : {
-			50000 : [ingot.manasteel, <ore:manaPearl>, <ore:manaDiamond>]
+			50000 : [mana.steel, mana.valonite, mana.diamond]
 		}
 	}
 };

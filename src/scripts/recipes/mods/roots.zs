@@ -60,9 +60,9 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 	],
 	<roots:grove_stone> : [
 		[
-			[null, betweenstone],
-			[wildroot, betweenstone, terraMoss],
-			[betweenstoneSlab, betweenstone, betweenstoneSlab]
+			[null, <thebetweenlands:betweenstone_bricks>],
+			[wildroot, <thebetweenlands:betweenstone_bricks>, terraMoss],
+			[<thebetweenlands:betweenstone_brick_slab>, betweenstone, <thebetweenlands:betweenstone_brick_slab>]
 		]
 	],
 	<roots:staff> : [
@@ -111,7 +111,7 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 		[
 			[<ore:string>, null, <ore:string>],
 			[pelt, pelt, pelt],
-			[pelt, <ore:chestWood>, pelt]
+			[pelt, <ore:chestWeed>, pelt]
 		]
 	],
 	<roots:fey_crafter> : [
@@ -129,3 +129,10 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 };
 
 iRecipes.add(shapedRecipes, false);
+
+//==================================
+######## Furnace recipes ########
+//==================================
+
+furnace.remove(<roots:flour>);
+furnace.addRecipe(<roots:wildewheet_bread>, <roots:flour>);

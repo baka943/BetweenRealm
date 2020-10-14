@@ -11,7 +11,7 @@ import crafttweaker.liquid.ILiquidStack;
 var mixerRecipes as ILiquidStack[][ILiquidStack] = {
 	<fluid:dawnstone> * 8 : [
 		<fluid:iron> * 4,
-		<fluid:copper> * 4
+		<fluid:octine> * 4
 	]
 };
 

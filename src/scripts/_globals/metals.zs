@@ -30,7 +30,6 @@ global ingot as IIngredient[string] = {
 	octine : <ore:ingotOctine>,
 	syrmorite : <ore:ingotSyrmorite>,
 	antimony : <ore:ingotAntimony>,
-	manasteel : <ore:ingotManasteel>,
 	elven : <ore:ingotElvenElementium>,
 	terrasteel : <ore:ingotTerrasteel>
 };
@@ -48,6 +47,7 @@ global nugget as IIngredient[string] = {
 	electrum : <ore:nuggetElectrum>,
 	octine : <ore:nuggetOctine>,
 	syrmorite : <ore:nuggetSyrmorite>,
+	valonite : <ore:nuggetValonite>,
 	manasteel : <ore:nuggetManasteel>,
 	elven : <ore:nuggetElvenElementium>,
 	terrasteel : <ore:nuggetTerrasteel>

@@ -176,6 +176,8 @@ zenClass Botania {
 	function addAltar(map as IIngredient[][][IItemStack][int]) {
 		for mana, recipes in map {
 			for output, inner in recipes {
+				RuneAltar.removeRecipe(output);
+				
 				for inputs in inner {
 					RuneAltar.addRecipe(output, inputs, mana);
 				}

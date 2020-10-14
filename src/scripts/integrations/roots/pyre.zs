@@ -48,7 +48,7 @@ val pyreRecipes as IIngredient[][][IItemStack] = {
 		[swampTallgrass, <thebetweenlands:items_plant_drop:4>, <roots:runic_dust>, terraMoss, terraMoss]
 	],
 	<roots:stalicripe> * 3 : [
-		[<minecraft:flint>, <thebetweenlands:items_plant_drop:14>, <roots:runic_dust>, wildroot, redstone]
+		[terraMoss, <thebetweenlands:items_plant_drop:14>, <roots:runic_dust>, wildroot, redstone]
 	],
 	<roots:pereskia> * 3 : [
 		[wildroot, <ore:dentrothystShard>, redstone, <thebetweenlands:items_plant_drop:31>, swampReed]
