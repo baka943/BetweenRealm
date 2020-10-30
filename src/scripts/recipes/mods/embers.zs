@@ -17,7 +17,7 @@ val removeRecipes as IItemStack[] = [
 iRecipes.remove(removeRecipes);
 
 #Remove Ashen Armors
-iRecipes.remove("embers:ashen_cloak_.*");
+iRecipes.remove("embers:ashen_cloak_.*", false);
 
 //==================================
 ######## Shaped recipes ########

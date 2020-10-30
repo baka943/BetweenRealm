@@ -9,11 +9,7 @@ import crafttweaker.item.IIngredient;
 ######## Remove recipes ########
 //==================================
 
-val removeRecipes as string[] = [
-	"mysticalworld:ender_pearl"
-];
-
-iRecipes.remove(removeRecipes);
+iRecipes.remove("mysticalworld:ender_pearl", false);
 
 //==================================
 ######## Shaped recipes ########
@@ -134,5 +130,5 @@ iRecipes.add(shapedRecipes, false);
 ######## Furnace recipes ########
 //==================================
 
-furnace.remove(<roots:flour>);
+furnace.remove(<minecraft:bread>);
 furnace.addRecipe(<roots:wildewheet_bread>, <roots:flour>);

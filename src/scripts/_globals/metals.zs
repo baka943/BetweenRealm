@@ -5,15 +5,18 @@
 import crafttweaker.item.IIngredient;
 
 global ore as IIngredient[string] = {
-	iron : <ore:oreIron>,
-	gold : <ore:oreGold>,
-	copper : <ore:oreCopper>,
-	tin : <ore:oreTin>,
-	lead : <ore:oreLead>,
-	nickel : <ore:oreNickel>,
-	silver : <ore:oreSilver>,
-	octine : <ore:oreOctine>,
-	syrmorite : <ore:oreSyrmorite>
+	iron : <betweenores:iron_ore>,
+	gold : <betweenores:gold_ore>,
+	lapis : <betweenores:lapis_ore>,
+	copper : <betweenores:copper_ore>,
+	tin : <betweenores:tin_ore>,
+	lead : <betweenores:lead_ore>,
+	nickel : <betweenores:nickel_ore>,
+	silver : <betweenores:silver_ore>,
+	octine : <thebetweenlands:octine_ore>,
+	syrmorite : <thebetweenlands:syrmorite_ore>,
+	ardite : <betweenores:ardite_ore>,
+	cobalt : <betweenores:cobalt_ore>
 };
 
 global ingot as IIngredient[string] = {
@@ -24,6 +27,8 @@ global ingot as IIngredient[string] = {
 	lead : <ore:ingotLead>,
 	nickel : <ore:ingotNickel>,
 	silver : <ore:ingotSilver>,
+	steel : <ore:ingotSteel>,
+	aluminum : <ore:ingotAluminum>,
 	dawnstone : <ore:ingotDawnstone>,
 	bronze : <ore:ingotBronze>,
 	electrum : <ore:ingotElectrum>,
@@ -79,6 +84,7 @@ global plate as IIngredient[string] = {
 	lead : <ore:plateLead>,
 	nickel : <ore:plateNickel>,
 	silver : <ore:plateSilver>,
+	steel : <ore:plateSteel>,
 	dawnstone : <ore:plateDawnstone>,
 	bronze : <ore:plateBronze>,
 	electrum : <ore:plateElectrum>

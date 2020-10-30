@@ -4,55 +4,36 @@
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 
-//==================================
-######## Remove recipes ########
-//==================================
-
-val removeRecipes as IItemStack[] = [
-	<minecraft:leather>,
-	<minecraft:stone:3>,
-	<minecraft:stone:5>,
-	<minecraft:ladder>
-];
-
-iRecipes.remove(removeRecipes);
+import crafttweaker.recipes.IFurnaceRecipe;
 
 //==================================
 ######## Shaped recipes ########
 //==================================
 
-val shapedRecipes as IIngredient[][][][IItemStack] = {
-	<minecraft:hopper> : [
-		[
-			[ingot.iron, null, ingot.iron],
-			[ingot.iron, <ore:chestWood>, ingot.iron],
-			[null, ingot.iron]
-		],
-		[
-			[ingot.iron, <ore:logWood>, ingot.iron],
-			[ingot.iron, <ore:logWood>, ingot.iron],
-			[null, ingot.iron]
-		]
-	],
-	<minecraft:ladder> * 8 : [
-		[
-			[<minecraft:stick>, null, <minecraft:stick>],
-			[<minecraft:stick>, <minecraft:stick>, <minecraft:stick>],
-			[<minecraft:stick>, null, <minecraft:stick>]
-		]
-	],
-	<minecraft:glass_bottle> * 3 : [
-		[
-			[<minecraft:glass>, null, <minecraft:glass>],
-			[null, <minecraft:glass>]
-		]
-	]
-};
-
-iRecipes.add(shapedRecipes, false);
+iRecipes.add(<minecraft:glass_bottle> * 3,
+	[
+		[<minecraft:glass>, null, <minecraft:glass>],
+		[null, <minecraft:glass>]
+	], false);
 
 //==================================
 ######## Furnace recipes ########
 //==================================
 
-furnace.remove(charCoal);
+for rec in furnace.all {
+	var input as IIngredient = rec.input;
+	var output as IItemStack = rec.output;
+
+	for item in input.items {
+		if(!(list has item.definition.owner)) {
+			furnace.remove(output);
+		}
+	}
+}
+
+static list as string[] = ["thebetweenlands", "botania", "roots", "mysticalworld"];
+
+furnace.addRecipe(<minecraft:iron_ingot>, ore.iron);
+furnace.addRecipe(<minecraft:gold_ingot>, ore.gold);
+furnace.addRecipe(<minecraft:dye:4> * 8 , ore.lapis);
+

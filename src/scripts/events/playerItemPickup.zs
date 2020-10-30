@@ -9,4 +9,5 @@ import crafttweaker.world.IWorld;
 
 events.onPlayerPickupItem(function(event as PlayerPickupItemEvent) {
 	var item as IItemStack = event.item.item;
+	var world as IWorld = event.player.world;
 });

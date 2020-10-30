@@ -1,12 +1,13 @@
 #priority 943
 #Name: artisanWorktables.zs
 #Author: baka943
-#modloaded artisanworktables
 
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 
 import mods.artisanworktables.builder.RecipeBuilder;
+
+import scripts.functions.getItemName;
 
 zenClass ArtisanWorktables {
 	
@@ -24,7 +25,7 @@ zenClass ArtisanWorktables {
 			for stack, recipes in itemRecipes {
 				builder.addOutput(stack);
 				builder.setShapeless(recipes.recipe);
-				builder.setName(stack.definition.id);
+				builder.setName(getItemName(stack));
 
 				if(!isNull(recipes.tools)) {
 					var toolTable = recipes.tools;
@@ -32,12 +33,6 @@ zenClass ArtisanWorktables {
 
 					for toolType in toolTable {
 						builder.addTool(toolType, damage);
-					}
-				}
-
-				if(!isNull(recipes.fluids)) {
-					for fluid in recipes.fluids {
-						builder.setFluid(fluid);
 					}
 				}
 
@@ -58,7 +53,7 @@ zenClass ArtisanWorktables {
 			for stack, recipes in itemRecipes {
 				builder.addOutput(stack);
 				builder.setShaped(recipes.recipe);
-				builder.setName(stack.definition.id);
+				builder.setName(getItemName(stack));
 
 				if(!isNull(recipes.tools)) {
 					var toolTable = recipes.tools[0];
@@ -66,12 +61,6 @@ zenClass ArtisanWorktables {
 
 					for toolType in toolTable {
 						builder.addTool(toolType, damage);
-					}
-				}
-
-				if(!isNull(recipes.fluids)) {
-					for fluid in recipes.fluids[0] {
-						builder.setFluid(fluid);
 					}
 				}
 

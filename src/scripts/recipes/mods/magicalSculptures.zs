@@ -8,7 +8,7 @@ import crafttweaker.item.IIngredient;
 ######## Remove recipes ########
 //==================================
 
-iRecipes.remove("magicalsculpture:item.relic.*");
+iRecipes.remove("magicalsculpture:item.relic.*", false);
 
 //==================================
 ######## Shaped recipes ########

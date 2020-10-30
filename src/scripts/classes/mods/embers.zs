@@ -37,8 +37,8 @@ zenClass Embers {
 	}
 
 	#Add Exchange Table recipes
-	function addAlchemy(map as IIngredient[][][int][IItemStack]) {
-		for item, itemRecipes in map {
+	function addAlchemy(recipes as IIngredient[][][int][IItemStack]) {
+		for item, itemRecipes in recipes {
 			Alchemy.remove(item);
 
 			for level, inner in itemRecipes {
@@ -94,8 +94,8 @@ zenClass Embers {
 	}
 
 	#Add Stamper recipes
-	function addStamper(map as IItemStack[ILiquidStack][IIngredient]) {
-		for stamp, recipe in map {
+	function addStamper(recipes as IItemStack[ILiquidStack][IIngredient]) {
+		for stamp, recipe in recipes {
 			for liquid, output in recipe {
 				Stamper.remove(output);
 				Stamper.add(output, liquid, stamp, null);
@@ -108,8 +108,8 @@ zenClass Embers {
 	//==================================
 
 	#Add Mixer recipes
-	function addMixer(map as ILiquidStack[][ILiquidStack]) {
-		for output, inputs in map {
+	function addMixer(recipes as ILiquidStack[][ILiquidStack]) {
+		for output, inputs in recipes {
 				Mixer.remove(output);
 				Mixer.add(output, inputs);
 		}
@@ -133,11 +133,11 @@ zenClass Embers {
 	}
 
 	#Add Melter recipes
-	function addMelter(map as ILiquidStack[string][IIngredient]) {
-		for input, inner in map {
+	function addMelter(recipes as ILiquidStack[string][IIngredient]) {
+		for input, inner in recipes {
 			if(isNull(inner.bonus)) {
 				Melter.add(inner.output, input);
-			} Melter.add(inner.output, input, inner.bonus);
+			} else Melter.add(inner.output, input, inner.bonus);
 		}
 	}
 
@@ -146,8 +146,8 @@ zenClass Embers {
 	//==================================
 
 	#Remove Dawnstone Anvil recipes
-	function removeAnvil(map as IItemStack[IItemStack]) {
-		for bottom, top in map {
+	function removeAnvil(recipes as IItemStack[IItemStack]) {
+		for bottom, top in recipes {
 			DawnstoneAnvil.remove(bottom, top);
 		}
 	}
@@ -179,7 +179,7 @@ zenClass Embers {
 	#Add Metal Coefficient
 	function addMetalCoef(block as IIngredient, multiplier as double) {
 		EmberGeneration.addMetalCoefficient(block, multiplier);
-		block.addTooltip("Can also be placed under the Pressure Refinery");
+		// block.addTooltip("Can also be placed under the Pressure Refinery");
 	}
 
 	#Add Boiler fluids

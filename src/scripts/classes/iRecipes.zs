@@ -13,6 +13,38 @@ zenClass IRecipes {
 	zenConstructor() {}
 
 	//==================================
+	######## Remove recipes ########
+	//==================================
+
+	function remove(removal as IItemStack) {
+		recipes.remove(removal);
+	}
+
+	function remove(removals as IItemStack[]) {
+		for toRemove in removals {
+			recipes.remove(toRemove);
+		}
+	}
+
+	function remove(removal as string, isMod as bool) {
+		if(isMod) {
+			recipes.removeByMod(removal);
+		} else recipes.removeByRegex(removal);
+	}
+	
+	function remove(removals as string[], isMod as bool) {
+		if(isMod) {
+			for toRemove in removals {
+				recipes.removeByMod(toRemove);
+			}
+		} else {
+			for toRemove in removals {
+				recipes.removeByRegex(toRemove);
+			}
+		}
+	}
+
+	//==================================
 	######## Shapeless recipes ########
 	//==================================
 
@@ -82,30 +114,6 @@ zenClass IRecipes {
 			this.add(output, [[input, input], [input, input]], false);
 		} else {
 			this.add(output, [[input, input, input], [input, input, input], [input, input, input]], false);
-		}
-	}
-
-	//==================================
-	######## Remove recipes ########
-	//==================================
-
-	function remove(removal as IItemStack) {
-		recipes.remove(removal);
-	}
-
-	function remove(removals as IItemStack[]) {
-		for toRemove in removals {
-			recipes.remove(toRemove);
-		}
-	}
-
-	function remove(removal as string) {
-		recipes.removeByRegex(removal);
-	}
-	
-	function remove(removals as string[]) {
-		for toRemove in removals {
-			recipes.removeByRegex(toRemove);
 		}
 	}
 

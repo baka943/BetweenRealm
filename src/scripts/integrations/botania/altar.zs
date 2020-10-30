@@ -43,25 +43,25 @@ val altarRecipes as IIngredient[][][IItemStack][int] = {
 	},
 	12000 : {
 		<botania:rune:9> : [
-			[<ore:runeAirB> , mana.valonite, <ore:runeSummerB>, mana.diamond]
+			[<ore:runeAirB>, mana.valonite, <ore:runeSummerB>, mana.diamond]
 		],
 		<botania:rune:10> : [
-			[<ore:runeFireB> , mana.valonite, <ore:runeWinterB>, mana.diamond]
+			[<ore:runeFireB>, mana.valonite, <ore:runeWinterB>, mana.diamond]
 		],
 		<botania:rune:11> : [
-			[<ore:runeWaterB> , mana.valonite, <ore:runeSpringB>, mana.diamond]
+			[<ore:runeWaterB>, mana.valonite, <ore:runeSpringB>, mana.diamond]
 		],
 		<botania:rune:12> : [
-			[<ore:runeAirB> , mana.valonite, <ore:runeAutumnB>, mana.diamond]
+			[<ore:runeAirB>, mana.valonite, <ore:runeAutumnB>, mana.diamond]
 		],
 		<botania:rune:13> : [
-			[<ore:runeEarthB> , mana.valonite, <ore:runeWinterB>, mana.diamond]
+			[<ore:runeEarthB>, mana.valonite, <ore:runeWinterB>, mana.diamond]
 		],
 		<botania:rune:14> : [
-			[<ore:runeWaterB> , mana.valonite, <ore:runeWinterB>, mana.diamond]
+			[<ore:runeWaterB>, mana.valonite, <ore:runeWinterB>, mana.diamond]
 		],
 		<botania:rune:15> : [
-			[<ore:runeFireB> , mana.valonite, <ore:runeSummerB>, mana.diamond]
+			[<ore:runeFireB>, mana.valonite, <ore:runeSummerB>, mana.diamond]
 		]
 	}
 };
