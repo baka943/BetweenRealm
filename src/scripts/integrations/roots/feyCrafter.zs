@@ -20,7 +20,7 @@ val feyCrafterRecipes as IIngredient[][][IItemStack] = {
 		[gem.lapis, betweenstone, betweenstone, betweenstone, betweenstone]
 	],
 	<roots:unending_bowl> : [
-		[<ore:swampWater>, <roots:mortar>, dewgonia, terraMoss, dewgonia]
+		[<fluid:swamp_water> * 1000, <roots:mortar>, dewgonia, terraMoss, dewgonia]
 	],
 	<roots:living_axe> : [
 		[ingot.octine, <thebetweenlands:weedwood_axe>, wildroot, <ore:rootsBark>, <ore:rootsBark>]

@@ -435,6 +435,11 @@ zenClass Pyrotech {
 	//==================================
 
 	#Remove Anvil recipes
+	function removeAnvil() {
+		GraniteAnvil.removeAllRecipes();
+		IroncladAnvil.removeAllRecipes();
+	}
+
 	function removeAnvilG() {
 		GraniteAnvil.removeAllRecipes();
 	}
@@ -456,34 +461,15 @@ zenClass Pyrotech {
 	}
 
 	#Add Anvil recipes
-	function addAnvilG(map as IIngredient[][int][IItemStack][string]) {
-		for type, recipes in map {
-			for output, recipe in recipes {
-				for hits, inputs in recipe {
-					for i, input in inputs {
-						var name as string = getItemName(output);
+	function addAnvil(recipes as IIngredient[][IItemStack]) {
+		for output, inputs in recipes {
+			for i, input in inputs {
+				var name as string = getItemName(output);
 
-						if(i > 0) name += "/" ~ i;
+				if(i > 0) name += "/" ~ i;
 
-						GraniteAnvil.addRecipe(name, output, input, hits, type);
-					}
-				}
-			}
-		}
-	}
-
-	function addAnvilI(map as IIngredient[][int][IItemStack][string]) {
-		for type, recipes in map {
-			for output, recipe in recipes {
-				for hits, inputs in recipe {
-					for i, input in inputs {
-						var name as string = getItemName(output);
-
-						if(i > 0) name += "/" ~ i;
-
-						IroncladAnvil.addRecipe(name, output, input, hits, type);
-					}
-				}
+				GraniteAnvil.addRecipe(name, output, input, 6, "hammer");
+				IroncladAnvil.addRecipe(name + "/ironclad", output, input, 4, "hammer");
 			}
 		}
 	}

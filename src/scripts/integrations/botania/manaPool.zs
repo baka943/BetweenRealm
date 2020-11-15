@@ -1,6 +1,5 @@
 #Name: manaPool.zs
 #Author: baka943
-#modloaded botania
 
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
@@ -28,6 +27,11 @@ val infusionRecipes as IIngredient[][IItemStack][int] = {
 	150 : {
 		<botania:managlass> : [
 			siltGlass
+		]
+	},
+	500 : {
+		<botania:manaresource:23> : [
+			<botania:dye:*>
 		]
 	},
 	2500 : {

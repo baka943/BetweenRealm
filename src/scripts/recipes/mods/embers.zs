@@ -2,8 +2,8 @@
 #Author: baka943
 #modloaded embers
 
-import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
+import crafttweaker.item.IIngredient;
 
 //==================================
 ######## Remove recipes ########
@@ -11,7 +11,10 @@ import crafttweaker.item.IItemStack;
 
 #Remove Items/Blocks
 val removeRecipes as IItemStack[] = [
-
+	<embers:ingot_dawnstone>,
+	<embers:nugget_dawnstone>,
+	<embers:block_dawnstone>,
+	<embers:plate_dawnstone>
 ];
 
 iRecipes.remove(removeRecipes);

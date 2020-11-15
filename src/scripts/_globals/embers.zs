@@ -16,3 +16,21 @@ global emberCrystal as IItemStack = <embers:crystal_ember>;
 global emberCluster as IItemStack = <embers:ember_cluster>;
 global emberDust as IItemStack = <embers:dust_ember>;
 global archaicBrick as IItemStack = <embers:archaic_brick>;
+
+for item in <ore:blockCopper>.items {
+	if(item.definition.owner == "embers") {
+		<ore:blockCopper>.remove(item);
+	}
+}
+
+for item in <ore:blockLead>.items {
+	if(item.definition.owner == "embers") {
+		<ore:blockLead>.remove(item);
+	}
+}
+
+for item in <ore:blockSilver>.items {
+	if(item.definition.owner == "embers") {
+		<ore:blockSilver>.remove(item);
+	}
+}

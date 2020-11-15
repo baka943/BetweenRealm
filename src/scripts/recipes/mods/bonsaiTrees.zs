@@ -1,6 +1,5 @@
 #Name: bonsaiTrees.zs
 #Author: baka943
-#modloaded bonsaitrees embers
 
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
@@ -12,8 +11,8 @@ import crafttweaker.item.IItemStack;
 val shapedRecipes as IIngredient[][][][IItemStack] = {
 	<bonsaitrees:bonsaipot> : [
 		[
-			[caminiteBrick, null, caminiteBrick],
-			[caminiteBrick, caminiteBrick, caminiteBrick]
+			[livingrock, mana.powder, livingrock],
+			[livingrock, livingrock, livingrock]
 		]
 	],
 	<bonsaitrees:bonsaipot:1> : [

@@ -14,7 +14,8 @@ val removeRecipes as IItemStack[] = [
 	<botania:felpumpkin>,
 	<botania:lexicon>,
 	<botania:corporeaspark>,
-	<botania:spark>
+	<botania:spark>,
+	<minecraft:stone:3>
 ];
 
 iRecipes.remove(removeRecipes);
@@ -26,7 +27,8 @@ iRecipes.remove(removeRecipes);
 val shapedRecipes as IIngredient[][][][IItemStack] = {
 	<botania:manaresource:3> : [
 		[
-			[bark.livingwood],
+			[null, null, bark.livingwood],
+			[null, bark.livingwood],
 			[bark.livingwood]
 		]
 	],

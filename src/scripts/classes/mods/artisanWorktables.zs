@@ -29,10 +29,9 @@ zenClass ArtisanWorktables {
 
 				if(!isNull(recipes.tools)) {
 					var toolTable = recipes.tools;
-					var damage as int = toolTable.length;
 
 					for toolType in toolTable {
-						builder.addTool(toolType, damage);
+						builder.addTool(toolType, 1);
 					}
 				}
 
@@ -57,10 +56,9 @@ zenClass ArtisanWorktables {
 
 				if(!isNull(recipes.tools)) {
 					var toolTable = recipes.tools[0];
-					var damage as int = toolTable.length;
 
 					for toolType in toolTable {
-						builder.addTool(toolType, damage);
+						builder.addTool(toolType, 1);
 					}
 				}
 

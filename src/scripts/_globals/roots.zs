@@ -6,8 +6,6 @@
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 
-import scripts.functions.getItemName;
-
 global wildroot as IItemStack = <roots:wildroot>;
 global terraMoss as IItemStack = <roots:terra_moss>;
 global pereskia as IItemStack = <roots:pereskia>;
@@ -21,13 +19,12 @@ global moonglowLeaf as IItemStack = <roots:moonglow_leaf>;
 global pelt as IItemStack = <mysticalworld:pelt>;
 
 global bark as IIngredient[string] = {
-	weedwood : <realmtweaks:bark_weedwood>,
 	livingwood : <realmtweaks:bark_livingwood>,
 	wildwood : <roots:bark_wildwood>
 };
 
 for item in <ore:rootsBark>.items {
-	if(item.definition.owner == "roots" && !item.matches(<roots:bark_wildwood>)) {
+	if(!(bark.values has item)) {
 		<ore:rootsBark>.remove(item);
 	}
 }

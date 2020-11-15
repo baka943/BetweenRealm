@@ -41,7 +41,7 @@ val soakingRecipes as IIngredient[ILiquidStack][IItemStack][int] = {
 	},
 	3600 : {
 		<pyrotech:material:3> : {
-			<fluid:clay> * 250 : <pyrotech:material:31>
+			<fluid:liquid_clay> * 250 : <pyrotech:material:31>
 		}
 	},
 	6000 : {
@@ -51,7 +51,7 @@ val soakingRecipes as IIngredient[ILiquidStack][IItemStack][int] = {
 	},
 	12000 : {
 		<pyrotech:living_tar> : {
-			<fluid:coal_tar> * 1000 : <pyrotech:pile_ash>
+			<fluid:coal_tar> * 1000 : <minecraft:magma>
 		}
 	}
 };

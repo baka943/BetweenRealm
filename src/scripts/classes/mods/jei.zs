@@ -16,8 +16,20 @@ zenClass Jei {
 
 	function hide(items as IItemStack[]) {
 		for item in items {
+			item.definition.creativeTab = null;
+			
+			if(item.isItemBlock) item.asBlock().definition.creativeTab = null;
+
 			JEI.removeAndHide(item);
 		}
+	}
+
+	function hide(item as IItemStack) {
+		item.definition.creativeTab = null;
+		
+		if(item.isItemBlock) item.asBlock().definition.creativeTab = null;
+
+		JEI.removeAndHide(item);
 	}
 
 }

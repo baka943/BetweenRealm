@@ -17,7 +17,7 @@ pyrotech.removeDrying();
 val dryingRecipes as IIngredient[][IItemStack][int] = {
 	2400 : {
 		<tconstruct:materials:2> : [
-			<minecraft:clay_ball>
+			clayBall
 		],
 		<minecraft:sponge> : [
 			<minecraft:sponge:1>
@@ -25,8 +25,7 @@ val dryingRecipes as IIngredient[][IItemStack][int] = {
 	},
 	3600 : {
 		<pyrotech:material:13> : [
-			<pyrotech:material:12>,
-			<ore:treeSapling>
+			<pyrotech:material:12>
 		],
 		<minecraft:paper> : [
 			<pyrotech:material:25>

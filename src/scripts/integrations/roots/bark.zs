@@ -27,11 +27,6 @@ val barkRecipes as IItemStack[][IItemStack] = {
 	<realmtweaks:bark_livingwood> * 4 : [
 		livingwood
 	],
-	<realmtweaks:bark_weedwood> * 4 : [
-		<thebetweenlands:log_weedwood>,
-		<thebetweenlands:log_weedwood:12>,
-		<thebetweenlands:weedwood>
-	],
 	<roots:terra_moss> * 2 : [
 		<thebetweenlands:lichen>,
 		<thebetweenlands:dead_lichen>,

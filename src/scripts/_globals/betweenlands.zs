@@ -1,7 +1,6 @@
 #priority 10086
 #Name: betweenlands.zs
 #Author: baka943
-#modloaded thebetweenlands
 
 import crafttweaker.item.IItemStack;
 
@@ -75,7 +74,7 @@ global siltGlass as IItemStack = <thebetweenlands:silt_glass>;
 <ore:cobblestone>.remove(betweenstone);
 <ore:stone>.remove(<thebetweenlands:smooth_betweenstone>);
 
-for item in <ore:logwood>.items {
+for item in <ore:logWood>.items {
 	if(item.definition.owner == "thebetweenlands") {
 		<ore:logWood>.remove(item);
 		<ore:betweenWood>.add(item);

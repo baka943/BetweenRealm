@@ -196,7 +196,7 @@
       }
     },
     "betweenlands_copper": {
-      "enabled": "false",
+      "enabled": "true",
       "distribution": "uniform",
       "generator": {
         "block": {
@@ -219,7 +219,7 @@
       }
     },
     "betweenlands_tin": {
-      "enabled": "false",
+      "enabled": "true",
       "distribution": "uniform",
       "generator": {
         "block": {
@@ -242,7 +242,7 @@
       }
     },
     "betweenlands_lead": {
-      "enabled": "false",
+      "enabled": "true",
       "distribution": "uniform",
       "generator": {
         "block": {
@@ -265,7 +265,7 @@
       }
     },
     "betweenlands_nickel": {
-      "enabled": "false",
+      "enabled": "true",
       "distribution": "uniform",
       "generator": {
         "block": {
@@ -288,7 +288,7 @@
       }
     },
     "betweenlands_silver": {
-      "enabled": "false",
+      "enabled": "true",
       "distribution": "uniform",
       "generator": {
         "block": {
@@ -311,7 +311,7 @@
       }
     },
     "betweenlands_aluminum": {
-      "enabled": "false",
+      "enabled": "true",
       "distribution": "uniform",
       "generator": {
         "block": {
@@ -333,91 +333,8 @@
         ]
       }
     },
-    "betweenlands_platinum": {
-      "enabled": "false",
-      "distribution": "uniform",
-      "generator": {
-        "block": [
-          {
-            "name": "betweenores:platinum_ore",
-            "weight": 40
-          },
-          {
-            "name": "betweenores:nickel_ore",
-            "weight": 60
-          }
-        ],
-        "material": "thebetweenlands:pitstone",
-        "cluster-size": 4
-      },
-      "cluster-count": 1,
-      "min-height": 0,
-      "max-height": 30,
-      "retrogen": "true",
-      "biome": "all",
-      "dimension": {
-        "restriction": "blacklist",
-        "value": [
-          -1,
-          1
-        ]
-      }
-    },
-    "betweenlands_iridium": {
-      "enabled": "false",
-      "distribution": "uniform",
-      "generator": {
-        "block": [
-          {
-            "name": "betweenores:iridium_ore",
-            "weight": 40
-          },
-          {
-            "name": "betweenores:platinum_ore",
-            "weight": 60
-          }
-        ],
-        "material": "thebetweenlands:pitstone",
-        "cluster-size": 4
-      },
-      "cluster-count": 1,
-      "min-height": 0,
-      "max-height": 25,
-      "retrogen": "true",
-      "biome": "all",
-      "dimension": {
-        "restriction": "blacklist",
-        "value": [
-          -1,
-          1
-        ]
-      }
-    },
-    "betweenlands_mithril": {
-      "enabled": "false",
-      "distribution": "uniform",
-      "generator": {
-        "block": {
-          "name": "betweenores:mithril_ore"
-        },
-        "material": "thebetweenlands:pitstone",
-        "cluster-size": 2
-      },
-      "cluster-count": 1,
-      "min-height": 0,
-      "max-height": 10,
-      "retrogen": "true",
-      "biome": "all",
-      "dimension": {
-        "restriction": "blacklist",
-        "value": [
-          -1,
-          1
-        ]
-      }
-    },
     "betweenlands_uranium": {
-      "enabled": "false",
+      "enabled": "true",
       "distribution": "uniform",
       "generator": {
         "block": {
@@ -439,31 +356,8 @@
         ]
       }
     },
-    "betweenlands_osmium": {
-      "enabled": "false",
-      "distribution": "uniform",
-      "generator": {
-        "block": {
-          "name": "betweenores:osmium_ore"
-        },
-        "material": "thebetweenlands:betweenstone",
-        "cluster-size": 8
-      },
-      "cluster-count": 8,
-      "min-height": 0,
-      "max-height": 100,
-      "retrogen": "true",
-      "biome": "all",
-      "dimension": {
-        "restriction": "blacklist",
-        "value": [
-          -1,
-          1
-        ]
-      }
-    },
     "betweenlands_ardite": {
-      "enabled": "false",
+      "enabled": "true",
       "distribution": "uniform",
       "generator": {
         "block": {
@@ -486,7 +380,7 @@
       }
     },
     "betweenlands_cobalt": {
-      "enabled": "false",
+      "enabled": "true",
       "distribution": "uniform",
       "generator": {
         "block": {

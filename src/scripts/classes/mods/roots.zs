@@ -12,7 +12,6 @@ import mods.roots.Bark;
 import mods.roots.Fey;
 import mods.roots.Mortar;
 import mods.roots.Pyre;
-import mods.roots.RunicShears;
 import mods.roots.Ritual;
 import mods.roots.Pacifist;
 import mods.roots.AnimalHarvest;
@@ -140,49 +139,6 @@ zenClass Roots {
 		for name, inner in map {
 			for inputs in inner {
 				Ritual.modifyRitual(name, inputs);
-			}
-		}
-	}
-
-	//==================================
-	######## Runic Shear recipes ########
-	//==================================
-
-	#Remove Runic Shear recipes
-	function removeShearR(outputs as IItemStack[]) {
-		for output in outputs {
-			RunicShears.removeRecipe(output);
-		}
-	}
-
-	#Add Runic Shear recipes
-	function addShear(map as IItemStack[][IItemStack][IItemStack]) {
-		for output, recipes in map {
-			RunicShears.removeRecipe(output);
-
-			for replacement, inner in recipes {
-				for i, input in inner {
-					var name as string = getItemName(output);
-
-					if(i > 0) name += "/" ~ i;
-
-					RunicShears.addRecipe(name, output, replacement, input, input);
-				}
-			}
-		}
-	}
-
-	#Add Entity recipes
-	function addShearE(recipes as IEntityDefinition[][IItemStack][int]) {
-		for cooldown, inner in recipes {
-			for output, entities in inner {
-				for i, entity in entities {
-					var name as string = getItemName(output);
-
-					if(i > 0) name += "/" ~ i;
-
-					RunicShears.addEntityRecipe(name, output, entity, cooldown);
-				}
 			}
 		}
 	}
