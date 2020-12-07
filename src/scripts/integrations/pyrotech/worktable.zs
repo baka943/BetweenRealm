@@ -4,6 +4,9 @@
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 
+import mods.pyrotech.Worktable;
+import mods.pyrotech.Stages;
+
 //==================================
 ######## Remove recipes ########
 //==================================
@@ -17,9 +20,9 @@ pyrotech.removeAllWorktable();
 val shapedRecipes as IIngredient[][][][IItemStack] = {
 	<pyrotech:worktable_stone> : [
 		[
-			[<pyrotech:material:16>, <minecraft:stone_slab>, <pyrotech:material:16>],
-			[<pyrotech:material:16>, <pyrotech:worktable>, <pyrotech:material:16>],
-			[<pyrotech:material:16>, <pyrotech:stone_bricks>, <pyrotech:material:16>]
+			[<minecraft:stone>, <minecraft:stone_slab>, <minecraft:stone>],
+			[<minecraft:stone>, <pyrotech:worktable>, <minecraft:stone>],
+			[<minecraft:stone>, <minecraft:stone>, <minecraft:stone>]
 		]
 	],
 	<pyrotech:kiln_pit> : [
@@ -29,8 +32,15 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 	],
 	<pyrotech:tinder> : [
 		[
-			[<pyrotech:material:13>, <ore:stickWood>],
-			[<ore:stickWood>, <pyrotech:material:13>]
+			[<pyrotech:material:29>, <ore:twine>],
+			[<ore:twine>, <pyrotech:material:29>]
+		]
+	],
+	<pyrotech:material:29> : [
+		[
+			[<ore:stickWood>, <ore:stickWood>, <ore:stickWood>],
+			[<ore:stickWood>, <ore:twine>, <ore:stickWood>],
+			[<ore:stickWood>, <ore:stickWood>, <ore:stickWood>]
 		]
 	],
 	<pyrotech:drying_rack> : [
@@ -82,6 +92,48 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 			[<ore:plankTreatedWood>, <ore:plankTreatedWood>],
 			[<ore:plankTreatedWood>, <ore:plankTreatedWood>]
 		]
+	],
+	<pyrotech:soaking_pot> : [
+		[
+			[<minecraft:stone_slab>, null, <minecraft:stone_slab>],
+			[<pyrotech:material:20>, <minecraft:stone>, <pyrotech:material:20>]
+		]
+	],
+	<pyrotech:worktable> : [
+		[
+			[<pyrotech:material:20>, <pyrotech:material:20>],
+			[<pyrotech:material:20>, <pyrotech:material:20>]
+		]
+	],
+	<minecraft:stone_axe> : [
+		[
+			[<ore:rock>, <pyrotech:material:12>],
+			[<ore:rock>, <ore:stickWood>]
+		]
+	],
+	<minecraft:stone_pickaxe> : [
+		[
+			[<ore:rock>, <pyrotech:material:12>],
+			[<ore:stickWood>, <ore:rock>]
+		]
+	],
+	<minecraft:stone_shovel> : [
+		[
+			[<ore:rock>, <pyrotech:material:12>],
+			[<ore:stickWood>]
+		]
+	],
+	<minecraft:stone_hoe> : [
+		[
+			[<pyrotech:material:12>, <ore:rock>],
+			[<ore:stickWood>]
+		]
+	],
+	<pyrotech:crude_hammer> : [
+		[
+			[<ore:rock>, <ore:rock>],
+			[<ore:stickWood>, <pyrotech:material:12>]
+		]
 	]
 };
 
@@ -97,23 +149,12 @@ val shapelessRecipes as IIngredient[][][IItemStack] = {
 	],
 	<pyrotech:material:14> * 3 : [
 		[<pyrotech:material:13>, <pyrotech:material:13>, <pyrotech:material:13>]
+	],
+	<pyrotech:chopping_block> : [
+		[<ore:logWood>]
 	]
 };
 
 pyrotech.addWorktable(shapelessRecipes);
 
-//==================================
-######## Add recipes from name ########
-//==================================
-
-val recipeName as string[] = [
-	"crafttweaker:pyrotech/worktable",
-	"crafttweaker:pyrotech/crude_hammer",
-	"crafttweaker:pyrotech/chopping_block",
-	"crafttweaker:minecraft/stone_axe",
-	"crafttweaker:minecraft/stone_pickaxe",
-	"crafttweaker:minecraft/stone_shovel",
-	"crafttweaker:minecraft/stone_hoe"
-];
-
-pyrotech.addWorktable(recipeName);
+Worktable.setGameStages(Stages.and([stageCities.stage]));

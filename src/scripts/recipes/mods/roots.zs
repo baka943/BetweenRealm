@@ -9,7 +9,12 @@ import crafttweaker.item.IIngredient;
 ######## Remove recipes ########
 //==================================
 
-iRecipes.remove("mysticalworld:ender_pearl", false);
+val removeRecipes as string[] = [
+	"mysticalworld:ender_pearl",
+	"mysticalworld:pelt_to_leather"
+];
+
+iRecipes.remove(removeRecipes, false);
 
 //==================================
 ######## Shaped recipes ########
@@ -19,6 +24,16 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 	<mysticalworld:pelt> * 2 : [
 		[
 			[<thebetweenlands:items_misc:4>]
+		],
+		[
+			[<minecraft:leather>]
+		]
+	],
+	<mysticalworld:spindle> : [
+		[
+			[null, <roots:wildwood_fence>],
+			[<roots:wildwood_slab>, <roots:wildwood_slab>, <roots:wildwood_slab>],
+			[null, nugget.iron]
 		]
 	],
 	<roots:bonfire> : [
@@ -84,19 +99,40 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 	],
 	<roots:iron_knife> : [
 		[
+			[null, null, ingot.iron],
+			[null, ingot.iron],
+			[<ore:stickWeed>]
+		]
+	],
+	<roots:gold_knife> : [
+		[
+			[null, null, ingot.gold],
+			[null, ingot.gold],
+			[<ore:stickWeed>]
+		]
+	],
+	<roots:diamond_knife> : [
+		[
+			[null, null, gem.diamond],
+			[null, gem.diamond],
+			[<ore:stickWeed>]
+		]
+	],
+	<mysticalworld:copper_knife> : [
+		[
 			[null, null, ingot.syrmorite],
 			[null, ingot.syrmorite],
 			[<ore:stickWeed>]
 		]
 	],
-	<roots:gold_knife> : [
+	<mysticalworld:silver_knife> : [
 		[
 			[null, null, ingot.octine],
 			[null, ingot.octine],
 			[<ore:stickWeed>]
 		]
 	],
-	<roots:diamond_knife> : [
+	<mysticalworld:amethyst_knife> : [
 		[
 			[null, null, gem.valonite],
 			[null, gem.valonite],
@@ -125,6 +161,11 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 };
 
 iRecipes.add(shapedRecipes, false);
+
+#Replaces in recipes for any recipe output except pelt
+recipes.replaceAllOccurences(<minecraft:leather>, pelt, <*>.only(function(item) {
+    return !isNull(item) && item.definition.owner != "thaumcraft" && !pelt.matches(item);
+}));
 
 //==================================
 ######## Furnace recipes ########

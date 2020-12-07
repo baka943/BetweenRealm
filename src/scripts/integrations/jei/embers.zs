@@ -44,7 +44,8 @@ val removeList as IItemStack[] = [
 	<embers:block_silver>,
 	<soot:stamp_text_raw>,
 	<soot:stamp_text>,
-	<soot:sulfur_ore>
+	<soot:sulfur_ore>,
+	<embers:ore_quartz>
 ];
 
 jei.hide(removeList);

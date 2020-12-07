@@ -91,9 +91,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<immersiveengineering:drillhead:1> : {
 			recipe : [
-				[<ore:ingotIron>, <ore:ingotIron>],
-				[<ore:blockIron>, <ore:blockIron>, <ore:ingotIron>],
-				[<ore:ingotIron>, <ore:ingotIron>]
+				[ingot.iron, ingot.iron],
+				[<ore:blockIron>, <ore:blockIron>, ingot.iron],
+				[ingot.iron, ingot.iron]
 			]
 		},
 		<immersiveengineering:wooden_device1:3> : {
@@ -120,14 +120,17 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		<immersiveengineering:wooden_device1:1> : {
 			recipe : [
 				[<immersiveengineering:material:11>, <immersiveengineering:material:11>, <immersiveengineering:material:11>],
-				[<immersiveengineering:material:11>, <ore:ingotIron>, <immersiveengineering:material:11>],
+				[<immersiveengineering:material:11>, ingot.iron, <immersiveengineering:material:11>],
 				[<immersiveengineering:material:11>, <immersiveengineering:material:11>, <immersiveengineering:material:11>]
 			]
 		},
 		<immersiveengineering:wooden_device0:2> : {
 			recipe : [
-				[<ore:plankTreatedWood>, <ore:plankTreatedWood>, <ore:plankTreatedWood>],
-				[<ore:craftingTableWood>, null, <ore:fenceTreatedWood>]
+				[<ore:slabTreatedWood>, <ore:slabTreatedWood>, <ore:slabTreatedWood>],
+				[<ore:plankTreatedWood>, null, <ore:fenceTreatedWood>]
+			],
+			secondary : [
+				[<immersiveengineering:blueprint>.reuse()]
 			]
 		},
 		<immersiveengineering:powerpack> : {
@@ -146,15 +149,15 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		<immersiveengineering:connector:10> : {
 			recipe : [
 				[<immersiveengineering:connector:4>, null, <immersiveengineering:connector:4>],
-				[<ore:ingotIron>, <minecraft:repeater>, <ore:ingotIron>],
-				[<ore:ingotIron>, <ore:dustRedstone>, <ore:ingotIron>]
+				[ingot.iron, <minecraft:repeater>, ingot.iron],
+				[ingot.iron, <ore:dustRedstone>, ingot.iron]
 			]
 		},
 		<immersiveengineering:connector:11> : {
 			recipe : [
 				[null, <immersiveengineering:tool:2>],
 				[<minecraft:hardened_clay>, <immersiveengineering:metal_decoration0>, <minecraft:hardened_clay>],
-				[<ore:ingotIron>, <immersiveengineering:metal_decoration0>, <ore:ingotIron>]
+				[ingot.iron, <immersiveengineering:metal_decoration0>, ingot.iron]
 			]
 		},
 		<immersiveengineering:cloth_device> * 3 : {
@@ -187,8 +190,8 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 	blacksmith : {
 		<immersiveengineering:connector:3> * 8 : {
 			recipe : [
-				[null, <ore:ingotIron>],
-				[<minecraft:hardened_clay>, <ore:ingotIron>, <minecraft:hardened_clay>]
+				[null, ingot.iron],
+				[<minecraft:hardened_clay>, ingot.iron, <minecraft:hardened_clay>]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -196,8 +199,8 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<immersiveengineering:connector:1> * 8 : {
 			recipe : [
-				[null, <ore:ingotCopper>],
-				[<minecraft:hardened_clay>, <ore:ingotCopper>, <minecraft:hardened_clay>]
+				[null, ingot.copper],
+				[<minecraft:hardened_clay>, ingot.copper, <minecraft:hardened_clay>]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -205,9 +208,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<immersiveengineering:connector:5> * 8 : {
 			recipe : [
-				[null, <ore:ingotAluminum>],
-				[<immersiveengineering:stone_decoration:8>, <ore:ingotAluminum>, <immersiveengineering:stone_decoration:8>],
-				[<immersiveengineering:stone_decoration:8>, <ore:ingotAluminum>, <immersiveengineering:stone_decoration:8>]
+				[null, ingot.aluminium],
+				[<immersiveengineering:stone_decoration:8>, ingot.aluminium, <immersiveengineering:stone_decoration:8>],
+				[<immersiveengineering:stone_decoration:8>, ingot.aluminium, <immersiveengineering:stone_decoration:8>]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -215,8 +218,8 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<immersiveengineering:sword_steel> : {
 			recipe : [
-				[null, null, <ore:ingotSteel>],
-				[null, <ore:ingotSteel>],
+				[null, null, ingot.steel],
+				[null, ingot.steel],
 				[<ore:stickTreatedWood>]
 			],
 			tools : [
@@ -235,9 +238,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<immersiveengineering:toolupgrade:1> : {
 			recipe : [
-				[null, <ore:ingotIron>],
-				[<ore:ingotIron>, null, <ore:ingotIron>],
-				[null, <ore:ingotIron>, <immersiveengineering:material:8>]
+				[null, ingot.iron],
+				[ingot.iron, null, ingot.iron],
+				[null, ingot.iron, <immersiveengineering:material:8>]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -254,8 +257,8 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<immersivepetroleum:upgrades:1> : {
 			recipe : [
-				[<ore:ingotSteel>, null, <ore:plateSteel>],
-				[null, <ore:ingotSteel>, <ore:plateSteel>],
+				[ingot.steel, null, <ore:plateSteel>],
+				[null, ingot.steel, <ore:plateSteel>],
 				[<ore:plateSteel>, <ore:plateSteel>, <ore:blockSteel>]
 			],
 			tools : [
@@ -264,9 +267,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<immersiveengineering:material:1> * 4 : {
 			recipe : [
-				[null, null, <ore:ingotIron>],
-				[null, <ore:ingotIron>],
-				[<ore:ingotIron>]
+				[null, null, ingot.iron],
+				[null, ingot.iron],
+				[ingot.iron]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -293,8 +296,8 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<immersiveengineering:tool> : {
 			recipe : [
-				[null, <ore:ingotIron>, <minecraft:string>],
-				[null, <ore:stickTreatedWood>, <ore:ingotIron>],
+				[null, ingot.iron, <minecraft:string>],
+				[null, <ore:stickTreatedWood>, ingot.iron],
 				[<ore:stickTreatedWood>]
 			],
 			tools : [
@@ -304,7 +307,7 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		<immersiveengineering:material:8> : {
 			recipe : [
 				[<ore:plateIron>, null, <ore:plateIron>],
-				[null, <ore:ingotCopper>],
+				[null, ingot.copper],
 				[<ore:plateIron>, null, <ore:plateIron>]
 			],
 			tools : [
@@ -313,9 +316,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<immersiveengineering:drillhead> : {
 			recipe : [
-				[<ore:ingotSteel>, <ore:ingotSteel>],
-				[<ore:blockSteel>, <ore:blockSteel>, <ore:ingotSteel>],
-				[<ore:ingotSteel>, <ore:ingotSteel>]
+				[ingot.steel, ingot.steel],
+				[<ore:blockSteel>, <ore:blockSteel>, ingot.steel],
+				[ingot.steel, ingot.steel]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -323,7 +326,7 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<immersiveengineering:tool:1> : {
 			recipe : [
-				[<ore:stickTreatedWood>, <ore:ingotIron>],
+				[<ore:stickTreatedWood>, ingot.iron],
 				[null, <ore:stickTreatedWood>]
 			],
 			tools : [
@@ -332,9 +335,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<immersiveengineering:material:2> * 4 : {
 			recipe : [
-				[null, null, <ore:ingotSteel>],
-				[null, <ore:ingotSteel>],
-				[<ore:ingotSteel>]
+				[null, null, ingot.steel],
+				[null, ingot.steel],
+				[ingot.steel]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -343,7 +346,7 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		<immersiveengineering:connector:9> : {
 			recipe : [
 				[null, <minecraft:lever>],
-				[<minecraft:hardened_clay>, <ore:ingotCopper>, <minecraft:hardened_clay>]
+				[<minecraft:hardened_clay>, ingot.copper, <minecraft:hardened_clay>]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -351,8 +354,8 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<immersiveengineering:connector:6> * 8 : {
 			recipe : [
-				[<ore:ingotSteel>, <ore:stickSteel>, <ore:ingotSteel>],
-				[<ore:ingotSteel>, null, <ore:ingotSteel>]
+				[ingot.steel, <ore:stickSteel>, ingot.steel],
+				[ingot.steel, null, ingot.steel]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -371,7 +374,7 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		<immersiveengineering:material:13> : {
 			recipe : [
 				[<ore:stickTreatedWood>, <ore:stickTreatedWood>],
-				[<ore:ingotCopper>, <ore:stickTreatedWood>],
+				[ingot.copper, <ore:stickTreatedWood>],
 				[<ore:stickTreatedWood>, <ore:stickTreatedWood>]
 			],
 			tools : [
@@ -409,9 +412,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<immersiveengineering:revolver> : {
 			recipe : [
-				[null, <ore:ingotIron>],
+				[null, ingot.iron],
 				[<immersiveengineering:material:14>, <immersiveengineering:material:15>, <immersiveengineering:material:16>],
-				[<immersiveengineering:material:13>, <ore:ingotIron>, <immersiveengineering:material:13>]
+				[<immersiveengineering:material:13>, ingot.iron, <immersiveengineering:material:13>]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -429,7 +432,7 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<immersiveengineering:toolupgrade:2> : {
 			recipe : [
-				[<ore:ingotSteel>, <ore:ingotSteel>, <ore:ingotSteel>],
+				[ingot.steel, ingot.steel, ingot.steel],
 				[null, <immersiveengineering:material:9>]
 			],
 			tools : [
@@ -456,8 +459,8 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<immersiveengineering:toolupgrade:4> : {
 			recipe : [
-				[<minecraft:iron_sword>, <ore:ingotSteel>],
-				[<ore:ingotSteel>, <ore:plankTreatedWood>]
+				[<minecraft:iron_sword>, ingot.steel],
+				[ingot.steel, <ore:plankTreatedWood>]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -465,7 +468,7 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<immersiveengineering:shovel_steel> : {
 			recipe : [
-				[<ore:ingotSteel>],
+				[ingot.steel],
 				[<ore:stickTreatedWood>],
 				[<ore:stickTreatedWood>]
 			],
@@ -475,9 +478,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<immersiveengineering:toolupgrade:1> : {
 			recipe : [
-				[null, <ore:ingotIron>],
-				[<ore:ingotIron>, null, <ore:ingotIron>],
-				[null, <ore:ingotIron>, <immersiveengineering:material:8>]
+				[null, ingot.iron],
+				[ingot.iron, null, ingot.iron],
+				[null, ingot.iron, <immersiveengineering:material:8>]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -496,7 +499,7 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		<immersiveengineering:wooden_device0:7> : {
 			recipe : [
 				[<ore:plankTreatedWood>, <ore:dustRedstone>, <ore:plankTreatedWood>],
-				[<ore:ingotIron>, <immersiveengineering:metal_device1:6>, <ore:ingotIron>],
+				[ingot.iron, <immersiveengineering:metal_device1:6>, ingot.iron],
 				[<ore:plankTreatedWood>, <immersiveengineering:material:8>, <ore:plankTreatedWood>]
 			],
 			tools : [
@@ -505,8 +508,8 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<immersiveengineering:toolupgrade:3> : {
 			recipe : [
-				[<immersiveengineering:material:8>, <ore:ingotSteel>],
-				[<ore:ingotSteel>, <minecraft:bucket>, <ore:dyeRed>],
+				[<immersiveengineering:material:8>, ingot.steel],
+				[ingot.steel, <minecraft:bucket>, <ore:dyeRed>],
 				[null, <ore:dyeRed>, <minecraft:bucket>]
 			],
 			tools : [
@@ -534,9 +537,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<immersiveengineering:toolupgrade:8> : {
 			recipe : [
-				[<ore:paneGlassColorless>, <ore:ingotCopper>],
-				[<ore:ingotCopper>, null, <ore:ingotCopper>],
-				[null, <ore:ingotCopper>, <ore:paneGlassColorless>]
+				[<ore:paneGlassColorless>, ingot.copper],
+				[ingot.copper, null, ingot.copper],
+				[null, ingot.copper, <ore:paneGlassColorless>]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -544,9 +547,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<immersiveengineering:speedloader> : {
 			recipe : [
-				[null, null, <ore:ingotIron>],
-				[<ore:ingotIron>, <ore:ingotIron>, <ore:ingotSteel>],
-				[null, null, <ore:ingotIron>]
+				[null, null, ingot.iron],
+				[ingot.iron, ingot.iron, ingot.steel],
+				[null, null, ingot.iron]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -555,7 +558,7 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		<immersiveengineering:wooden_device0:3> : {
 			recipe : [
 				[<ore:plankTreatedWood>, <ore:dustRedstone>, <ore:plankTreatedWood>],
-				[<ore:ingotIron>, <immersiveengineering:conveyor>.withTag({conveyorType: "immersiveengineering:conveyor"}), <ore:ingotIron>],
+				[ingot.iron, <immersiveengineering:conveyor>.withTag({conveyorType: "immersiveengineering:conveyor"}), ingot.iron],
 				[<ore:plankTreatedWood>, <immersiveengineering:material:8>, <ore:plankTreatedWood>]
 			],
 			tools : [
@@ -573,9 +576,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<immersiveengineering:connector:2> * 4 : {
 			recipe : [
-				[null, <ore:ingotIron>],
-				[<minecraft:hardened_clay>, <ore:ingotIron>, <minecraft:hardened_clay>],
-				[<minecraft:hardened_clay>, <ore:ingotIron>, <minecraft:hardened_clay>]
+				[null, ingot.iron],
+				[<minecraft:hardened_clay>, ingot.iron, <minecraft:hardened_clay>],
+				[<minecraft:hardened_clay>, ingot.iron, <minecraft:hardened_clay>]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -583,9 +586,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<immersiveengineering:toolupgrade:5> : {
 			recipe : [
-				[null, <ore:ingotCopper>, <ore:ingotSteel>],
-				[<ore:ingotCopper>, null, <ore:ingotCopper>],
-				[<immersiveengineering:material:8>, <ore:ingotCopper>]
+				[null, ingot.copper, ingot.steel],
+				[ingot.copper, null, ingot.copper],
+				[<immersiveengineering:material:8>, ingot.copper]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -593,9 +596,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<immersiveengineering:material:3> * 4 : {
 			recipe : [
-				[null, null, <ore:ingotAluminum>],
-				[null, <ore:ingotAluminum>],
-				[<ore:ingotAluminum>]
+				[null, null, ingot.aluminium],
+				[null, ingot.aluminium],
+				[ingot.aluminium]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -603,9 +606,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<immersiveengineering:bullet> * 5 : {
 			recipe : [
-				[<ore:ingotCopper>, null, <ore:ingotCopper>],
-				[<ore:ingotCopper>, null, <ore:ingotCopper>],
-				[null, <ore:ingotCopper>]
+				[ingot.copper, null, ingot.copper],
+				[ingot.copper, null, ingot.copper],
+				[null, ingot.copper]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -633,8 +636,8 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		<immersiveengineering:connector:7> : {
 			recipe : [
 				[<immersiveengineering:connector>, null, <immersiveengineering:connector:2>],
-				[<ore:ingotIron>, <immersiveengineering:metal_decoration0:1>, <ore:ingotIron>],
-				[<ore:ingotIron>, <ore:ingotIron>, <ore:ingotIron>]
+				[ingot.iron, <immersiveengineering:metal_decoration0:1>, ingot.iron],
+				[ingot.iron, ingot.iron, ingot.iron]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -654,7 +657,7 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 			recipe : [
 				[null, null, <ore:leather>],
 				[<ore:leather>, <immersiveengineering:metal_decoration0>],
-				[<ore:leather>, <ore:ingotIron>, <ore:leather>]
+				[<ore:leather>, ingot.iron, <ore:leather>]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -671,9 +674,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<immersiveengineering:toolupgrade:7> : {
 			recipe : [
-				[null, <ore:ingotSteel>, <ore:ingotSteel>],
+				[null, ingot.steel, ingot.steel],
 				[<immersiveengineering:metal_device1:6>, <immersiveengineering:metal_device1:6>, <minecraft:hopper>],
-				[null, <ore:ingotSteel>, <ore:ingotSteel>]
+				[null, ingot.steel, ingot.steel]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -681,8 +684,8 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<immersiveengineering:skyhook> : {
 			recipe : [
-				[<ore:ingotSteel>, <ore:ingotSteel>],
-				[<ore:ingotSteel>, <immersiveengineering:material:8>],
+				[ingot.steel, ingot.steel],
+				[ingot.steel, <immersiveengineering:material:8>],
 				[null, <immersiveengineering:material:13>, <immersiveengineering:material:13>]
 			],
 			tools : [
@@ -691,7 +694,7 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<immersiveengineering:pickaxe_steel> : {
 			recipe : [
-				[<ore:ingotSteel>, <ore:ingotSteel>, <ore:ingotSteel>],
+				[ingot.steel, ingot.steel, ingot.steel],
 				[null, <ore:stickTreatedWood>],
 				[null, <ore:stickTreatedWood>]
 			],
@@ -712,8 +715,8 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		<immersiveengineering:connector:8> : {
 			recipe : [
 				[<immersiveengineering:connector:2>, null, <immersiveengineering:connector:4>],
-				[<ore:ingotIron>, <immersiveengineering:metal_decoration0:2>, <ore:ingotIron>],
-				[<ore:ingotIron>, <ore:ingotIron>, <ore:ingotIron>]
+				[ingot.iron, <immersiveengineering:metal_decoration0:2>, ingot.iron],
+				[ingot.iron, ingot.iron, ingot.iron]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -721,9 +724,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<immersiveengineering:connector> * 4 : {
 			recipe : [
-				[null, <ore:ingotCopper>],
-				[<minecraft:hardened_clay>, <ore:ingotCopper>, <minecraft:hardened_clay>],
-				[<minecraft:hardened_clay>, <ore:ingotCopper>, <minecraft:hardened_clay>]
+				[null, ingot.copper],
+				[<minecraft:hardened_clay>, ingot.copper, <minecraft:hardened_clay>],
+				[<minecraft:hardened_clay>, ingot.copper, <minecraft:hardened_clay>]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -750,9 +753,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<immersiveengineering:connector:4> * 4 : {
 			recipe : [
-				[null, <ore:ingotAluminum>],
-				[<minecraft:hardened_clay>, <ore:ingotAluminum>, <minecraft:hardened_clay>],
-				[<minecraft:hardened_clay>, <ore:ingotAluminum>, <minecraft:hardened_clay>]
+				[null, ingot.aluminium],
+				[<minecraft:hardened_clay>, ingot.aluminium, <minecraft:hardened_clay>],
+				[<minecraft:hardened_clay>, ingot.aluminium, <minecraft:hardened_clay>]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -761,7 +764,7 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		<immersiveengineering:material:9> : {
 			recipe : [
 				[<ore:plateSteel>, null, <ore:plateSteel>],
-				[null, <ore:ingotCopper>],
+				[null, ingot.copper],
 				[<ore:plateSteel>, null, <ore:plateSteel>]
 			],
 			tools : [
@@ -771,7 +774,7 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		<immersiveengineering:wooden_device1> : {
 			recipe : [
 				[null, <immersiveengineering:material:10>],
-				[<immersiveengineering:material:10>, <ore:ingotSteel>, <immersiveengineering:material:10>],
+				[<immersiveengineering:material:10>, ingot.steel, <immersiveengineering:material:10>],
 				[null, <immersiveengineering:material:10>]
 			],
 			tools : [
@@ -826,9 +829,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<immersiveengineering:material:15> : {
 			recipe : [
-				[null, <ore:ingotSteel>],
-				[<ore:ingotSteel>, <immersiveengineering:material:8>, <ore:ingotSteel>],
-				[null, <ore:ingotSteel>]
+				[null, ingot.steel],
+				[ingot.steel, <immersiveengineering:material:8>, ingot.steel],
+				[null, ingot.steel]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -836,8 +839,8 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<immersiveengineering:axe_steel> : {
 			recipe : [
-				[<ore:ingotSteel>, <ore:ingotSteel>],
-				[<ore:ingotSteel>, <ore:stickTreatedWood>],
+				[ingot.steel, ingot.steel],
+				[ingot.steel, <ore:stickTreatedWood>],
 				[null, <ore:stickTreatedWood>]
 			],
 			tools : [
@@ -846,9 +849,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<immersiveengineering:material:16> : {
 			recipe : [
-				[<ore:ingotSteel>],
-				[<ore:ingotSteel>, <ore:ingotSteel>],
-				[null, <ore:ingotSteel>, <ore:ingotSteel>]
+				[ingot.steel],
+				[ingot.steel, ingot.steel],
+				[null, ingot.steel, ingot.steel]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -885,7 +888,7 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<immersiveengineering:wooden_device0:6> : {
 			recipe : [
-				[<ore:plankTreatedWood>, <ore:ingotIron>, <ore:plankTreatedWood>],
+				[<ore:plankTreatedWood>, ingot.iron, <ore:plankTreatedWood>],
 				[<ore:dustRedstone>, <immersiveengineering:metal_decoration0>, <ore:dustRedstone>]
 			],
 			tools : [
@@ -896,7 +899,7 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 			recipe : [
 				[<minecraft:paper>, <ore:dyeRed>, <minecraft:paper>],
 				[<minecraft:paper>, <ore:dyeRed>, <minecraft:paper>],
-				[null, <ore:ingotCopper>]
+				[null, ingot.copper]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -915,7 +918,7 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		<immersiveengineering:tool:2> : {
 			recipe : [
 				[null, <minecraft:compass>],
-				[<ore:stickWood> | <ore:stickTreatedWood>, <ore:ingotCopper>, <ore:stickWood> | <ore:stickTreatedWood>]
+				[<ore:stickWood> | <ore:stickTreatedWood>, ingot.copper, <ore:stickWood> | <ore:stickTreatedWood>]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -945,6 +948,12 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 
 artisanWorktables.add(shapedRecipes, false);
 
+for table, recipes in shapedRecipes {
+	for item in recipes {
+		iRecipes.remove(item);
+	}
+}
+
 val shapelessRecipes as IIngredient[][string][IItemStack][string] = {
 	basic : {
 		<immersiveengineering:tool:3> : {
@@ -957,3 +966,9 @@ val shapelessRecipes as IIngredient[][string][IItemStack][string] = {
 };
 
 artisanWorktables.add(shapelessRecipes);
+
+for table, recipes in shapelessRecipes {
+	for item in recipes {
+		iRecipes.remove(item);
+	}
+}

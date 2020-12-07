@@ -140,8 +140,8 @@ val exchangeAlchemy as IIngredient[][][int][IItemStack] = {
 	},
 	<embers:wildfire_core> : {
 		2 : [
-			[emberCluster, ingot.dawnstone, ingot.bronze, ingot.dawnstone, ingot.bronze],
-			[emberCluster, ingot.bronze, ingot.dawnstone, ingot.bronze, ingot.dawnstone]
+			[emberCluster, ingot.dawnstone, ingot.electrum, ingot.dawnstone, ingot.electrum],
+			[emberCluster, ingot.electrum, ingot.dawnstone, ingot.electrum, ingot.dawnstone]
 		]
 	},
 	<soot:alchemy_globe> : {

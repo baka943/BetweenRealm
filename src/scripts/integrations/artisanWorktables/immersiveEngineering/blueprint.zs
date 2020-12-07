@@ -1,7 +1,11 @@
 #Name: blueprint.zs
 #Author: baka943
 
+import mods.zenstages.ZenStager;
+import mods.zenstages.Stage;
+
 import mods.artisanworktables.builder.RecipeBuilder;
+import mods.artisanintegrations.requirement.GameStages;
 
 var engineer = RecipeBuilder.get("engineer");
 
@@ -13,6 +17,7 @@ engineer.setShaped(
 		[<minecraft:paper>, <minecraft:paper>, <minecraft:paper>]
 	]);
 engineer.setName("immersiveengineering/blueprint/molds");
+engineer.addRequirement(GameStages.allOf([stageCities.stage]));
 engineer.create();
 
 engineer.addOutput(<immersiveengineering:blueprint>.withTag({blueprint: "bullet"}));
@@ -23,6 +28,7 @@ engineer.setShaped(
 		[<minecraft:paper>, <minecraft:paper>, <minecraft:paper>]
 	]);
 engineer.setName("immersiveengineering/blueprint/bullet");
+engineer.addRequirement(GameStages.allOf([stageCities.stage]));
 engineer.create();
 
 engineer.addOutput(<immersiveengineering:blueprint>.withTag({blueprint: "components"}));
@@ -33,4 +39,5 @@ engineer.setShaped(
 		[<minecraft:paper>, <minecraft:paper>, <minecraft:paper>]
 	]);
 engineer.setName("immersiveengineering/blueprint/components");
+engineer.addRequirement(GameStages.allOf([stageCities.stage]));
 engineer.create();

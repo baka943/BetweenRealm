@@ -91,13 +91,7 @@ val dryingRecipes as IIngredient[][IItemStack][int] = {
 	},
 	10200 : {
 		<minecraft:leather> : [
-			<minecraft:cooked_beef> |
-			<minecraft:cooked_chicken> |
-			<minecraft:cooked_fish> |
-			<minecraft:cooked_fish:1> |
-			<minecraft:cooked_mutton> |
-			<minecraft:cooked_porkchop> |
-			<minecraft:cooked_rabbit>
+			<ore:listAllmeatcooked>
 		]
 	},
 	18000 : {

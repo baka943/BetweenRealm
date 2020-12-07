@@ -10,23 +10,23 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 			recipe : [
 				[null, null, <minecraft:flint>],
 				[null, <minecraft:flint>],
-				[clayBall, ingot.iron]
+				[<pyrotech:material:4>, ingot.iron]
 			]
 		},
 		<artisanworktables:artisans_solderer_stone> : {
 			recipe : [
 				[null, null, <ore:stone>],
 				[null, <ore:stone>],
-				[clayBall, ingot.iron]
+				[<pyrotech:material:4>, ingot.iron]
 			]
 		}
 	},
 	blacksmith : {
 		<artisanworktables:artisans_solderer_copper> : {
 			recipe : [
-				[null, null, <ore:ingotCopper>],
-				[null, <ore:ingotCopper>],
-				[clayBall, ingot.iron]
+				[null, null, ingot.copper],
+				[null, ingot.copper],
+				[<pyrotech:material:4>, ingot.iron]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -34,9 +34,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<artisanworktables:artisans_solderer_diamond> : {
 			recipe : [
-				[null, null, <ore:gemDiamond>],
-				[null, <ore:gemDiamond>],
-				[clayBall, ingot.iron]
+				[null, null, gem.diamond],
+				[null, gem.diamond],
+				[<pyrotech:material:4>, ingot.iron]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -44,9 +44,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<artisanworktables:artisans_solderer_aluminum> : {
 			recipe : [
-				[null, null, <ore:ingotAluminum>],
-				[null, <ore:ingotAluminum>],
-				[clayBall, ingot.iron]
+				[null, null, ingot.aluminium],
+				[null, ingot.aluminium],
+				[<pyrotech:material:4>, ingot.iron]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -54,9 +54,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<artisanworktables:artisans_solderer_electrum> : {
 			recipe : [
-				[null, null, <ore:ingotElectrum>],
-				[null, <ore:ingotElectrum>],
-				[clayBall, ingot.iron]
+				[null, null, ingot.electrum],
+				[null, ingot.electrum],
+				[<pyrotech:material:4>, ingot.iron]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -64,9 +64,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<artisanworktables:artisans_solderer_constantan> : {
 			recipe : [
-				[null, null, <ore:ingotConstantan>],
-				[null, <ore:ingotConstantan>],
-				[clayBall, ingot.iron]
+				[null, null, ingot.constantan],
+				[null, ingot.constantan],
+				[<pyrotech:material:4>, ingot.iron]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -74,9 +74,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<artisanworktables:artisans_solderer_silver> : {
 			recipe : [
-				[null, null, <ore:ingotSilver>],
-				[null, <ore:ingotSilver>],
-				[clayBall, ingot.iron]
+				[null, null, ingot.silver],
+				[null, ingot.silver],
+				[<pyrotech:material:4>, ingot.iron]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -84,9 +84,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<artisanworktables:artisans_solderer_gold> : {
 			recipe : [
-				[null, null, <ore:ingotGold>],
-				[null, <ore:ingotGold>],
-				[clayBall, ingot.iron]
+				[null, null, ingot.gold],
+				[null, ingot.gold],
+				[<pyrotech:material:4>, ingot.iron]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -94,9 +94,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<artisanworktables:artisans_solderer_lead> : {
 			recipe : [
-				[null, null, <ore:ingotLead>],
-				[null, <ore:ingotLead>],
-				[clayBall, ingot.iron]
+				[null, null, ingot.lead],
+				[null, ingot.lead],
+				[<pyrotech:material:4>, ingot.iron]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -104,9 +104,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<artisanworktables:artisans_solderer_nickel> : {
 			recipe : [
-				[null, null, <ore:ingotNickel>],
-				[null, <ore:ingotNickel>],
-				[clayBall, ingot.iron]
+				[null, null, ingot.nickel],
+				[null, ingot.nickel],
+				[<pyrotech:material:4>, ingot.iron]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -114,9 +114,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<artisanworktables:artisans_solderer_iron> : {
 			recipe : [
-				[null, null, <ore:ingotIron>],
-				[null, <ore:ingotIron>],
-				[clayBall, ingot.iron]
+				[null, null, ingot.iron],
+				[null, ingot.iron],
+				[<pyrotech:material:4>, ingot.iron]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -124,9 +124,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<artisanworktables:artisans_solderer_steel> : {
 			recipe : [
-				[null, null, <ore:ingotSteel>],
-				[null, <ore:ingotSteel>],
-				[clayBall, ingot.iron]
+				[null, null, ingot.steel],
+				[null, ingot.steel],
+				[<pyrotech:material:4>, ingot.iron]
 			],
 			tools : [
 				[<ore:artisansHammer>]

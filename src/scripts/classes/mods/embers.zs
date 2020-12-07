@@ -183,9 +183,9 @@ zenClass Embers {
 	}
 
 	#Add Boiler fluids
-	function addBoiler(fluid as ILiquidStack, multiplier as double) {
-		EmberGeneration.addBoilerFluid(fluid, <fluid:steam>, multiplier);
-	}
+	// function addBoiler(fluid as ILiquidStack, multiplier as double) {
+	// 	EmberGeneration.addBoilerFluid(fluid, <fluid:steam>, multiplier);
+	// }
 	
 }
 

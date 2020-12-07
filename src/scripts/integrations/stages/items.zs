@@ -9,8 +9,8 @@ import mods.ItemStages;
 // ItemStages.stageModItems(stageNether.stage, "embers");
 // ItemStages.stageModItems(stageCities.stage, "pyrotech");
 
-ItemStages.addItemStage(stageDisable.stage, <soot:stamp_text>);
-ItemStages.addItemStage(stageDisable.stage, <soot:stamp_text_raw>);
-ItemStages.addItemStage(stageDisable.stage, <minecraft:crafting_table>);
-ItemStages.addItemStage(stageDisable.stage, <minecraft:furnace>);
-ItemStages.addItemStage(stageDisable.stage, <minecraft:furnace_minecart>);
+stageDisable.addIngredient(<soot:stamp_text>);
+stageDisable.addIngredient(<soot:stamp_text_raw>);
+stageDisable.addIngredient(<minecraft:crafting_table>);
+stageDisable.addIngredient(<minecraft:furnace>);
+stageDisable.addIngredient(<minecraft:furnace_minecart>);

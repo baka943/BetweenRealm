@@ -22,7 +22,6 @@ val removeRecipes as IItemStack[] = [
 	<tconstruct:edible:32>,
 	<tconstruct:edible:33>,
 	<tconstruct:edible:34>,
-	<minecraft:leather>,
 	<tconstruct:materials:2>,
 	<tconstruct:dried_clay>,
 	<minecraft:sponge>,

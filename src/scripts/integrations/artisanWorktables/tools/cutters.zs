@@ -24,9 +24,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 	blacksmith : {
 		<artisanworktables:artisans_cutters_gold> : {
 			recipe : [
-				[<ore:ingotGold>, null, <ore:ingotGold>],
+				[ingot.gold, null, ingot.gold],
 				[null, <ore:string>],
-				[<ore:stickWood>, null, <ore:stickWood>]
+				[<ore:stickTreatedWood>, null, <ore:stickTreatedWood>]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -34,9 +34,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<artisanworktables:artisans_cutters_lead> : {
 			recipe : [
-				[<ore:ingotLead>, null, <ore:ingotLead>],
+				[ingot.lead, null, ingot.lead],
 				[null, <ore:string>],
-				[<ore:stickWood>, null, <ore:stickWood>]
+				[<ore:stickTreatedWood>, null, <ore:stickTreatedWood>]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -44,9 +44,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<artisanworktables:artisans_cutters_constantan> : {
 			recipe : [
-				[<ore:ingotConstantan>, null, <ore:ingotConstantan>],
+				[ingot.constantan, null, ingot.constantan],
 				[null, <ore:string>],
-				[<ore:stickWood>, null, <ore:stickWood>]
+				[<ore:stickTreatedWood>, null, <ore:stickTreatedWood>]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -54,9 +54,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<artisanworktables:artisans_cutters_nickel> : {
 			recipe : [
-				[<ore:ingotNickel>, null, <ore:ingotNickel>],
+				[ingot.nickel, null, ingot.nickel],
 				[null, <ore:string>],
-				[<ore:stickWood>, null, <ore:stickWood>]
+				[<ore:stickTreatedWood>, null, <ore:stickTreatedWood>]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -64,9 +64,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<artisanworktables:artisans_cutters_copper> : {
 			recipe : [
-				[<ore:ingotCopper>, null, <ore:ingotCopper>],
+				[ingot.copper, null, ingot.copper],
 				[null, <ore:string>],
-				[<ore:stickWood>, null, <ore:stickWood>]
+				[<ore:stickTreatedWood>, null, <ore:stickTreatedWood>]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -74,9 +74,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<artisanworktables:artisans_cutters_electrum> : {
 			recipe : [
-				[<ore:ingotElectrum>, null, <ore:ingotElectrum>],
+				[ingot.electrum, null, ingot.electrum],
 				[null, <ore:string>],
-				[<ore:stickWood>, null, <ore:stickWood>]
+				[<ore:stickTreatedWood>, null, <ore:stickTreatedWood>]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -84,9 +84,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<artisanworktables:artisans_cutters_diamond> : {
 			recipe : [
-				[<ore:gemDiamond>, null, <ore:gemDiamond>],
+				[gem.diamond, null, gem.diamond],
 				[null, <ore:string>],
-				[<ore:stickWood>, null, <ore:stickWood>]
+				[<ore:stickTreatedWood>, null, <ore:stickTreatedWood>]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -94,9 +94,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<artisanworktables:artisans_cutters_silver> : {
 			recipe : [
-				[<ore:ingotSilver>, null, <ore:ingotSilver>],
+				[ingot.silver, null, ingot.silver],
 				[null, <ore:string>],
-				[<ore:stickWood>, null, <ore:stickWood>]
+				[<ore:stickTreatedWood>, null, <ore:stickTreatedWood>]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -104,9 +104,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<artisanworktables:artisans_cutters_steel> : {
 			recipe : [
-				[<ore:ingotSteel>, null, <ore:ingotSteel>],
+				[ingot.steel, null, ingot.steel],
 				[null, <ore:string>],
-				[<ore:stickWood>, null, <ore:stickWood>]
+				[<ore:stickTreatedWood>, null, <ore:stickTreatedWood>]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -114,9 +114,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<artisanworktables:artisans_cutters_iron> : {
 			recipe : [
-				[<ore:ingotIron>, null, <ore:ingotIron>],
+				[ingot.iron, null, ingot.iron],
 				[null, <ore:string>],
-				[<ore:stickWood>, null, <ore:stickWood>]
+				[<ore:stickTreatedWood>, null, <ore:stickTreatedWood>]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -124,9 +124,9 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<artisanworktables:artisans_cutters_aluminum> : {
 			recipe : [
-				[<ore:ingotAluminum>, null, <ore:ingotAluminum>],
+				[ingot.aluminium, null, ingot.aluminium],
 				[null, <ore:string>],
-				[<ore:stickWood>, null, <ore:stickWood>]
+				[<ore:stickTreatedWood>, null, <ore:stickTreatedWood>]
 			],
 			tools : [
 				[<ore:artisansHammer>]

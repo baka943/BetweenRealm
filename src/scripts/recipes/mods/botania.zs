@@ -187,13 +187,13 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 	<botania:spark> * 2 : [
 		[
 			[null, <botania:petal:*>],
-			[nugget.octine, infernalBulb, nugget.octine],
+			[ignis, infernalBulb, ignis],
 			[null, <botania:petal:*>]
 		],
 		[
-			[null, nugget.octine],
+			[null, ignis],
 			[<botania:petal:*>, infernalBulb, <botania:petal:*>],
-			[null, nugget.octine]
+			[null, ignis]
 		]
 	],
 	<botania:redstringcontainer> : [
@@ -229,6 +229,13 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 			[livingrock, livingrock, livingrock],
 			[livingrock, redstone, <ore:bRedString>],
 			[livingrock, livingrock, livingrock]
+		]
+	],
+	<manavisualizer:manareader> : [
+		[
+			[null, mana.powder, mana.diamond],
+			[null, <ore:livingwoodTwig>, mana.powder],
+			[<ore:livingwoodTwig>]
 		]
 	]
 };
@@ -294,3 +301,5 @@ val shapelessRecipes as IIngredient[][][IItemStack] = {
 };
 
 iRecipes.add(shapelessRecipes);
+
+static ignis as IItemStack = <thaumcraft:crystal_essence>.withTag({Aspects: [{amount: 1, key: "ignis"}]});

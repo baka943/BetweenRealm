@@ -6,6 +6,7 @@ import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 
 import mods.artisanworktables.builder.RecipeBuilder;
+import mods.artisanintegrations.requirement.GameStages;
 
 import scripts.functions.getItemName;
 
@@ -27,6 +28,9 @@ zenClass ArtisanWorktables {
 				builder.setShapeless(recipes.recipe);
 				builder.setName(getItemName(stack));
 
+				stageCities.addIngredient(stack);
+				
+
 				if(!isNull(recipes.tools)) {
 					var toolTable = recipes.tools;
 
@@ -39,6 +43,7 @@ zenClass ArtisanWorktables {
 					builder.setSecondaryIngredients(recipes.secondary);
 				}
 
+				builder.addRequirement(GameStages.allOf([stageCities.stage]));
 				builder.create();
 			}
 		}
@@ -54,6 +59,8 @@ zenClass ArtisanWorktables {
 				builder.setShaped(recipes.recipe);
 				builder.setName(getItemName(stack));
 
+				stageCities.addIngredient(stack);
+
 				if(!isNull(recipes.tools)) {
 					var toolTable = recipes.tools[0];
 
@@ -68,6 +75,7 @@ zenClass ArtisanWorktables {
 
 				if(isMirrored) builder.setMirrored();
 
+				builder.addRequirement(GameStages.allOf([stageCities.stage]));
 				builder.create();
 			}
 		}

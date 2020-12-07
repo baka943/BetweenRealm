@@ -37,9 +37,6 @@ Burn.createBuilder("charcoal/flakes", <pyrotech:material:15>, "pyrotech:pile_woo
     .addFailureItem(<pyrotech:material:0>)
     .addFailureItem(<pyrotech:material:0> * 2)
     .addFailureItem(<pyrotech:material:0> * 4)
-    .addFailureItem(<pyrotech:material:15> * 4)
-    .addFailureItem(<pyrotech:material:15> * 6)
-    .addFailureItem(<pyrotech:material:15> * 8)
     .setRequiresRefractoryBlocks(false)
     .setFluidLevelAffectsFailureChance(true)
     .register();

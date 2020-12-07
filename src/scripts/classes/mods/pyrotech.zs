@@ -38,51 +38,21 @@ zenClass Pyrotech {
 	//==================================
 
 	#Remove Crucible recipes
-	function removeCrucibleB() {
+	function removeCrucible() {
 		BrickCrucible.removeAllRecipes();
-	}
-
-	function removeCrucibleB(outputs as ILiquidStack[]) {
-		for output in outputs {
-			BrickCrucible.removeRecipes(output);
-		}
-	}
-
-	function removeCrucibleS() {
 		StoneCrucible.removeAllRecipes();
 	}
 
-	function removeCrucibleS(outputs as ILiquidStack[]) {
-		for output in outputs {
-			StoneCrucible.removeRecipes(output);
-		}
-	}
-
 	#Add Crucible recipes
-	function addCrucibleB(recipes as IIngredient[][ILiquidStack][int]) {
-		for time, recipe in recipes {
-			for output, inputs in recipe {
-				for i, input in inputs {
-					var name as string = output.name;
+	function addCrucible(recipes as IIngredient[][ILiquidStack]) {
+		for output, inputs in recipes {
+			for i, input in inputs {
+				var name as string = output.name + "/" + output.amount;
 
-					if(i > 0) name += "/" ~ i;
+				if(i > 0) name += "/" ~ i;
 
-					BrickCrucible.addRecipe(name, output, input, time);
-				}
-			}
-		}
-	}
-
-	function addCrucibleS(recipes as IIngredient[][ILiquidStack][int]) {
-		for time, recipe in recipes {
-			for output, inputs in recipe {
-				for i, input in inputs {
-					var name as string = output.name;
-
-					if(i > 0) name += "/" ~ i;
-
-					StoneCrucible.addRecipe(name, output, input, time);
-				}
+				StoneCrucible.addRecipe(name + "/stone", output, input, 2400);
+				BrickCrucible.addRecipe(name + "/brick", output, input, 1200);
 			}
 		}
 	}
@@ -92,75 +62,34 @@ zenClass Pyrotech {
 	//==================================
 
 	#Remove Kiln recipes
-	function removeKilnB() {
+	function removeKiln() {
 		BrickKiln.removeAllRecipes();
-	}
-
-	function removeKilnB(outputs as IIngredient[]) {
-		for output in outputs {
-			BrickKiln.removeRecipes(output);
-		}
-	}
-
-	function removeKilnP() {
 		PitKiln.removeAllRecipes();
-	}
-
-	function removeKilnP(outputs as IIngredient[]) {
-		for output in outputs {
-			PitKiln.removeRecipes(output);
-		}
-	}
-
-	function removeKilnS() {
 		StoneKiln.removeAllRecipes();
 	}
 
-	function removeKilnS(outputs as IIngredient[]) {
-		for output in outputs {
-			StoneKiln.removeRecipes(output);
-		}
-	}
-
 	#Add Kiln recipes
-	function addKilnB(recipes as IIngredient[][string][IItemStack][int]) {
-		for time, recipe in recipes {
-			for output, inner in recipe {
-				for i, input in inner.inputs {
-					var name as string = getItemName(output);
+	function addKiln(recipes as IIngredient[][string][IItemStack]) {
+		for output, inner in recipes {
+			for i, input in inner.inputs {
+				var name as string = getItemName(output);
 
-					if(i > 0) name += "/" ~ i;
+				if(i > 0) name += "/" ~ i;
 
-					BrickKiln.addRecipe(name, output, input, time, 0.25, inner.failure);
-				}
+				StoneKiln.addRecipe(name + "/stone", output, input, 480, 0.33, inner.failure);
+				BrickKiln.addRecipe(name + "/brick", output, input, 240, 0.1, inner.failure);
 			}
 		}
 	}
 
-	function addKilnP(recipes as IIngredient[][string][IItemStack][int]) {
-		for time, recipe in recipes {
-			for output, inner in recipe {
-				for i, input in inner.inputs {
-					var name as string = getItemName(output);
+	function addKilnP(recipes as IIngredient[][string][IItemStack]) {
+		for output, inner in recipes {
+			for i, input in inner.inputs {
+				var name as string = getItemName(output);
 
-					if(i > 0) name += "/" ~ i;
+				if(i > 0) name += "/" ~ i;
 
-					PitKiln.addRecipe(name, output, input, time, 0.5, inner.failure);
-				}
-			}
-		}
-	}
-
-	function addKilnS(recipes as IIngredient[][string][IItemStack][int]) {
-		for time, recipe in recipes {
-			for output, inner in recipe {
-				for i, input in inner.inputs {
-					var name as string = getItemName(output);
-
-					if(i > 0) name += "/" ~ i;
-
-					StoneKiln.addRecipe(name, output, input, time, 0.33, inner.failure);
-				}
+				PitKiln.addRecipe(name + "/pit", output, input, 840, 0.5, inner.failure);
 			}
 		}
 	}
@@ -324,12 +253,6 @@ zenClass Pyrotech {
 		Chopping.removeAllRecipes();
 	}
 
-	function removeChopping(outputs as IIngredient[]) {
-		for output in outputs {
-			Chopping.removeRecipes(output);
-		}
-	}
-
 	#Add Chopping recipes
 	function addChopping(recipes as IIngredient[][IItemStack]) {
 		for output, inputs in recipes {
@@ -440,26 +363,6 @@ zenClass Pyrotech {
 		IroncladAnvil.removeAllRecipes();
 	}
 
-	function removeAnvilG() {
-		GraniteAnvil.removeAllRecipes();
-	}
-
-	function removeAnvilG(outputs as IIngredient[]) {
-		for output in outputs {
-			GraniteAnvil.removeRecipes(output);
-		}
-	}
-
-	function removeAnvilI() {
-		IroncladAnvil.removeAllRecipes();
-	}
-
-	function removeAnvilI(outputs as IIngredient[]) {
-		for output in outputs {
-			IroncladAnvil.removeRecipes(output);
-		}
-	}
-
 	#Add Anvil recipes
 	function addAnvil(recipes as IIngredient[][IItemStack]) {
 		for output, inputs in recipes {
@@ -520,6 +423,7 @@ zenClass Pyrotech {
 				if(i > 0) name += "/" ~ i;
 
 				Worktable.addShapeless(name, item, recipe);
+				stageCities.addIngredient(item);
 			}
 		}
 	}
@@ -532,12 +436,9 @@ zenClass Pyrotech {
 				if(i > 0) name += "/" ~ i;
 				
 				Worktable.addShaped(name, item, recipe, null, 0, isMirrored);
+				stageCities.addIngredient(item);
 			}
 		}
-	}
-
-	function addWorktable(recipes as string[]) {
-		Worktable.whitelistVanillaRecipes(recipes);
 	}
 
 }

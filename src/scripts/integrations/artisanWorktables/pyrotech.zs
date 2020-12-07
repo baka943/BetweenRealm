@@ -147,15 +147,15 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<pyrotech:worktable> : {
 			recipe : [
-				[<ore:slabWood>],
-				[<ore:logWood>]
+				[<pyrotech:material:20>, <pyrotech:material:20>],
+				[<pyrotech:material:20>, <pyrotech:material:20>]
 			]
 		},
 		<pyrotech:worktable_stone> : {
 			recipe : [
-				[<pyrotech:material:16>, <minecraft:stone:6>, <pyrotech:material:16>],
-				[<pyrotech:material:16>, <pyrotech:worktable>, <pyrotech:material:16>],
-				[<pyrotech:material:16>, <pyrotech:stone_bricks>, <pyrotech:material:16>]
+				[<minecraft:stone>, <minecraft:stone_slab>, <minecraft:stone>],
+				[<minecraft:stone>, <pyrotech:worktable>, <minecraft:stone>],
+				[<minecraft:stone>, <minecraft:stone>, <minecraft:stone>]
 			]
 		},
 		<pyrotech:torch_stone> * 4 : {
@@ -166,9 +166,8 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<pyrotech:soaking_pot> : {
 			recipe : [
-				[<pyrotech:material:16>, null, <pyrotech:material:16>],
-				[<pyrotech:material:20>, <pyrotech:material:16>, <pyrotech:material:20>],
-				[<pyrotech:material:20>, <pyrotech:material:16>, <pyrotech:material:20>]
+				[<minecraft:stone_slab>, null, <minecraft:stone_slab>],
+				[<pyrotech:material:20>, <minecraft:stone>, <pyrotech:material:20>]
 			]
 		},
 		<pyrotech:material:24> : {
@@ -232,8 +231,8 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<pyrotech:tinder> : {
 			recipe : [
-				[<pyrotech:material:13>, <ore:stickWood>],
-				[<ore:stickWood>, <pyrotech:material:13>]
+				[<pyrotech:material:29>, <ore:twine>],
+				[<ore:twine>, <pyrotech:material:29>]
 			]
 		},
 		<pyrotech:anvil_granite> : {
@@ -354,7 +353,7 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		<pyrotech:sawmill_blade_bone> : {
 			recipe : [
 				[<pyrotech:material:11>, <pyrotech:material:11>, <pyrotech:material:11>],
-				[<pyrotech:material:11>, <minecraft:stone:3>, <pyrotech:material:11>],
+				[<pyrotech:material:11>, <minecraft:stone>, <pyrotech:material:11>],
 				[<pyrotech:material:11>, <pyrotech:material:11>, <pyrotech:material:11>]
 			],
 			tools : [
@@ -374,7 +373,7 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		<pyrotech:sawmill_blade_flint> : {
 			recipe : [
 				[<pyrotech:material:10>, <pyrotech:material:10>, <pyrotech:material:10>],
-				[<pyrotech:material:10>, <minecraft:stone:3>, <pyrotech:material:10>],
+				[<pyrotech:material:10>, <minecraft:stone>, <pyrotech:material:10>],
 				[<pyrotech:material:10>, <pyrotech:material:10>, <pyrotech:material:10>]
 			],
 			tools : [
@@ -385,8 +384,8 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 	blacksmith : {
 		<pyrotech:diamond_hammer> : {
 			recipe : [
-				[null, <minecraft:diamond>, <pyrotech:material:26>],
-				[null, <ore:stickStone>, <minecraft:diamond>],
+				[null, gem.diamond, <pyrotech:material:26>],
+				[null, <ore:stickStone>, gem.diamond],
 				[<ore:stickStone>]
 			],
 			tools : [
@@ -395,8 +394,8 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<pyrotech:tongs_diamond> : {
 			recipe : [
-				[null, <pyrotech:material:18>],
-				[<ore:stickStone>, <pyrotech:material:18>, <pyrotech:material:18>],
+				[null, gem.diamond],
+				[<ore:stickStone>, gem.diamond, gem.diamond],
 				[null, <ore:stickStone>]
 			],
 			tools : [
@@ -426,7 +425,7 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		<pyrotech:anvil_iron_plated> : {
 			recipe : [
 				[ingot.iron, ingot.iron, ingot.iron],
-				[<minecraft:stone:2>, <minecraft:stone:2>, <minecraft:stone:2>],
+				[<minecraft:stone>, <minecraft:stone>, <minecraft:stone>],
 				[<minecraft:stone_slab>, <minecraft:stone_slab>, <minecraft:stone_slab>]
 			],
 			tools : [
@@ -435,8 +434,8 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<pyrotech:obsidian_hammer> : {
 			recipe : [
-				[null, <pyrotech:material:33>, <pyrotech:material:26>],
-				[null, <ore:stickStone>, <pyrotech:material:33>],
+				[null, <minecraft:obsidian>, <pyrotech:material:26>],
+				[null, <ore:stickStone>, <minecraft:obsidian>],
 				[<ore:stickStone>]
 			],
 			tools : [
@@ -455,8 +454,8 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		},
 		<pyrotech:tongs_obsidian> : {
 			recipe : [
-				[null, <pyrotech:material:33>],
-				[<ore:stickStone>, <pyrotech:material:33>, <pyrotech:material:33>],
+				[null, <minecraft:obsidian>],
+				[<ore:stickStone>, <minecraft:obsidian>, <minecraft:obsidian>],
 				[null, <ore:stickStone>]
 			],
 			tools : [
@@ -570,6 +569,12 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 
 artisanWorktables.add(shapedRecipes, false);
 
+for table, recipes in shapedRecipes {
+	for item in recipes {
+		iRecipes.remove(item);
+	}
+}
+
 val shapelessRecipes as IIngredient[][string][IItemStack][string] = {
 	basic : {
 		<pyrotech:material:13> * 2 : {
@@ -579,7 +584,7 @@ val shapelessRecipes as IIngredient[][string][IItemStack][string] = {
 			recipe : [<pyrotech:material:13>, <pyrotech:material:13>, <ore:twine>]
 		},
 		<pyrotech:chopping_block> : {
-			recipe : [<ore:logWood>, <ore:toolAxe>]
+			recipe : [<ore:logWood>]
 		},
 		<pyrotech:material:12> : {
 			recipe : [<minecraft:tallgrass:1>]
@@ -592,11 +597,14 @@ val shapelessRecipes as IIngredient[][string][IItemStack][string] = {
 		},
 		<pyrotech:bow_drill> : {
 			recipe : [<minecraft:bow>, <ore:stickWood>]
-		},
-		<pyrotech:material:17> * 4 : {
-			recipe : [clayBall]
 		}
 	}
 };
 
 artisanWorktables.add(shapelessRecipes);
+
+for table, recipes in shapelessRecipes {
+	for item in recipes {
+		iRecipes.remove(item);
+	}
+}

@@ -28,3 +28,11 @@ for item in <ore:workbench>.items {
 		<ore:workbench>.remove(item);
 	}
 }
+
+for item in <ore:logWood>.items {
+	if(item.definition.owner != "minecraft") {
+		<ore:logWood>.remove(item);
+	}
+
+	stageCities.addIngredient(item);
+}

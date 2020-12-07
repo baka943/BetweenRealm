@@ -6,12 +6,15 @@
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 
+import mods.zenstages.Stage;
+import mods.zenstages.ZenStager;
+
 //==================================
 ######## Remove recipes ########
 //==================================
 
 val removeRecipes as string[] = [
-	"minecraft",
+	// "minecraft",
 	"pyrotech",
 	"artisanworktables",
 	"immersiveengineering",
@@ -28,8 +31,8 @@ iRecipes.remove(removeRecipes, true);
 val shapedRecipes as IIngredient[][][][IItemStack] = {
 	<pyrotech:worktable> : [
 		[
-			[<ore:slabWood>],
-			[<ore:logWood>]
+			[<pyrotech:material:20>, <pyrotech:material:20>],
+			[<pyrotech:material:20>, <pyrotech:material:20>]
 		]
 	],
 	<minecraft:stone_axe> : [
@@ -70,10 +73,4 @@ iRecipes.add(shapedRecipes, false);
 ######## Shapeless recipes ########
 //==================================
 
-val shapelessRecipes as IIngredient[][][IItemStack] = {
-	<pyrotech:chopping_block> : [
-		[<ore:logWood>, <ore:toolAxe>]
-	]
-};
-
-iRecipes.add(shapelessRecipes);
+iRecipes.add(<pyrotech:chopping_block>, [<ore:logWood>]);

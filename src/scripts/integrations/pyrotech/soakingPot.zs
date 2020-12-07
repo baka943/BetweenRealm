@@ -41,7 +41,7 @@ val soakingRecipes as IIngredient[ILiquidStack][IItemStack][int] = {
 	},
 	3600 : {
 		<pyrotech:material:3> : {
-			<fluid:liquid_clay> * 250 : <pyrotech:material:31>
+			<fluid:clay> * 250 : <pyrotech:material:31>
 		}
 	},
 	6000 : {

@@ -19,11 +19,6 @@ global siltGlass as IItemStack = <thebetweenlands:silt_glass>;
 	<thebetweenlands:polished_limestone>
 );
 
-<ore:swampWater>.add(
-	<thebetweenlands:bl_bucket>.withTag({Fluid: {FluidName: "swamp_water", Amount: 1000}}),
-	<thebetweenlands:bl_bucket:1>.withTag({Fluid: {FluidName: "swamp_water", Amount: 1000}})
-);
-
 <ore:dentrothyst>.add(
 	<thebetweenlands:dentrothyst>,
 	<thebetweenlands:dentrothyst:1>
@@ -40,8 +35,8 @@ global siltGlass as IItemStack = <thebetweenlands:silt_glass>;
 );
 
 <ore:elixirSlowest>.add(
-	<thebetweenlands:elixir:36>.withTag({elixirData: {duration: 300, strength: 4}}),
-	<thebetweenlands:elixir:37>.withTag({elixirData: {duration: 300, strength: 4}})
+	<thebetweenlands:elixir:36>,
+	<thebetweenlands:elixir:37>
 );
 
 <ore:snailShell>.add(
@@ -66,10 +61,22 @@ global siltGlass as IItemStack = <thebetweenlands:silt_glass>;
 	<thebetweenlands:pickerel_weed>
 );
 
+for item in <ore:allFlowers>.items {
+	if(item.definition.owner != "thebetweenlands") {
+		<ore:allFlowers>.remove(item);
+	}
+}
+
 <ore:allTallFlowers>.add(
 	<thebetweenlands:cardinal_flower>,
 	<thebetweenlands:tall_cattail>
 );
+
+for item in <ore:allTallFlowers>.items {
+	if(item.definition.owner != "thebetweenlands") {
+		<ore:allTallFlowers>.remove(item);
+	}
+}
 
 <ore:cobblestone>.remove(betweenstone);
 <ore:stone>.remove(<thebetweenlands:smooth_betweenstone>);

@@ -134,12 +134,6 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 				[<minecraft:stick>, <minecraft:planks:3>, <minecraft:stick>]
 			]
 		},
-		<minecraft:repeater> : {
-			recipe : [
-				[<minecraft:redstone_torch>, redstone, <minecraft:redstone_torch>],
-				[<ore:stone>, <ore:stone>, <ore:stone>]
-			]
-		},
 		<minecraft:purpur_block> * 4 : {
 			recipe : [
 				[<minecraft:chorus_fruit_popped>, <minecraft:chorus_fruit_popped>],
@@ -228,12 +222,6 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 				[<ore:stickWood>, null, <ore:stickWood>],
 				[<ore:stickWood>, <ore:stickWood>, <ore:stickWood>],
 				[<ore:stickWood>, null, <ore:stickWood>]
-			]
-		},
-		<minecraft:redstone_torch> : {
-			recipe : [
-				[redstone],
-				[<ore:stickWood>]
 			]
 		},
 		<minecraft:wooden_pressure_plate> : {
@@ -486,11 +474,6 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 			recipe : [
 				[<ore:blockGlassRed>, <ore:blockGlassRed>, <ore:blockGlassRed>],
 				[<ore:blockGlassRed>, <ore:blockGlassRed>, <ore:blockGlassRed>]
-			]
-		},
-		<minecraft:cookie> * 8 : {
-			recipe : [
-				[<minecraft:wheat>, <minecraft:dye:3>, <minecraft:wheat>]
 			]
 		},
 		<minecraft:dark_oak_fence_gate> : {
@@ -808,12 +791,6 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 				[<ore:blockGlassColorless>, <ore:blockGlassColorless>, <ore:blockGlassColorless>]
 			]
 		},
-		<minecraft:sticky_piston> : {
-			recipe : [
-				[<ore:slimeball>],
-				[<minecraft:piston>]
-			]
-		},
 		<minecraft:emerald> * 9 : {
 			recipe : [
 				[<minecraft:emerald_block>]
@@ -824,13 +801,6 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 				[<minecraft:planks>],
 				[<minecraft:planks>, <minecraft:planks>],
 				[<minecraft:planks>, <minecraft:planks>, <minecraft:planks>]
-			]
-		},
-		<minecraft:comparator> : {
-			recipe : [
-				[null, <minecraft:redstone_torch>],
-				[<minecraft:redstone_torch>, <minecraft:quartz>, <minecraft:redstone_torch>],
-				[<ore:stone>, <ore:stone>, <ore:stone>]
 			]
 		},
 		<minecraft:wooden_button> : {
@@ -1331,19 +1301,15 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 				[<pyrotech:material:32>, null, <pyrotech:material:32>],
 				[<pyrotech:material:32>, <pyrotech:material:32>, <pyrotech:material:32>]
 			]
+		},
+		<minecraft:leather> : {
+			recipe : [
+				[<minecraft:rabbit_hide>, <minecraft:rabbit_hide>],
+				[<minecraft:rabbit_hide>, <minecraft:rabbit_hide>]
+			]
 		}
 	},
 	blacksmith : {
-		<minecraft:cauldron> : {
-			recipe : [
-				[ingot.iron, null, ingot.iron],
-				[ingot.iron, null, ingot.iron],
-				[ingot.iron, ingot.iron, ingot.iron]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
 		<minecraft:iron_pickaxe> : {
 			recipe : [
 				[ingot.iron, ingot.iron, ingot.iron],
@@ -1387,16 +1353,6 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 			recipe : [
 				[<minecraft:hopper>],
 				[<minecraft:minecart>]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:activator_rail> * 6 : {
-			recipe : [
-				[ingot.iron, <ore:stickWood>, ingot.iron],
-				[ingot.iron, <minecraft:redstone_torch>, ingot.iron],
-				[ingot.iron, <ore:stickWood>, ingot.iron]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -1531,36 +1487,6 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 				[ingot.iron, null, ingot.iron],
 				[ingot.iron, <ore:stickWood>, ingot.iron],
 				[ingot.iron, null, ingot.iron]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:piston> : {
-			recipe : [
-				[<ore:plankWood>, <ore:plankWood>, <ore:plankWood>],
-				[<ore:cobblestone>, ingot.iron, <ore:cobblestone>],
-				[<ore:cobblestone>, <ore:dustRedstone>, <ore:cobblestone>]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:tripwire_hook> * 2 : {
-			recipe : [
-				[ingot.iron],
-				[<ore:stickWood>],
-				[<ore:plankWood>]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:hopper> : {
-			recipe : [
-				[ingot.iron, null, ingot.iron],
-				[ingot.iron, <ore:chestWood>, ingot.iron],
-				[null, ingot.iron]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -1927,6 +1853,12 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 
 artisanWorktables.add(shapedRecipes, false);
 
+for table, recipes in shapedRecipes {
+	for item in recipes {
+		iRecipes.remove(item);
+	}
+}
+
 var blacksmith = RecipeBuilder.get("blacksmith");
 
 blacksmith.addOutput(<minecraft:iron_ingot> * 9);
@@ -1949,18 +1881,6 @@ blacksmith.create();
 
 val shapelessRecipes as IIngredient[][string][IItemStack][string] = {
 	basic : {
-		<minecraft:wool:14> : {
-			recipe : [<ore:dyeRed>, <ore:woolWhite>]
-		},
-		<minecraft:wool:2> : {
-			recipe : [<ore:dyeMagenta>, <ore:woolWhite>]
-		},
-		<minecraft:wool:15> : {
-			recipe : [<ore:dyeBlack>, <ore:woolWhite>]
-		},
-		<minecraft:wool:10> : {
-			recipe : [<ore:dyePurple>, <ore:woolWhite>]
-		},
 		<minecraft:concrete_powder:9> * 8 : {
 			recipe : [<ore:dyeCyan>, <minecraft:sand>, <minecraft:sand>, <minecraft:sand>, <minecraft:sand>, <minecraft:gravel>, <minecraft:gravel>, <minecraft:gravel>, <minecraft:gravel>]
 		},
@@ -1997,12 +1917,6 @@ val shapelessRecipes as IIngredient[][string][IItemStack][string] = {
 		<minecraft:trapped_chest> : {
 			recipe : [<ore:chestWood>, <minecraft:tripwire_hook>]
 		},
-		<minecraft:wool:3> : {
-			recipe : [<ore:dyeLightBlue>, <ore:woolWhite>]
-		},
-		<minecraft:wool:1> : {
-			recipe : [<ore:dyeOrange>, <ore:woolWhite>]
-		},
 		<minecraft:clay_ball> : {
 			recipe : [<minecraft:clay>]
 		},
@@ -2012,20 +1926,8 @@ val shapelessRecipes as IIngredient[][string][IItemStack][string] = {
 		<minecraft:stick> * 2 : {
 			recipe : [<ore:treeSapling>]
 		},
-		<minecraft:wool:13> : {
-			recipe : [<ore:dyeGreen>, <ore:woolWhite>]
-		},
-		<minecraft:wool:9> : {
-			recipe : [<ore:dyeCyan>, <ore:woolWhite>]
-		},
-		<minecraft:fermented_spider_eye> : {
-			recipe : [<minecraft:spider_eye>, <minecraft:brown_mushroom>, <minecraft:sugar>]
-		},
 		<minecraft:pumpkin_pie> : {
 			recipe : [<minecraft:pumpkin>, <minecraft:sugar>, <ore:egg>]
-		},
-		<minecraft:wool:6> : {
-			recipe : [<ore:dyePink>, <ore:woolWhite>]
 		},
 		<minecraft:fire_charge> : {
 			recipe : [<minecraft:gunpowder>, <minecraft:blaze_powder>, <minecraft:coal>]
@@ -2045,14 +1947,8 @@ val shapelessRecipes as IIngredient[][string][IItemStack][string] = {
 		<minecraft:concrete_powder:12> * 8 : {
 			recipe : [<ore:dyeBrown>, <minecraft:sand>, <minecraft:sand>, <minecraft:sand>, <minecraft:sand>, <minecraft:gravel>, <minecraft:gravel>, <minecraft:gravel>, <minecraft:gravel>]
 		},
-		<minecraft:wool:4> : {
-			recipe : [<ore:dyeYellow>, <ore:woolWhite>]
-		},
 		<minecraft:concrete_powder> * 8 : {
 			recipe : [<ore:dyeWhite>, <minecraft:sand>, <minecraft:sand>, <minecraft:sand>, <minecraft:sand>, <minecraft:gravel>, <minecraft:gravel>, <minecraft:gravel>, <minecraft:gravel>]
-		},
-		<minecraft:wool:7> : {
-			recipe : [<ore:dyeGray>, <ore:woolWhite>]
 		},
 		<minecraft:concrete_powder:6> * 8 : {
 			recipe : [<ore:dyePink>, <minecraft:sand>, <minecraft:sand>, <minecraft:sand>, <minecraft:sand>, <minecraft:gravel>, <minecraft:gravel>, <minecraft:gravel>, <minecraft:gravel>]
@@ -2060,23 +1956,11 @@ val shapelessRecipes as IIngredient[][string][IItemStack][string] = {
 		<minecraft:blaze_powder> * 2 : {
 			recipe : [<minecraft:blaze_rod>]
 		},
-		<minecraft:wool:11> : {
-			recipe : [<ore:dyeBlue>, <ore:woolWhite>]
-		},
-		<minecraft:wool:5> : {
-			recipe : [<ore:dyeLime>, <ore:woolWhite>]
-		},
-		<minecraft:wool:8> : {
-			recipe : [<ore:dyeLightGray>, <ore:woolWhite>]
-		},
 		<minecraft:mossy_cobblestone> : {
 			recipe : [<ore:cobblestone>, <minecraft:vine>]
 		},
 		<minecraft:string> : {
 			recipe : [<ore:fiberHemp>, <ore:fiberHemp>, <ore:fiberHemp>]
-		},
-		<minecraft:wool:12> : {
-			recipe : [<ore:dyeBrown>, <ore:woolWhite>]
 		},
 		<minecraft:magma_cream> : {
 			recipe : [<minecraft:blaze_powder>, <ore:slimeball>]
@@ -2093,10 +1977,16 @@ val shapelessRecipes as IIngredient[][string][IItemStack][string] = {
 	},
 	blacksmith : {
 		<minecraft:flint_and_steel> : {
-			recipe : [<ore:ingotIron>, <minecraft:flint>],
+			recipe : [ingot.iron, <minecraft:flint>],
 			tools : [<ore:artisansHammer>]
 		}
 	}
 };
 
 artisanWorktables.add(shapelessRecipes);
+
+for table, recipes in shapelessRecipes {
+	for item in recipes {
+		iRecipes.remove(item);
+	}
+}

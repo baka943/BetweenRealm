@@ -71,10 +71,7 @@
       "minecraft:iron_axe:*",
       "minecraft:golden_axe:*",
       "minecraft:diamond_axe:*",
-      "pyrotech:crude_axe:*",
-      "pyrotech:flint_axe:*",
-      "pyrotech:bone_axe:*",
-      "pyrotech:obsidian_axe:*"
+	  "immersiveengineering:axe_steel:*"
     ],
     "twine": [
       "pyrotech:material:14",

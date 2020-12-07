@@ -1,7 +1,11 @@
 #Name: wirecoil.zs
 #Author: baka943
 
+import mods.zenstages.ZenStager;
+import mods.zenstages.Stage;
+
 import mods.artisanworktables.builder.RecipeBuilder;
+import mods.artisanintegrations.requirement.GameStages;
 
 var blacksmith = RecipeBuilder.get("blacksmith");
 
@@ -14,6 +18,7 @@ blacksmith.setShaped(
 	]);
 blacksmith.setName("immersiveengineering/lv_wire_coil");
 blacksmith.addTool(<ore:artisansHammer>, 1);
+blacksmith.addRequirement(GameStages.allOf([stageCities.stage]));
 blacksmith.create();
 
 blacksmith.addOutput(<immersiveengineering:wirecoil:1> * 4);
@@ -25,6 +30,7 @@ blacksmith.setShaped(
 	]);
 blacksmith.setName("immersiveengineering/mv_wire_coil");
 blacksmith.addTool(<ore:artisansHammer>, 1);
+blacksmith.addRequirement(GameStages.allOf([stageCities.stage]));
 blacksmith.create();
 
 blacksmith.addOutput(<immersiveengineering:wirecoil:2> * 4);
@@ -36,6 +42,7 @@ blacksmith.setShaped(
 	]);
 blacksmith.setName("immersiveengineering/hv_wire_coil");
 blacksmith.addTool(<ore:artisansHammer>, 1);
+blacksmith.addRequirement(GameStages.allOf([stageCities.stage]));
 blacksmith.create();
 
 blacksmith.addOutput(<immersiveengineering:wirecoil:2> * 4);
@@ -47,6 +54,7 @@ blacksmith.setShaped(
 	]);
 blacksmith.setName("immersiveengineering/hv_wire_coil/1");
 blacksmith.addTool(<ore:artisansHammer>, 1);
+blacksmith.addRequirement(GameStages.allOf([stageCities.stage]));
 blacksmith.create();
 
 blacksmith.addOutput(<immersiveengineering:wirecoil:3> * 4);
@@ -58,6 +66,7 @@ blacksmith.setShaped(
 	]);
 blacksmith.setName("immersiveengineering/hemp_rope_coil");
 blacksmith.addTool(<ore:artisansHammer>, 1);
+blacksmith.addRequirement(GameStages.allOf([stageCities.stage]));
 blacksmith.create();
 
 blacksmith.addOutput(<immersiveengineering:wirecoil:4> * 4);
@@ -69,6 +78,7 @@ blacksmith.setShaped(
 	]);
 blacksmith.setName("immersiveengineering/steel_cable_coil");
 blacksmith.addTool(<ore:artisansHammer>, 1);
+blacksmith.addRequirement(GameStages.allOf([stageCities.stage]));
 blacksmith.create();
 
 blacksmith.addOutput(<immersiveengineering:wirecoil:5> * 4);
@@ -80,6 +90,7 @@ blacksmith.setShaped(
 	]);
 blacksmith.setName("immersiveengineering/redstone_wire_coil");
 blacksmith.addTool(<ore:artisansHammer>, 1);
+blacksmith.addRequirement(GameStages.allOf([stageCities.stage]));
 blacksmith.create();
 
 blacksmith.addOutput(<immersiveengineering:wirecoil:5> * 4);
@@ -91,6 +102,7 @@ blacksmith.setShaped(
 	]);
 blacksmith.setName("immersiveengineering/redstone_wire_coil/1");
 blacksmith.addTool(<ore:artisansHammer>, 1);
+blacksmith.addRequirement(GameStages.allOf([stageCities.stage]));
 blacksmith.create();
 
 blacksmith.addOutput(<immersiveengineering:wirecoil:6> * 4);
@@ -102,6 +114,7 @@ blacksmith.setShaped(
 	]);
 blacksmith.setName("immersiveengineering/insulated_lv_wire_coil");
 blacksmith.addTool(<ore:artisansHammer>, 1);
+blacksmith.addRequirement(GameStages.allOf([stageCities.stage]));
 blacksmith.create();
 
 blacksmith.addOutput(<immersiveengineering:wirecoil:7> * 4);
@@ -113,4 +126,5 @@ blacksmith.setShaped(
 	]);
 blacksmith.setName("immersiveengineering/insulated_mv_wire_coil");
 blacksmith.addTool(<ore:artisansHammer>, 1);
+blacksmith.addRequirement(GameStages.allOf([stageCities.stage]));
 blacksmith.create();
