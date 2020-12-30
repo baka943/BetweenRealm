@@ -61,20 +61,6 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 			[<ore:plankWood>, <ore:plankWood>, <ore:plankWood>]
 		]
 	],
-	<minecraft:wooden_sword> : [
-		[
-			[<ore:plankWood>],
-			[<ore:plankWood>],
-			[<ore:stickWood>]
-		]
-	],
-	<minecraft:ladder> * 3 : [
-		[
-			[<ore:stickWood>, null, <ore:stickWood>],
-			[<ore:stickWood>, <ore:stickWood>, <ore:stickWood>],
-			[<ore:stickWood>, null, <ore:stickWood>]
-		]
-	],
 	<pyrotech:torch_fiber> * 4 : [
 		[
 			[<pyrotech:material:13>],
@@ -98,42 +84,6 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 			[<minecraft:stone_slab>, null, <minecraft:stone_slab>],
 			[<pyrotech:material:20>, <minecraft:stone>, <pyrotech:material:20>]
 		]
-	],
-	<pyrotech:worktable> : [
-		[
-			[<pyrotech:material:20>, <pyrotech:material:20>],
-			[<pyrotech:material:20>, <pyrotech:material:20>]
-		]
-	],
-	<minecraft:stone_axe> : [
-		[
-			[<ore:rock>, <pyrotech:material:12>],
-			[<ore:rock>, <ore:stickWood>]
-		]
-	],
-	<minecraft:stone_pickaxe> : [
-		[
-			[<ore:rock>, <pyrotech:material:12>],
-			[<ore:stickWood>, <ore:rock>]
-		]
-	],
-	<minecraft:stone_shovel> : [
-		[
-			[<ore:rock>, <pyrotech:material:12>],
-			[<ore:stickWood>]
-		]
-	],
-	<minecraft:stone_hoe> : [
-		[
-			[<pyrotech:material:12>, <ore:rock>],
-			[<ore:stickWood>]
-		]
-	],
-	<pyrotech:crude_hammer> : [
-		[
-			[<ore:rock>, <ore:rock>],
-			[<ore:stickWood>, <pyrotech:material:12>]
-		]
 	]
 };
 
@@ -149,9 +99,6 @@ val shapelessRecipes as IIngredient[][][IItemStack] = {
 	],
 	<pyrotech:material:14> * 3 : [
 		[<pyrotech:material:13>, <pyrotech:material:13>, <pyrotech:material:13>]
-	],
-	<pyrotech:chopping_block> : [
-		[<ore:logWood>]
 	]
 };
 

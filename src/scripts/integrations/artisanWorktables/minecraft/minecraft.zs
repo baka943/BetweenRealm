@@ -147,21 +147,11 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 				[<minecraft:cobblestone>, <minecraft:cobblestone>, <minecraft:cobblestone>]
 			]
 		},
-		<minecraft:carpet:12> * 3 : {
-			recipe : [
-				[<ore:woolBrown>, <ore:woolBrown>]
-			]
-		},
 		<minecraft:jungle_door> * 3 : {
 			recipe : [
 				[<minecraft:planks:3>, <minecraft:planks:3>],
 				[<minecraft:planks:3>, <minecraft:planks:3>],
 				[<minecraft:planks:3>, <minecraft:planks:3>]
-			]
-		},
-		<minecraft:carpet:11> * 3 : {
-			recipe : [
-				[<ore:woolBlue>, <ore:woolBlue>]
 			]
 		},
 		<minecraft:red_nether_brick> : {
@@ -229,23 +219,11 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 				[<ore:plankWood>, <ore:plankWood>]
 			]
 		},
-		<minecraft:carpet:1> * 3 : {
-			recipe : [
-				[<ore:woolOrange>, <ore:woolOrange>]
-			]
-		},
 		<minecraft:cake> : {
 			recipe : [
 				[<minecraft:milk_bucket>, <minecraft:milk_bucket>, <minecraft:milk_bucket>],
 				[<minecraft:sugar>, <ore:egg>, <minecraft:sugar>],
 				[<minecraft:wheat>, <minecraft:wheat>, <minecraft:wheat>]
-			]
-		},
-		<minecraft:armor_stand> : {
-			recipe : [
-				[<ore:stickWood>, <ore:stickWood>, <ore:stickWood>],
-				[null, <ore:stickWood>],
-				[<ore:stickWood>, <minecraft:stone_slab>, <ore:stickWood>]
 			]
 		},
 		<minecraft:stained_glass_pane:6> * 16 : {
@@ -314,21 +292,10 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 				[null, <ore:plankWood>]
 			]
 		},
-		<minecraft:wool> : {
-			recipe : [
-				[<ore:string>, <ore:string>],
-				[<ore:string>, <ore:string>]
-			]
-		},
 		<minecraft:stained_glass_pane:13> * 16 : {
 			recipe : [
 				[<ore:blockGlassGreen>, <ore:blockGlassGreen>, <ore:blockGlassGreen>],
 				[<ore:blockGlassGreen>, <ore:blockGlassGreen>, <ore:blockGlassGreen>]
-			]
-		},
-		<minecraft:carpet:5> * 3 : {
-			recipe : [
-				[<ore:woolLime>, <ore:woolLime>]
 			]
 		},
 		<minecraft:stained_glass_pane:8> * 16 : {
@@ -344,34 +311,10 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 				[null, <ore:dustGlowstone>]
 			]
 		},
-		<minecraft:carpet:14> * 3 : {
-			recipe : [
-				[<ore:woolRed>, <ore:woolRed>]
-			]
-		},
-		<minecraft:sugar> : {
-			recipe : [
-				[<ore:sugarcane>]
-			]
-		},
-		<minecraft:dispenser> : {
-			recipe : [
-				[<ore:cobblestone>, <ore:cobblestone>, <ore:cobblestone>],
-				[<ore:cobblestone>, <minecraft:bow>, <ore:cobblestone>],
-				[<ore:cobblestone>, <ore:dustRedstone>, <ore:cobblestone>]
-			]
-		},
 		<minecraft:stained_glass_pane:9> * 16 : {
 			recipe : [
 				[<ore:blockGlassCyan>, <ore:blockGlassCyan>, <ore:blockGlassCyan>],
 				[<ore:blockGlassCyan>, <ore:blockGlassCyan>, <ore:blockGlassCyan>]
-			]
-		},
-		<minecraft:daylight_detector> : {
-			recipe : [
-				[<ore:blockGlassColorless>, <ore:blockGlassColorless>, <ore:blockGlassColorless>],
-				[<minecraft:quartz>, <minecraft:quartz>, <minecraft:quartz>],
-				[<minecraft:wooden_slab> | <minecraft:wooden_slab:1> | <minecraft:wooden_slab:2> | <minecraft:wooden_slab:3> | <minecraft:wooden_slab:4> | <minecraft:wooden_slab:5>, <minecraft:wooden_slab> | <minecraft:wooden_slab:1> | <minecraft:wooden_slab:2> | <minecraft:wooden_slab:3> | <minecraft:wooden_slab:4> | <minecraft:wooden_slab:5>, <minecraft:wooden_slab> | <minecraft:wooden_slab:1> | <minecraft:wooden_slab:2> | <minecraft:wooden_slab:3> | <minecraft:wooden_slab:4> | <minecraft:wooden_slab:5>]
 			]
 		},
 		<minecraft:acacia_boat> : {
@@ -384,23 +327,6 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 			recipe : [
 				[<ore:stoneDiorite>, <ore:stoneDiorite>],
 				[<ore:stoneDiorite>, <ore:stoneDiorite>]
-			]
-		},
-		<minecraft:carpet:3> * 3 : {
-			recipe : [
-				[<ore:woolLightBlue>, <ore:woolLightBlue>]
-			]
-		},
-		<minecraft:dropper> : {
-			recipe : [
-				[<ore:cobblestone>, <ore:cobblestone>, <ore:cobblestone>],
-				[<ore:cobblestone>, null, <ore:cobblestone>],
-				[<ore:cobblestone>, <ore:dustRedstone>, <ore:cobblestone>]
-			]
-		},
-		<minecraft:carpet:15> * 3 : {
-			recipe : [
-				[<ore:woolBlack>, <ore:woolBlack>]
 			]
 		},
 		<minecraft:trapdoor> * 2 : {
@@ -535,11 +461,6 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 				[<ore:blockGlassGray>, <ore:blockGlassGray>, <ore:blockGlassGray>]
 			]
 		},
-		<minecraft:carpet:7> * 3 : {
-			recipe : [
-				[<ore:woolGray>, <ore:woolGray>]
-			]
-		},
 		<minecraft:stone_sword> : {
 			recipe : [
 				[<pyrotech:material:16>],
@@ -575,11 +496,6 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		<minecraft:stone_slab:6> * 3 : {
 			recipe : [
 				[<minecraft:nether_brick>, <minecraft:nether_brick>, <minecraft:nether_brick>]
-			]
-		},
-		<minecraft:stone_slab:7> * 3 : {
-			recipe : [
-				[<minecraft:quartz_block>, <minecraft:quartz_block>, <minecraft:quartz_block>]
 			]
 		},
 		<minecraft:brewing_stand> : {
@@ -646,11 +562,6 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 				[<minecraft:minecart>]
 			]
 		},
-		<minecraft:carpet:4> * 3 : {
-			recipe : [
-				[<ore:woolYellow>, <ore:woolYellow>]
-			]
-		},
 		<minecraft:snow_layer> * 6 : {
 			recipe : [
 				[<minecraft:snow>, <minecraft:snow>, <minecraft:snow>]
@@ -674,30 +585,11 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 				[<ore:stoneGranite>, <ore:stoneGranite>]
 			]
 		},
-		<minecraft:quartz_block:1> : {
-			recipe : [
-				[<minecraft:stone_slab:7>],
-				[<minecraft:stone_slab:7>]
-			]
-		},
 		<minecraft:stained_hardened_clay:7> * 8 : {
 			recipe : [
 				[<minecraft:hardened_clay>, <minecraft:hardened_clay>, <minecraft:hardened_clay>],
 				[<minecraft:hardened_clay>, <ore:dyeGray>, <minecraft:hardened_clay>],
 				[<minecraft:hardened_clay>, <minecraft:hardened_clay>, <minecraft:hardened_clay>]
-			]
-		},
-		<minecraft:quartz_block:2> * 2 : {
-			recipe : [
-				[<minecraft:quartz_block>],
-				[<minecraft:quartz_block>]
-			]
-		},
-		<minecraft:observer> : {
-			recipe : [
-				[<ore:cobblestone>, <ore:cobblestone>, <ore:cobblestone>],
-				[<ore:dustRedstone>, <ore:dustRedstone>, <minecraft:quartz>],
-				[<ore:cobblestone>, <ore:cobblestone>, <ore:cobblestone>]
 			]
 		},
 		<minecraft:stone:6> * 4 : {
@@ -808,18 +700,6 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 				[<ore:plankWood>]
 			]
 		},
-		<minecraft:carpet:9> * 3 : {
-			recipe : [
-				[<ore:woolCyan>, <ore:woolCyan>]
-			]
-		},
-		<minecraft:noteblock> : {
-			recipe : [
-				[<ore:plankWood>, <ore:plankWood>, <ore:plankWood>],
-				[<ore:plankWood>, <ore:dustRedstone>, <ore:plankWood>],
-				[<ore:plankWood>, <ore:plankWood>, <ore:plankWood>]
-			]
-		},
 		<minecraft:tnt> : {
 			recipe : [
 				[<ore:gunpowder>, <minecraft:sand> | <minecraft:sand:1>, <ore:gunpowder>],
@@ -881,11 +761,6 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 			recipe : [
 				[<ore:rock>, <pyrotech:material:12>],
 				[<ore:rock>, <ore:stickWood>]
-			]
-		},
-		<minecraft:carpet:2> * 3 : {
-			recipe : [
-				[<ore:woolMagenta>, <ore:woolMagenta>]
 			]
 		},
 		<minecraft:glass_pane> * 16 : {
@@ -987,11 +862,6 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 				[<minecraft:purpur_block>, <minecraft:purpur_block>, <minecraft:purpur_block>]
 			]
 		},
-		<minecraft:carpet:8> * 3 : {
-			recipe : [
-				[<ore:woolLightGray>, <ore:woolLightGray>]
-			]
-		},
 		<minecraft:sandstone:2> * 4 : {
 			recipe : [
 				[<minecraft:sandstone>, <minecraft:sandstone>],
@@ -1005,28 +875,11 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 				[<ore:blockGlassColorless>, <minecraft:ghast_tear>, <ore:blockGlassColorless>]
 			]
 		},
-		<minecraft:quartz_stairs> * 4 : {
-			recipe : [
-				[<minecraft:quartz_block> | <minecraft:quartz_block:1> | <minecraft:quartz_block:2>],
-				[<minecraft:quartz_block> | <minecraft:quartz_block:1> | <minecraft:quartz_block:2>, <minecraft:quartz_block> | <minecraft:quartz_block:1> | <minecraft:quartz_block:2>],
-				[<minecraft:quartz_block> | <minecraft:quartz_block:1> | <minecraft:quartz_block:2>, <minecraft:quartz_block> | <minecraft:quartz_block:1> | <minecraft:quartz_block:2>, <minecraft:quartz_block> | <minecraft:quartz_block:1> | <minecraft:quartz_block:2>]
-			]
-		},
-		<minecraft:carpet> * 3 : {
-			recipe : [
-				[<ore:woolWhite>, <ore:woolWhite>]
-			]
-		},
 		<minecraft:stained_glass:14> * 8 : {
 			recipe : [
 				[<ore:blockGlassColorless>, <ore:blockGlassColorless>, <ore:blockGlassColorless>],
 				[<ore:blockGlassColorless>, <ore:dyeRed>, <ore:blockGlassColorless>],
 				[<ore:blockGlassColorless>, <ore:blockGlassColorless>, <ore:blockGlassColorless>]
-			]
-		},
-		<minecraft:carpet:13> * 3 : {
-			recipe : [
-				[<ore:woolGreen>, <ore:woolGreen>]
 			]
 		},
 		<minecraft:stained_glass:2> * 8 : {
@@ -1100,13 +953,6 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 				[<ore:blockGlassYellow>, <ore:blockGlassYellow>, <ore:blockGlassYellow>]
 			]
 		},
-		<minecraft:redstone_lamp> : {
-			recipe : [
-				[null, <ore:dustRedstone>],
-				[<ore:dustRedstone>, <ore:glowstone>, <ore:dustRedstone>],
-				[null, <ore:dustRedstone>]
-			]
-		},
 		<minecraft:end_rod> * 4 : {
 			recipe : [
 				[<minecraft:blaze_rod>],
@@ -1138,11 +984,6 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 				[null, <ore:stickWood>]
 			]
 		},
-		<minecraft:carpet:6> * 3 : {
-			recipe : [
-				[<ore:woolPink>, <ore:woolPink>]
-			]
-		},
 		<minecraft:nether_brick> : {
 			recipe : [
 				[<minecraft:netherbrick>, <minecraft:netherbrick>],
@@ -1172,12 +1013,6 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 			recipe : [
 				[<ore:blockGlassOrange>, <ore:blockGlassOrange>, <ore:blockGlassOrange>],
 				[<ore:blockGlassOrange>, <ore:blockGlassOrange>, <ore:blockGlassOrange>]
-			]
-		},
-		<minecraft:quartz_block> : {
-			recipe : [
-				[<minecraft:quartz>, <minecraft:quartz>],
-				[<minecraft:quartz>, <minecraft:quartz>]
 			]
 		},
 		<minecraft:bow> : {
@@ -1235,11 +1070,6 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 			recipe : [
 				[<minecraft:planks:1>, null, <minecraft:planks:1>],
 				[<ore:plankTreatedWood>, <pyrotech:material:23>, <ore:plankTreatedWood>]
-			]
-		},
-		<minecraft:carpet:10> * 3 : {
-			recipe : [
-				[<ore:woolPurple>, <ore:woolPurple>]
 			]
 		},
 		<minecraft:sea_lantern> : {
@@ -1310,229 +1140,10 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 		}
 	},
 	blacksmith : {
-		<minecraft:iron_pickaxe> : {
-			recipe : [
-				[ingot.iron, ingot.iron, ingot.iron],
-				[null, <ore:stickWood>],
-				[null, <ore:stickWood>]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:iron_leggings> : {
-			recipe : [
-				[ingot.iron, ingot.iron, ingot.iron],
-				[ingot.iron, null, ingot.iron],
-				[ingot.iron, null, ingot.iron]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:iron_shovel> : {
-			recipe : [
-				[ingot.iron],
-				[<ore:stickWood>],
-				[<ore:stickWood>]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:iron_trapdoor> : {
-			recipe : [
-				[ingot.iron, ingot.iron],
-				[ingot.iron, ingot.iron]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:hopper_minecart> : {
-			recipe : [
-				[<minecraft:hopper>],
-				[<minecraft:minecart>]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:iron_boots> : {
-			recipe : [
-				[ingot.iron, null, ingot.iron],
-				[ingot.iron, null, ingot.iron]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:minecart> : {
-			recipe : [
-				[ingot.iron, null, ingot.iron],
-				[ingot.iron, ingot.iron, ingot.iron]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:iron_sword> : {
-			recipe : [
-				[ingot.iron],
-				[ingot.iron],
-				[<ore:stickWood>]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:iron_block> : {
-			recipe : [
-				[ingot.iron, ingot.iron, ingot.iron],
-				[ingot.iron, ingot.iron, ingot.iron],
-				[ingot.iron, ingot.iron, ingot.iron]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:bucket> : {
-			recipe : [
-				[ingot.iron, null, ingot.iron],
-				[null, ingot.iron]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:iron_door> * 3 : {
-			recipe : [
-				[ingot.iron, ingot.iron],
-				[ingot.iron, ingot.iron],
-				[ingot.iron, ingot.iron]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:iron_axe> : {
-			recipe : [
-				[ingot.iron, ingot.iron],
-				[ingot.iron, <ore:stickWood>],
-				[null, <ore:stickWood>]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:compass> : {
-			recipe : [
-				[null, ingot.iron],
-				[ingot.iron, redstone, ingot.iron],
-				[null, ingot.iron]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
 		<minecraft:shears> : {
 			recipe : [
 				[null, ingot.iron],
 				[ingot.iron]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:iron_chestplate> : {
-			recipe : [
-				[ingot.iron, null, ingot.iron],
-				[ingot.iron, ingot.iron, ingot.iron],
-				[ingot.iron, ingot.iron, ingot.iron]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:iron_hoe> : {
-			recipe : [
-				[ingot.iron, ingot.iron],
-				[null, <ore:stickWood>],
-				[null, <ore:stickWood>]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:iron_ingot> : {
-			recipe : [
-				[nugget.iron, nugget.iron, nugget.iron],
-				[nugget.iron, nugget.iron, nugget.iron],
-				[nugget.iron, nugget.iron, nugget.iron]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:iron_nugget> * 9 : {
-			recipe : [
-				[ingot.iron]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:rail> * 16 : {
-			recipe : [
-				[ingot.iron, null, ingot.iron],
-				[ingot.iron, <ore:stickWood>, ingot.iron],
-				[ingot.iron, null, ingot.iron]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:iron_bars> * 16 : {
-			recipe : [
-				[ingot.iron, ingot.iron, ingot.iron],
-				[ingot.iron, ingot.iron, ingot.iron]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:iron_helmet> : {
-			recipe : [
-				[ingot.iron, ingot.iron, ingot.iron],
-				[ingot.iron, null, ingot.iron]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:heavy_weighted_pressure_plate> : {
-			recipe : [
-				[ingot.iron, ingot.iron]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:detector_rail> * 6 : {
-			recipe : [
-				[ingot.iron, null, ingot.iron],
-				[ingot.iron, <minecraft:stone_pressure_plate>, ingot.iron],
-				[ingot.iron, <ore:dustRedstone>, ingot.iron]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:shield> : {
-			recipe : [
-				[<ore:plankWood>, ingot.iron, <ore:plankWood>],
-				[<ore:plankWood>, <ore:plankWood>, <ore:plankWood>],
-				[null, <ore:plankWood>]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -1548,89 +1159,11 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 				[<ore:artisansHammer>]
 			]
 		},
-		<minecraft:golden_rail> * 6 : {
-			recipe : [
-				[ingot.gold, null, ingot.gold],
-				[ingot.gold, <ore:stickWood>, ingot.gold],
-				[ingot.gold, redstone, ingot.gold]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:golden_hoe> : {
-			recipe : [
-				[ingot.gold, ingot.gold],
-				[null, <ore:stickWood>],
-				[null, <ore:stickWood>]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:clock> : {
-			recipe : [
-				[null, ingot.gold],
-				[ingot.gold, redstone, ingot.gold],
-				[null, ingot.gold]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:golden_pickaxe> : {
-			recipe : [
-				[ingot.gold, ingot.gold, ingot.gold],
-				[null, <ore:stickWood>],
-				[null, <ore:stickWood>]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:golden_helmet> : {
-			recipe : [
-				[ingot.gold, ingot.gold, ingot.gold],
-				[ingot.gold, null, ingot.gold]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:gold_block> : {
-			recipe : [
-				[ingot.gold, ingot.gold, ingot.gold],
-				[ingot.gold, ingot.gold, ingot.gold],
-				[ingot.gold, ingot.gold, ingot.gold]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
 		<minecraft:golden_apple> : {
 			recipe : [
 				[ingot.gold, ingot.gold, ingot.gold],
 				[ingot.gold, <minecraft:apple>, ingot.gold],
 				[ingot.gold, ingot.gold, ingot.gold]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:golden_boots> : {
-			recipe : [
-				[ingot.gold, null, ingot.gold],
-				[ingot.gold, null, ingot.gold]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:golden_axe> : {
-			recipe : [
-				[ingot.gold, ingot.gold],
-				[ingot.gold, <ore:stickWood>],
-				[null, <ore:stickWood>]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -1646,193 +1179,11 @@ val shapedRecipes as IIngredient[][][string][IItemStack][string] = {
 				[<ore:artisansHammer>]
 			]
 		},
-		<minecraft:golden_sword> : {
-			recipe : [
-				[ingot.gold],
-				[ingot.gold],
-				[<ore:stickWood>]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:golden_shovel> : {
-			recipe : [
-				[ingot.gold],
-				[<ore:stickWood>],
-				[<ore:stickWood>]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:golden_chestplate> : {
-			recipe : [
-				[ingot.gold, null, ingot.gold],
-				[ingot.gold, ingot.gold, ingot.gold],
-				[ingot.gold, ingot.gold, ingot.gold]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:golden_leggings> : {
-			recipe : [
-				[ingot.gold, ingot.gold, ingot.gold],
-				[ingot.gold, null, ingot.gold],
-				[ingot.gold, null, ingot.gold]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:gold_ingot> : {
-			recipe : [
-				[nugget.gold, nugget.gold, nugget.gold],
-				[nugget.gold, nugget.gold, nugget.gold],
-				[nugget.gold, nugget.gold, nugget.gold]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:gold_nugget> * 9 : {
-			recipe : [
-				[ingot.gold]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
 		<minecraft:golden_carrot> : {
 			recipe : [
 				[nugget.gold, nugget.gold, nugget.gold],
 				[nugget.gold, <minecraft:carrot>, nugget.gold],
 				[nugget.gold, nugget.gold, nugget.gold]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:light_weighted_pressure_plate> : {
-			recipe : [
-				[ingot.gold, ingot.gold]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:diamond_leggings> : {
-			recipe : [
-				[gem.diamond, gem.diamond, gem.diamond],
-				[gem.diamond, null, gem.diamond],
-				[gem.diamond, null, gem.diamond]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:diamond_sword> : {
-			recipe : [
-				[gem.diamond],
-				[gem.diamond],
-				[<ore:stickWood>]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:diamond_axe> : {
-			recipe : [
-				[gem.diamond, gem.diamond],
-				[gem.diamond, <ore:stickWood>],
-				[null, <ore:stickWood>]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:diamond_helmet> : {
-			recipe : [
-				[gem.diamond, gem.diamond, gem.diamond],
-				[gem.diamond, null, gem.diamond]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:diamond_boots> : {
-			recipe : [
-				[gem.diamond, null, gem.diamond],
-				[gem.diamond, null, gem.diamond]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:diamond_block> : {
-			recipe : [
-				[gem.diamond, gem.diamond, gem.diamond],
-				[gem.diamond, gem.diamond, gem.diamond],
-				[gem.diamond, gem.diamond, gem.diamond]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:jukebox> : {
-			recipe : [
-				[<ore:plankWood>, <ore:plankWood>, <ore:plankWood>],
-				[<ore:plankWood>, gem.diamond, <ore:plankWood>],
-				[<ore:plankWood>, <ore:plankWood>, <ore:plankWood>]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:diamond_pickaxe> : {
-			recipe : [
-				[gem.diamond, gem.diamond, gem.diamond],
-				[null, <ore:stickWood>],
-				[null, <ore:stickWood>]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:diamond_shovel> : {
-			recipe : [
-				[gem.diamond],
-				[<ore:stickWood>],
-				[<ore:stickWood>]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:diamond_chestplate> : {
-			recipe : [
-				[gem.diamond, null, gem.diamond],
-				[gem.diamond, gem.diamond, gem.diamond],
-				[gem.diamond, gem.diamond, gem.diamond]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:diamond> * 9 : {
-			recipe : [
-				[<minecraft:diamond_block>]
-			],
-			tools : [
-				[<ore:artisansHammer>]
-			]
-		},
-		<minecraft:diamond_hoe> : {
-			recipe : [
-				[gem.diamond, gem.diamond],
-				[null, <ore:stickWood>],
-				[null, <ore:stickWood>]
 			],
 			tools : [
 				[<ore:artisansHammer>]
@@ -1858,26 +1209,6 @@ for table, recipes in shapedRecipes {
 		iRecipes.remove(item);
 	}
 }
-
-var blacksmith = RecipeBuilder.get("blacksmith");
-
-blacksmith.addOutput(<minecraft:iron_ingot> * 9);
-blacksmith.setShaped(
-	[
-		[block.iron]
-	]);
-blacksmith.setName("minecraft/iron_ingot/1");
-blacksmith.addTool(<ore:artisansHammer>, 1);
-blacksmith.create();
-
-blacksmith.addOutput(<minecraft:gold_ingot> * 9);
-blacksmith.setShaped(
-	[
-		[block.gold]
-	]);
-blacksmith.setName("minecraft/gold_ingot/1");
-blacksmith.addTool(<ore:artisansHammer>, 1);
-blacksmith.create();
 
 val shapelessRecipes as IIngredient[][string][IItemStack][string] = {
 	basic : {

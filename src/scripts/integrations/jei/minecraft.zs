@@ -32,3 +32,7 @@ val removeList as IItemStack[] = [
 jei.hide(removeList);
 
 mods.jei.JEI.hideCategory("jei.information");
+mods.jei.JEI.hideCategory("pe.worldtransmute");
+mods.jei.JEI.hideCategory("botania.orechid");
+mods.jei.JEI.hideCategory("botania.orechid_ignem");
+mods.jei.JEI.hideCategory("pyrotech.pit.burn");

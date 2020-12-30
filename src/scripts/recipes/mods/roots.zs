@@ -168,6 +168,27 @@ recipes.replaceAllOccurences(<minecraft:leather>, pelt, <*>.only(function(item) 
 }));
 
 //==================================
+######## Shapeless recipes ########
+//==================================
+
+val shapelessRecipes as IIngredient[][][IItemStack] = {
+	<roots:elemental_soil_air> : [
+		[<roots:elemental_soil>, cloudBerry]
+	],
+	<roots:elemental_soil_earth> : [
+		[<roots:elemental_soil>, stalicripe]
+	],
+	<roots:elemental_soil_fire> : [
+		[<roots:elemental_soil>, infernalBulb]
+	],
+	<roots:elemental_soil_water> : [
+		[<roots:elemental_soil>, dewgonia]
+	]
+};
+
+iRecipes.add(shapelessRecipes);
+
+//==================================
 ######## Furnace recipes ########
 //==================================
 

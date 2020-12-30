@@ -1,0 +1,17 @@
+// For more info visit https://faq.ftb.world/books/ftb-utilities/page/ranks
+
+[player]
+power: 1
+default_player_rank: true
+example.permission: true
+example.other_permission: false
+ftbutilities.homes.max: 3
+ftbutilities.back.cooldown: 0s
+ftbutilities.homes.cooldown: 0s
+ftbutilities.homes.warmup: 0s
+ftbutilities.back.warmup: 0s
+
+[admin]
+power: 2
+default_op_rank: true
+example.other_permission: true

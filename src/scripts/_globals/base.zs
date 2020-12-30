@@ -33,6 +33,14 @@ for item in <ore:logWood>.items {
 	if(item.definition.owner != "minecraft") {
 		<ore:logWood>.remove(item);
 	}
-
-	stageCities.addIngredient(item);
 }
+
+stageCities.addIngredient(<ore:logWood>);
+
+for item in <ore:plankWood>.items {
+	if(item.definition.owner != "minecraft") {
+		<ore:plankWood>.remove(item);
+	}
+}
+
+stageCities.addIngredient(<ore:plankWood>);

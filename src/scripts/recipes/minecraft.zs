@@ -3,6 +3,7 @@
 
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
+import crafttweaker.creativetabs.ICreativeTab;
 
 //==================================
 ######## Shaped recipes ########
@@ -229,7 +230,6 @@ val itemList as IItemStack[] = [
 	<minecraft:blaze_rod>,
 	<minecraft:sandstone>,
 	<minecraft:record_stal>,
-	<minecraft:shield>,
 	<minecraft:record_ward>,
 	<minecraft:sponge>,
 	<minecraft:egg>,
