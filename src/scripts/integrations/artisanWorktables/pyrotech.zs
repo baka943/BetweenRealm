@@ -1,6 +1,8 @@
 #Name: pyrotech.zs
 #Author: baka943
 
+#modloaded pyrotech
+
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 

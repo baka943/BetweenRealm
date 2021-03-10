@@ -1,6 +1,8 @@
 #Name: dye.zs
 #Author: baka943
 
+#modloaded artisanworktables
+
 import crafttweaker.item.IItemDefinition;
 
 import mods.zenstages.ZenStager;

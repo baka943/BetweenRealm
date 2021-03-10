@@ -1,9 +1,7 @@
 #Name: blockDrops.zs
 #Author: baka943
 
-import crafttweaker.events.IEventManager;
 import crafttweaker.event.BlockHarvestDropsEvent;
-
 import crafttweaker.item.WeightedItemStack;
 
 #Block Harvest Drops Handler

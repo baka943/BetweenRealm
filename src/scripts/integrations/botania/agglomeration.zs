@@ -1,6 +1,7 @@
 #Name: agglomeration.zs
 #Author: baka943
-#modloaded botania botania_tweaks
+
+#modloaded botania
 
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;

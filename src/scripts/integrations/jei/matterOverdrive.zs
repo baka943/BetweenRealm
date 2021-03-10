@@ -1,6 +1,8 @@
 #Name: materOverdrive.zs
 #Author: baka943
 
+#modloaded materoverdrive
+
 import crafttweaker.item.IItemStack;
 
 val removeList as IItemStack[] = [

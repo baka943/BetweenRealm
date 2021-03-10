@@ -1,6 +1,8 @@
 #Name: spanner.zs
 #Author: baka943
 
+#modloaded artisanworktables
+
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 

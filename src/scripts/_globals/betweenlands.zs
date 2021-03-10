@@ -2,6 +2,8 @@
 #Name: betweenlands.zs
 #Author: baka943
 
+#modloaded thebetweenlands
+
 import crafttweaker.item.IItemStack;
 
 global betweenstone as IItemStack = <thebetweenlands:betweenstone>;

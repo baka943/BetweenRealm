@@ -1,5 +1,6 @@
 #Name: mortar.zs
 #Author: baka943
+
 #modloaded thebetweenlands
 
 import crafttweaker.item.IItemStack;
@@ -146,13 +147,13 @@ val mortarRecipes as IIngredient[][IItemStack] = {
 		<thebetweenlands:items_plant_drop:28>
 	],
 	<thebetweenlands:items_crushed:44> * 2 : [
-		<thebetweenlands:tangled_root>,
-		<thebetweenlands:giant_root>
+		<thebetweenlands:tangled_root>
+		| <thebetweenlands:giant_root>
 	],
 	<thebetweenlands:items_crushed:16> * 2 : [
-		<thebetweenlands:log_weedwood>,
-		<thebetweenlands:log_weedwood:12>,
-		<thebetweenlands:items_misc:13>
+		<thebetweenlands:log_weedwood>
+		| <thebetweenlands:log_weedwood:12>
+		| <thebetweenlands:items_misc:13>
 	],
 	<thebetweenlands:items_crushed:33> * 2 : [
 		<thebetweenlands:items_plant_drop:32>
@@ -206,21 +207,21 @@ val mortarRecipes as IIngredient[][IItemStack] = {
 		<thebetweenlands:items_plant_drop:47>
 	],
 	<thebetweenlands:items_misc:48> * 2 : [
-		<thebetweenlands:skull_mask>,
-		<thebetweenlands:wights_bane>,
-		<thebetweenlands:sludge_slicer>,
-		<thebetweenlands:critter_cruncher>,
-		<thebetweenlands:hag_hacker>,
-		<thebetweenlands:voodoo_doll>,
-		<thebetweenlands:swift_pick>,
-		<thebetweenlands:magic_item_magnet>,
-		<thebetweenlands:ring_of_dispersion>,
-		<thebetweenlands:ring_of_flight>,
-		<thebetweenlands:ring_of_gathering>,
-		<thebetweenlands:ring_of_power>,
-		<thebetweenlands:ring_of_recruitment>,
-		<thebetweenlands:ring_of_summoning>,
-		<thebetweenlands:gem_singer>
+		<thebetweenlands:skull_mask>
+		| <thebetweenlands:wights_bane>
+		| <thebetweenlands:sludge_slicer>
+		| <thebetweenlands:critter_cruncher>
+		| <thebetweenlands:hag_hacker>
+		| <thebetweenlands:voodoo_doll>
+		| <thebetweenlands:swift_pick>
+		| <thebetweenlands:magic_item_magnet>
+		| <thebetweenlands:ring_of_dispersion>
+		| <thebetweenlands:ring_of_flight>
+		| <thebetweenlands:ring_of_gathering>
+		| <thebetweenlands:ring_of_power>
+		| <thebetweenlands:ring_of_recruitment>
+		| <thebetweenlands:ring_of_summoning>
+		| <thebetweenlands:gem_singer>
 	],
 	<roots:runic_dust> * 2 : [
 		<ore:runestone>

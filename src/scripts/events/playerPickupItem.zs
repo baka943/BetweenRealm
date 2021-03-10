@@ -2,7 +2,6 @@
 #Author: baka943
 
 import crafttweaker.item.IItemStack;
-import crafttweaker.events.IEventManager;
 import crafttweaker.event.PlayerPickupItemEvent;
 import crafttweaker.player.IPlayer;
 import crafttweaker.world.IWorld;

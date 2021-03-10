@@ -1,6 +1,7 @@
 #Name: flowerGrowth.zs
 #Author: baka943
-#modloaded roots thebetweenlands
+
+#modloaded roots
 
 import crafttweaker.block.IBlockState;
 

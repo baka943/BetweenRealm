@@ -1,6 +1,8 @@
 #Name: immersiveengineering.zs
 #Author: baka943
 
+#modloaded immersiveengineering
+
 import crafttweaker.item.IItemStack;
 
 val removeList as IItemStack[] = [

@@ -1,6 +1,7 @@
 #priority 943
 #Name: embers.zs
 #Author: baka943
+
 #modloaded embers
 
 import crafttweaker.item.IIngredient;

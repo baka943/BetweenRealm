@@ -1,9 +1,7 @@
 #Name: blockBreak.zs
 #Author: baka943
 
-import crafttweaker.events.IEventManager;
 import crafttweaker.event.BlockBreakEvent;
-
 import crafttweaker.item.IItemStack;
 
 events.onBlockBreak(function(event as BlockBreakEvent) {

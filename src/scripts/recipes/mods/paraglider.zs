@@ -1,6 +1,8 @@
 #Name: paraglider.zs
 #Author: baka943
 
+#modloaded paraglider
+
 val recipeNames as string[] = [
 	"paraglider:paraglider",
 	"paraglider:paraglider_skin_botw_paraglider",

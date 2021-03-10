@@ -1,5 +1,6 @@
 #Name: burn.zs
 #Author: baka943
+
 #modloaded pyrotech
 
 import mods.pyrotech.Burn;

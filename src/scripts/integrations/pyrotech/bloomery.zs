@@ -1,6 +1,8 @@
 #Name: bloomery.zs
 #Author: baka943
 
+#modloaded pyrotech
+
 import mods.pyrotech.Bloomery;
 
 //==================================

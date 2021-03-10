@@ -8,9 +8,5 @@ import crafttweaker.item.IItemStack;
 function getItemName(item as IItemStack) as string {
 	var itemName as string = item.definition.id.replace(":", "/");
 
-	if(item.metadata != 0) {
-		itemName += "_" ~ item.metadata;
-	}
-
-	return itemName;
+	return item.metadata == 0 ? itemName : itemName + "_" + item.metadata;
 }

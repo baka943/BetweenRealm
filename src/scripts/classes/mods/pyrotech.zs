@@ -1,6 +1,7 @@
 #priority 943
 #Name: pyrotech.zs
 #Author: baka943
+
 #modloaded pyrotech
 
 import crafttweaker.item.IItemStack;

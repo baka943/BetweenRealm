@@ -2,6 +2,8 @@
 #Name: artisanWorktables.zs
 #Author: baka943
 
+#modloaded artisanworktables
+
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 

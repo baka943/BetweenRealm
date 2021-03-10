@@ -1,5 +1,6 @@
 #Name: altar.zs
 #Author: baka943
+
 #modloaded botania
 
 import crafttweaker.item.IItemStack;

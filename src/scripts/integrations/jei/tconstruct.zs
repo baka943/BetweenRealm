@@ -1,6 +1,8 @@
 #Name: tconstruct.zs
 #Author: baka943
 
+#modloaded tconstruct
+
 import crafttweaker.item.IItemStack;
 
 val removeList as IItemStack[] = [

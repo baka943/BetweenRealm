@@ -1,6 +1,7 @@
 #Name: anvil.zs
 #Author: baka943
-#modloaded embers thebetweenlands
+
+#modloaded embers
 
 import crafttweaker.item.IItemStack;
 
@@ -8,5 +9,5 @@ import crafttweaker.item.IItemStack;
 ######## Remove Anvil recipes ########
 //==================================
 
-embers.removeRepair(<thebetweenlands:life_crystal>);
-embers.removeRepairM(<thebetweenlands:life_crystal>);
+// embers.removeRepair(<thebetweenlands:life_crystal>);
+// embers.removeRepairM(<thebetweenlands:life_crystal>);

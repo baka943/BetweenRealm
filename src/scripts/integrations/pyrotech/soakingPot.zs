@@ -1,6 +1,8 @@
 #Name: soakingPot.zs
 #Author: baka943
 
+#modloaded pyrotech
+
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 import crafttweaker.liquid.ILiquidStack;

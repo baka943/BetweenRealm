@@ -1,6 +1,7 @@
 #Name: pyre.zs
 #Author: baka943
-#modloaded roots thebetweenlands
+
+#modloaded roots
 
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;

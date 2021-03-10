@@ -1,7 +1,7 @@
 #Name: refinedStorage.zs
 #Author: baka943
 
-import crafttweaker.item.IItemStack;
+#modloaded refinedstorage
 
 furnace.remove(<refinedstorage:processor:3>);
 furnace.remove(<refinedstorage:processor:4>);

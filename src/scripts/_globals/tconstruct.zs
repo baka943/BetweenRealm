@@ -2,6 +2,8 @@
 #Name: tconstruct.zs
 #Author: baka943
 
+#modloaded tconstruct
+
 import crafttweaker.item.IItemStack;
 
 global searedBlock as IItemStack = <tconstruct:seared:10>;
