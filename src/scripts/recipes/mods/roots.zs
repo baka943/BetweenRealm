@@ -86,8 +86,8 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 	],
 	<roots:wood_knife> : [
 		[
-			[null, null, <ore:betweenPlank>],
-			[null, <ore:betweenPlank>],
+			[null, null, <thebetweenlands:weedwood_planks>],
+			[null, <thebetweenlands:weedwood_planks>],
 			[<ore:stickWeed>]
 		]
 	],
@@ -165,7 +165,7 @@ iRecipes.add(shapedRecipes, false);
 
 #Replaces in recipes for any recipe output except pelt
 recipes.replaceAllOccurences(<minecraft:leather>, pelt, <*>.only(function(item) {
-    return !isNull(item) && item.definition.owner != "thaumcraft" && !pelt.matches(item);
+    return !isNull(item) && !pelt.matches(item);
 }));
 
 //==================================

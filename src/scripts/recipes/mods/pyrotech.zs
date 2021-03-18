@@ -75,3 +75,6 @@ iRecipes.add(shapedRecipes, false);
 //==================================
 
 iRecipes.add(<pyrotech:chopping_block>, [<ore:logWood>]);
+
+
+jei.hide("pyrotech.pit.burn");

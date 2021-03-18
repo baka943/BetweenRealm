@@ -1,4 +1,4 @@
-#priority 10086
+#priority 10088
 #Name: betweenlands.zs
 #Author: baka943
 
@@ -15,6 +15,7 @@ global saplingWeedwood as IItemStack = <thebetweenlands:sapling_weedwood>;
 global swampReed as IItemStack = <thebetweenlands:swamp_reed_item>;
 global swampTallgrass as IItemStack = <thebetweenlands:items_plant_drop:28>;
 global siltGlass as IItemStack = <thebetweenlands:silt_glass>;
+global swampMeal as IItemStack = <thebetweenlands:items_crushed:17>;
 
 <ore:limestone>.add(
 	<thebetweenlands:limestone>,
@@ -85,50 +86,50 @@ for item in <ore:allTallFlowers>.items {
 
 for item in <ore:logWood>.items {
 	if(item.definition.owner == "thebetweenlands") {
-		<ore:logWood>.remove(item);
 		<ore:betweenWood>.add(item);
+		<ore:logWood>.remove(item);
 	}
 }
 
 for item in <ore:plankWood>.items {
 	if(item.definition.owner == "thebetweenlands") {
-		<ore:plankWood>.remove(item);
 		<ore:betweenPlank>.add(item);
+		<ore:plankWood>.remove(item);
 	}
 }
 
 for item in <ore:treeSapling>.items {
 	if(item.definition.owner == "thebetweenlands") {
-		<ore:treeSapling>.remove(item);
 		<ore:betweenSapling>.add(item);
+		<ore:treeSapling>.remove(item);
 	}
 }
 
 for item in <ore:treeLeaves>.items {
 	if(item.definition.owner == "thebetweenlands") {
-		<ore:treeLeaves>.remove(item);
 		<ore:betweenLeaves>.add(item);
+		<ore:treeLeaves>.remove(item);
 	}
 }
 
 for item in <ore:stickWood>.items {
 	if(item.definition.owner == "thebetweenlands") {
-		<ore:stickWood>.remove(item);
 		<ore:stickWeed>.add(item);
+		<ore:stickWood>.remove(item);
 	}
 }
 
 for item in <ore:chestWood>.items {
 	if(item.definition.owner == "thebetweenlands") {
-		<ore:chestWood>.remove(item);
 		<ore:chestWeed>.add(item);
+		<ore:chestWood>.remove(item);
 	}
 }
 
 for item in <ore:vine>.items {
 	if(item.definition.owner == "thebetweenlands") {
-		<ore:vine>.remove(item);
 		<ore:betweenVine>.add(item);
+		<ore:vine>.remove(item);
 	}
 }
 

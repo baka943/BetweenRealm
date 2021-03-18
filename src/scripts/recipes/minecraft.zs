@@ -100,17 +100,16 @@ static list as string[] = ["thebetweenlands", "botania", "roots", "mysticalworld
 
 furnace.addRecipe(<minecraft:iron_nugget> * 8, ore.iron);
 furnace.addRecipe(<minecraft:gold_nugget> * 8, ore.gold);
-furnace.addRecipe(<thaumcraft:nugget:1> * 8, ore.copper);
 furnace.addRecipe(<minecraft:dye:4> * 8, ore.lapis);
 furnace.addRecipe(<minecraft:glass>, <minecraft:sand> | <minecraft:sand:1>);
 
 for item in loadedMods["minecraft"].items {
 	if(item.isFood && !item.matches(<minecraft:cookie>) && !item.matches(<minecraft:spider_eye>)) {
-		stageCities.addIngredient(item);
+		// stageCities.addIngredient(item);
 	}
 }
 
-stageCities.addLiquid(<liquid:lava>);
+// stageCities.addLiquid(<liquid:lava>);
 
 val itemList as IItemStack[] = [
 	<minecraft:yellow_glazed_terracotta>,
@@ -393,5 +392,9 @@ val itemList as IItemStack[] = [
 ];
 
 for item in itemList {
-	stageCities.addIngredient(item);
+	// stageCities.addIngredient(item);
 }
+
+
+
+jei.hide("jei.information");

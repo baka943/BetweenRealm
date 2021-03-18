@@ -37,6 +37,16 @@ zenClass Jei {
 		stageDisable.addIngredient(item);
 	}
 
+	function hide(names as string[]) {
+		for name in names {
+			JEI.hideCategory(name);
+		}
+	}
+
+	function hide(name as string) {
+		JEI.hideCategory(name);
+	}
+
 }
 
 #init
