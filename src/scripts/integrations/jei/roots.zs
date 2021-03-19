@@ -8,6 +8,11 @@ import crafttweaker.item.IItemStack;
 val removeList as IItemStack[] = [
 	<roots:ritual_overgrowth>,
 	<roots:ritual_healing_aura>,
+	<roots:ritual_purity>,
+	<roots:ritual_fire_storm>,
+	<roots:ritual_spreading_forest>,
+	<roots:ritual_animal_harvest>,
+	<roots:ritual_frost_lands>,
 	<roots:bark_oak>,
 	<roots:bark_spruce>,
 	<roots:bark_birch>,

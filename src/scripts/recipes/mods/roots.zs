@@ -12,7 +12,8 @@ import crafttweaker.item.IIngredient;
 
 val removeRecipes as string[] = [
 	"mysticalworld:ender_pearl",
-	"mysticalworld:pelt_to_leather"
+	"mysticalworld:pelt_to_leather",
+	"roots:paper"
 ];
 
 iRecipes.remove(removeRecipes, false);
@@ -86,8 +87,8 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 	],
 	<roots:wood_knife> : [
 		[
-			[null, null, <thebetweenlands:weedwood_planks>],
-			[null, <thebetweenlands:weedwood_planks>],
+			[null, null, <ore:betweenPlank>],
+			[null, <ore:betweenPlank>],
 			[<ore:stickWeed>]
 		]
 	],
@@ -152,11 +153,6 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 			[saplingWeedwood, null, saplingWeedwood],
 			[terraMoss, saplingWeedwood, wildroot],
 			[<ore:logWeedwood>, <ore:logWeedwood>, <ore:logWeedwood>]
-		]
-	],
-	<minecraft:cookie> * 8 : [
-		[
-			[<roots:wildewheet>, <mysticalworld:assorted_seeds>, <roots:wildewheet>]
 		]
 	]
 };

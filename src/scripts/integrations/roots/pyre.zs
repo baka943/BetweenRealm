@@ -72,12 +72,6 @@ val modifyRituals as IIngredient[][][string] = {
 	ritual_divine_protection : [
 		[pereskia, cloudBerry, <ore:rootsBark>, <ore:rootsBark>, glowstone]
 	],
-	ritual_fire_storm : [
-		[infernalBulb, <ore:rootsBark>, coal, <ore:rootsBark>, <ore:powderBlaze>]
-	],
-	ritual_spreading_forest : [
-		[terraMoss, spiritHerb, <ore:rootsBark>, <ore:betweenSapling>, <ore:betweenSapling>]
-	],
 	ritual_windwall : [
 		[cloudBerry, moonglowLeaf, <ore:rootsBark>, <ore:rootsBark>, <thebetweenlands:items_misc:3>]
 	],
@@ -86,15 +80,6 @@ val modifyRituals as IIngredient[][][string] = {
 	],
 	ritual_germination : [
 		[spiritHerb, wildroot, wildroot, boneMeal, <ore:rootsBark>]
-	],
-	ritual_purity : [
-		[terraMoss, wildroot, <roots:baffle_cap_mushroom>, <thebetweenlands:wight_heart>, <ore:dentrothystVial>]
-	],
-	ritual_frost_lands : [
-		[<minecraft:snowball>, dewgonia, <minecraft:snow>, <ore:rootsBark>, <ore:rootsBark>]
-	],
-	ritual_animal_harvest : [
-		[<roots:wildewheet>, spiritHerb, <thebetweenlands:syrmorite_shears>, wildroot, wildroot]
 	],
 	ritual_summon_creatures : [
 		[spiritHerb, <roots:wildewheet>, <roots:wildewheet>, <thebetweenlands:wight_heart>, <roots:spirit_herb_seed>]
