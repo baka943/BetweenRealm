@@ -222,9 +222,6 @@ val mortarRecipes as IIngredient[][IItemStack] = {
 		| <thebetweenlands:ring_of_recruitment>
 		| <thebetweenlands:ring_of_summoning>
 		| <thebetweenlands:gem_singer>
-	],
-	<roots:runic_dust> * 2 : [
-		<ore:runestone>
 	]
 };
 

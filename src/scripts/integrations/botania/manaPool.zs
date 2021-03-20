@@ -61,7 +61,7 @@ val infusionRecipes as IIngredient[][IItemStack][int] = {
 	}
 };
 
-botania.addManaPoolI(infusionRecipes);
+botania.addManaPool(infusionRecipes, "infusion");
 
 //==================================
 ######## Add Mana Alchemy recipes ########
@@ -80,4 +80,4 @@ val alchemyRecipes as IIngredient[][IItemStack][int] = {
 	}
 };
 
-botania.addManaPoolA(alchemyRecipes);
+botania.addManaPool(alchemyRecipes, "alchemy");

@@ -64,17 +64,12 @@ zenClass Roots {
 	}
 
 	#Add Fey recipes
-	function addFey(recipes as IIngredient[][][IItemStack]) {
-		for output, inner in recipes {
+	function addFey(recipes as IIngredient[][IItemStack]) {
+		for output, inputs in recipes {
+			var name as string = getItemName(output);
+
 			Fey.removeRecipe(output);
-
-			for i, inputs in inner {
-				var name as string = getItemName(output);
-
-				if(i > 0) name += "/" ~ i;
-
-				Fey.addRecipe(name, output, inputs, 0);
-			}
+			Fey.addRecipe(name, output, inputs, 0);
 		}
 	}
 
@@ -90,22 +85,17 @@ zenClass Roots {
 	}
 
 	#Add Mortar recipes
-	function addMortar(map as IIngredient[][][IItemStack]) {
-		for output, inner in map {
+	function addMortar(map as IIngredient[][IItemStack]) {
+		for output, inputs in map {
 			Mortar.removeRecipe(output);
-
-			for inputs in inner {
-				Mortar.addRecipe(output, inputs);
-			}
+			Mortar.addRecipe(output, inputs);
 		}
 	}
 
 	#Change Spell
-	function changeSpell(map as IIngredient[][][string]) {
-		for spellName, inner in map {
-			for inputs in inner {
-				Mortar.changeSpell(spellName, inputs);
-			}
+	function changeSpell(map as IIngredient[][string]) {
+		for spellName, inputs in map {
+			Mortar.changeSpell(spellName, inputs);
 		}
 	}
 
@@ -121,26 +111,19 @@ zenClass Roots {
 	}
 
 	#Add Pyre recipes
-	function addPyre(recipes as IIngredient[][][IItemStack]) {
-		for output, inner in recipes {
+	function addPyre(recipes as IIngredient[][IItemStack]) {
+		for output, inputs in recipes {
+			var name as string = getItemName(output);
+
 			Pyre.removeRecipe(output);
-
-			for i, inputs in inner {
-				var name as string = getItemName(output);
-
-				if(i > 0) name += "/" ~ i;
-
-				Pyre.addRecipe(name, output, inputs, 0);
-			}
+			Pyre.addRecipe(name, output, inputs, 0);
 		}
 	}
 
 	#Modify Ritual
-	function modifyRitual(map as IIngredient[][][string]) {
-		for name, inner in map {
-			for inputs in inner {
-				Ritual.modifyRitual(name, inputs);
-			}
+	function modifyRitual(map as IIngredient[][string]) {
+		for name, inputs in map {
+			Ritual.modifyRitual(name, inputs);
 		}
 	}
 
@@ -236,11 +219,9 @@ zenClass Roots {
 	}
 
 	#Add Entities Summon
-	function addEntityS(map as IIngredient[][][IEntityDefinition]) {
-		for entity, inner in map {
-			for ingredients in inner {
-				SummonCreatures.addEntity(entity, ingredients);
-			}
+	function addEntityS(map as IIngredient[][IEntityDefinition]) {
+		for entity, ingredients in map {
+			SummonCreatures.addEntity(entity, ingredients);
 		}
 	}
 

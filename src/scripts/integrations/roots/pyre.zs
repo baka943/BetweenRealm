@@ -66,34 +66,34 @@ roots.addPyre(pyreRecipes);
 //==================================
 
 val modifyRituals as IIngredient[][][string] = {
-	ritual_heavy_storms : [
+	"ritual_heavy_storms" : [
 		[wildroot, dewgonia, <ore:betweenVine>, cloudBerry, <roots:wildewheet_seed>]
 	],
-	ritual_divine_protection : [
+	"ritual_divine_protection" : [
 		[pereskia, cloudBerry, <ore:rootsBark>, <ore:rootsBark>, glowstone]
 	],
-	ritual_windwall : [
+	"ritual_windwall" : [
 		[cloudBerry, moonglowLeaf, <ore:rootsBark>, <ore:rootsBark>, <thebetweenlands:items_misc:3>]
 	],
-	ritual_warding_protection : [
+	"ritual_warding_protection" : [
 		[<thebetweenlands:wight_heart>, stalicripe, wildroot, <ore:rootsBark>, <ore:dentrothystShard>]
 	],
-	ritual_germination : [
+	"ritual_germination" : [
 		[spiritHerb, wildroot, wildroot, boneMeal, <ore:rootsBark>]
 	],
-	ritual_summon_creatures : [
+	"ritual_summon_creatures" : [
 		[spiritHerb, <roots:wildewheet>, <roots:wildewheet>, <thebetweenlands:wight_heart>, <roots:spirit_herb_seed>]
 	],
-	ritual_wild_growth : [
+	"ritual_wild_growth" : [
 		[wildroot, <ore:rootsBark>, <ore:rootsBark>, spiritHerb, spiritHerb]
 	],
-	ritual_flower_growth : [
+	"ritual_flower_growth" : [
 		[boneMeal, wildroot, terraMoss, petals, stalicripe]
 	],
-	ritual_transmutation : [
+	"ritual_transmutation" : [
 		[<ore:rootsBark>, <roots:runestone>, <roots:runestone>, cloudBerry, stalicripe]
 	],
-	ritual_gathering : [
+	"ritual_gathering" : [
 		[<roots:wildewheet>, <roots:wildewheet>, <roots:wildewheet_seed>, <ore:hopper>, redstone]
 	]
 };

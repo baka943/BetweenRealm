@@ -9,66 +9,66 @@ import crafttweaker.item.IIngredient;
 ######## Brew recipes ########
 //==================================
 
-val brewRecipes as IIngredient[][][string] = {
-	speed : [
-		[wildroot, azuwynn, yunugaz, ordaniis]
+val brewRecipes as IIngredient[][string] = {
+	"speed" : [
+		wildroot, azuwynn, yunugaz, ordaniis
 	],
-	strength : [
-		[wildroot, azuwynn, armaniis, ordaniis]
+	"strength" : [
+		wildroot, azuwynn, armaniis, ordaniis
 	],
-	haste : [
-		[wildroot, azuwynn, dayuniis, ordaniis]
+	"haste" : [
+		wildroot, azuwynn, dayuniis, ordaniis
 	],
-	healing : [
-		[wildroot, azuwynn, yeowynn, ordaniis]
+	"healing" : [
+		wildroot, azuwynn, yeowynn, ordaniis
 	],
-	jumpBoost : [
-		[wildroot, dayuniis, yunugaz, ordaniis]
+	"jumpBoost" : [
+		wildroot, dayuniis, yunugaz, ordaniis
 	],
-	regen : [
-		[wildroot, yeowynn, yunugaz, ordaniis]
+	"regen" : [
+		wildroot, yeowynn, yunugaz, ordaniis
 	],
-	regenWeak : [
-		[wildroot, celawynn, yeowynn, ordaniis]
+	"regenWeak" : [
+		wildroot, celawynn, yeowynn, ordaniis
 	],
-	resistance : [
-		[wildroot, fergalaz, celawynn, ordaniis]
+	"resistance" : [
+		wildroot, fergalaz, celawynn, ordaniis
 	],
-	fireResistance : [
-		[wildroot, firnalaz, celawynn, ordaniis]
+	"fireResistance" : [
+		wildroot, firnalaz, celawynn, ordaniis
 	],
-	waterBreathing : [
-		[wildroot, byrginaz, celawynn, ordaniis]
+	"waterBreathing" : [
+		wildroot, byrginaz, celawynn, ordaniis
 	],
-	invisibility : [
-		[wildroot, yihinren, geoliirgaz, ordaniis]
+	"invisibility" : [
+		wildroot, yihinren, geoliirgaz, ordaniis
 	],
-	nightVision : [
-		[wildroot, freiwynn, celawynn, ordaniis]
+	"nightVision" : [
+		wildroot, freiwynn, celawynn, ordaniis
 	],
-	absorption : [
-		[wildroot, yeowynn, yihinren, ordaniis]
+	"absorption" : [
+		wildroot, yeowynn, yihinren, ordaniis
 	],
-	overload : [
-		[wildroot, azuwynn, uduriis, ordaniis]
+	"overload" : [
+		wildroot, azuwynn, uduriis, ordaniis
 	],
-	soulCross : [
-		[wildroot, armaniis, dayuniis, ordaniis]
+	"soulCross" : [
+		wildroot, armaniis, dayuniis, ordaniis
 	],
-	featherFeet : [
-		[wildroot, yunugaz, celawynn, ordaniis]
+	"featherFeet" : [
+		wildroot, yunugaz, celawynn, ordaniis
 	],
-	emptiness : [
-		[wildroot, uduriis, geoliirgaz, ordaniis]
+	"emptiness" : [
+		wildroot, uduriis, geoliirgaz, ordaniis
 	],
-	bloodthirst : [
-		[wildroot, armaniis, geoliirgaz, ordaniis]
+	"bloodthirst" : [
+		wildroot, armaniis, geoliirgaz, ordaniis
 	],
-	allure : [
-		[wildroot, byrginaz, armaniis, ordaniis]
+	"allure" : [
+		wildroot, byrginaz, armaniis, ordaniis
 	],
-	clear : [
-		[wildroot, wodren, celawynn, ordaniis]
+	"clear" : [
+		wildroot, wodren, celawynn, ordaniis
 	]
 };
 

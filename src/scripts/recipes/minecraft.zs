@@ -9,77 +9,13 @@ import crafttweaker.creativetabs.ICreativeTab;
 ######## Shaped recipes ########
 //==================================
 
-val shapedRecipes as IIngredient[][][][IItemStack] = {
-	<minecraft:glass_bottle> * 3 : [
-		[
-			[<minecraft:glass>, null, <minecraft:glass>],
-			[null, <minecraft:glass>]
-		]
-	],
-	<minecraft:cauldron> : [
-		[
-			[ingot.iron, null, ingot.iron],
-			[ingot.iron, null, ingot.iron],
-			[ingot.iron, ingot.iron, ingot.iron]
-		]
-	]
-};
 
-// iRecipes.add(shapedRecipes, false);
 
 //==================================
 ######## Shapeless recipes ########
 //==================================
 
-val shapelessRecipes as IIngredient[][][IItemStack] = {
-	<minecraft:wool:1> : [
-		[<ore:dyeOrange>, <ore:woolWhite>]
-	],
-	<minecraft:wool:2> : [
-		[<ore:dyeMagenta>, <ore:woolWhite>]
-	],
-	<minecraft:wool:3> : [
-		[<ore:dyeLightBlue>, <ore:woolWhite>]
-	],
-	<minecraft:wool:4> : [
-		[<ore:dyeYellow>, <ore:woolWhite>]
-	],
-	<minecraft:wool:5> : [
-		[<ore:dyeLime>, <ore:woolWhite>]
-	],
-	<minecraft:wool:6> : [
-		[<ore:dyePink>, <ore:woolWhite>]
-	],
-	<minecraft:wool:7> : [
-		[<ore:dyeGray>, <ore:woolWhite>]
-	],
-	<minecraft:wool:8> : [
-		[<ore:dyeLightGray>, <ore:woolWhite>]
-	],
-	<minecraft:wool:9> : [
-		[<ore:dyeCyan>, <ore:woolWhite>]
-	],
-	<minecraft:wool:10> : [
-		[<ore:dyePurple>, <ore:woolWhite>]
-	],
-	<minecraft:wool:11> : [
-		[<ore:dyeBlue>, <ore:woolWhite>]
-	],
-	<minecraft:wool:12> : [
-		[<ore:dyeBrown>, <ore:woolWhite>]
-	],
-	<minecraft:wool:13> : [
-		[<ore:dyeGreen>, <ore:woolWhite>]
-	],
-	<minecraft:wool:14> : [
-		[<ore:dyeRed>, <ore:woolWhite>]
-	],
-	<minecraft:wool:15> : [
-		[<ore:dyeBlack>, <ore:woolWhite>]
-	]
-};
 
-// iRecipes.add(shapelessRecipes);
 
 //==================================
 ######## Furnace recipes ########
@@ -101,7 +37,6 @@ static list as string[] = ["thebetweenlands", "botania", "roots", "mysticalworld
 furnace.addRecipe(<minecraft:iron_nugget> * 8, ore.iron);
 furnace.addRecipe(<minecraft:gold_nugget> * 8, ore.gold);
 furnace.addRecipe(<minecraft:dye:4> * 8, ore.lapis);
-furnace.addRecipe(<minecraft:glass>, <minecraft:sand> | <minecraft:sand:1>);
 
 for item in loadedMods["minecraft"].items {
 	if(item.isFood && !item.matches(<minecraft:cookie>) && !item.matches(<minecraft:spider_eye>)) {

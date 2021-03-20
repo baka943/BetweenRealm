@@ -30,13 +30,10 @@ zenClass Botania {
 	}
 
 	#Add Brew recipes
-	function addBrew(map as IIngredient[][][string]) {
-		for brewName, inner in map {
+	function addBrew(recipes as IIngredient[][string]) {
+		for brewName, inputs in recipes {
 			Brew.removeRecipe(brewName);
-
-			for inputs in inner {
-				Brew.addRecipe(inputs, brewName);
-			}
+			Brew.addRecipe(inputs, brewName);
 		}
 	}
 
@@ -52,11 +49,9 @@ zenClass Botania {
 	}
 
 	#Add Elven Trade recipes
-	function addElven(map as IIngredient[][][IIngredient[]]) {
-		for outputs, inner in map {
-			for inputs in inner {
-				ElvenTrade.addRecipe(outputs, inputs);
-			}
+	function addElven(trades as IIngredient[][IIngredient[]]) {
+		for outputs, inputs in trades {
+			ElvenTrade.addRecipe(outputs, inputs);
 		}
 	}
 
@@ -72,33 +67,15 @@ zenClass Botania {
 	}
 
 	#Add Mana Infusion recipes
-	function addManaPoolI(map as IIngredient[][IItemStack][int]) {
-		for mana, recipes in map {
+	function addManaPool(pools as IIngredient[][IItemStack][int], type as string) {
+		for mana, recipes in pools {
 			for output, inner in recipes {
 				for input in inner {
-					ManaInfusion.addInfusion(output, input, mana);
-				}
-			}
-		}
-	}
-
-	#Add Mana Alchemy recipes
-	function addManaPoolA(map as IIngredient[][IItemStack][int]) {
-		for mana, recipes in map {
-			for output, inner in recipes {
-				for input in inner {
-					ManaInfusion.addAlchemy(output, input, mana);
-				}
-			}
-		}
-	}
-
-	#Add Mana Conjuration recipes
-	function addManaPoolC(map as IIngredient[][IItemStack][int]) {
-		for mana, recipes in map {
-			for output, inner in recipes {
-				for input in inner {
-					ManaInfusion.addConjuration(output, input, mana);
+					if(type == "alchemy") {
+						ManaInfusion.addAlchemy(output, input, mana);
+					} else if(type == "conjuration") {
+						ManaInfusion.addConjuration(output, input, mana);
+					} else ManaInfusion.addInfusion(output, input, mana);
 				}
 			}
 		}
@@ -122,21 +99,16 @@ zenClass Botania {
 	}
 
 	#Add Petal Apothecary recipes
-	function addApothecaryN(recipes as IIngredient[][][string]) {
-		for name, inner in recipes {
+	function addApothecaryN(recipes as IIngredient[][string]) {
+		for name, inputs in recipes {
 			Apothecary.removeRecipe(name);
-
-			for inputs in inner {
-				Apothecary.addRecipe(name, inputs);
-			}
+			Apothecary.addRecipe(name, inputs);
 		}
 	}
 
-	function addApothecary(map as IIngredient[][][IItemStack]) {
-		for output, inner in map {
-			for inputs in inner {
-				Apothecary.addRecipe(output, inputs);
-			}
+	function addApothecary(recipes as IIngredient[][IItemStack]) {
+		for output, inputs in recipes {
+			Apothecary.addRecipe(output, inputs);
 		}
 	}
 
@@ -152,8 +124,8 @@ zenClass Botania {
 	}
 
 	#Add Pure Daisy recipes
-	function addPure(map as IIngredient[][IItemStack][int]) {
-		for time, recipes in map {
+	function addPure(pures as IIngredient[][IItemStack][int]) {
+		for time, recipes in pures {
 			for output, inner in recipes {
 				for input in inner {
 					PureDaisy.addRecipe(input, output, time);
@@ -174,14 +146,11 @@ zenClass Botania {
 	}
 
 	#Add Rune Altar recipes
-	function addAltar(map as IIngredient[][][IItemStack][int]) {
+	function addAltar(map as IIngredient[][IItemStack][int]) {
 		for mana, recipes in map {
-			for output, inner in recipes {
+			for output, inputs in recipes {
 				RuneAltar.removeRecipe(output);
-				
-				for inputs in inner {
-					RuneAltar.addRecipe(output, inputs, mana);
-				}
+				RuneAltar.addRecipe(output, inputs, mana);
 			}
 		}
 	}

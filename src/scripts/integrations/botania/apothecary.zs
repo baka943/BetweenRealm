@@ -10,7 +10,7 @@ import crafttweaker.item.IIngredient;
 ######## Add Apothecary recipes ########
 //==================================
 
-val apothecaryRecipes as IIngredient[][][IItemStack] = {
+val apothecaryRecipes as IIngredient[][IItemStack] = {
 
 };
 

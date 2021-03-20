@@ -9,9 +9,9 @@ import crafttweaker.item.IIngredient;
 ######## Add Elven Trade recipes ########
 //==================================
 
-val elvenTradeRecipes as IIngredient[][][IIngredient[]] = {
+val elvenTradeRecipes as IIngredient[][IIngredient[]] = {
 	[<botania:manaresource:12>] : [
-		[<ore:manaString>, <ore:manaString>]
+		<ore:manaString>, <ore:manaString>
 	]
 };
 
