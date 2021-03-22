@@ -1,3 +1,4 @@
+#priority 100
 #Name: minecraft.zs
 #Author: baka943
 
@@ -17,7 +18,9 @@ val removeList as IItemStack[] = [
 	<minecraft:monster_egg:3>,
 	<minecraft:monster_egg:4>,
 	<minecraft:monster_egg:5>,
-	<minecraft:end_portal_frame>
+	<minecraft:end_portal_frame>,
+	<minecraft:bedrock>,
+	<baubles:ring>
 ];
 
 jei.hide(removeList);

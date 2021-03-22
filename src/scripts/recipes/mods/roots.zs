@@ -11,9 +11,11 @@ import crafttweaker.item.IIngredient;
 //==================================
 
 val removeRecipes as string[] = [
+	"roots:paper",
+	"mysticalworld:antler_hat",
+	"mysticalworld:beetle_mask",
 	"mysticalworld:ender_pearl",
-	"mysticalworld:pelt_to_leather",
-	"roots:paper"
+	"mysticalworld:pelt_to_leather"
 ];
 
 iRecipes.remove(removeRecipes, false);
@@ -25,17 +27,7 @@ iRecipes.remove(removeRecipes, false);
 val shapedRecipes as IIngredient[][][][IItemStack] = {
 	<mysticalworld:pelt> * 2 : [
 		[
-			[<thebetweenlands:items_misc:4>]
-		],
-		[
-			[<minecraft:leather>]
-		]
-	],
-	<mysticalworld:spindle> : [
-		[
-			[null, <roots:wildwood_fence>],
-			[<roots:wildwood_slab>, <roots:wildwood_slab>, <roots:wildwood_slab>],
-			[null, nugget.iron]
+			[lurkerSkin | <minecraft:leather>]
 		]
 	],
 	<roots:bonfire> : [

@@ -23,11 +23,13 @@ global redstone as IOreDictEntry = <ore:dustRedstone>;
 global gunpowder as IOreDictEntry = <ore:gunpowder>;
 global glowstone as IOreDictEntry = <ore:dustGlowstone>;
 
+
 for item in <ore:workbench>.items {
 	if(item.definition.owner == "minecraft") {
 		<ore:workbench>.remove(item);
 	}
 }
+
 
 for item in <ore:logWood>.items {
 	if(item.definition.owner != "minecraft") {
@@ -35,7 +37,8 @@ for item in <ore:logWood>.items {
 	}
 }
 
-stageCities.addIngredient(<ore:logWood>);
+stageMinecraft.addIngredient(<ore:logWood>);
+
 
 for item in <ore:plankWood>.items {
 	if(item.definition.owner != "minecraft") {
@@ -43,4 +46,40 @@ for item in <ore:plankWood>.items {
 	}
 }
 
-stageCities.addIngredient(<ore:plankWood>);
+stageMinecraft.addIngredient(<ore:plankWood>);
+
+
+for item in <ore:stickWood>.items {
+	if(item.definition.owner != "minecraft") {
+		<ore:stickWood>.remove(item);
+	}
+}
+
+stageMinecraft.addIngredient(<ore:stickWood>);
+
+
+for item in <ore:fenceWood>.items {
+	if(item.definition.owner != "minecraft") {
+		<ore:fenceWood>.remove(item);
+	}
+}
+
+stageMinecraft.addIngredient(<ore:fenceWood>);
+
+
+for item in <ore:slabWood>.items {
+	if(item.definition.owner != "minecraft") {
+		<ore:slabWood>.remove(item);
+	}
+}
+
+
+stageMinecraft.addIngredient(<ore:slabWood>);
+
+for item in <ore:stairWood>.items {
+	if(item.definition.owner != "minecraft") {
+		<ore:stairWood>.remove(item);
+	}
+}
+
+stageMinecraft.addIngredient(<ore:stairWood>);

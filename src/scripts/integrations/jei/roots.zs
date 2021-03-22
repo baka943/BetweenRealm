@@ -1,3 +1,4 @@
+#priority 100
 #Name: roots.zs
 #Author: baka943
 
@@ -20,6 +21,9 @@ val removeList as IItemStack[] = [
 	<roots:bark_acacia>,
 	<roots:bark_dark_oak>,
 	<roots:terra_spores>,
+	<roots:petals>,
+	<mysticalworld:quartz_ore>,
+	<mysticalworld:granite_quartz_ore>,
 	<mysticalworld:copper_axe>,
 	<mysticalworld:copper_dust>,
 	<mysticalworld:copper_dust_tiny>,
@@ -29,6 +33,10 @@ val removeList as IItemStack[] = [
 	<mysticalworld:copper_pickaxe>,
 	<mysticalworld:copper_shovel>,
 	<mysticalworld:copper_sword>,
+	<mysticalworld:copper_helmet>,
+	<mysticalworld:copper_chestplate>,
+	<mysticalworld:copper_leggings>,
+	<mysticalworld:copper_boots>,
 	<mysticalworld:silver_axe>,
 	<mysticalworld:silver_dust>,
 	<mysticalworld:silver_dust_tiny>,
@@ -38,6 +46,10 @@ val removeList as IItemStack[] = [
 	<mysticalworld:silver_pickaxe>,
 	<mysticalworld:silver_shovel>,
 	<mysticalworld:silver_sword>,
+	<mysticalworld:silver_helmet>,
+	<mysticalworld:silver_chestplate>,
+	<mysticalworld:silver_leggings>,
+	<mysticalworld:silver_boots>,
 	<mysticalworld:amethyst_axe>,
 	<mysticalworld:amethyst_hoe>,
 	<mysticalworld:amethyst_gem>,
@@ -53,7 +65,36 @@ val removeList as IItemStack[] = [
 	<mysticalworld:silver_block>,
 	<mysticalworld:silver_ore>,
 	<mysticalworld:amethyst_block>,
-	<mysticalworld:amethyst_ore>
+	<mysticalworld:amethyst_ore>,
+	<mysticalworld:carapace>,
+	<mysticalworld:antlers>,
+	<mysticalworld:venison>,
+	<mysticalworld:raw_squid>,
+	<mysticalworld:cooked_venison>,
+	<mysticalworld:cooked_squid>,
+	<mysticalworld:epic_squid>,
+	<mysticalworld:fish_and_chips>,
+	<mysticalworld:cooked_beetroot>,
+	<mysticalworld:cooked_carrot>,
+	<mysticalworld:beetroot_salad>,
+	<mysticalworld:cactus_dandelion_salad>,
+	<mysticalworld:aubergine_salad>,
+	<mysticalworld:stewed_eggplant>,
+	<mysticalworld:ink_bottle>,
+	<mysticalworld:unripe_pearl>,
+	<mysticalworld:pearleporter>,
+	<mysticalworld:assorted_seeds>,
+	<mysticalworld:cooked_seeds>,
+	<mysticalworld:stuffed_aubergine>,
+	<mysticalworld:silk_cocoon>,
+	<mysticalworld:silk_thread>,
+	<mysticalworld:spindle>,
+	<mysticalworld:silkworm_egg>,
+	<mysticalworld:gall_apple>,
+	<mysticalworld:wasp_attractant>,
+	<mysticalworld:tannins>
 ];
 
 jei.hide(removeList);
+
+jei.hide(<patchouli:guide_book>.withTag({"patchouli:book": "mysticalworld:world_guide"}));

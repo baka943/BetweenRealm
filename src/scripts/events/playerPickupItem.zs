@@ -13,22 +13,32 @@ events.onPlayerPickupItem(function(event as PlayerPickupItemEvent) {
 	if("roots:wildroot" == item && !player.hasGameStage(stageRoots.stage)) {
 		player.addGameStage(stageRoots.stage);
 
-		if(isNull(data.PlayerPersisted.pickupItem)) {
-			data = {"PlayerPersisted": {"pickupItem": "grass"}};
+		if(isNull(data.PlayerPersisted.realmtweaks_pickup_item)) {
+			data = {"PlayerPersisted": {"realmtweaks_pickup_item": "grass"}};
 
 			player.addGameStage(stageGrass.stage);
+			player.addGameStage(stageWater.stage);
 			player.update(data);
+		}
+
+		if(data.PlayerPersisted.realmtweaks_pickup_item == "grass") {
+			player.addGameStage(stageGrass.stage);
+			player.addGameStage(stageWater.stage);
 		}
 	}
 
 	if(flowers has item && !player.hasGameStage(stageBotania.stage)) {
 		player.addGameStage(stageBotania.stage);
 
-		if(isNull(data.PlayerPersisted.pickupItem)) {
-			data = {"PlayerPersisted": {"pickupItem": "flower"}};
+		if(isNull(data.PlayerPersisted.realmtweaks_pickup_item)) {
+			data = {"PlayerPersisted": {"realmtweaks_pickup_item": "flower"}};
 
 			player.addGameStage(stageFlower.stage);
 			player.update(data);
+		}
+
+		if(data.PlayerPersisted.realmtweaks_pickup_item == "flower") {
+			player.addGameStage(stageFlower.stage);
 		}
 	}
 });

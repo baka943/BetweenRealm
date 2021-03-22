@@ -11,14 +11,22 @@ events.onPlayerOpenContainer(function(event as PlayerOpenContainerEvent) {
 	var player as IPlayer = event.player;
 	var data as IData = player.data;
 
-	if(!player.hasGameStage(stageRelic.stage) && isNull(data.PlayerPersisted.openContainer)) {
-		for item in container {
-			if(!isNull(item) && item.definition.owner == "magicalsculpture") {
-				data = {"PlayerPersisted": {"openContainer": "relic"}};
+	if(!player.hasGameStage(stageRelic.stage)) {
+		if(isNull(data.PlayerPersisted.realmtweaks_open_container)) {
+			for item in container {
+				if(!isNull(item) && item.definition.owner == "magicalsculpture") {
+					data = {"PlayerPersisted": {"realmtweaks_open_container": "relic"}};
 
-				player.addGameStage(stageRelic.stage);
-				player.update(data);
+					player.addGameStage(stageRelic.stage);
+					player.update(data);
+				}
 			}
 		}
+
+		if(data.PlayerPersisted.realmtweaks_open_container == "relic") {
+			player.addGameStage(stageRelic.stage);
+		}
 	}
+
+	print(container.asString());
 });

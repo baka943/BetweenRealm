@@ -7,9 +7,6 @@
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 
-import mods.zenstages.Stage;
-import mods.zenstages.ZenStager;
-
 //==================================
 ######## Remove recipes ########
 //==================================

@@ -51,7 +51,7 @@ val changeSpell as IIngredient[][string] = {
 		dewgonia, swampReed, clayBall, <ore:dentrothystVial>, ingot.syrmorite
 	],
 	"spell_sky_soarer" : [
-		<thebetweenlands:weedwood_ladder>, petals, <thebetweenlands:angler_tooth_arrow>, <roots:wildewheet_seed>, cloudBerry
+		<thebetweenlands:weedwood_ladder>, <botania:petal:*>, <thebetweenlands:angler_tooth_arrow>, <roots:wildewheet_seed>, cloudBerry
 	],
 	"spell_dandelion_winds" : [
 		<thebetweenlands:items_plant_drop:20>, <ore:betweenLeaves>, <roots:runic_dust>, cloudBerry, <roots:spirit_herb_seed>
@@ -60,13 +60,13 @@ val changeSpell as IIngredient[][string] = {
 		<thebetweenlands:valonite_shovel>, cloudBerry, infernalBulb, dewgonia, stalicripe
 	],
 	"spell_petal_shell" : [
-		petals, <roots:spirit_herb_seed>, spiritHerb, <thebetweenlands:valonite_shield>, pereskia
+		<botania:petal:*>, <roots:spirit_herb_seed>, spiritHerb, <thebetweenlands:valonite_shield>, pereskia
 	],
 	"spell_radiance" : [
 		glowstone, <thebetweenlands:sulfur_torch>, <ore:dyeYellow>, cloudBerry, pereskia
 	],
 	"spell_sense_danger" : [
-		[nugget.gold, <minecraft:compass>, <minecraft:spider_eye>, <ore:rootsBark>, wildroot]
+		nugget.gold, <minecraft:compass>, <minecraft:spider_eye>, <ore:rootsBark>, wildroot
 	],
 	"spell_geas" : [
 		<minecraft:web>, <minecraft:lead>, <thebetweenlands:net>, <roots:spirit_herb_seed>, <roots:baffle_cap_mushroom>
@@ -81,7 +81,7 @@ val changeSpell as IIngredient[][string] = {
 		<ore:enderpearl>, moonglowLeaf, <thebetweenlands:items_plant_drop:16>, <ore:dyeYellow>, <roots:wildewheet>
 	],
 	"spell_supplication" : [
-		<thebetweenlands:weedwood_door_item>, betweenstone, saplingWeedwood, wildroot, petals
+		<thebetweenlands:weedwood_door_item>, betweenstone, saplingWeedwood, wildroot, <botania:petal:*>
 	],
 	"spell_fey_light" : [
 		<minecraft:lit_pumpkin>, <thebetweenlands:items_plant_drop:16>, cloudBerry, <ore:rootsBark>, cloudBerry

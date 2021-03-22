@@ -1,3 +1,4 @@
+#priority 100
 #Name: pyrotech.zs
 #Author: baka943
 

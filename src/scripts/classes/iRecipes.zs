@@ -69,6 +69,27 @@ zenClass IRecipes {
 		recipes.addShapeless(name, item, recipe);
 	}
 
+	function add(suffix as string, map as IIngredient[][][IItemStack]) {
+		for item, itemRecipes in map {
+			recipes.remove(item);
+
+			for i, recipe in itemRecipes {
+				var name as string = getItemName(item);
+
+				if(i > 0) name += "/" ~ i;
+
+				recipes.addShapeless(name + "/" + suffix, item, recipe);
+			}
+		}
+	}
+
+	function add(suffix as string, item as IItemStack, recipe as IIngredient[]) {
+		var name as string = getItemName(item);
+		
+		recipes.remove(item);
+		recipes.addShapeless(name + "/" + suffix, item, recipe);
+	}
+
 	//==================================
 	######## Shaped/Mirrored recipes ########
 	//==================================
@@ -97,6 +118,32 @@ zenClass IRecipes {
 		if(isMirrored) {
 			recipes.addShapedMirrored(name, item, recipe);
 		} else recipes.addShaped(name, item, recipe);
+	}
+
+	function add(suffix as string, map as IIngredient[][][][IItemStack], isMirrored as bool) {
+		for item, itemRecipes in map {
+			recipes.remove(item);
+
+			for i, recipe in itemRecipes {
+				var name as string = getItemName(item);
+
+				if(i > 0) name += "/" ~ i;
+				
+				if(isMirrored) {
+					recipes.addShapedMirrored(name + "/" + suffix, item, recipe);
+				} else recipes.addShaped(name + "/" + suffix, item, recipe);
+			}
+		}
+	}
+
+	function add(suffix as string, item as IItemStack, recipe as IIngredient[][], isMirrored as bool) {
+		var name as string = getItemName(item);
+		
+		recipes.remove(item);
+
+		if(isMirrored) {
+			recipes.addShapedMirrored(name + "/" + suffix, item, recipe);
+		} else recipes.addShaped(name + "/" + suffix, item, recipe);
 	}
 
 	//==================================

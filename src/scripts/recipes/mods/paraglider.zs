@@ -15,8 +15,8 @@ for name in recipeNames {
 
 iRecipes.add(<paraglider:paraglider>,
 	[
-		[<ore:stickWeed>, pelt, <ore:stickWeed>],
-		[pelt, <ore:stickWeed>, pelt],
+		[<ore:stickWeed>, lurkerSkin, <ore:stickWeed>],
+		[lurkerSkin, <ore:stickWeed>, lurkerSkin],
 		[<ore:stickWeed>, null, <ore:stickWeed>]
 	],
 	false

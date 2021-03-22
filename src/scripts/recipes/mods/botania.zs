@@ -21,21 +21,16 @@ val removeRecipes as IItemStack[] = [
 
 iRecipes.remove(removeRecipes);
 
+iRecipes.remove("botania:dye_.*", false);
+
 //==================================
 ######## Shaped recipes ########
 //==================================
 
 val shapedRecipes as IIngredient[][][][IItemStack] = {
-	<botania:manaresource:3> : [
-		[
-			[null, null, bark.livingwood],
-			[null, bark.livingwood],
-			[bark.livingwood]
-		]
-	],
 	<botania:altar:0> : [
 		[
-			[<roots:runestone_slab>, petals, <roots:runestone_slab>],
+			[<roots:runestone_slab>, <botania:petal:*>, <roots:runestone_slab>],
 			[null, <ore:runestone>],
 			[<ore:runestone>, <ore:runestone>, <ore:runestone>]
 		]
@@ -49,7 +44,7 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 	],
 	<botania:flowerbag> : [
 		[
-			[pelt, petals, pelt],
+			[pelt, <botania:petal:*>, pelt],
 			[pelt, null, pelt],
 			[null, pelt]
 		]
@@ -97,14 +92,14 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 	<botania:spreader> : [
 		[
 			[livingwood, livingwood, livingwood],
-			[ingot.octine, petals],
+			[ingot.octine, <botania:petal:*>],
 			[livingwood, livingwood, livingwood]
 		]
 	],
 	<botania:spreader:2> : [
 		[
 			[<ore:dreamwood>, <ore:dreamwood>, <ore:dreamwood>],
-			[ingot.elven, petals],
+			[ingot.elven, <botania:petal:*>],
 			[<ore:dreamwood>, <ore:dreamwood>, <ore:dreamwood>]
 		]
 	],
@@ -249,6 +244,29 @@ for i in 0 .. 16 {
 		],
 		false
 	);
+
+	iRecipes.add(<botania:dye>.definition.makeStack(i) * 2,
+		[
+			<botania:flower>.definition.makeStack(i),
+			<botania:pestleandmortar>
+		]
+	);
+}
+
+for i in 0 .. 8 {
+	iRecipes.add("double", <botania:dye>.definition.makeStack(i) * 4,
+		[
+			<botania:doubleflower1>.definition.makeStack(i),
+			<botania:pestleandmortar>
+		]
+	);
+	
+	iRecipes.add("double", <botania:dye>.definition.makeStack(i + 8) * 4,
+		[
+			<botania:doubleflower2>.definition.makeStack(i),
+			<botania:pestleandmortar>
+		]
+	);
 }
 
 //==================================
@@ -257,7 +275,7 @@ for i in 0 .. 16 {
 
 val shapelessRecipes as IIngredient[][][IItemStack] = {
 	<botania:fertilizer> : [
-		[swampMeal, petals, petals]
+		[swampMeal, <thebetweenlands:items_plant_drop:4>]
 	],
 	<botania:grassseeds:3> : [
 		[<botania:grassseeds>, <thebetweenlands:dead_weedwood_bush>]

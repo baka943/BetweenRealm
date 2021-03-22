@@ -32,7 +32,7 @@ for rec in furnace.all {
 	}
 }
 
-static list as string[] = ["thebetweenlands", "botania", "roots", "mysticalworld"];
+static list as string[] = ["thebetweenlands", "botania", "roots"];
 
 furnace.addRecipe(<minecraft:iron_nugget> * 8, ore.iron);
 furnace.addRecipe(<minecraft:gold_nugget> * 8, ore.gold);

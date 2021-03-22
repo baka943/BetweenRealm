@@ -16,6 +16,7 @@ global swampReed as IItemStack = <thebetweenlands:swamp_reed_item>;
 global swampTallgrass as IItemStack = <thebetweenlands:items_plant_drop:28>;
 global siltGlass as IItemStack = <thebetweenlands:silt_glass>;
 global swampMeal as IItemStack = <thebetweenlands:items_crushed:17>;
+global lurkerSkin as IItemStack = <thebetweenlands:items_misc:4>;
 
 <ore:limestone>.add(
 	<thebetweenlands:limestone>,

@@ -2,19 +2,18 @@
 #Author: baka943
 
 import mods.ItemStages;
+import mods.zenstages.ZenStager;
 
 // ItemStages.stageModItems(stageEnder.stage, "bloodmagic");
 // ItemStages.stageModItems(stageNether.stage, "embers");
 // ItemStages.stageModItems(stageCities.stage, "pyrotech");
-for item in loadedMods["botania" | "botania_tweaks"].items {
-	if(!item.matches(<botania:fertilizer>)) {
+for item in loadedMods["botania"].items {
+	if(!item.matches(<botania:fertilizer>) && item.definition.id != "botania:altar") {
 		stageBotania.addIngredient(item);
 	}
 }
 
-// for item in loadedMods["botania_tweaks"].items {
-// 	stageBotania.addIngredient(item);
-// }
+stageBotania.addIngredients(loadedMods["botania_tweaks"].items);
 
 stageBotania.addIngredients([
 	<botania:enchantedsoil>,
@@ -29,12 +28,7 @@ for item in loadedMods["roots"].items {
 	}
 }
 
-for item in loadedMods["mysticalworld"].items {
-	stageRoots.addIngredient(item);
-}
-
 stageRoots.addIngredient(<patchouli:guide_book>.withTag({"patchouli:book": "roots:roots_guide"}));
-stageRoots.addIngredient(<patchouli:guide_book>.withTag({"patchouli:book": "mysticalworld:world_guide"}));
 
 stageRoots.addIngredients([
 	<roots:ritual_heavy_storms>,
@@ -50,15 +44,43 @@ stageRoots.addIngredients([
 	<roots:structure_marker>
 ]);
 
-for item in loadedMods["magicalsculpture"].items {
-	stageRelic.addIngredient(item);
-}
-
-stageDisable.addIngredients([
-	<minecraft:crafting_table>,
-	<minecraft:furnace>,
-	<minecraft:furnace_minecart>
+stageRoots.addIngredients([
+	<mysticalworld:amethyst_knife>,
+	<mysticalworld:copper_knife>,
+	<mysticalworld:silver_knife>,
+	<mysticalworld:aubergine_seed>,
+	<mysticalworld:aubergine>,
+	<mysticalworld:cooked_aubergine>
 ]);
+
+stageRelic.addIngredients(loadedMods["magicalsculpture"].items);
+
+stageGrass.addIngredient(<botania:altar>);
+stageGrass.addIngredientOverride(<roots:unending_bowl>);
+
+stageBetweenlands.addIngredients([
+	<minecraft:fishing_rod>,
+	<minecraft:coal_ore>,
+	<minecraft:iron_ore>,
+	<minecraft:gold_ore>,
+	<minecraft:redstone_ore>,
+	<minecraft:lapis_ore>,
+	<minecraft:diamond_ore>,
+	<minecraft:emerald_ore>
+]);
+
+stageWater.addIngredient(<minecraft:water_bucket>);
+stageLava.addIngredient(<minecraft:lava_bucket>);
+
+// ZenStager.isStaged("ingredient", <minecraft:stick>);
+// stageMinecraft.addIngredients(loadedMods["minecraft"].items);
+for item in loadedMods["minecraft"].items {
+	if(!ZenStager.isStaged("ingredient", item)) {
+		stageMinecraft.addIngredient(item);
+	}
+}
 
 // ItemStages.stageTooltip(stageDisable.stage, "§9" + game.localize("tooltip.itemstages.stage"));
 ItemStages.stageTooltip(stageDisable.stage, "§9" + game.localize("gui.tooltip.matter") + ":");
+
+ItemStages.stageRecipeCategory(stageMinecraft.stage, "minecraft.anvil");

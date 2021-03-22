@@ -29,11 +29,11 @@ val barkRecipes as IItemStack[][IItemStack] = {
 		livingwood
 	],
 	<roots:terra_moss> * 2 : [
-		<thebetweenlands:lichen>
-		| <thebetweenlands:dead_lichen>
-		| <thebetweenlands:moss>
-		| <thebetweenlands:dead_moss>
-		| <thebetweenlands:cave_moss>
+		<thebetweenlands:lichen>,
+		<thebetweenlands:dead_lichen>,
+		<thebetweenlands:moss>,
+		<thebetweenlands:dead_moss>,
+		<thebetweenlands:cave_moss>
 	]
 };
 

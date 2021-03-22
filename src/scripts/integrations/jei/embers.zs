@@ -1,10 +1,10 @@
+#priority 100
 #Name: embers.zs
 #Author: baka943
 
 #modloaded embers
 
 import crafttweaker.item.IItemStack;
-import crafttweaker.block.IBlock;
 
 val removeList as IItemStack[] = [
 	<embers:ingot_copper>,

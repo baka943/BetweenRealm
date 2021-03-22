@@ -1,3 +1,4 @@
+#priority 100
 #Name: tconstruct.zs
 #Author: baka943
 

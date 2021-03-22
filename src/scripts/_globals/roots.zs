@@ -6,7 +6,6 @@
 
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
-import crafttweaker.oredict.IOreDictEntry;
 
 global wildroot as IItemStack = <roots:wildroot>;
 global terraMoss as IItemStack = <roots:terra_moss>;
@@ -16,11 +15,8 @@ global cloudBerry as IItemStack = <roots:cloud_berry>;
 global infernalBulb as IItemStack = <roots:infernal_bulb>;
 global dewgonia as IItemStack = <roots:dewgonia>;
 global stalicripe as IItemStack = <roots:stalicripe>;
-global petals as IItemStack = <roots:petals>;
 global moonglowLeaf as IItemStack = <roots:moonglow_leaf>;
-global pelt as IOreDictEntry = <ore:pelt>;
-
-<ore:pelt>.add(<mysticalworld:pelt>);
+global pelt as IItemStack = <mysticalworld:pelt>;
 
 global bark as IIngredient[string] = {
 	livingwood : <realmtweaks:bark_livingwood>,
@@ -39,3 +35,5 @@ for item in <ore:leather>.items {
 		<ore:feyLeather>.add(item);
 	}
 }
+
+<ore:dyeBlack>.remove(<mysticalworld:ink_bottle>);
