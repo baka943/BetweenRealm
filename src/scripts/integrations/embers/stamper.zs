@@ -26,17 +26,7 @@ embers.removeStamper(removeRecipes);
 
 val metalStamper as IItemStack[ILiquidStack][IIngredient] = {
 	<embers:stamp_flat> : {
-		<fluid:dawnstone> * 1296 : <embers:block_dawnstone>,
-		<fluid:octine> * 1296 : <thebetweenlands:octine_block>,
-		<fluid:syrmorite> * 1296 : <thebetweenlands:syrmorite_block>
-	},
-	<embers:stamp_bar> : {
-		<fluid:octine> * 144 : <thebetweenlands:octine_ingot>,
-		<fluid:syrmorite> * 144 : <thebetweenlands:items_misc:11>
-	},
-	<soot:stamp_nugget> : {
-		<fluid:octine> * 16 : <thebetweenlands:items_misc:42>,
-		<fluid:syrmorite> * 16 : <thebetweenlands:items_misc:41>
+		<fluid:dawnstone> * 1296 : <embers:block_dawnstone>
 	}
 };
 

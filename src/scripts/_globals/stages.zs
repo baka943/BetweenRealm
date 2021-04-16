@@ -5,16 +5,19 @@
 import mods.zenstages.ZenStager;
 import mods.zenstages.Stage;
 
+global stageAtlantis as Stage = ZenStager.initStage("atlantis_stage");
+global stageIslands as Stage = ZenStager.initStage("islands_stage");
+global stageCities as Stage = ZenStager.initStage("cities_stage");
 global stageAstral as Stage = ZenStager.initStage("astral_stage");
 global stageEnder as Stage = ZenStager.initStage("ender_stage");
-global stageCities as Stage = ZenStager.initStage("cities_stage");
+global stageLost as Stage = ZenStager.initStage("lost_stage");
 
 //Minecart
 global stageMinecraft as Stage = ZenStager.initStage("minecraft_stage");
 global stageWater as Stage = ZenStager.initStage("water_stage");
 global stageLava as Stage = ZenStager.initStage("lava_stage");
 
-#Betweenmods
+//Betweenmods
 global stageBetweenlands as Stage = ZenStager.initStage("welcome_to_betweenlands");
 global stageBotania as Stage = ZenStager.initStage("botania_stage");
 global stageRoots as Stage = ZenStager.initStage("roots_stage");
@@ -24,3 +27,8 @@ global stageRelic as Stage = ZenStager.initStage("relic_stage");
 
 //Bat No'l
 global stageDisable as Stage = ZenStager.initStage("disable_and_hide");
+
+//LootTable of gamestages
+val stageTable = stageTables.createTable("playermode");
+stageTable.createEntry(stageGrass.stage, 5);
+stageTable.createEntry(stageFlower.stage, 5);

@@ -25,9 +25,6 @@ roots.removeBark(removeRecipes);
 //==================================
 
 val barkRecipes as IItemStack[][IItemStack] = {
-	<realmtweaks:bark_livingwood> * 4 : [
-		livingwood
-	],
 	<roots:terra_moss> * 2 : [
 		<thebetweenlands:lichen>,
 		<thebetweenlands:dead_lichen>,

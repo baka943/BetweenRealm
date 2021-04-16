@@ -1,9 +1,7 @@
-#Name: lootTweaker.zs
+#Name: magicalsculpture.zs
 #Author: baka943
 
 import loottweaker.LootTweaker;
-import loottweaker.vanilla.loot.LootTable;
-import loottweaker.vanilla.loot.LootPool;
 
 val emptyTable as string[] = [
 	"magicalsculpture:inject/blaze",

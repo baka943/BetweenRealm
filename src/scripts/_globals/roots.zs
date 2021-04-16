@@ -19,7 +19,6 @@ global moonglowLeaf as IItemStack = <roots:moonglow_leaf>;
 global pelt as IItemStack = <mysticalworld:pelt>;
 
 global bark as IIngredient[string] = {
-	livingwood : <realmtweaks:bark_livingwood>,
 	wildwood : <roots:bark_wildwood>
 };
 

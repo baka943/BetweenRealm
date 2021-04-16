@@ -275,7 +275,7 @@ for i in 0 .. 8 {
 
 val shapelessRecipes as IIngredient[][][IItemStack] = {
 	<botania:fertilizer> : [
-		[swampMeal, <thebetweenlands:items_plant_drop:4>]
+		[<thebetweenlands:items_plant_drop:4>, <thebetweenlands:items_plant_drop:12>, <thebetweenlands:items_plant_drop:20>, swampMeal]
 	],
 	<botania:grassseeds:3> : [
 		[<botania:grassseeds>, <thebetweenlands:dead_weedwood_bush>]
@@ -314,7 +314,7 @@ val shapelessRecipes as IIngredient[][][IItemStack] = {
 
 iRecipes.add(shapelessRecipes);
 
-
+iRecipes.add(stageBotania.stage, <botania:fertilizer>, [<botania:dye:*>, <botania:dye:*>, <botania:dye:*>, swampMeal]);
 
 val categoryList as string[] = [
 	"botania.orechid",

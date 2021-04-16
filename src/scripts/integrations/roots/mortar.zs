@@ -13,6 +13,7 @@ import crafttweaker.item.IIngredient;
 val removeRecipes as IItemStack[] = [
 	<minecraft:dye:12>,
 	<minecraft:dye:14>,
+	<minecraft:dye:15>,
 	<roots:flour>
 ];
 
@@ -27,7 +28,10 @@ val mortarRecipes as IIngredient[][IItemStack] = {
 		<roots:wildewheet>
 	],
 	<minecraft:flint> : [
-		<thebetweenlands:items_misc:50>
+		pitstone, pitstone, pitstone, pitstone, pitstone
+	],
+	<botania:fertilizer> * 3 : [
+		<botania:dye:*>, swampMeal, <botania:dye:*>, swampMeal, <botania:dye:*>
 	]
 };
 
@@ -39,19 +43,19 @@ roots.addMortar(mortarRecipes);
 
 val changeSpell as IIngredient[][string] = {
 	"spell_wild_fire" : [
-		<ore:dyeOrange>, coal, gunpowder, infernalBulb, <minecraft:tnt>
+		<ore:runeFireB>, <botania:dye:1>, <botania:dye:1>, infernalBulb, <botania:dye:14>
 	],
 	"spell_magnetism" : [
-		ingot.iron, redstone, <ore:paper>, wildroot, gem.lapis
+		<ore:runeManaB>, <botania:dye:14>, spiritHerb, wildroot, <botania:dye:11>
 	],
 	"spell_rampant_growth" : [
-		saplingWeedwood, boneMeal, saplingWeedwood, spiritHerb, pereskia
+		<ore:runeSpringB>, <botania:dye:5>, pereskia, <botania:dye:13>, spiritHerb
 	],
 	"spell_second_wind" : [
-		dewgonia, swampReed, clayBall, <ore:dentrothystVial>, ingot.syrmorite
+		<ore:runeWaterB>, dewgonia, <botania:dye:9>, <botania:dye:3>, <botania:dye:11>
 	],
 	"spell_sky_soarer" : [
-		<thebetweenlands:weedwood_ladder>, <botania:petal:*>, <thebetweenlands:angler_tooth_arrow>, <roots:wildewheet_seed>, cloudBerry
+		<ore:runeAirB>, <botania:petal:*>, <thebetweenlands:angler_tooth_arrow>, <roots:wildewheet_seed>, cloudBerry
 	],
 	"spell_dandelion_winds" : [
 		<thebetweenlands:items_plant_drop:20>, <ore:betweenLeaves>, <roots:runic_dust>, cloudBerry, <roots:spirit_herb_seed>
@@ -81,10 +85,10 @@ val changeSpell as IIngredient[][string] = {
 		<ore:enderpearl>, moonglowLeaf, <thebetweenlands:items_plant_drop:16>, <ore:dyeYellow>, <roots:wildewheet>
 	],
 	"spell_supplication" : [
-		<thebetweenlands:weedwood_door_item>, betweenstone, saplingWeedwood, wildroot, <botania:petal:*>
+		cloudBerry, infernalBulb, dewgonia, stalicripe, wildroot
 	],
 	"spell_fey_light" : [
-		<minecraft:lit_pumpkin>, <thebetweenlands:items_plant_drop:16>, cloudBerry, <ore:rootsBark>, cloudBerry
+		<ore:runeManaB>, <botania:dye:6>, cloudBerry, <botania:dye:10>, <botania:dye:5>
 	]
 };
 

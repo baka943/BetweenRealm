@@ -1,3 +1,4 @@
+#priority -100
 #Name: multiblock.zs
 #Author: baka943
 

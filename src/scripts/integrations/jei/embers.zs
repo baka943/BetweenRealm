@@ -41,6 +41,7 @@ val removeList as IItemStack[] = [
 	<embers:ore_copper>,
 	<embers:ore_lead>,
 	<embers:ore_silver>,
+	<embers:ore_quartz>,
 	<embers:block_copper>,
 	<embers:block_lead>,
 	<embers:block_silver>,

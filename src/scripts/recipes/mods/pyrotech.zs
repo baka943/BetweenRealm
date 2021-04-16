@@ -12,7 +12,6 @@ import crafttweaker.item.IIngredient;
 //==================================
 
 val removeRecipes as string[] = [
-	// "minecraft",
 	"pyrotech",
 	"artisanworktables",
 	"immersiveengineering",

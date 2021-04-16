@@ -6,10 +6,48 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.creativetabs.ICreativeTab;
 
 //==================================
+######## Remove recipes ########
+//==================================
+
+val removeRecipes as IItemStack[] = [
+	<minecraft:iron_nugget>,
+	<minecraft:gold_nugget>
+];
+
+iRecipes.remove(removeRecipes);
+
+//==================================
 ######## Shaped recipes ########
 //==================================
 
+val shapedRecipes as IIngredient[][][][IItemStack] = {
+	<minecraft:iron_nugget> * 8 : [
+		[
+			[ingot.iron]
+		]
+	],
+	<minecraft:iron_ingot> : [
+		[
+			[nugget.iron, nugget.iron, nugget.iron],
+			[nugget.iron, null, nugget.iron],
+			[nugget.iron, nugget.iron, nugget.iron]
+		]
+	],
+	<minecraft:gold_nugget> * 8 : [
+		[
+			[ingot.gold]
+		]
+	],
+	<minecraft:gold_ingot> : [
+		[
+			[nugget.gold, nugget.gold, nugget.gold],
+			[nugget.gold, null, nugget.gold],
+			[nugget.gold, nugget.gold, nugget.gold]
+		]
+	]
+};
 
+iRecipes.add(shapedRecipes, false);
 
 //==================================
 ######## Shapeless recipes ########
@@ -26,13 +64,11 @@ for rec in furnace.all {
 	var output as IItemStack = rec.output;
 
 	for item in input.items {
-		if(!(list in item.definition.owner)) {
+		if(item.definition.owner != "thebetweenlands") {
 			furnace.remove(output);
 		}
 	}
 }
-
-static list as string[] = ["thebetweenlands", "botania", "roots"];
 
 furnace.addRecipe(<minecraft:iron_nugget> * 8, ore.iron);
 furnace.addRecipe(<minecraft:gold_nugget> * 8, ore.gold);

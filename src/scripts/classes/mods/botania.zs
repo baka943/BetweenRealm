@@ -7,7 +7,6 @@
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 
-import mods.botania.Brew;
 import mods.botania.ElvenTrade;
 import mods.botania.ManaInfusion;
 import mods.botania.Apothecary;
@@ -17,25 +16,6 @@ import mods.botania.RuneAltar;
 zenClass Botania {
 	
 	zenConstructor() {}
-
-	//==================================
-	######## Brew ########
-	//==================================
-
-	#Remove Brew recipes
-	function removeBrew(names as string[]) {
-		for brewName in names {
-			Brew.removeRecipe(brewName);
-		}
-	}
-
-	#Add Brew recipes
-	function addBrew(recipes as IIngredient[][string]) {
-		for brewName, inputs in recipes {
-			Brew.removeRecipe(brewName);
-			Brew.addRecipe(inputs, brewName);
-		}
-	}
 
 	//==================================
 	######## Elven Trade ########

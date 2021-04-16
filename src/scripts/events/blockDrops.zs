@@ -14,7 +14,7 @@ events.onBlockHarvestDrops(function(event as BlockHarvestDropsEvent) {
 
 	if(event.silkTouch) return;
 
-	if(!isNull(blockDrops[blockID])) {
+	if(!isNull(blockDrops[blockID]) && event.isPlayer) {
 		for i, drop in blockDrops[blockID] {
 			if(i == 0) {
 				event.drops = [drop];

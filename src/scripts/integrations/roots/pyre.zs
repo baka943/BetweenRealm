@@ -82,7 +82,7 @@ val modifyRituals as IIngredient[][string] = {
 		spiritHerb, <roots:wildewheet>, <roots:wildewheet>, <thebetweenlands:wight_heart>, <roots:spirit_herb_seed>
 	],
 	"ritual_wild_growth" : [
-		wildroot, <ore:rootsBark>, <ore:rootsBark>, spiritHerb, spiritHerb
+		wildroot, spiritHerb, wildroot, spiritHerb, wildroot
 	],
 	"ritual_flower_growth" : [
 		swampMeal, wildroot, terraMoss, <botania:petal:*>, stalicripe

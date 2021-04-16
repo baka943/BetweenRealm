@@ -30,17 +30,6 @@ val pureDaisyRecipes as IIngredient[][IItemStack][int] = {
 		<botania:livingwood> : [
 			<ore:logWeedwood>
 		]
-	},
-	80 : {
-		<minecraft:slime> : [
-			<thebetweenlands:rubber_block>
-		],
-		<minecraft:sand> : [
-			<thebetweenlands:silt>
-		],
-		<minecraft:grass> : [
-			<thebetweenlands:swamp_grass>
-		]
 	}
 };
 
