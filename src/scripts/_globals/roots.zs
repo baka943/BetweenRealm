@@ -22,12 +22,6 @@ global bark as IIngredient[string] = {
 	wildwood : <roots:bark_wildwood>
 };
 
-for item in <ore:rootsBark>.items {
-	if(!(bark.values has item)) {
-		<ore:rootsBark>.remove(item);
-	}
-}
-
 for item in <ore:leather>.items {
 	if(item.definition.owner == "roots") {
 		<ore:leather>.remove(item);

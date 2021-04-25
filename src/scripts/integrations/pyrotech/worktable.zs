@@ -75,12 +75,6 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 			[<ore:stickStone>]
 		]
 	],
-	<artisanworktables:workstation:5> : [
-		[
-			[<ore:plankTreatedWood>, <ore:plankTreatedWood>],
-			[<ore:plankTreatedWood>, <ore:plankTreatedWood>]
-		]
-	],
 	<pyrotech:soaking_pot> : [
 		[
 			[<minecraft:stone_slab>, null, <minecraft:stone_slab>],

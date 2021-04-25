@@ -65,7 +65,7 @@ stageBetweenlands.addIngredients([
 ]);
 
 stageWater.addIngredient(<minecraft:water_bucket>);
-stageLava.addIngredient(<minecraft:lava_bucket>);
+stageMinecraft.addIngredient(<minecraft:lava_bucket>);
 
 for item in loadedMods["minecraft"].items {
 	if(!ZenStager.isStaged("ingredient", item) && item.definition.id != "minecraft:enchanted_book") {

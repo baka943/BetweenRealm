@@ -15,7 +15,6 @@ import mods.roots.Mortar;
 import mods.roots.Pyre;
 import mods.roots.Ritual;
 import mods.roots.Pacifist;
-import mods.roots.AnimalHarvest;
 import mods.roots.FlowerGrowth;
 import mods.roots.SummonCreatures;
 import mods.roots.Transmutation;
@@ -144,45 +143,6 @@ zenClass Roots {
 			Pacifist.addEntity(entity);
 		}
 	}
-
-	//==================================
-	######## Animal Harvest Ritual ########
-	//==================================
-
-	#Remove Animals
-	function removeEntityH(entities as IEntityDefinition[]) {
-		for entity in entities {
-			AnimalHarvest.removeEntity(entity);
-		}
-	}
-
-	#Add Animals
-	function addEntityH(entities as IEntityDefinition[]) {
-		for entity in entities {
-			AnimalHarvest.addEntity(entity);
-		}
-	}
-
-	// #Remove Fishes
-	// function removeFish(fishes as IItemStack[]) {
-	// 	for fish in fishes {
-	// 		AnimalHarvest.removeFish(fish);
-	// 	}
-	// }
-
-	// #Add Fishes
-	// function addFish(inner as IItemStack[][int]) {
-	// 	for weight, fishes in inner {
-	// 		for i, fish in fishes {
-	// 			var name as string = getItemName(fish);
-
-	// 			if(i > 0) name += "/" ~ i;
-
-	// 			AnimalHarvest.removeFish(fish);
-	// 			AnimalHarvest.addFish(name, fish, weight);
-	// 		}
-	// 	}
-	// }
 
 	//==================================
 	######## Flower Growth Ritual ########

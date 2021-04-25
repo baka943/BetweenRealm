@@ -5,17 +5,14 @@
 import mods.zenstages.ZenStager;
 import mods.zenstages.Stage;
 
+//Dimension
 global stageAtlantis as Stage = ZenStager.initStage("atlantis_stage");
 global stageIslands as Stage = ZenStager.initStage("islands_stage");
 global stageCities as Stage = ZenStager.initStage("cities_stage");
-global stageAstral as Stage = ZenStager.initStage("astral_stage");
-global stageEnder as Stage = ZenStager.initStage("ender_stage");
-global stageLost as Stage = ZenStager.initStage("lost_stage");
 
 //Minecart
 global stageMinecraft as Stage = ZenStager.initStage("minecraft_stage");
 global stageWater as Stage = ZenStager.initStage("water_stage");
-global stageLava as Stage = ZenStager.initStage("lava_stage");
 
 //Betweenmods
 global stageBetweenlands as Stage = ZenStager.initStage("welcome_to_betweenlands");

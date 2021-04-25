@@ -14,7 +14,8 @@ val removeRecipes as IItemStack[] = [
 	<minecraft:dye:12>,
 	<minecraft:dye:14>,
 	<minecraft:dye:15>,
-	<roots:flour>
+	<roots:flour>,
+	<roots:petals>
 ];
 
 roots.removeMortar(removeRecipes);
@@ -31,7 +32,7 @@ val mortarRecipes as IIngredient[][IItemStack] = {
 		pitstone, pitstone, pitstone, pitstone, pitstone
 	],
 	<botania:fertilizer> * 3 : [
-		<botania:dye:*>, swampMeal, <botania:dye:*>, swampMeal, <botania:dye:*>
+		<botania:dye:*>, <botania:dye:*>, <botania:dye:*>, swampMeal, swampMeal
 	]
 };
 
@@ -43,52 +44,52 @@ roots.addMortar(mortarRecipes);
 
 val changeSpell as IIngredient[][string] = {
 	"spell_wild_fire" : [
-		<ore:runeFireB>, <botania:dye:1>, <botania:dye:1>, infernalBulb, <botania:dye:14>
+		<ore:runeFireB>, <botania:petal:1>, <botania:petal:1>, infernalBulb, <botania:petal:14>
 	],
 	"spell_magnetism" : [
-		<ore:runeManaB>, <botania:dye:14>, spiritHerb, wildroot, <botania:dye:11>
+		<ore:runeManaB>, <botania:petal:14>, spiritHerb, wildroot, <botania:petal:11>
 	],
 	"spell_rampant_growth" : [
-		<ore:runeSpringB>, <botania:dye:5>, pereskia, <botania:dye:13>, spiritHerb
+		<ore:runeSpringB>, <botania:petal:5>, pereskia, <botania:petal:13>, spiritHerb
 	],
 	"spell_second_wind" : [
-		<ore:runeWaterB>, dewgonia, <botania:dye:9>, <botania:dye:3>, <botania:dye:11>
+		<ore:runeWaterB>, dewgonia, <botania:petal:9>, <botania:petal:3>, <botania:petal:11>
 	],
 	"spell_sky_soarer" : [
-		<ore:runeAirB>, <botania:petal:*>, <thebetweenlands:angler_tooth_arrow>, <roots:wildewheet_seed>, cloudBerry
+		<ore:runeAirB>, <botania:petal>, <botania:petal:8>, <botania:petal:9>, cloudBerry
 	],
 	"spell_dandelion_winds" : [
-		<thebetweenlands:items_plant_drop:20>, <ore:betweenLeaves>, <roots:runic_dust>, cloudBerry, <roots:spirit_herb_seed>
+		<ore:runeAirB>, <botania:petal>, <botania:petal:12>, cloudBerry, <botania:petal:4>
 	],
 	"spell_harvest" : [
-		<thebetweenlands:valonite_shovel>, cloudBerry, infernalBulb, dewgonia, stalicripe
+		<ore:runeAirB>, <roots:wildewheet>, <botania:petal:7>, <botania:petal:7>, <botania:petal:8>
 	],
 	"spell_petal_shell" : [
-		<botania:petal:*>, <roots:spirit_herb_seed>, spiritHerb, <thebetweenlands:valonite_shield>, pereskia
+		<ore:runeManaB>, <botania:petal:6>, spiritHerb, <botania:petal:6>, <botania:petal:10>
 	],
 	"spell_radiance" : [
-		glowstone, <thebetweenlands:sulfur_torch>, <ore:dyeYellow>, cloudBerry, pereskia
+		<ore:runeFireB>, <botania:petal:14>, cloudBerry, <botania:petal:14>, pereskia
 	],
 	"spell_sense_danger" : [
-		nugget.gold, <minecraft:compass>, <minecraft:spider_eye>, <ore:rootsBark>, wildroot
+		<ore:runeEnvyB>, <botania:petal:9>, <botania:petal:7>, <botania:petal:8>, wildroot
 	],
 	"spell_geas" : [
-		<minecraft:web>, <minecraft:lead>, <thebetweenlands:net>, <roots:spirit_herb_seed>, <roots:baffle_cap_mushroom>
+		<ore:runeLustB>, <botania:petal:2>, <roots:baffle_cap_mushroom>, <botania:petal:2>, <botania:petal:10>
 	],
 	"spell_rose_thorns" : [
-		<thebetweenlands:items_misc:21>, <thebetweenlands:items_plant_drop:12>, <thebetweenlands:items_misc:14>, <ore:dyeRed>, terraMoss
+		<ore:runePrideB>, <botania:petal:14>, <botania:petal:14>, <botania:petal:14>, terraMoss
 	],
 	"spell_acid_cloud" : [
-		<minecraft:spider_eye>, <roots:baffle_cap_mushroom>, <ore:dyeLime>, <thebetweenlands:items_misc:21>, <thebetweenlands:items_misc:14>
+		<ore:runeSlothB>, <roots:baffle_cap_mushroom>, <botania:petal:10>, <botania:petal:2>, <botania:petal:13>
 	],
 	"spell_light_drifter" : [
-		<ore:enderpearl>, moonglowLeaf, <thebetweenlands:items_plant_drop:16>, <ore:dyeYellow>, <roots:wildewheet>
+		<ore:runeGreedB>, pereskia, <botania:petal>, <botania:petal:4>, <roots:wildewheet>
 	],
 	"spell_supplication" : [
-		cloudBerry, infernalBulb, dewgonia, stalicripe, wildroot
+		cloudBerry, infernalBulb, wildroot, dewgonia, stalicripe
 	],
 	"spell_fey_light" : [
-		<ore:runeManaB>, <botania:dye:6>, cloudBerry, <botania:dye:10>, <botania:dye:5>
+		<ore:runeManaB>, <botania:petal:6>, cloudBerry, <botania:petal:10>, <botania:petal:5>
 	]
 };
 

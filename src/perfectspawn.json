@@ -1,0 +1,39 @@
+{
+	"general": {
+		"initialSpawnDimension": 20
+	},
+	"rules": [
+		{
+			"appliesTo": [20],
+			"canRespawnHere": true,
+			"respawnDimension": 20,
+			"spawnPoint": {
+				"posX": 0,
+				"posY": 140,
+				"posZ": 0
+			}
+		},
+		{
+			"appliesTo": [0],
+			"canRespawnHere": true,
+			"canSleepHere": true,
+			"respawnDimension": 0
+		},
+		{
+			"appliesTo": [1],
+			"canRespawnHere": true,
+			"respawnDimension": 1,
+			"spawnPoint": {
+				"posX": 0,
+				"posY": 63,
+				"posZ": 0
+			}
+		},
+		{
+			"appliesTo": ["*"],
+			"canRespawnHere": false,
+			"canSleepHere": false,
+			"respawnDimension": 20
+		}
+	]
+}

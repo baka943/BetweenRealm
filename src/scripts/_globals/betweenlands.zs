@@ -48,40 +48,6 @@ global lurkerSkin as IItemStack = <thebetweenlands:items_misc:4>;
 	<thebetweenlands:items_misc:1>
 );
 
-<ore:allFlowers>.add(
-	<thebetweenlands:bladderwort_flower>,
-	<thebetweenlands:blue_eyed_grass>,
-	<thebetweenlands:blue_iris>,
-	<thebetweenlands:bog_bean_flower>,
-	<thebetweenlands:boneset>,
-	<thebetweenlands:cattail>,
-	<thebetweenlands:copper_iris>,
-	<thebetweenlands:golden_club_flower>,
-	<thebetweenlands:marsh_hibiscus>,
-	<thebetweenlands:marsh_mallow>,
-	<thebetweenlands:marsh_marigold_flower>,
-	<thebetweenlands:milkweed>,
-	<thebetweenlands:nettle_flowered>,
-	<thebetweenlands:pickerel_weed>
-);
-
-for item in <ore:allFlowers>.items {
-	if(item.definition.owner != "thebetweenlands") {
-		<ore:allFlowers>.remove(item);
-	}
-}
-
-<ore:allTallFlowers>.add(
-	<thebetweenlands:cardinal_flower>,
-	<thebetweenlands:tall_cattail>
-);
-
-for item in <ore:allTallFlowers>.items {
-	if(item.definition.owner != "thebetweenlands") {
-		<ore:allTallFlowers>.remove(item);
-	}
-}
-
 <ore:cobblestone>.remove(betweenstone);
 <ore:stone>.remove(<thebetweenlands:smooth_betweenstone>);
 

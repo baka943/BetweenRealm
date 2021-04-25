@@ -11,9 +11,6 @@ import crafttweaker.item.IIngredient;
 //==================================
 
 val feyCrafterRecipes as IIngredient[][IItemStack] = {
-	<roots:elemental_soil> * 4 : [
-		<thebetweenlands:swamp_dirt>, terraMoss, wildroot, <ore:gravel>, swampMeal
-	],
 	<roots:runic_shears> : [
 		<thebetweenlands:syrmorite_shears>, pereskia, pereskia, <ore:runestone>, <ore:runestone>
 	],
@@ -21,22 +18,22 @@ val feyCrafterRecipes as IIngredient[][IItemStack] = {
 		gem.lapis, betweenstone, betweenstone, betweenstone, betweenstone
 	],
 	<roots:unending_bowl> : [
-		<fluid:swamp_water> * 1000, <roots:mortar>, dewgonia, terraMoss, dewgonia
+		<fluid:water> * 1000, dewgonia, dewgonia, <roots:mortar>, terraMoss
 	],
 	<roots:living_axe> : [
-		ingot.octine, <thebetweenlands:weedwood_axe>, wildroot, <ore:rootsBark>, <ore:rootsBark>
+		ingot.iron, <thebetweenlands:weedwood_axe>, wildroot, <ore:rootsBark>, <ore:rootsBark>
 	],
 	<roots:living_hoe> : [
-		ingot.octine, <thebetweenlands:weedwood_shovel>, wildroot, <roots:wildewheet>, <ore:rootsBark>
+		ingot.iron, <thebetweenlands:weedwood_shovel>, wildroot, <roots:wildewheet>, <ore:rootsBark>
 	],
 	<roots:living_pickaxe> : [
-		ingot.octine, <thebetweenlands:weedwood_pickaxe>, wildroot, <ore:rootsBark>, <ore:rootsBark>
+		ingot.iron, <thebetweenlands:weedwood_pickaxe>, wildroot, <ore:rootsBark>, <ore:rootsBark>
 	],
 	<roots:living_shovel> : [
-		ingot.octine, <thebetweenlands:weedwood_shovel>, wildroot, <ore:rootsBark>, <ore:rootsBark>
+		ingot.iron, <thebetweenlands:weedwood_shovel>, wildroot, <ore:rootsBark>, <ore:rootsBark>
 	],
 	<roots:living_sword> : [
-		ingot.octine, <thebetweenlands:weedwood_sword>, wildroot, <ore:rootsBark>, <ore:rootsBark>
+		ingot.iron, <thebetweenlands:weedwood_sword>, wildroot, <ore:rootsBark>, <ore:rootsBark>
 	],
 	<roots:wildwood_bow> : [
 		<thebetweenlands:weedwood_bow>, bark.wildwood, bark.wildwood, terraMoss, spiritHerb
@@ -73,6 +70,9 @@ val feyCrafterRecipes as IIngredient[][IItemStack] = {
 	],
 	<roots:wildwood_quiver> : [
 		<ore:chestWeed>, <roots:bark_wildwood>, <roots:bark_wildwood>, terraMoss, spiritHerb
+	],
+	<roots:apothecary_pouch> : [
+		<ore:chestWeed>, bark.wildwood, bark.wildwood, spiritHerb, <roots:component_pouch>
 	]
 };
 

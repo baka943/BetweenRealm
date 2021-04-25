@@ -64,34 +64,28 @@ roots.addPyre(pyreRecipes);
 
 val modifyRituals as IIngredient[][string] = {
 	"ritual_heavy_storms" : [
-		wildroot, dewgonia, <ore:betweenVine>, cloudBerry, <roots:wildewheet_seed>
+		<botania:petal:11>, dewgonia, cloudBerry, <botania:petal:11>, <botania:petal:9>
 	],
 	"ritual_divine_protection" : [
-		pereskia, cloudBerry, <ore:rootsBark>, <ore:rootsBark>, glowstone
+		pereskia, <ore:runePrideB>, spiritHerb, <botania:petal>, <botania:petal:8>
 	],
 	"ritual_windwall" : [
-		cloudBerry, moonglowLeaf, <ore:rootsBark>, <ore:rootsBark>, <thebetweenlands:items_misc:3>
+		cloudBerry, <ore:runeAirB>, moonglowLeaf, <botania:petal:4>, <botania:petal>
 	],
 	"ritual_warding_protection" : [
-		<thebetweenlands:wight_heart>, stalicripe, wildroot, <ore:rootsBark>, <ore:dentrothystShard>
+		stalicripe, <ore:runeSpringB>, spiritHerb, <botania:petal>, <botania:petal>
 	],
 	"ritual_germination" : [
-		spiritHerb, wildroot, wildroot, swampMeal, <ore:rootsBark>
-	],
-	"ritual_summon_creatures" : [
-		spiritHerb, <roots:wildewheet>, <roots:wildewheet>, <thebetweenlands:wight_heart>, <roots:spirit_herb_seed>
+		spiritHerb, <ore:runeSpringB>, <botania:petal:5>, <botania:petal:5>, <botania:petal:13>
 	],
 	"ritual_wild_growth" : [
-		wildroot, spiritHerb, wildroot, spiritHerb, wildroot
+		wildroot, spiritHerb, moonglowLeaf, wildroot, wildroot
 	],
 	"ritual_flower_growth" : [
-		swampMeal, wildroot, terraMoss, <botania:petal:*>, stalicripe
-	],
-	"ritual_transmutation" : [
-		<ore:rootsBark>, <roots:runestone>, <roots:runestone>, cloudBerry, stalicripe
+		wildroot, <ore:runeSpringB>, <botania:petal:10>, <botania:petal:5>, <botania:petal:13>
 	],
 	"ritual_gathering" : [
-		<roots:wildewheet>, <roots:wildewheet>, <roots:wildewheet_seed>, <ore:hopper>, redstone
+		<roots:wildewheet>, <ore:runeAirB>, <botania:petal:7>, <botania:petal:7>, <botania:petal:8>
 	]
 };
 
