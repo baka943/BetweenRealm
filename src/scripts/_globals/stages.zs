@@ -9,6 +9,8 @@ import mods.zenstages.Stage;
 global stageAtlantis as Stage = ZenStager.initStage("atlantis_stage");
 global stageIslands as Stage = ZenStager.initStage("islands_stage");
 global stageCities as Stage = ZenStager.initStage("cities_stage");
+global stageNether as Stage = ZenStager.initStage("nether_stage");
+global stageSky as Stage = ZenStager.initStage("sky_stage");
 
 //Minecart
 global stageMinecraft as Stage = ZenStager.initStage("minecraft_stage");

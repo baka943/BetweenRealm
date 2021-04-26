@@ -24,7 +24,9 @@ val removeList as IItemStack[] = [
 	<minecraft:monster_egg:5>,
 	<minecraft:end_portal_frame>,
 	<minecraft:bedrock>,
-	<baubles:ring>
+	<baubles:ring>,
+	<gbook_snapshot:guidebook>.withTag({Book: "gbook_snapshot:xml/guidebook_additions.xml"}),
+	<gbook_snapshot:guidebook>.withTag({Book: "gbook_snapshot:xml/guidebook.xml"})
 ];
 
 jei.hide(removeList);
@@ -66,6 +68,20 @@ stageBetweenlands.addIngredients([
 
 stageWater.addIngredient(<minecraft:water_bucket>);
 stageMinecraft.addIngredient(<minecraft:lava_bucket>);
+
+// stageAtlantis
+stageIslands.addIngredients([
+	<minecraft:end_bricks>,
+	<minecraft:end_stone>,
+	<minecraft:ender_chest>,
+	<minecraft:ender_eye>,
+	<minecraft:end_rod>,
+	<minecraft:elytra>,
+	<minecraft:dragon_breath>,
+	<minecraft:dragon_egg>,
+	<minecraft:cyan_shulker_box>
+]);
+// stageCities
 
 for item in loadedMods["minecraft"].items {
 	if(!ZenStager.isStaged("ingredient", item) && item.definition.id != "minecraft:enchanted_book") {

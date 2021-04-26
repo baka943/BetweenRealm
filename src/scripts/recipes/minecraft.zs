@@ -11,7 +11,8 @@ import crafttweaker.creativetabs.ICreativeTab;
 
 val removeRecipes as IItemStack[] = [
 	<minecraft:iron_nugget>,
-	<minecraft:gold_nugget>
+	<minecraft:gold_nugget>,
+	<minecraft:flint>
 ];
 
 iRecipes.remove(removeRecipes);
@@ -73,14 +74,6 @@ for rec in furnace.all {
 furnace.addRecipe(<minecraft:iron_nugget> * 8, ore.iron);
 furnace.addRecipe(<minecraft:gold_nugget> * 8, ore.gold);
 furnace.addRecipe(<minecraft:dye:4> * 8, ore.lapis);
-
-for item in loadedMods["minecraft"].items {
-	if(item.isFood && !item.matches(<minecraft:cookie>) && !item.matches(<minecraft:spider_eye>)) {
-		// stageCities.addIngredient(item);
-	}
-}
-
-// stageCities.addLiquid(<liquid:lava>);
 
 val itemList as IItemStack[] = [
 	<minecraft:yellow_glazed_terracotta>,
@@ -365,7 +358,5 @@ val itemList as IItemStack[] = [
 for item in itemList {
 	// stageCities.addIngredient(item);
 }
-
-
 
 jei.hide("jei.information");

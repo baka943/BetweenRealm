@@ -15,7 +15,8 @@ val removeRecipes as string[] = [
 	"mysticalworld:antler_hat",
 	"mysticalworld:beetle_mask",
 	"mysticalworld:ender_pearl",
-	"mysticalworld:pelt_to_leather"
+	"mysticalworld:pelt_to_leather",
+	"mysticalworld:thatch"
 ];
 
 iRecipes.remove(removeRecipes, false);
@@ -155,6 +156,9 @@ iRecipes.add(shapedRecipes, false);
 recipes.replaceAllOccurences(<minecraft:leather>, pelt, <*>.only(function(item) {
     return !isNull(item) && !pelt.matches(item);
 }));
+
+#Thatch
+iRecipes.addCompress(<mysticalworld:thatch> * 16, <roots:wildewheet>, 3);
 
 //==================================
 ######## Shapeless recipes ########

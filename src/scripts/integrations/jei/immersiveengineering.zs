@@ -13,8 +13,8 @@ val removeList as IItemStack[] = [
 	<immersiveengineering:ore:3>,
 	<immersiveengineering:ore:4>,
 	<immersiveengineering:ore:5>
-	// <immersiveengineering:stone_device>,
-	// <immersiveengineering:stone_device:1>
 ];
 
 jei.hide(removeList);
+
+stageDisable.addIngredients([<immersiveengineering:stone_device:0>, <immersiveengineering:stone_device:1>]);

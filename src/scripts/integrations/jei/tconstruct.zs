@@ -11,7 +11,11 @@ val removeList as IItemStack[] = [
 	<tconstruct:rack:1>.withTag({textureBlock: {id: "minecraft:wooden_slab", Count: 1 as byte, Damage: 0 as short}}),
 	<tconstruct:clay_cast>,
 	<tconstruct:ore>,
-	<tconstruct:ore:1>
+	<tconstruct:ore:1>,
+	<tconstruct:wooden_hopper>,
+	<tconstruct:punji>,
+	<tconstruct:wood_rail>,
+	<tconstruct:wood_rail_trapdoor>
 ];
 
 jei.hide(removeList);

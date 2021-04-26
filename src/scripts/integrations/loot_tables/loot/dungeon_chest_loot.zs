@@ -13,8 +13,8 @@ pool.addItemEntryJson(<magicalsculpture:relic>, 9, 0, [
 	{
 		"function": "set_data",
 		"data": {
-			"min": 0,
-			"max": 49
+			"min": 0.0,
+			"max": 49.0
 		}
 	}
 ], [], "relic");

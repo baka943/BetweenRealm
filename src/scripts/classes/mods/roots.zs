@@ -14,10 +14,7 @@ import mods.roots.Fey;
 import mods.roots.Mortar;
 import mods.roots.Pyre;
 import mods.roots.Ritual;
-import mods.roots.Pacifist;
 import mods.roots.FlowerGrowth;
-import mods.roots.SummonCreatures;
-import mods.roots.Transmutation;
 
 import scripts.functions.getItemName;
 
@@ -127,24 +124,6 @@ zenClass Roots {
 	}
 
 	//==================================
-	######## Untrue Pacifist Creatures ########
-	//==================================
-
-	#Remove Entitys
-	function removeEntityP(entities as IEntityDefinition[]) {
-		for entity in entities {
-			Pacifist.removeEntity(entity);
-		}
-	}
-
-	#Add Entitys
-	function addEntityP(entities as IEntityDefinition[]) {
-		for entity in entities {
-			Pacifist.addEntity(entity);
-		}
-	}
-
-	//==================================
 	######## Flower Growth Ritual ########
 	//==================================
 
@@ -159,83 +138,6 @@ zenClass Roots {
 	function addFlower(map as IBlockState[string]) {
 		for name, state in map {
 			FlowerGrowth.addRecipeBlockState(name, state);
-		}
-	}
-
-	//==================================
-	######## Summon Creatures Ritual ########
-	//==================================
-
-	#Clear Life Essences
-	function clearLifeEssences() {
-		SummonCreatures.clearLifeEssence();
-	}
-
-	#Remove Entities Summon
-	function removeEntityS(entities as IEntityDefinition[]) {
-		for entity in entities {
-			SummonCreatures.removeEntity(entity);
-		}
-	}
-
-	#Add Entities Summon
-	function addEntityS(map as IIngredient[][IEntityDefinition]) {
-		for entity, ingredients in map {
-			SummonCreatures.addEntity(entity, ingredients);
-		}
-	}
-
-	#Remove Life Essences
-	function removeLifeEssence(entities as IEntityDefinition[]) {
-		for entity in entities {
-			SummonCreatures.removeLifeEssence(entity);
-		}
-	}
-
-	#Add Life Essences
-	function addLifeEssence(entities as IEntityDefinition[]) {
-		for entity in entities {
-			SummonCreatures.addLifeEssence(entity);
-		}
-	}
-
-	//==================================
-	######## Transmutation Ritual ########
-	//==================================
-
-	#Remove Transmutations
-	function removeTrans(names as string[]) {
-		for name in names {
-			Transmutation.removeRecipe(name);
-		}
-	}
-
-	#Add Transmutations
-	function addTransB(map as IBlockState[][IBlockState][string]) {
-		for recipeName, recipes in map {
-			for replacement, originals in recipes {
-				for i, original in originals {
-					var name as string = recipeName;
-
-					if(i > 0) name += "/" ~ i;
-
-					Transmutation.addBlockToBlockRecipe(name, original, replacement);
-				}
-			}
-		}
-	}
-
-	function addTransI(map as IBlockState[][IItemStack][string]) {
-		for recipeName, recipes in map {
-			for output, originals in recipes {
-				for i, original in originals {
-					var name as string = recipeName;
-
-					if(i > 0) name += "/" ~ i;
-
-					Transmutation.addBlockToItemRecipe(name, original, output);
-				}
-			}
 		}
 	}
 
