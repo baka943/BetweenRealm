@@ -47,9 +47,7 @@ function getInventory(player as IPlayer, worldIn as string) as IData {
 	return DataUtil.fromJson(data);
 }
 
-function setInventory(player as IPlayer, worldIn as string) {	
-	clearInventory(player);
-
+function setInventory(player as IPlayer, worldIn as string) {
 	var data as IData = player.data.PlayerPersisted.memberGet("traveler_" + worldIn);
 
 	for index in 0 .. 41 {
@@ -77,19 +75,19 @@ function setInventory(player as IPlayer, worldIn as string) {
 }
 
 function clearInventory(player as IPlayer){
-    var item as IItemStack = null;
-    for index in 0 to 41 {
-        if(index == 36)
-            player.setItemToSlot(IEntityEquipmentSlot.feet(), item);
-        else if(index == 37) 
-            player.setItemToSlot(IEntityEquipmentSlot.legs(), item);
-        else if(index == 38) 
-            player.setItemToSlot(IEntityEquipmentSlot.chest(), item);
-        else if(index == 39) 
-            player.setItemToSlot(IEntityEquipmentSlot.head(), item);
-        else if(index == 40) 
-            player.setItemToSlot(IEntityEquipmentSlot.offhand(), item);
-        else
-            player.replaceItemInInventory(index, item);
+	var item as IItemStack = null;
+
+	for index in 0 to 41 {
+		if(index == 36) {
+			player.setItemToSlot(IEntityEquipmentSlot.feet(), item);
+		} else if(index == 37) {
+			player.setItemToSlot(IEntityEquipmentSlot.legs(), item);
+		} else if(index == 38) {
+			player.setItemToSlot(IEntityEquipmentSlot.chest(), item);
+		} else if(index == 39) {
+			player.setItemToSlot(IEntityEquipmentSlot.head(), item);
+		} else if(index == 40) {
+			player.setItemToSlot(IEntityEquipmentSlot.offhand(), item);
+		} else player.replaceItemInInventory(index, item);
     }
 }
