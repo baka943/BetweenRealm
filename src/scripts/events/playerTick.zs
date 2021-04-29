@@ -11,5 +11,4 @@ events.onPlayerTick(function(event as PlayerTickEvent) {
 	var player as IPlayer = event.player;
 	var world as IWorld = player.world;
 
-	
 });

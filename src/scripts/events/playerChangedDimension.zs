@@ -1,4 +1,4 @@
-#Name: playerItemPickup.zs
+#Name: playerChangedDimension.zs
 #Author: baka943
 
 import crafttweaker.event.PlayerChangedDimensionEvent;
@@ -8,7 +8,6 @@ import crafttweaker.data.IData;
 
 import scripts.functions.getInventory;
 import scripts.functions.setInventory;
-import scripts.functions.clearInventory;
 
 events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
 	var player as IPlayer = event.player;
@@ -62,15 +61,18 @@ events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
 
 	if(fromWorld == "the_nether" || fromWorld == "CompactMachines") {
 		player.update(getInventory(player, toWorld));
-		return;
 	} else player.update(getInventory(player, fromWorld));
 
-	if(toWorld == "the_nether"
-		|| toWorld == "CompactMachines") return;
+	if(toWorld == "the_nether" || toWorld == "CompactMachines") return;
 
-	clearInventory(player);
+	var scommand = server.commandManager;
 
 	if(!isNull(player.data.PlayerPersisted.memberGet("traveler_" + toWorld))) {
 		setInventory(player, toWorld);
+	} else {
+		scommand.executeCommand(server, "gamerule sendCommandFeedback false");
+		scommand.executeCommand(server, "gamerule commandBlockOutput false");
+		scommand.executeCommand(server, "gamerule logAdminCommands false");
+		scommand.executeCommand(server, "clear " + player.name);
 	}
 });
