@@ -9,6 +9,7 @@ import mods.ctutils.world.World;
 import mods.ctutils.world.IGameRules;
 
 import scripts.functions.getInventory;
+import scripts.functions.clearInventory;
 
 events.onEntityLivingDeathDrops(function(event as EntityLivingDeathDropsEvent) {
 	if(event.entity instanceof IPlayer) {
@@ -25,6 +26,7 @@ events.onEntityLivingDeath(function(event as EntityLivingDeathEvent) {
 
 		if(rules.getBoolean("keepInventory")) {
 			player.update(getInventory(player, player.world.getDimensionType()));
+			clearInventory(player);
 		}
 	}
 });
