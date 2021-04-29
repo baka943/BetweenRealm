@@ -53,6 +53,23 @@ stageNether.addLiquids([
 	<liquid:milk>
 ]);
 
+stageCities.addLiquids([
+	<liquid:oil>,
+	<liquid:diesel>,
+	<liquid:gasoline>,
+	<liquid:lubricant>,
+	<liquid:napalm>,
+	<liquid:potion>,
+	<liquid:creosote>,
+	<liquid:plantoil>,
+	<liquid:ethanol>,
+	<liquid:biodiesel>,
+	<liquid:concrete>,
+	<liquid:uranium>,
+	<liquid:constantan>,
+	<liquid:dist_water>
+]);
+
 stageIslands.addLiquids([
 	<liquid:molten_blood_infused_iron>,
 	<liquid:refined_life_essence>,
@@ -60,5 +77,7 @@ stageIslands.addLiquids([
 ]);
 
 stageAtlantis.addLiquid(<liquid:astralsorcery.liquidstarlight>);
+
+stageSky.addLiquids([<liquid:liquidchorus>, <liquid:menrilresin>]);
 
 stageDisable.addLiquids([<liquid:wood_tar>, <liquid:liquid_clay>]);

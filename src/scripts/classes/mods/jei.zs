@@ -4,9 +4,6 @@
 
 import crafttweaker.item.IItemStack;
 
-import mods.zenstages.Stage;
-import mods.zenstages.ZenStager;
-
 import mods.jei.JEI;
 
 zenClass Jei {
@@ -19,9 +16,9 @@ zenClass Jei {
 
 	function hide(items as IItemStack[]) {
 		for item in items {
-			item.definition.creativeTab = null;
-			
-			if(item.isItemBlock) item.asBlock().definition.creativeTab = null;
+			if(item.isItemBlock)
+				item.asBlock().definition.creativeTab = null;
+			else item.definition.creativeTab = null;
 
 			JEI.removeAndHide(item);
 			stageDisable.addIngredient(item);
@@ -29,9 +26,9 @@ zenClass Jei {
 	}
 
 	function hide(item as IItemStack) {
-		item.definition.creativeTab = null;
-		
-		if(item.isItemBlock) item.asBlock().definition.creativeTab = null;
+		if(item.isItemBlock)
+			item.asBlock().definition.creativeTab = null;
+		else item.definition.creativeTab = null;
 
 		JEI.removeAndHide(item);
 		stageDisable.addIngredient(item);

@@ -2,10 +2,10 @@
 #Author: baka943
 
 import crafttweaker.event.EntityTravelToDimensionEvent;
-import crafttweaker.entity.IEntityItem;
+import crafttweaker.player.IPlayer;
 
 events.onEntityTravelToDimension(function(event as EntityTravelToDimensionEvent) {
-	if(event.entity instanceof IEntityItem) {
+	if(!(event.entity instanceof IPlayer)) {
 		event.cancel();
 	}
 });

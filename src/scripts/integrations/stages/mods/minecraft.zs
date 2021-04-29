@@ -16,17 +16,21 @@ val removeList as IItemStack[] = [
 	<minecraft:wooden_sword>,
 	<minecraft:crafting_table>,
 	<minecraft:furnace>,
-	<minecraft:monster_egg>,
-	<minecraft:monster_egg:1>,
-	<minecraft:monster_egg:2>,
-	<minecraft:monster_egg:3>,
-	<minecraft:monster_egg:4>,
-	<minecraft:monster_egg:5>,
+	<minecraft:monster_egg:*>,
 	<minecraft:end_portal_frame>,
 	<minecraft:bedrock>,
+	<minecraft:command_block>,
+	<minecraft:barrier>,
+	<minecraft:repeating_command_block>,
+	<minecraft:chain_command_block>,
+	<minecraft:structure_void>,
+	<minecraft:structure_block>,
+	<minecraft:command_block_minecart>,
+	<minecraft:knowledge_book>,
 	<baubles:ring>,
 	<gbook_snapshot:guidebook>.withTag({Book: "gbook_snapshot:xml/guidebook_additions.xml"}),
-	<gbook_snapshot:guidebook>.withTag({Book: "gbook_snapshot:xml/guidebook.xml"})
+	<gbook_snapshot:guidebook>.withTag({Book: "gbook_snapshot:xml/guidebook.xml"}),
+	<gbook_snapshot:guidebook>
 ];
 
 jei.hide(removeList);
@@ -88,6 +92,21 @@ for item in loadedMods["minecraft"].items {
 		stageMinecraft.addIngredient(item);
 	}
 }
+
+stageMinecraft.addIngredients(loadedMods["storagedrawers"].items);
+stageMinecraft.addIngredients(loadedMods["improvedbackpacks"].items);
+
+stageMinecraft.addIngredients([
+	<minecraft:farmland>,
+	<minecraft:brown_mushroom_block>,
+	<minecraft:red_mushroom_block>,
+	<minecraft:grass_path>,
+	<minecraft:filled_map>,
+	<minecraft:fireworks>,
+	<minecraft:written_book>,
+	<minecraft:milk_bucket>,
+	<forge:bucketfilled>
+]);
 
 // ItemStages.stageTooltip(stageDisable.stage, "§9" + game.localize("tooltip.itemstages.stage"));
 ItemStages.stageTooltip(stageDisable.stage, "§9" + game.localize("gui.tooltip.matter") + ":");

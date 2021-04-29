@@ -1,94 +1,67 @@
 #priority -100
-#Name: items.zs
+#Name: nether.zs
 #Author: baka943
 
 import mods.ItemStages;
+import mods.zenstages.ZenStager;
 
-import scripts.functions.getItemName;
+import crafttweaker.item.IItemStack;
 
-for item in loadedMods["botania"].items {
-	if(!item.matches(<botania:fertilizer>)) {
-		stageBotania.addIngredient(item);
-	}
-}
+val removeList as IItemStack[] = [
+	<embers:ingot_copper>,
+	<embers:ingot_lead>,
+	<embers:ingot_silver>,
+	<embers:nugget_copper>,
+	<embers:nugget_lead>,
+	<embers:nugget_silver>,
+	<embers:plate_copper>,
+	<embers:plate_lead>,
+	<embers:plate_silver>,
+	<embers:plate_iron>,
+	<embers:plate_gold>,
+	<embers:axe_copper>,
+	<embers:axe_dawnstone>,
+	<embers:axe_lead>,
+	<embers:axe_silver>,
+	<embers:pickaxe_copper>,
+	<embers:pickaxe_dawnstone>,
+	<embers:pickaxe_lead>,
+	<embers:pickaxe_silver>,
+	<embers:shovel_copper>,
+	<embers:shovel_dawnstone>,
+	<embers:shovel_lead>,
+	<embers:shovel_silver>,
+	<embers:hoe_copper>,
+	<embers:hoe_dawnstone>,
+	<embers:hoe_lead>,
+	<embers:hoe_silver>,
+	<embers:sword_copper>,
+	<embers:sword_dawnstone>,
+	<embers:sword_lead>,
+	<embers:sword_silver>,
+	<embers:ore_copper>,
+	<embers:ore_lead>,
+	<embers:ore_silver>,
+	<embers:ore_quartz>,
+	<embers:block_copper>,
+	<embers:block_lead>,
+	<embers:block_silver>,
+	<soot:stamp_text_raw>,
+	<soot:stamp_text>,
+	<soot:sulfur_ore>,
+	<embers:ore_quartz>,
+	<tconstruct:stone_stick>,
+	<tconstruct:rack:1>.withTag({textureBlock: {id: "minecraft:wooden_slab", Count: 1 as byte, Damage: 0 as short}}),
+	<tconstruct:clay_cast>,
+	<tconstruct:ore>,
+	<tconstruct:ore:1>,
+	<tconstruct:wooden_hopper>,
+	<tconstruct:punji>,
+	<tconstruct:wood_rail>,
+	<tconstruct:wood_rail_trapdoor>
+];
 
-stageBotania.addIngredients(loadedMods["botania_tweaks"].items);
-
-stageBotania.addIngredients([
-	<botania:enchantedsoil>,
-	<botania:enchanter>,
-	<botania:bifrost>,
-	<botania:cacophoniumblock>,
-	<botania:altar>
-]);
-
-for item in loadedMods["roots"].items {
-	if(!item.matches(<roots:wildroot>)) {
-		stageRoots.addIngredient(item);
-	}
-}
-
-stageRoots.addIngredients([
-	<roots:ritual_heavy_storms>,
-	<roots:ritual_divine_protection>,
-	<roots:ritual_windwall>,
-	<roots:ritual_warding_protection>,
-	<roots:ritual_germination>,
-	<roots:ritual_wild_growth>,
-	<roots:ritual_flower_growth>,
-	<roots:ritual_gathering>,
-	<roots:structure_marker>,
-	<mysticalworld:amethyst_knife>,
-	<mysticalworld:copper_knife>,
-	<mysticalworld:silver_knife>,
-	<mysticalworld:aubergine_seed>,
-	<mysticalworld:aubergine>,
-	<mysticalworld:cooked_aubergine>,
-	<patchouli:guide_book>.withTag({"patchouli:book": "roots:roots_guide"}),
-	<mysticalworld:thatch>,
-	<mysticalworld:thatch_slab>,
-	<mysticalworld:thatch_stairs>,
-	<mysticalworld:thatch_wall>
-]);
-
-stageRelic.addIngredients(loadedMods["magicalsculpture"].items);
-
-stageAtlantis.addIngredients(loadedMods["astralsorcery"].items);
-stageAtlantis.addIngredients(loadedMods["arcanearchives"].items);
-
-stageAtlantis.addIngredients([
-	<forge:bucketfilled>.withTag({FluidName: "astralsorcery.liquidstarlight", Amount: 1000})
-]);
-
-stageIslands.addIngredients(loadedMods["bloodmagic"].items);
-stageIslands.addIngredients(loadedMods["bloodarsenal"].items);
-
-stageIslands.addIngredients([
-	<forge:bucketfilled>.withTag({FluidName: "molten_blood_infused_iron", Amount: 1000}),
-	<forge:bucketfilled>.withTag({FluidName: "refined_life_essence", Amount: 1000}),
-	<forge:bucketfilled>.withTag({FluidName: "lifeessence", Amount: 1000}),
-	<guideapi:bloodmagic-guide>,
-	<guideapi:bloodarsenal-guide>,
-	<bloodarsenal:blood_infused_wooden_slab>
-]);
-
-for item in loadedMods["bloodarsenal"].items {
-	if(getItemName(item) == "bloodarsenal/modifier_tome") {
-		stageIslands.addIngredient(item);
-	}
-}
-
-for item in loadedMods["bloodmagic"].items {
-	if(getItemName(item) == "bloodmagic/upgrade_tome") {
-		stageIslands.addIngredient(item);
-	}
-}
-
-stageCities.addIngredients(loadedMods["pyrotech"].items);
-stageCities.addIngredients(loadedMods["immersiveengineering"].items);
-stageCities.addIngredients(loadedMods["immersivepetroleum"].items);
-stageCities.addIngredients(loadedMods["immersivetech"].items);
-stageCities.addIngredients(loadedMods["cyberware"].items);
+jei.hide(removeList);
 
 stageNether.addIngredients(loadedMods["embers"].items);
 stageNether.addIngredients(loadedMods["soot"].items);
@@ -157,13 +130,3 @@ stageNether.addIngredients([
 	<tconstruct:spaghetti>,
 	<tconstruct:moms_spaghetti>
 ]);
-
-stageMinecraft.addIngredients(loadedMods["storagedrawers"].items);
-stageMinecraft.addIngredients(loadedMods["improvedbackpacks"].items);
-
-stageSky.addIngredients(loadedMods["refinedstorage"].items);
-stageSky.addIngredients(loadedMods["refinedstorageaddons"].items);
-stageSky.addIngredients(loadedMods["matteroverdrive"].items);
-stageSky.addIngredients(loadedMods["integrateddynamics"].items);
-stageSky.addIngredients(loadedMods["integratedtunnels"].items);
-stageSky.addIngredients(loadedMods["compactmachines3"].items);

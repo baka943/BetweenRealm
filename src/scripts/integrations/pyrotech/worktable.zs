@@ -63,18 +63,6 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 			[<ore:plankWood>, <ore:plankWood>, <ore:plankWood>]
 		]
 	],
-	<pyrotech:torch_fiber> * 4 : [
-		[
-			[<pyrotech:material:13>],
-			[<ore:stickWood>]
-		]
-	],
-	<pyrotech:torch_stone> * 4 : [
-		[
-			[<pyrotech:material:21>],
-			[<ore:stickStone>]
-		]
-	],
 	<pyrotech:soaking_pot> : [
 		[
 			[<minecraft:stone_slab>, null, <minecraft:stone_slab>],
@@ -90,9 +78,6 @@ pyrotech.addWorktable(shapedRecipes, false);
 //==================================
 
 val shapelessRecipes as IIngredient[][][IItemStack] = {
-	<pyrotech:flint_and_tinder> : [
-		[<pyrotech:material:10>, <pyrotech:material:13>, <ore:rock>]
-	],
 	<pyrotech:material:14> * 3 : [
 		[<pyrotech:material:13>, <pyrotech:material:13>, <pyrotech:material:13>]
 	]

@@ -48,13 +48,6 @@ function getInventory(player as IPlayer, worldIn as string) as IData {
 }
 
 function setInventory(player as IPlayer, worldIn as string) {
-	var scommand = server.commandManager;
-	
-	scommand.executeCommand(server, "gamerule sendCommandFeedback false");
-	scommand.executeCommand(server, "gamerule commandBlockOutput false");
-	scommand.executeCommand(server, "gamerule logAdminCommands false");
-	scommand.executeCommand(server, "clear " + player.name);
-
 	var data as IData = player.data.PlayerPersisted.memberGet("traveler_" + worldIn);
 
 	for index in 0 .. 41 {
@@ -79,4 +72,22 @@ function setInventory(player as IPlayer, worldIn as string) {
 			player.setItemToSlot(IEntityEquipmentSlot.offhand(), item);
 		} else player.replaceItemInInventory(index, item);
 	}
+}
+
+function clearInventory(player as IPlayer){
+	var item as IItemStack = null;
+
+	for index in 0 to 41 {
+		if(index == 36) {
+			player.setItemToSlot(IEntityEquipmentSlot.feet(), item);
+		} else if(index == 37) {
+			player.setItemToSlot(IEntityEquipmentSlot.legs(), item);
+		} else if(index == 38) {
+			player.setItemToSlot(IEntityEquipmentSlot.chest(), item);
+		} else if(index == 39) {
+			player.setItemToSlot(IEntityEquipmentSlot.head(), item);
+		} else if(index == 40) {
+			player.setItemToSlot(IEntityEquipmentSlot.offhand(), item);
+		} else player.replaceItemInInventory(index, item);
+    }
 }

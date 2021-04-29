@@ -6,7 +6,7 @@
       "distribution": "uniform",
       "generator": {
         "block": {
-          "name": "betweenores:coal_ore"
+          "name": "minecraft:coal_ore"
         },
         "material": "thebetweenlands:betweenstone",
         "cluster-size": 9
@@ -29,7 +29,7 @@
       "distribution": "uniform",
       "generator": {
         "block": {
-          "name": "betweenores:iron_ore"
+          "name": "minecraft:iron_ore"
         },
         "material": "thebetweenlands:betweenstone",
         "cluster-size": 9
@@ -52,7 +52,7 @@
       "distribution": "uniform",
       "generator": {
         "block": {
-          "name": "betweenores:gold_ore"
+          "name": "minecraft:gold_ore"
         },
         "material": "thebetweenlands:pitstone",
         "cluster-size": 9
@@ -75,7 +75,7 @@
       "distribution": "uniform",
       "generator": {
         "block": {
-          "name": "betweenores:redstone_ore"
+          "name": "minecraft:redstone_ore"
         },
         "material": "thebetweenlands:pitstone",
         "cluster-size": 8
@@ -98,7 +98,7 @@
       "distribution": "uniform",
       "generator": {
         "block": {
-          "name": "betweenores:lapis_ore"
+          "name": "minecraft:lapis_ore"
         },
         "material": "thebetweenlands:pitstone",
         "cluster-size": 7
@@ -121,7 +121,7 @@
       "distribution": "uniform",
       "generator": {
         "block": {
-          "name": "betweenores:diamond_ore"
+          "name": "minecraft:diamond_ore"
         },
         "material": "thebetweenlands:pitstone",
         "cluster-size": 8
@@ -144,7 +144,7 @@
       "distribution": "uniform",
       "generator": {
         "block": {
-          "name": "betweenores:emerald_ore"
+          "name": "minecraft:emerald_ore"
         },
         "material": "thebetweenlands:pitstone",
         "cluster-size": 2

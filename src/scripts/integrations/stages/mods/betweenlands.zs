@@ -1,10 +1,33 @@
-#priority 100
-#Name: roots.zs
+#priority -100
+#Name: betweenlands.zs
 #Author: baka943
 
-#modloaded roots
+import mods.ItemStages;
+import mods.zenstages.ZenStager;
 
 import crafttweaker.item.IItemStack;
+
+stageRelic.addIngredients(loadedMods["magicalsculpture"].items);
+
+for i in 1 .. 9 {
+	jei.hide(<botania:altar>.definition.makeStack(i));
+}
+
+for item in loadedMods["botania"].items {
+	if(!item.matches(<botania:fertilizer>)) {
+		stageBotania.addIngredient(item);
+	}
+}
+
+stageBotania.addIngredients(loadedMods["botania_tweaks"].items);
+
+stageBotania.addIngredients([
+	<botania:enchantedsoil>,
+	<botania:enchanter>,
+	<botania:bifrost>,
+	<botania:cacophoniumblock>,
+	<botania:altar>
+]);
 
 val removeList as IItemStack[] = [
 	<roots:ritual_overgrowth>,
@@ -100,3 +123,37 @@ val removeList as IItemStack[] = [
 jei.hide(removeList);
 
 jei.hide(<patchouli:guide_book>.withTag({"patchouli:book": "mysticalworld:world_guide"}));
+
+for item in loadedMods["roots"].items {
+	if(!item.matches(<roots:wildroot>)) {
+		stageRoots.addIngredient(item);
+	}
+}
+
+stageRoots.addIngredients([
+	<roots:ritual_heavy_storms>,
+	<roots:ritual_divine_protection>,
+	<roots:ritual_windwall>,
+	<roots:ritual_warding_protection>,
+	<roots:ritual_germination>,
+	<roots:ritual_wild_growth>,
+	<roots:ritual_flower_growth>,
+	<roots:ritual_gathering>,
+	<roots:structure_marker>,
+	<mysticalworld:amethyst_knife>,
+	<mysticalworld:copper_knife>,
+	<mysticalworld:silver_knife>,
+	<mysticalworld:aubergine_seed>,
+	<mysticalworld:aubergine>,
+	<mysticalworld:cooked_aubergine>,
+	<patchouli:guide_book>.withTag({"patchouli:book": "roots:roots_guide"}),
+	<mysticalworld:thatch>,
+	<mysticalworld:thatch_slab>,
+	<mysticalworld:thatch_stairs>,
+	<mysticalworld:thatch_wall>
+]);
+
+
+stageBotania.addRecipeRegex("botania:wands/twigwand_.*");
+stageBotania.addRecipeRegex(".*botania_stage");
+stageBotania.addRecipeRegex("botania:floating_.*");
