@@ -68,7 +68,7 @@ stageBetweenlands.addIngredients([
 	<minecraft:beacon>,
 	<minecraft:name_tag>,
 	<minecraft:blaze_powder>
-], false);
+]);
 
 stageWater.addIngredient(<minecraft:water_bucket>);
 stageMinecraft.addIngredient(<minecraft:lava_bucket>);

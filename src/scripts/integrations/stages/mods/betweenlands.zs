@@ -153,7 +153,7 @@ stageRoots.addIngredients([
 	<mysticalworld:thatch_wall>
 ]);
 
-stageRelic.addRecipeRegex("magicalsculpture:reveral_relic_.*");
+
 stageBotania.addRecipeRegex("botania:wands/twigwand_.*");
-stageBotania.addRecipeRegex("crafttweaker:.*/botania_stage");
+stageBotania.addRecipeRegex(".*botania_stage");
 stageBotania.addRecipeRegex("botania:floating_.*");
