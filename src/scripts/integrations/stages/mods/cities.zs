@@ -15,7 +15,6 @@ val removeList as IItemStack[] = [
 	<immersiveengineering:ore:4>,
 	<immersiveengineering:ore:5>,
 	<immersiveengineering:stone_device:0>,
-	<immersiveengineering:stone_device:1>,
 	<pyrotech:rock:1>,
 	<pyrotech:rock:2>,
 	<pyrotech:rock:3>,

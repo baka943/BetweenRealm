@@ -6,5 +6,4 @@
 
 import mods.multiblockstages.IEMultiBlockStages;
 
-IEMultiBlockStages.addStage(stageDisable.stage, "IE:CokeOven", "Waiting for server...");
-IEMultiBlockStages.addStage(stageDisable.stage, "IE:BlastFurnace", "Waiting for server...");
+IEMultiBlockStages.addStage(stageDisable.stage, "IE:CokeOven", "§4Waiting for server...");
