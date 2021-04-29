@@ -1,4 +1,4 @@
-#Name: playerItemPickup.zs
+#Name: playerChangedDimension.zs
 #Author: baka943
 
 import crafttweaker.event.PlayerChangedDimensionEvent;
