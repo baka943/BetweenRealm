@@ -17,7 +17,7 @@ events.onPlayerAttackEntity(function(event as PlayerAttackEntityEvent) {
 		DelayManager.addDelayWork(function() {
 			var health as float = target.maxHealth - target.health;
 			var addHealth as float = (player.maxHealth - player.health) == 0 ? 2.0F : (player.maxHealth - player.health) / player.maxHealth;
-			var res as float = health + (health * addHealth);
+			var res as float = health * addHealth;
 
 			target.attackEntityFrom(<damageSource:IN_FIRE>, res);
 		}, 1);
