@@ -19,7 +19,7 @@ events.onPlayerAttackEntity(function(event as PlayerAttackEntityEvent) {
 
         DelayManager.addDelayWork(function() {
 			var health as float = target.maxHealth - target.health;
-			var addHealth as float = (player.maxHealth - player.health) == 0.0F ? 1.0F : (player.maxHealth - player.health) / player.maxHealth;
+			var addHealth as float = (player.maxHealth - player.health) == 0.0F ? 1.0F : (player.maxHealth - (player.maxHealth - player.health)) / player.maxHealth;
 
 			player.sendChat(target.health);
 
