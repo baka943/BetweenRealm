@@ -11,6 +11,7 @@ import mods.ctutils.world.IGameRules;
 import scripts.functions.getInventory;
 import scripts.functions.clearInventory;
 
+//代办事项：修复在下界和压缩空间死亡BUG
 events.onEntityLivingDeathDrops(function(event as EntityLivingDeathDropsEvent) {
 	if(event.entity instanceof IPlayer) {
 		var player as IPlayer = event.entity;
