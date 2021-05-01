@@ -2,41 +2,47 @@
 #Author: ikexing
 
 import crafttweaker.event.PlayerAttackEntityEvent;
-import crafttweaker.player.IPlayer;
-import crafttweaker.world.IWorld;
+import crafttweaker.event.EntityLivingHurtEvent;
 import crafttweaker.entity.IEntityLivingBase;
+import crafttweaker.player.IPlayer;
 import mods.zenutils.DelayManager;
+import crafttweaker.world.IWorld;
 
 static damageNow as int[] = [0];
 static result as float[] = [0.0F];
+static targetHealth as float[] = [0.0F];
+static targetMember as IEntityLivingBase[] = [null];
+
+events.onEntityLivingHurt(function(event as EntityLivingHurtEvent){
+    var target as IEntityLivingBase = event.entityLivingBase;
+
+    targetHealth[0] = target.health;
+
+    if(isNull(targetMember[0]) || targetMember[0].getUUIDObject().asString() != target.getUUIDObject().asString()) {
+        targetMember[0] = target;
+    }
+});
 
 events.onPlayerAttackEntity(function(event as PlayerAttackEntityEvent) {
     var player as IPlayer = event.player;
     var world as IWorld = player.world;
     
-    if(!world.remote && event.target instanceof IEntityLivingBase && player.hasGameStage(stageGrass.stage)){
+    if(!world.remote && event.target instanceof IEntityLivingBase && player.hasGameStage(stageGrass.stage)) {
         var target as IEntityLivingBase = event.target;
 
         DelayManager.addDelayWork(function() {
-			var health as float = target.maxHealth - target.health;
-			var addHealth as float = (player.maxHealth - player.health) == 0.0F ? 1.0F : (player.maxHealth - (player.maxHealth - player.health)) / player.maxHealth;
+			var damage as float = targetHealth[0] - target.health;
+			var addHealth as float = player.health / player.maxHealth;
 
-			player.sendChat(target.health);
-
-			if(damageNow[0] == 0){
-				damageNow[0] = health;
+			if(damageNow[0] == 0 || damageNow[0] != damage) {
+				damageNow[0] = damage;
 			}
-			
+
 			result[0] = (damageNow[0] * addHealth);
-        }, 2);
+        }, 5);
 
 		DelayManager.addDelayWork(function() {
-			target.health = target.health - res[0];
-			
-			if(target.health <= 0){
-				damageNow[0] = 0;
-			}
-			player.sendChat(target.health);
-		},3);
+			target.health = target.health - result[0];
+		}, 6);
     }
 });
