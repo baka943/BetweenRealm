@@ -3,7 +3,6 @@
 
 import crafttweaker.event.PlayerChangedDimensionEvent;
 import crafttweaker.player.IPlayer;
-import crafttweaker.world.IWorld;
 import crafttweaker.data.IData;
 
 import scripts.functions.getInventory;
@@ -23,6 +22,12 @@ events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
 		if(isNull(data.PlayerPersisted.realmTraveler)) {
 			data = {"PlayerPersisted": {"realmTraveler": "atlantis"}};
 			player.update(data);
+		}
+
+		if(isNull(data.PlayerPersisted.hasASBook)) {
+			data = {"PlayerPersisted": {"hasASBook": "yep"}};
+			player.update(data);
+			player.give(<astralsorcery:itemjournal>);
 		}
 
 		if(!player.hasGameStage(stageMinecraft.stage)) {
@@ -49,6 +54,12 @@ events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
 		if(isNull(data.PlayerPersisted.realmTraveler)) {
 			data = {"PlayerPersisted": {"realmTraveler": "cities"}};
 			player.update(data);
+		}
+
+		if(isNull(data.PlayerPersisted.hasPYBook)) {
+			data = {"PlayerPersisted": {"hasPYBook": "yep"}};
+			player.update(data);
+			player.give(<pyrotech:book>);
 		}
 
 		if(!player.hasGameStage(stageMinecraft.stage)) {
