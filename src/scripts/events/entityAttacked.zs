@@ -17,7 +17,7 @@ events.onEntityLivingAttacked(function(event as EntityLivingAttackedEvent) {
 		var health as float = player.health;
 		var attacked as float = event.amount;
 
-		if(attacked == 1 && player.hasGameStage(stageFlower.stage))
+		if(attacked == 1)
 			return;
 
 		if(amountNow[0] == 1) {
@@ -25,7 +25,7 @@ events.onEntityLivingAttacked(function(event as EntityLivingAttackedEvent) {
 			return;
 		}
 
-		if(amountNow[0] == 0 && player.hasGameStage(stageFlower.stage)) {
+		if(amountNow[0] == 0) {
 			var random = world.random.nextFloat(0.1, 1.5);
 			var res = (attacked / random);
 

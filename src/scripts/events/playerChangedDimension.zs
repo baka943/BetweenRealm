@@ -19,11 +19,6 @@ events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
 	if(toWorld == "overworld" && !player.hasGameStage(stageAtlantis.stage)) {
 		player.addGameStage(stageAtlantis.stage);
 
-		if(isNull(data.PlayerPersisted.realmTraveler)) {
-			data = {"PlayerPersisted": {"realmTraveler": "atlantis"}};
-			player.update(data);
-		}
-
 		if(isNull(data.PlayerPersisted.hasASBook)) {
 			data = {"PlayerPersisted": {"hasASBook": "yep"}};
 			player.update(data);
@@ -41,20 +36,10 @@ events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
 	
 	if(toWorld == "the_end" && !player.hasGameStage(stageIslands.stage)) {
 		player.addGameStage(stageIslands.stage);
-
-		if(isNull(data.PlayerPersisted.realmTraveler)) {
-			data = {"PlayerPersisted": {"realmTraveler": "islands"}};
-			player.update(data);
-		}
 	}
 	
 	if(toWorld == "lostcities" && !player.hasGameStage(stageCities.stage)) {
 		player.addGameStage(stageCities.stage);
-
-		if(isNull(data.PlayerPersisted.realmTraveler)) {
-			data = {"PlayerPersisted": {"realmTraveler": "cities"}};
-			player.update(data);
-		}
 
 		if(isNull(data.PlayerPersisted.hasPYBook)) {
 			data = {"PlayerPersisted": {"hasPYBook": "yep"}};

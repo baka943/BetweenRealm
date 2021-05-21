@@ -12,18 +12,4 @@ events.onPlayerLoggedIn(function(event as PlayerLoggedInEvent) {
 	if(!player.hasGameStage(stageBetweenlands.stage)) {
 		player.addGameStage(stageBetweenlands.stage);
 	}
-
-	if(isNull(data.PlayerPersisted.playerType)) {
-		var scommand = server.commandManager;
-
-		scommand.executeCommand(server, "stagetable silentaward " + player.name + " playermode");
-
-		if(player.hasGameStage(stageGrass.stage)) {
-			data = {"PlayerPersisted": {"playerType": "grass"}};
-		} else if(player.hasGameStage(stageFlower.stage)) {
-			data = {"PlayerPersisted": {"playerType": "flower"}};
-		}
-
-		player.update(data);
-	}
 });

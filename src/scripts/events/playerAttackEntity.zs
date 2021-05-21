@@ -27,7 +27,7 @@ events.onPlayerAttackEntity(function(event as PlayerAttackEntityEvent) {
 	var player as IPlayer = event.player;
 	var world as IWorld = player.world;
 
-	if(!world.remote && event.target instanceof IEntityLivingBase && player.hasGameStage(stageGrass.stage)) {
+	if(!world.remote && event.target instanceof IEntityLivingBase) {
 		var target as IEntityLivingBase = event.target;
 
 		DelayManager.addDelayWork(function() {
