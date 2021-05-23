@@ -19,11 +19,11 @@ events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
 	if(toWorld == "overworld" && !player.hasGameStage(stageAtlantis.stage)) {
 		player.addGameStage(stageAtlantis.stage);
 
-		if(isNull(data.PlayerPersisted.hasASBook)) {
-			data = {"PlayerPersisted": {"hasASBook": "yep"}};
-			player.update(data);
-			player.give(<astralsorcery:itemjournal>);
-		}
+		// if(isNull(data.PlayerPersisted.hasASBook)) {
+		// 	data = {"PlayerPersisted": {"hasASBook": "yep"}};
+		// 	player.update(data);
+		// 	player.give(<astralsorcery:itemjournal>);
+		// }
 
 		if(!player.hasGameStage(stageMinecraft.stage)) {
 			player.addGameStage(stageMinecraft.stage);
@@ -41,11 +41,11 @@ events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
 	if(toWorld == "lostcities" && !player.hasGameStage(stageCities.stage)) {
 		player.addGameStage(stageCities.stage);
 
-		if(isNull(data.PlayerPersisted.hasPYBook)) {
-			data = {"PlayerPersisted": {"hasPYBook": "yep"}};
-			player.update(data);
-			player.give(<pyrotech:book>);
-		}
+		// if(isNull(data.PlayerPersisted.hasPYBook)) {
+		// 	data = {"PlayerPersisted": {"hasPYBook": "yep"}};
+		// 	player.update(data);
+		// 	player.give(<pyrotech:book>);
+		// }
 
 		if(!player.hasGameStage(stageMinecraft.stage)) {
 			player.addGameStage(stageMinecraft.stage);
@@ -55,6 +55,9 @@ events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
 			player.addGameStage(stageWater.stage);
 		}
 	}
+
+	var realmTraveler as IData = {"PlayerPersisted": {"gotoRealm": toWorld, "fromRealm": fromWorld}};
+	player.update(realmTraveler);
 
 	if(fromWorld == "the_nether" || fromWorld == "CompactMachines") {
 		player.update(getInventory(player, toWorld));

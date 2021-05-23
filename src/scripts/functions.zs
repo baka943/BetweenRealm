@@ -60,7 +60,7 @@ function setInventory(player as IPlayer, worldIn as string) {
 
 		if(slotNow.tag != "null") item = item.withTag(slotNow.tag);
 
-		setItemWith(index, item);
+		setItemWith(player, index, item);
 	}
 }
 
@@ -68,11 +68,11 @@ function clearInventory(player as IPlayer) {
 	var item as IItemStack = null;
 
 	for index in 0 .. 41 {
-		setItemWith(index, item);
+		setItemWith(player, index, item);
     }
 }
 
-function setItemWith(index as int, item as IItemStack) {
+function setItemWith(player as IPlayer, index as int, item as IItemStack) {
 	if(index == 36) {
 		player.setItemToSlot(IEntityEquipmentSlot.feet(), item);
 	} else if(index == 37) {
@@ -85,3 +85,9 @@ function setItemWith(index as int, item as IItemStack) {
 		player.setItemToSlot(IEntityEquipmentSlot.offhand(), item);
 	} else player.replaceItemInInventory(index, item);
 }
+
+#Paper Tool replacement
+//<realmtweaks:paper_tool>.withTag({originalStack: {ForgeCaps: {"astralsorcery:cap_item_amulet_holder": {}}, id: "minecraft:golden_pickaxe", Count: 1 as byte, Damage: 0 as short}})
+//<minecraft:gold_ingot>.asData() => {id: "minecraft:gold_ingot", Count: 1 as byte, Damage: 0 as short}
+
+// var tag as IData = {originalStack: <minecraft:gold_ingot>.asData(), travel: 0};

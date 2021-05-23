@@ -7,5 +7,7 @@ import crafttweaker.player.IPlayer;
 events.onEntityTravelToDimension(function(event as EntityTravelToDimensionEvent) {
 	if(!(event.entity instanceof IPlayer)) {
 		event.cancel();
+	} else {
+		
 	}
 });

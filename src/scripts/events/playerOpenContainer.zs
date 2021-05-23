@@ -19,8 +19,6 @@ events.onPlayerOpenContainer(function(event as PlayerOpenContainerEvent) {
 					player.update(data);
 				}
 			}
-		} else if(data.PlayerPersisted.lootThief == "relic") {
-			player.addGameStage(stageRelic.stage);
-		}
+		} else player.addGameStage(stageRelic.stage);
 	}
 });

@@ -3,6 +3,7 @@
 
 import crafttweaker.event.PlayerRespawnEvent;
 import crafttweaker.player.IPlayer;
+import crafttweaker.data.IData;
 
 import scripts.functions.setInventory;
 
@@ -13,4 +14,7 @@ events.onPlayerRespawn(function(event as PlayerRespawnEvent) {
 	if(!isNull(player.data.PlayerPersisted.memberGet("traveler_" + dim))) {
 		setInventory(player, dim);
 	}
+
+	var realmTraveler as IData = {"PlayerPersisted": {"gotoRealm": "toWorld", "fromRealm": "fromWorld"}};
+	player.update(realmTraveler);
 });

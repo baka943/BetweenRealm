@@ -172,11 +172,11 @@ zenClass IE {
 	//==================================
 
 	#Remove Crusher recipes
-	function removeCrusherRecipes(outputs as IItemStack[]){
-		for output in outputs{
-			Crusher.removeRecipe(output);
-		}
-	}
+	// function removeCrusherRecipes(outputs as IItemStack[]){
+	// 	for output in outputs{
+	// 		Crusher.removeRecipe(output);
+	// 	}
+	// }
 
 	#Remove Crusher Recipes for Input
 	function removeCrusherRecipes(inputs as IItemStack[]){
