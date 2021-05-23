@@ -60,34 +60,28 @@ function setInventory(player as IPlayer, worldIn as string) {
 
 		if(slotNow.tag != "null") item = item.withTag(slotNow.tag);
 
-		if(index == 36) {
-			player.setItemToSlot(IEntityEquipmentSlot.feet(), item);
-		} else if(index == 37) {
-			player.setItemToSlot(IEntityEquipmentSlot.legs(), item);
-		} else if(index == 38) {
-			player.setItemToSlot(IEntityEquipmentSlot.chest(), item);
-		} else if(index == 39) {
-			player.setItemToSlot(IEntityEquipmentSlot.head(), item);
-		} else if(index == 40) {
-			player.setItemToSlot(IEntityEquipmentSlot.offhand(), item);
-		} else player.replaceItemInInventory(index, item);
+		setItemWith(index, item);
 	}
 }
 
-function clearInventory(player as IPlayer){
+function clearInventory(player as IPlayer) {
 	var item as IItemStack = null;
 
-	for index in 0 to 41 {
-		if(index == 36) {
-			player.setItemToSlot(IEntityEquipmentSlot.feet(), item);
-		} else if(index == 37) {
-			player.setItemToSlot(IEntityEquipmentSlot.legs(), item);
-		} else if(index == 38) {
-			player.setItemToSlot(IEntityEquipmentSlot.chest(), item);
-		} else if(index == 39) {
-			player.setItemToSlot(IEntityEquipmentSlot.head(), item);
-		} else if(index == 40) {
-			player.setItemToSlot(IEntityEquipmentSlot.offhand(), item);
-		} else player.replaceItemInInventory(index, item);
+	for index in 0 .. 41 {
+		setItemWith(index, item);
     }
+}
+
+function setItemWith(index as int, item as IItemStack) {
+	if(index == 36) {
+		player.setItemToSlot(IEntityEquipmentSlot.feet(), item);
+	} else if(index == 37) {
+		player.setItemToSlot(IEntityEquipmentSlot.legs(), item);
+	} else if(index == 38) {
+		player.setItemToSlot(IEntityEquipmentSlot.chest(), item);
+	} else if(index == 39) {
+		player.setItemToSlot(IEntityEquipmentSlot.head(), item);
+	} else if(index == 40) {
+		player.setItemToSlot(IEntityEquipmentSlot.offhand(), item);
+	} else player.replaceItemInInventory(index, item);
 }
