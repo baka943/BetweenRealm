@@ -56,7 +56,7 @@ events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
 		}
 	}
 
-	var realmTraveler as IData = {"PlayerPersisted": {"gotoRealm": toWorld, "fromRealm": fromWorld}};
+	var realmTraveler as IData = {"PlayerPersisted": {"fromRealm": fromWorld}};
 	player.update(realmTraveler);
 
 	if(fromWorld == "the_nether" || fromWorld == "CompactMachines") {

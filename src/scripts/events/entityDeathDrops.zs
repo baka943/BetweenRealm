@@ -18,8 +18,8 @@ events.onEntityLivingDeathDrops(function(event as EntityLivingDeathDropsEvent) {
 		var player as IPlayer = event.entity;
 		var data as IData = player.data;
 
-		if(dimension has data.PlayerPersised.gotoRealm) {
-			player.update(getInventory(player, data.PlayerPersised.fromRealm));
+		if(dimension has player.world.getDimensionType()) {
+			player.update(getInventory(player, data.PlayerPersisted.fromRealm));
 		} else player.update(getInventory(player, player.world.getDimensionType()));
 	}
 });
@@ -30,11 +30,11 @@ events.onEntityLivingDeath(function(event as EntityLivingDeathEvent) {
 		var data as IData = player.data;
 		var rules as IGameRules = World.getGameRules(player.world);
 
-		if(rules.getBoolean("keepInventory")) {
-			if(dimension has data.PlayerPersised.gotoRealm) {
-				player.update(getInventory(player, data.PlayerPersised.fromRealm));
-			} else player.update(getInventory(player, player.world.getDimensionType()));
+		if(dimension has player.world.getDimensionType()) {
+			player.update(getInventory(player, data.PlayerPersisted.fromRealm));
+		} else player.update(getInventory(player, player.world.getDimensionType()));
 
+		if(rules.getBoolean("keepInventory")) {
 			clearInventory(player);
 		}
 	}
