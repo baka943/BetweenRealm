@@ -8,7 +8,7 @@ events.onEntityTravelToDimension(function(event as EntityTravelToDimensionEvent)
 	if(event.entity instanceof IPlayer) {
 		var player as IPlayer = event.entity;
 
-		if(player.world.id == -1 && event.dimension == 144) {
+		if(player.world.getDimensionType() == "the_nether" && event.dimension == 144) {
 			event.cancel();
 		}
 	} else event.cancel();
