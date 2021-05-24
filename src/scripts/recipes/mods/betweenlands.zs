@@ -44,53 +44,11 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 			[reedRope]
 		]
 	],
-	<thebetweenlands:mortar> : [
-		[
-			[<ore:runestone>, null, <ore:runestone>],
-			[<ore:runestone>, <ore:runestone>, <ore:runestone>],
-			[<ore:stickWeed>, null, <ore:stickWeed>]
-		]
-	],
-	<thebetweenlands:alembic> : [
-		[
-			[null, ingot.octine],
-			[null, <ore:dentrothyst>, <ore:dentrothystVial>],
-			[<ore:runestone>, ingot.octine, <ore:runestone>]
-		]
-	],
-	<thebetweenlands:pestle> : [
-		[
-			[null, null, <ore:stickWeed>],
-			[null, <ore:runestone>],
-			[<ore:runestone>]
-		]
-	],
-	<thebetweenlands:repeller> : [
-		[
-			[<ore:stickWeed>, <ore:dentrothystVial>],
-			[<ore:stickWeed>],
-			[<ore:runestone>]
-		]
-	],
 	<minecraft:fishing_rod> : [
 		[
 			[null, null, <ore:stickWeed>],
 			[null, <ore:stickWeed>, reedRope],
 			[<ore:stickWeed>, null, reedRope]
-		]
-	],
-	<minecraft:armor_stand> : [
-		[
-			[<ore:stickWeed>, <ore:stickWeed>, <ore:stickWeed>],
-			[null, <ore:stickWeed>],
-			[<ore:stickWeed>, betweenstoneSlab, <ore:stickWeed>]
-		]
-	],
-	<minecraft:beacon> : [
-		[
-			[siltGlass, siltGlass, siltGlass],
-			[siltGlass, <thebetweenlands:glowing_betweenstone_tile>, siltGlass],
-			[<roots:runestone_brick>, <roots:runestone_brick>, <roots:runestone_brick>]
 		]
 	]
 };

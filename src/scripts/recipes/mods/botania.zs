@@ -226,6 +226,13 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 			[livingrock, redstone, <ore:bRedString>],
 			[livingrock, livingrock, livingrock]
 		]
+	],
+	<minecraft:beacon> : [
+		[
+			[siltGlass, siltGlass, siltGlass],
+			[siltGlass, <thebetweenlands:glowing_betweenstone_tile>, siltGlass],
+			[<roots:runestone_brick>, <roots:runestone_brick>, <roots:runestone_brick>]
+		]
 	]
 };
 

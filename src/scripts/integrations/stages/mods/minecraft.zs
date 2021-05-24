@@ -65,10 +65,11 @@ stageBetweenlands.addIngredients([
 	<minecraft:obsidian>,
 	<minecraft:enchanting_table>,
 	<minecraft:torch>,
-	<minecraft:beacon>,
 	<minecraft:name_tag>,
 	<minecraft:blaze_powder>
 ], false);
+
+stageBotania.addIngredient(<minecraft:beacon>);
 
 stageWater.addIngredient(<minecraft:water_bucket>);
 stageMinecraft.addIngredient(<minecraft:lava_bucket>);
@@ -78,6 +79,7 @@ stageIslands.addIngredients([
 	<minecraft:end_bricks>,
 	<minecraft:end_stone>,
 	<minecraft:ender_chest>,
+	<minecraft:end_crystal>,
 	<minecraft:ender_eye>,
 	<minecraft:end_rod>,
 	<minecraft:elytra>,

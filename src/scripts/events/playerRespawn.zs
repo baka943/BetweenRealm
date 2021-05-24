@@ -15,6 +15,6 @@ events.onPlayerRespawn(function(event as PlayerRespawnEvent) {
 		setInventory(player, dim);
 	}
 
-	var realmTraveler as IData = {"PlayerPersisted": {"gotoRealm": "toWorld", "fromRealm": "fromWorld"}};
+	var realmTraveler as IData = {"PlayerPersisted": {"fromRealm": "fromWorld"}};
 	player.update(realmTraveler);
 });

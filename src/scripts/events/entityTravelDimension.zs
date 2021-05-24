@@ -5,9 +5,11 @@ import crafttweaker.event.EntityTravelToDimensionEvent;
 import crafttweaker.player.IPlayer;
 
 events.onEntityTravelToDimension(function(event as EntityTravelToDimensionEvent) {
-	if(!(event.entity instanceof IPlayer)) {
-		event.cancel();
-	} else {
-		
-	}
+	if(event.entity instanceof IPlayer) {
+		var player as IPlayer = event.entity;
+
+		if(player.world.id == -1 && event.dimension == 144) {
+			event.cancel();
+		}
+	} else event.cancel();
 });
