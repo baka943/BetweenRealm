@@ -20,8 +20,6 @@ global stageWater as Stage = ZenStager.initStage("water_stage");
 global stageBetweenlands as Stage = ZenStager.initStage("welcome_to_betweenlands");
 global stageBotania as Stage = ZenStager.initStage("botania_stage");
 global stageRoots as Stage = ZenStager.initStage("roots_stage");
-global stageGrass as Stage = ZenStager.initStage("grass_stage");
-global stageFlower as Stage = ZenStager.initStage("flower_stage");
 global stageRelic as Stage = ZenStager.initStage("relic_stage");
 
 //Bat No'l

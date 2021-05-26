@@ -18,20 +18,10 @@ events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
 
 	if(toWorld == "overworld" && !player.hasGameStage(stageAtlantis.stage)) {
 		player.addGameStage(stageAtlantis.stage);
+	}
 
-		// if(isNull(data.PlayerPersisted.hasASBook)) {
-		// 	data = {"PlayerPersisted": {"hasASBook": "yep"}};
-		// 	player.update(data);
-		// 	player.give(<astralsorcery:itemjournal>);
-		// }
-
-		if(!player.hasGameStage(stageMinecraft.stage)) {
-			player.addGameStage(stageMinecraft.stage);
-		}
-
-		if(!player.hasGameStage(stageWater.stage)) {
-			player.addGameStage(stageWater.stage);
-		}
+	if(toWorld == "the_nether" && !player.hasGameStage(stageNether.stage)) {
+		player.addGameStage(stageNether.stage);
 	}
 	
 	if(toWorld == "the_end" && !player.hasGameStage(stageIslands.stage)) {
@@ -40,36 +30,20 @@ events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
 	
 	if(toWorld == "lostcities" && !player.hasGameStage(stageCities.stage)) {
 		player.addGameStage(stageCities.stage);
-
-		// if(isNull(data.PlayerPersisted.hasPYBook)) {
-		// 	data = {"PlayerPersisted": {"hasPYBook": "yep"}};
-		// 	player.update(data);
-		// 	player.give(<pyrotech:book>);
-		// }
-
-		if(!player.hasGameStage(stageMinecraft.stage)) {
-			player.addGameStage(stageMinecraft.stage);
-		}
-
-		if(!player.hasGameStage(stageWater.stage)) {
-			player.addGameStage(stageWater.stage);
-		}
 	}
 
 	var realmTraveler as IData = {"PlayerPersisted": {"fromRealm": fromWorld}};
 	player.update(realmTraveler);
 
-	if(fromWorld == "the_nether" || fromWorld == "CompactMachines") {
+	if(fromWorld == "the_nether") {
+		player.update(getInventory(player, "overworld"));
+	} else if(fromWorld == "CompactMachines") {
 		player.update(getInventory(player, toWorld));
-		return;
 	} else player.update(getInventory(player, fromWorld));
 
-	if(toWorld == "the_nether"
-		|| toWorld == "CompactMachines") return;
+	if(toWorld == "CompactMachines") return;
 
-	clearInventory(player);
-
-	if(!isNull(player.data.PlayerPersisted.memberGet("traveler_" + toWorld))) {
+	if(clearInventory(player) && !isNull(player.data.PlayerPersisted.memberGet("traveler_" + toWorld))) {
 		setInventory(player, toWorld);
 	}
 });

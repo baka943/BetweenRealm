@@ -19,14 +19,14 @@ function getItemName(item as IItemStack) as string {
 
 #Change Player Inventory
 function getInventory(player as IPlayer, worldIn as string) as IData {
-	var container as ItemHandler = player.getPlayerInventoryItemHandler();
+	var inventory as ItemHandler = player.getPlayerInventoryItemHandler();
 	var data as string = "{\"PlayerPersisted\": {\"traveler_" + worldIn + "\": {";
 
-	for index in 0 .. container.size {
-		var item as IItemStack = container.getStackInSlot(index);
+	for index in 0 .. 41 {
+		var stack as IItemStack = inventory.getStackInSlot(index);
 
-		if(isNull(item)) {
-			if(index == container.size - 1) {
+		if(isNull(stack)) {
+			if(index == 40) {
 				data += "\"slotID_" + index + "\": { \"item\": \"null\"}}}}";
 				break;
 			} else {
@@ -35,13 +35,9 @@ function getInventory(player as IPlayer, worldIn as string) as IData {
 			}
 		}
 
-		if(item.hasTag) {
-			data += "\"slotID_" + index + "\": { \"item\": \"" + item.definition.id + "\", \"metadata\": " + item.metadata + ", \"amount\": " + item.amount + ", \"tag\": " + DataUtil.toJson(item.tag) + "},";
-		} else {
-			data += "\"slotID_" + index + "\": { \"item\": \"" + item.definition.id + "\", \"metadata\": " + item.metadata + ", \"amount\": " + item.amount + ", \"tag\": \"null\"},";
-		}
+		data += "\"slotID_" + index + "\": { \"item\": " + DataUtil.toJson(stack.asData()) + ", \"tag\": " + (stack.hasTag ? "yep" : "null") + "},";
 
-		if(index == container.size - 1) data = data.substring(0, data.length() - 1) + "}}}";
+		if(index == 40) data = data.substring(0, data.length() - 1) + "}}}";
 	}
 
 	return DataUtil.fromJson(data);
@@ -55,39 +51,32 @@ function setInventory(player as IPlayer, worldIn as string) {
 
 		if(slotNow.item == "null") continue;
 
-		var item as IItemStack = itemUtils.getItem(slotNow.item.asString(), slotNow.metadata.asInt());
-		item = item.withAmount(slotNow.amount.asInt());
+		var stack as IItemStack = IItemStack.fromData(slotNow.item);
 
-		if(slotNow.tag != "null") item = item.withTag(slotNow.tag);
+		if(slotNow.tag == "null") stack.withTag(null);
 
-		setItemWith(player, index, item);
+		setItemWith(player, index, stack);
 	}
 }
 
-function clearInventory(player as IPlayer) {
-	var item as IItemStack = null;
-
+function clearInventory(player as IPlayer) as bool {
 	for index in 0 .. 41 {
-		setItemWith(player, index, item);
+		setItemWith(player, index, null);
     }
+
+	return true;
 }
 
-function setItemWith(player as IPlayer, index as int, item as IItemStack) {
+function setItemWith(player as IPlayer, index as int, stack as IItemStack) {
 	if(index == 36) {
-		player.setItemToSlot(IEntityEquipmentSlot.feet(), item);
+		player.setItemToSlot(IEntityEquipmentSlot.feet(), stack);
 	} else if(index == 37) {
-		player.setItemToSlot(IEntityEquipmentSlot.legs(), item);
+		player.setItemToSlot(IEntityEquipmentSlot.legs(), stack);
 	} else if(index == 38) {
-		player.setItemToSlot(IEntityEquipmentSlot.chest(), item);
+		player.setItemToSlot(IEntityEquipmentSlot.chest(), stack);
 	} else if(index == 39) {
-		player.setItemToSlot(IEntityEquipmentSlot.head(), item);
+		player.setItemToSlot(IEntityEquipmentSlot.head(), stack);
 	} else if(index == 40) {
-		player.setItemToSlot(IEntityEquipmentSlot.offhand(), item);
-	} else player.replaceItemInInventory(index, item);
+		player.setItemToSlot(IEntityEquipmentSlot.offhand(), stack);
+	} else player.replaceItemInInventory(index, stack);
 }
-
-#Paper Tool replacement
-//<realmtweaks:paper_tool>.withTag({originalStack: {ForgeCaps: {"astralsorcery:cap_item_amulet_holder": {}}, id: "minecraft:golden_pickaxe", Count: 1 as byte, Damage: 0 as short}})
-//<minecraft:gold_ingot>.asData() => {id: "minecraft:gold_ingot", Count: 1 as byte, Damage: 0 as short}
-
-// var tag as IData = {originalStack: <minecraft:gold_ingot>.asData(), travel: 0};
