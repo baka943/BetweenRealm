@@ -1,8 +1,6 @@
 #Name: betweenlands.zs
 #Author: baka943
 
-#modloaded thebetweenlands
-
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 
@@ -60,9 +58,6 @@ iRecipes.add(shapedRecipes, false);
 //==================================
 
 val shapelessRecipes as IIngredient[][][IItemStack] = {
-	<minecraft:fermented_spider_eye> : [
-		[<minecraft:spider_eye>, <ore:foodMushroom>, <minecraft:sugar>]
-	],
 	<realmtweaks:octine_flintstones> : [
 		[nugget.octine, <minecraft:flint>]
 	]

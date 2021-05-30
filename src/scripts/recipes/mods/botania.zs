@@ -321,7 +321,14 @@ val shapelessRecipes as IIngredient[][][IItemStack] = {
 
 iRecipes.add(shapelessRecipes);
 
-iRecipes.add(stageBotania.stage, <botania:fertilizer>, [<botania:dye:*>, <botania:dye:*>, <botania:dye:*>, swampMeal]);
+iRecipes.add(stageBotania.stage, <botania:fertilizer>,
+	[
+		<botania:dye:0> | <botania:dye:1> | <botania:dye:2> | <botania:dye:3> | <botania:dye:4> | <botania:dye:5> | <botania:dye:6> | <botania:dye:7> | <botania:dye:8> | <botania:dye:9> | <botania:dye:10> | <botania:dye:11> | <botania:dye:12> | <botania:dye:13> | <botania:dye:14> | <botania:dye:15>,
+		<botania:dye:1> | <botania:dye:2> | <botania:dye:3> | <botania:dye:4> | <botania:dye:5> | <botania:dye:6> | <botania:dye:7> | <botania:dye:8> | <botania:dye:9> | <botania:dye:10> | <botania:dye:11> | <botania:dye:12> | <botania:dye:13> | <botania:dye:14> | <botania:dye:15> | <botania:dye:0>,
+		<botania:dye:2> | <botania:dye:3> | <botania:dye:4> | <botania:dye:5> | <botania:dye:6> | <botania:dye:7> | <botania:dye:8> | <botania:dye:9> | <botania:dye:10> | <botania:dye:11> | <botania:dye:12> | <botania:dye:13> | <botania:dye:14> | <botania:dye:15> | <botania:dye:0> | <botania:dye:1>,
+		swampMeal
+	]
+);
 
 val categoryList as string[] = [
 	"botania.orechid",

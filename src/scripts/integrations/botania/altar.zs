@@ -1,8 +1,6 @@
 #Name: altar.zs
 #Author: baka943
 
-#modloaded botania
-
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 
@@ -27,7 +25,7 @@ botania.removeAltar(removeRecipes);
 //==================================
 
 val altarRecipes as IIngredient[][IItemStack][int] = {
-	5200 : {
+	5000 : {
 		<botania:rune> * 2 : [
 			mana.powder, mana.steel, mana.diamond, dewgonia, spiritHerb
 		],
@@ -41,7 +39,7 @@ val altarRecipes as IIngredient[][IItemStack][int] = {
 			mana.powder, mana.steel, mana.diamond, cloudBerry, spiritHerb
 		]
 	},
-	8000 : {
+	7600 : {
 		<botania:rune:4> : [
 			<ore:runeWaterB>, mana.valonite, <ore:runeFireB>, mana.valonite, <ore:runeManaB>, mana.valonite
 		],

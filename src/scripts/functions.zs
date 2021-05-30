@@ -2,8 +2,8 @@
 #Name: functions.zs
 #Author: baka943, ikexing
 
-import crafttweaker.player.IPlayer;
 import crafttweaker.item.IItemStack;
+import crafttweaker.player.IPlayer;
 import crafttweaker.data.IData;
 import crafttweaker.entity.IEntityEquipmentSlot;
 
@@ -53,7 +53,7 @@ function setInventory(player as IPlayer, worldIn as string) {
 
 		var stack as IItemStack = IItemStack.fromData(slotNow.item);
 
-		if(slotNow.tag == "null") stack.withTag(null);
+		if(slotNow.tag == "null") stack = stack.withTag(null);
 
 		setItemWith(player, index, stack);
 	}

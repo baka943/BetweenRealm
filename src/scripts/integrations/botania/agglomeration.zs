@@ -1,8 +1,6 @@
 #Name: agglomeration.zs
 #Author: baka943
 
-#modloaded botania
-
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 
@@ -19,7 +17,7 @@ botaniaTweaks.removeAgglomeration();
 var recipes as IIngredient[][int][IItemStack][string] = {
 	default : {
 		<botania:manaresource:4> : {
-			500000 : [mana.steel, mana.valonite, mana.diamond]
+			450000 : [mana.steel, mana.valonite, mana.diamond]
 		}
 	},
 	reverse : {

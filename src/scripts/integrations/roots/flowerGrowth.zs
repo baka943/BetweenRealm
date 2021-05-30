@@ -1,8 +1,6 @@
 #Name: flowerGrowth.zs
 #Author: baka943
 
-#modloaded roots
-
 import crafttweaker.block.IBlockState;
 import mods.roots.FlowerGrowth;
 

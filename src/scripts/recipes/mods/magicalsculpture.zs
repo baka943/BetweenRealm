@@ -1,8 +1,6 @@
 #Name: magicalsculpture.zs
 #Author: baka943
 
-#modloaded magicalsculpture
-
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 

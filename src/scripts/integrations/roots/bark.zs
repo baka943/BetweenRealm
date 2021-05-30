@@ -1,8 +1,6 @@
 #Name: bark.zs
 #Author: baka943
 
-#modloaded roots
-
 import crafttweaker.item.IItemStack;
 
 //==================================
@@ -26,11 +24,11 @@ roots.removeBark(removeRecipes);
 
 val barkRecipes as IItemStack[][IItemStack] = {
 	<roots:terra_moss> * 2 : [
-		<thebetweenlands:lichen>,
-		<thebetweenlands:dead_lichen>,
-		<thebetweenlands:moss>,
-		<thebetweenlands:dead_moss>,
-		<thebetweenlands:cave_moss>
+		<thebetweenlands:lichen>
+		| <thebetweenlands:dead_lichen>
+		| <thebetweenlands:moss>
+		| <thebetweenlands:dead_moss>
+		| <thebetweenlands:cave_moss>
 	]
 };
 

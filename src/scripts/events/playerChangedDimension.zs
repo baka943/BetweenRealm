@@ -11,26 +11,10 @@ import scripts.functions.clearInventory;
 
 events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
 	var player as IPlayer = event.player;
-	var data as IData = player.data;
+	var data as IData = player.data.PlayerPersisted;
 
 	var toWorld as string = event.toWorld.getDimensionType();
 	var fromWorld as string = event.fromWorld.getDimensionType();
-
-	if(toWorld == "overworld" && !player.hasGameStage(stageAtlantis.stage)) {
-		player.addGameStage(stageAtlantis.stage);
-	}
-
-	if(toWorld == "the_nether" && !player.hasGameStage(stageNether.stage)) {
-		player.addGameStage(stageNether.stage);
-	}
-	
-	if(toWorld == "the_end" && !player.hasGameStage(stageIslands.stage)) {
-		player.addGameStage(stageIslands.stage);
-	}
-	
-	if(toWorld == "lostcities" && !player.hasGameStage(stageCities.stage)) {
-		player.addGameStage(stageCities.stage);
-	}
 
 	var realmTraveler as IData = {"PlayerPersisted": {"fromRealm": fromWorld}};
 	player.update(realmTraveler);
@@ -43,7 +27,9 @@ events.onPlayerChangedDimension(function(event as PlayerChangedDimensionEvent) {
 
 	if(toWorld == "CompactMachines") return;
 
-	if(clearInventory(player) && !isNull(player.data.PlayerPersisted.memberGet("traveler_" + toWorld))) {
+	if(clearInventory(player) && toWorld == "the_nether" && !isNull(data.traveler_overworld)) {
+		setInventory(player, "overworld");
+	} else if(!isNull(data.memberGet("traveler_" + toWorld))) {
 		setInventory(player, toWorld);
 	}
 });

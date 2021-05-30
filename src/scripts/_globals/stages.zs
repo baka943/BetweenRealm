@@ -24,8 +24,3 @@ global stageRelic as Stage = ZenStager.initStage("relic_stage");
 
 //Bat No'l
 global stageDisable as Stage = ZenStager.initStage("disable_and_hide");
-
-//LootTable of gamestages
-val stageTable = stageTables.createTable("playermode");
-stageTable.createEntry(stageGrass.stage, 5);
-stageTable.createEntry(stageFlower.stage, 5);

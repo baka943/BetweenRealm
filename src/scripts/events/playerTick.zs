@@ -3,12 +3,14 @@
 
 import crafttweaker.event.PlayerTickEvent;
 import crafttweaker.event.PlayerCraftedEvent;
-import crafttweaker.player.IPlayer;
-import crafttweaker.world.IWorld;
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IItemDefinition;
+import crafttweaker.player.IPlayer;
+import crafttweaker.world.IWorld;
+import crafttweaker.text.ITextComponent;
 
 import mods.zenutils.ItemHandler;
+import mods.ctintegration.bloodmagic.SoulNetork;
 
 import scripts.functions.setItemWith;
 
@@ -17,12 +19,52 @@ events.onPlayerTick(function(event as PlayerTickEvent) {
 	var world as IWorld = player.world;
 	var dimension as string = world.getDimensionType();
 
-	if(event.phase == "END" && !world.isRemote() && dimension != "CompactMachines")
-		replaceTool(player, dimension);
+	if(event.phase == "END" && !world.isRemote()) {
+		if(dimension != "CompactMachines") replaceTool(player, dimension);
+
+		if(dimension == "betweenlands" && !player.hasGameStage(stageBetweenlands.stage)) {
+			player.addGameStage(stageBetweenlands.stage);
+		}
+
+		if(dimension == "overworld" && !player.hasGameStage(stageAtlantis.stage)) {
+			player.addGameStage(stageAtlantis.stage);
+			player.give(<astralsorcery:itemjournal>);
+		}
+
+		if(dimension == "the_nether" && !player.hasGameStage(stageNether.stage)) {
+			player.addGameStage(stageNether.stage);
+		}
+
+		if(dimension == "the_end" && !player.hasGameStage(stageIslands.stage)) {
+			player.addGameStage(stageIslands.stage);
+		}
+
+		if(dimension == "lostcities" && !player.hasGameStage(stageCities.stage)) {
+			player.addGameStage(stageCities.stage);
+			player.give(<pyrotech:book>);
+		}
+
+		//Time is Life
+		var network as SoulNetork = player.soulNetwork;
+		var orbTier as int = network.orbTier;
+		var essence as int = network.currentEssence;
+		
+		if(orbTier > 0) {
+			var amount as int = max(essence * orbTier / 100, 1);
+
+			if(world.getWorldTime() % 30 == 0) {
+				network.syphon(ITextComponent.fromString("syphon"), min(amount, 2500), true);
+
+				if(essence == 0) {
+					network.hurtPlayer(player, player.health <= 1.0F ? 0.0F : 1.0F);
+				}
+			}
+		}
+	}
 });
 
 events.onPlayerCrafted(function(event as PlayerCraftedEvent) {
-
+// To-do
 });
 
 function replaceTool(player as IPlayer, dimension as string) {
@@ -35,11 +77,11 @@ function replaceTool(player as IPlayer, dimension as string) {
 			var item as IItemDefinition = stack.definition;
 			var toolTypes as string[] = stack.toolClasses as string[];
 			//Overworld && Nether
-			if(!(overowrlds has dimension) && (replacedList.overworld has item || (toolTypes.length > 0 && item.owner == "minecraft"))) {
+			if(!(overoworlds has dimension) && (replacedList.overworld has item || (toolTypes.length > 0 && item.owner == "minecraft"))) {
 				setItemWith(player, index, <realmtweaks:paper_tool>.withTag({originalStack: stack.asData(), travel: "overworld", type: toolTypes.length > 0 ? toolTypes[0] : "pickaxe"}));
 			}
 
-			if(overowrlds has dimension && item.id == "realmtweaks:paper_tool" && !isNull(stack.tag.travel) && stack.tag.travel == "overworld") {
+			if(overoworlds has dimension && item.id == "realmtweaks:paper_tool" && !isNull(stack.tag.travel) && stack.tag.travel == "overworld") {
 				setItemWith(player, index, IItemStack.fromData(stack.tag.originalStack));
 			}
 			//The End
@@ -62,7 +104,7 @@ function replaceTool(player as IPlayer, dimension as string) {
 	}
 }
 
-static overowrlds as string[] = ["overworld", "the_nether"];
+static overoworlds as string[] = ["overworld", "the_nether"];
 
 static replacedList as IItemDefinition[][string] = {
 	"overworld" : [

@@ -1,8 +1,6 @@
 #Name: feyCrafter.zs
 #Author: baka943
 
-#modloaded roots
-
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 

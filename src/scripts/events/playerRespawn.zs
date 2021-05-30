@@ -6,15 +6,14 @@ import crafttweaker.player.IPlayer;
 import crafttweaker.data.IData;
 
 import scripts.functions.setInventory;
+import scripts.functions.clearInventory;
 
 events.onPlayerRespawn(function(event as PlayerRespawnEvent) {
 	var player as IPlayer = event.player;
-	var dim as string = player.world.getDimensionType();
+	var data as IData = player.data.PlayerPersisted;
+	var dimension as string = player.world.getDimensionType();
 
-	if(!isNull(player.data.PlayerPersisted.memberGet("traveler_" + dim))) {
-		setInventory(player, dim);
+	if(clearInventory(player) && !isNull(data.memberGet("traveler_" + dimension))) {
+		setInventory(player, dimension);
 	}
-
-	var realmTraveler as IData = {"PlayerPersisted": {"fromRealm": "fromWorld"}};
-	player.update(realmTraveler);
 });

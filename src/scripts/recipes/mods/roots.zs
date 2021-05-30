@@ -1,8 +1,6 @@
 #Name: roots.zs
 #Author: baka943
 
-#modloaded roots
-
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 
@@ -136,7 +134,7 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 	],
 	<roots:component_pouch> : [
 		[
-			[<ore:string>, null, <ore:string>],
+			[reedRope, null, reedRope],
 			[pelt, pelt, pelt],
 			[pelt, <ore:chestWeed>, pelt]
 		]
@@ -166,16 +164,16 @@ iRecipes.addCompress(<mysticalworld:thatch> * 16, <roots:wildewheet>, 3);
 
 val shapelessRecipes as IIngredient[][][IItemStack] = {
 	<roots:elemental_soil_air> : [
-		[<roots:elemental_soil>, cloudBerry]
+		[cloudBerry, <roots:elemental_soil>, cloudBerry]
 	],
 	<roots:elemental_soil_earth> : [
-		[<roots:elemental_soil>, stalicripe]
+		[stalicripe, <roots:elemental_soil>, stalicripe]
 	],
 	<roots:elemental_soil_fire> : [
-		[<roots:elemental_soil>, infernalBulb]
+		[infernalBulb, <roots:elemental_soil>, infernalBulb]
 	],
 	<roots:elemental_soil_water> : [
-		[<roots:elemental_soil>, dewgonia]
+		[dewgonia, <roots:elemental_soil>, dewgonia]
 	]
 };
 

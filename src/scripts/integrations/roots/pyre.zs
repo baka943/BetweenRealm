@@ -1,8 +1,6 @@
 #Name: pyre.zs
 #Author: baka943
 
-#modloaded roots
-
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 
@@ -52,7 +50,7 @@ val pyreRecipes as IIngredient[][IItemStack] = {
 		wildroot, <ore:dentrothystShard>, redstone, <thebetweenlands:items_plant_drop:31>, swampReed
 	],
 	<roots:baffle_cap_mushroom> * 3 : [
-		terraMoss, <minecraft:fermented_spider_eye>, <roots:wildewheet_seed>, <ore:foodMushroom>, <ore:foodMushroom>
+		terraMoss, cloudBerry, <roots:wildewheet_seed>, <ore:foodMushroom>, <ore:foodMushroom>
 	]
 };
 
