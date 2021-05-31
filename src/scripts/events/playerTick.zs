@@ -49,16 +49,11 @@ events.onPlayerTick(function(event as PlayerTickEvent) {
 		var orbTier as int = network.orbTier;
 		var essence as int = network.currentEssence;
 		
-		if(orbTier > 0) {
-			var amount as int = max(essence * orbTier / 100, 1);
+		var amount as int = max(essence * orbTier / 100, 1);
 
-			if(world.getWorldTime() % 30 == 0) {
-				network.syphon(ITextComponent.fromString("syphon"), min(amount, 2500), true);
-
-				if(essence == 0) {
-					network.hurtPlayer(player, player.health <= 1.0F ? 0.0F : 1.0F);
-				}
-			}
+		if(orbTier > 0 && world.getWorldTime() % 30 == 0) {
+			network.syphon(ITextComponent.fromString("syphon"), min(amount, 2500), true);
+			network.hurtPlayer(player, (essence == 0 && player.health >= 1.0F ? 1.0F : 0.0F));
 		}
 	}
 });

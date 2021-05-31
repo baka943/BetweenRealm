@@ -5,7 +5,7 @@
 import mods.zenstages.ZenStager;
 import mods.zenstages.Stage;
 
-//Dimension
+//Dimensions
 global stageAtlantis as Stage = ZenStager.initStage("atlantis_stage");
 global stageIslands as Stage = ZenStager.initStage("islands_stage");
 global stageCities as Stage = ZenStager.initStage("cities_stage");
