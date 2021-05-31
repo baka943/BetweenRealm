@@ -1,7 +1,6 @@
+#no_fix_recipe_book
 #Name: refinedStorage.zs
 #Author: baka943
-
-#modloaded refinedstorage
 
 furnace.remove(<refinedstorage:processor:3>);
 furnace.remove(<refinedstorage:processor:4>);

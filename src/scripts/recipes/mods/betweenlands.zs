@@ -1,3 +1,4 @@
+#no_fix_recipe_book
 #Name: betweenlands.zs
 #Author: baka943
 

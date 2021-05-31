@@ -1,3 +1,4 @@
+#no_fix_recipe_book
 #Name: minecraft.zs
 #Author: baka943
 

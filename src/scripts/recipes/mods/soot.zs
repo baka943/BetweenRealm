@@ -1,7 +1,6 @@
+#no_fix_recipe_book
 #Name: soot.zs
 #Author: baka943
-
-#modloaded soot
 
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;

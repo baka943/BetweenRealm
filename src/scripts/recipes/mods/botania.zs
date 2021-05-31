@@ -1,7 +1,6 @@
+#no_fix_recipe_book
 #Name: botania.zs
 #Author: baka943
-
-#modloaded botania
 
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;

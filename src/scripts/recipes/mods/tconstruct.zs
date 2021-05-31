@@ -1,7 +1,6 @@
+#no_fix_recipe_book
 #Name: tconstruct.zs
 #Author: baka943
-
-#modloaded tconstruct
 
 import crafttweaker.item.IItemStack;
 
@@ -11,7 +10,6 @@ val removeRecipes as IItemStack[] = [
 	<tconstruct:slime_channel:2>,
 	<tconstruct:slime_channel:3>,
 	<tconstruct:slime_channel:4>,
-	<tconstruct:slime_channel:5>,
 	<tconstruct:ingots>,
 	<tconstruct:ingots:1>,
 	<tconstruct:brownstone>,

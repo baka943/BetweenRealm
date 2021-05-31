@@ -1,7 +1,6 @@
+#no_fix_recipe_book
 #Name: matterOverdrive.zs
 #Author: baka943
-
-#modloaded matteroverdrive
 
 import crafttweaker.item.IItemStack;
 
