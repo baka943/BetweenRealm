@@ -172,18 +172,18 @@ zenClass IE {
 	//==================================
 
 	#Remove Crusher recipes
-	// function removeCrusherRecipes(outputs as IItemStack[]){
-	// 	for output in outputs{
-	// 		Crusher.removeRecipe(output);
-	// 	}
-	// }
-
-	#Remove Crusher Recipes for Input
-	function removeCrusherRecipes(inputs as IItemStack[]){
-		for input in inputs{
-			Crusher.removeRecipesForInput(input);
+	function removeCrusherRecipes(outputs as IItemStack[]){
+		for output in outputs{
+			Crusher.removeRecipe(output);
 		}
 	}
+
+	#Remove Crusher Recipes for Input
+	// function removeCrusherRecipes(inputs as IItemStack[]){
+	// 	for input in inputs{
+	// 		Crusher.removeRecipesForInput(input);
+	// 	}
+	// }
 
 	#Add Crusher recipes
 	function addCrusherRecipes(maps as double[IItemStack][int][IIngredient][IItemStack]){

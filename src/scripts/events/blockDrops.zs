@@ -31,12 +31,12 @@ static blockDrops as WeightedItemStack[][string] = {
 	##Example
 	// "thebetweenlands:swamp_tallgrass" : [
 	// 	<roots:wildroot> % 12
+	// ],
+	// "minecraft:end_stone" : [
+	// 	<minecraft:flint> % 100,
+	// 	<minecraft:flint> % 30,
+	// 	<minecraft:flint> % 5
 	// ]
-	"minecraft:end_stone" : [
-		<minecraft:flint> % 100,
-		<minecraft:flint> % 30,
-		<minecraft:flint> % 5
-	]
 };
 
 events.onBlockBreak(function(event as BlockBreakEvent) {
