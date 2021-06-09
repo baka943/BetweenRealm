@@ -8,14 +8,6 @@ import mods.ItemStages;
 import mods.zenstages.ZenStager;
 
 val removeList as IItemStack[] = [
-	<minecraft:furnace_minecart>,
-	<minecraft:wooden_axe>,
-	<minecraft:wooden_pickaxe>,
-	<minecraft:wooden_shovel>,
-	<minecraft:wooden_hoe>,
-	<minecraft:wooden_sword>,
-	<minecraft:crafting_table>,
-	<minecraft:furnace>,
 	<minecraft:monster_egg:*>,
 	<minecraft:end_portal_frame>,
 	<minecraft:bedrock>,
@@ -112,5 +104,3 @@ stageMinecraft.addIngredients([
 
 // ItemStages.stageTooltip(stageDisable.stage, "§9" + game.localize("tooltip.itemstages.stage"));
 ItemStages.stageTooltip(stageDisable.stage, "§9" + game.localize("gui.tooltip.matter") + ":");
-
-ItemStages.stageRecipeCategory(stageMinecraft.stage, "minecraft.anvil");
