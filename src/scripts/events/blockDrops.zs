@@ -37,6 +37,15 @@ static blockDrops as WeightedItemStack[][string] = {
 	// 	<minecraft:flint> % 30,
 	// 	<minecraft:flint> % 5
 	// ]
+	"minecraft:stone:1" : [
+		<pyrotech:cobblestone:2> % 100
+	],
+	"minecraft:stone:3" : [
+		<pyrotech:cobblestone:1> % 100
+	],
+	"minecraft:stone:5" : [
+		<pyrotech:cobblestone> % 100
+	]
 };
 
 events.onBlockBreak(function(event as BlockBreakEvent) {
