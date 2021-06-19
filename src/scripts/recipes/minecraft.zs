@@ -24,26 +24,12 @@ iRecipes.remove(removeRecipes);
 val shapedRecipes as IIngredient[][][][IItemStack] = {
 	<minecraft:iron_nugget> * 8 : [
 		[
-			[ingot.iron]
-		]
-	],
-	<minecraft:iron_ingot> : [
-		[
-			[nugget.iron, nugget.iron, nugget.iron],
-			[nugget.iron, null, nugget.iron],
-			[nugget.iron, nugget.iron, nugget.iron]
+			[<minecraft:iron_ingot>]
 		]
 	],
 	<minecraft:gold_nugget> * 8 : [
 		[
-			[ingot.gold]
-		]
-	],
-	<minecraft:gold_ingot> : [
-		[
-			[nugget.gold, nugget.gold, nugget.gold],
-			[nugget.gold, null, nugget.gold],
-			[nugget.gold, nugget.gold, nugget.gold]
+			[<minecraft:gold_ingot>]
 		]
 	]
 };
@@ -66,7 +52,7 @@ for rec in furnace.all {
 	}
 }
 
-furnace.addRecipe(<minecraft:iron_nugget> * 8, ore.iron);
-furnace.addRecipe(<minecraft:gold_nugget> * 8, ore.gold);
+furnace.addRecipe(<minecraft:iron_nugget> * 8, <minecraft:iron_ore>);
+furnace.addRecipe(<minecraft:gold_nugget> * 8, <minecraft:gold_ore>);
 
 jei.hide("jei.information");

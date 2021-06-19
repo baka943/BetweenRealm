@@ -17,13 +17,13 @@ events.onEntityLivingHurt(function(event as EntityLivingHurtEvent) {
 			var health as float = player.health;
 			var maxHealth as float = player.maxHealth;
 
-			damage = max(1.0F, damage * health / maxHealth);
+			event.amount = max(1.0F, damage * health / maxHealth);
 		} else if(entity instanceof IEntityMob && source instanceof IPlayer) {
 			var player as IPlayer = source;
 			var health as float = player.health;
 			var maxHealth as float = player.maxHealth;
 
-			damage *= 2.0F * health / maxHealth;
+			event.amount *= 2.0F * health / maxHealth;
 		}
 	}
 });
