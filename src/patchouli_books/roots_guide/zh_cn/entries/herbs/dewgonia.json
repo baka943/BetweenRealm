@@ -1,0 +1,23 @@
+{
+	"name": "露海棠",
+	"icon": "roots:dewgonia",
+	"category": "herbs",
+	"pages": [
+		{
+			"type": "spotlight",
+			"item": "roots:dewgonia",
+			"link_recipe": true,
+			"text": "露海棠错落于根茎上，通透水灵，但远没有其外表一般脆弱。$(p)$(info_cn) 露海棠只会在$(l:resources/elemental_soil#water)水素土$()上生长。"
+		},
+		{
+			"type": "ritual_crafting_template",
+			"recipe": "roots/dewgonia"
+		},
+		{
+			"type": "relations",
+			"entries": [
+				"resources/elemental_soil"
+			]
+		}
+	]
+}

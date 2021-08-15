@@ -1,0 +1,26 @@
+{
+	"name": "Apothecary Pouch",
+	"icon": "roots:apothecary_pouch",
+	"category": "apparatus",
+	"pages": [
+		{
+			"type": "spotlight",
+			"item": "roots:apothecary_pouch",
+			"link_recipe": true,
+			"text": "A vast improvement over the component pouch in capacity and usefulness: the pouch itself holds many more items.$(p)Herbs are stored in small glass vials to keep them separate from each other, at the same time increasing the amount that can be stored."
+		},
+		{
+			"type": "fey_crafting_template",
+			"recipe": "roots/apothecary_pouch"
+		},
+		{
+			"type": "relations",
+			"entries": [
+				"apparatus/component_pouch",
+				"basics/spells",
+				"herbs/spirit_herb",
+				"resources/wildwood"
+			]
+		}
+	]
+}

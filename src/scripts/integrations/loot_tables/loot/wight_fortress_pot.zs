@@ -8,3 +8,5 @@ import loottweaker.vanilla.loot.LootPool;
 val wight_fortress_pot as LootTable = LootTweaker.getTable("thebetweenlands:loot/wight_fortress_pot");
 var pool as LootPool = wight_fortress_pot.getPool("pot_loot");
 pool.removeEntry("scroll");
+pool.addItemEntry(<thebetweenlands:items_misc:40>, 8, 0, [], [], "scroll_new");
+pool.addLootTableEntry("betweenrealms:loot/relics", 8, 0, "relic");

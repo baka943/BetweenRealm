@@ -1,0 +1,61 @@
+{
+	"name": "Elemental Soil",
+	"icon": "roots:elemental_soil",
+	"category": "resources",
+	"priority": true,
+	"pages": [
+		{
+			"type": "spotlight",
+			"item": "roots:elemental_soil_fire",
+			"link_recipe": true,
+			"anchor": "fire",
+			"text": "$(l:herbs/infernal_bulb)Infernal Bulbs$() grow on magmatic soil.$(p)Other plants grown on magmatic soil will have drops cooked when harvested, if cookable. In addition, each plant harvested may drop experience."
+		},
+		{
+			"type": "fey_crafting_template",
+			"recipe": "roots/elemental_soil_fire"
+		},
+		{
+			"type": "spotlight",
+			"item": "roots:elemental_soil_water",
+			"link_recipe": true,
+			"anchor": "water",
+			"text": "$(l:herbs/dewgonia)Dewgonia$() grows on aquatic soil.$(p)Normal plants grown on the soil will be harvested automagically, the drops placed in containers below the soil or on the surface if none exists. $(info) Gravel beneath prevents this behaviour."
+		},
+		{
+			"type": "fey_crafting_template",
+			"recipe": "roots/elemental_soil_water"
+		},
+		{
+			"type": "spotlight",
+			"item": "roots:elemental_soil_air",
+			"link_recipe": true,
+			"anchor": "air",
+			"text": "$(l:herbs/cloud_berry)Cloud Berries$() grow on caelic, air-bound soil.$(p)Normal plants can also be grown on caelic soil, and the soil will grow them much faster than normal."
+		},
+		{
+			"type": "fey_crafting_template",
+			"recipe": "roots/elemental_soil_air"
+		},
+		{
+			"type": "spotlight",
+			"item": "roots:elemental_soil_earth",
+			"link_recipe": true,
+			"anchor": "earth",
+			"text": "$(l:herbs/stalicripe)Stalicripe$() grow on terran soil.$(p)Normal plants can also be grown on terran soil, and the fertile earth will yield much more for the crop."
+		},
+		{
+			"type": "fey_crafting_template",
+			"recipe": "roots/elemental_soil_earth"
+		},
+		{
+			"type": "relations",
+			"entries": [
+				"herbs/cloud_berry",
+				"herbs/infernal_bulb",
+				"herbs/dewgonia",
+				"herbs/stalicripe"
+			]
+		}
+	]
+}

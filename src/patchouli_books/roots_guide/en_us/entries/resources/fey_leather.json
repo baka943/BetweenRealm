@@ -1,0 +1,30 @@
+{
+	"name": "Fey Leather",
+	"icon": "roots:fey_leather",
+	"category": "resources",
+	"pages": [
+		{
+			"type": "spotlight",
+			"item": "roots:fey_leather",
+			"link_recipe": true,
+			"text": "Reaching through the world with $(l:apparatus/runic_shears)Runic Shears$() allows the gathering of many items from the fey, including those freely given by denizens of the fey - equivalent to many of the creatures of our world that drop leather."
+		},
+		{
+			"type": "text",
+			"text": "$(info) It is not possible to continuously gather fey leather, as the energies required vary per entity, and sometimes those entities are exhausted by the process."
+		},
+		{
+			"type": "entity",
+			"entity": "thebetweenlands:lurker",
+			"name": "Lurker",
+			"scale": 0.6,
+			"text": "This creature can be used as a source of fey leather using $(l:apparatus/runic_shears)Runic Shears$()."
+		},
+		{
+			"type": "relations",
+			"entries": [
+				"apparatus/sylvan_armor"
+			]
+		}
+	]
+}

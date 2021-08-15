@@ -1,4 +1,3 @@
-#no_fix_recipe_book
 #Name: embers.zs
 #Author: baka943
 

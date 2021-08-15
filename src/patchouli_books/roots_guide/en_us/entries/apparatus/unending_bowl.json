@@ -1,0 +1,23 @@
+{
+	"name": "Unending Bowl",
+	"icon": "roots:unending_bowl",
+	"category": "apparatus",
+	"pages": [
+		{
+			"type": "spotlight",
+			"item": "roots:unending_bowl",
+			"link_recipe": true,
+			"text": "Once placed, the unending bowl, as its name suggests, will never run out of water, no matter how much is taken from it.$(p)In addition, containers filled with water can also be emptied into it, and $(info) water can be piped in or out through standard methods."
+		},
+		{
+			"type": "fey_crafting_template",
+			"recipe": "roots/unending_bowl"
+		},
+		{
+			"type": "relations",
+			"entries": [
+				"herbs/dewgonia"
+			]
+		}
+	]
+}

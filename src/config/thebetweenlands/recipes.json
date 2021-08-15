@@ -1,0 +1,59 @@
+{
+	"pestle_and_mortar": [
+		{
+			"input": {
+				"id": "thebetweenlands:pitstone"
+			},
+			"output": {
+				"id": "minecraft:flint"
+			}
+		}
+	],
+	"compost_bin": [
+		{
+			"input": {
+				"item": {
+					"id": "mysticalworld:aubergine_seed"
+				},
+				"composting_time": 4000
+			},
+			"output": 3
+		},
+		{
+			"input": {
+				"item": {
+					"id": "roots:moonglow_seed"
+				},
+				"composting_time": 4000
+			},
+			"output": 3
+		},
+		{
+			"input": {
+				"item": {
+					"id": "roots:wildewheet_seed"
+				},
+				"composting_time": 4000
+			},
+			"output": 3
+		},
+		{
+			"input": {
+				"item": {
+					"id": "roots:spirit_herb_seed"
+				},
+				"composting_time": 4000
+			},
+			"output": 3
+		},
+		{
+			"input": {
+				"item": {
+					"id": "mysticalworld:silkworm_egg"
+				},
+				"composting_time": 4000
+			},
+			"output": 3
+		}
+	]
+}

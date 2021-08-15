@@ -39,6 +39,7 @@ val removeList as IItemStack[] = [
 	<roots:ritual_frost_lands>,
 	<roots:ritual_transmutation>,
 	<roots:ritual_summon_creatures>,
+	<roots:ritual_gathering>,
 	// <roots:bark_oak>,
 	// <roots:bark_spruce>,
 	// <roots:bark_birch>,

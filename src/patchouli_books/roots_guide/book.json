@@ -1,0 +1,19 @@
+{
+	"name": "book.betweenrealms.roots_name",
+	"landing_text": "book.betweenrealms.roots_text",
+	"subtitle": "book.betweenrealms.roots_subtitle",
+	"creative_tab": "roots",
+	"book_texture": "roots:textures/gui/book.png",
+	"filler_texture": "roots:textures/gui/patchouli/book_filler.png",
+	"model": "roots:druid_handbook",
+	"version": 0,
+	"show_progress": false,
+	"macros": {
+		"$(info)": "$(thing)$(bold)$(t:Important Detail)[!]$()",
+		"$(warning)": "$(#f00)$(bold)$(t:Warning)[!]$()",
+		"$(standing_stones)": "$(#aa0)$(bold)$(t:Standing Stones Required!)[!]$()",
+		"$(info_cn)": "$(thing)$(bold)$(t:重要信息！)[!]$()",
+		"$(warning_cn)": "$(#f00)$(bold)$(t:警告！)[!]$()",
+		"$(standing_stones_cn)": "$(#aa0)$(bold)$(t:需要石柱！)[!]$()"
+	}
+}

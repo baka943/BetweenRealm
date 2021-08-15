@@ -27,16 +27,16 @@ botania.removeAltar(removeRecipes);
 val altarRecipes as IIngredient[][IItemStack][int] = {
 	5000 : {
 		<botania:rune> * 2 : [
-			mana.powder, mana.steel, mana.diamond, dewgonia, spiritHerb
+			mana.powder, mana.steel, mana.diamond, <realmtweaks:powder_water>, spiritHerb
 		],
 		<botania:rune:1> * 2 : [
-			mana.powder, mana.steel, mana.diamond, infernalBulb, spiritHerb
+			mana.powder, mana.steel, mana.diamond, <minecraft:blaze_powder>, spiritHerb
 		],
 		<botania:rune:2> * 2 : [
-			mana.powder, mana.steel, mana.diamond, stalicripe, spiritHerb
+			mana.powder, mana.steel, mana.diamond, <realmtweaks:powder_earth>, spiritHerb
 		],
 		<botania:rune:3> * 2 : [
-			mana.powder, mana.steel, mana.diamond, cloudBerry, spiritHerb
+			mana.powder, mana.steel, mana.diamond, <realmtweaks:powder_air>, spiritHerb
 		]
 	},
 	7600 : {

@@ -1,0 +1,23 @@
+{
+	"name": "Stalicripe",
+	"icon": "roots:stalicripe",
+	"category": "herbs",
+	"pages": [
+		{
+			"type": "spotlight",
+			"item": "roots:stalicripe",
+			"link_recipe": true,
+			"text": "A rough, rugged plant that feels rough - almost the texture of recently hewn stone.$(p)$(info) Can only be grown on $(l:resources/elemental_soil#earth)Terran Soil.$()"
+		},
+		{
+			"type": "ritual_crafting_template",
+			"recipe": "roots/stalicripe"
+		},
+		{
+			"type": "relations",
+			"entries": [
+				"resources/elemental_soil"
+			]
+		}
+	]
+}

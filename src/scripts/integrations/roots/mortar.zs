@@ -28,11 +28,11 @@ val mortarRecipes as IIngredient[][IItemStack] = {
 	<roots:flour> : [
 		<roots:wildewheet>
 	],
-	<minecraft:flint> : [
-		pitstone, pitstone, pitstone, pitstone, pitstone
-	],
 	<botania:fertilizer> * 3 : [
-		<botania:dye:*> | <thebetweenlands:items_plant_drop:4>, <botania:dye:*> | <thebetweenlands:items_plant_drop:12>, <botania:dye:*> | <thebetweenlands:items_plant_drop:20>, swampMeal, swampMeal
+		<botania:dye:*> | <thebetweenlands:items_plant_drop:4>, <botania:dye:*> | <thebetweenlands:items_plant_drop:12>, <botania:dye:*> | <thebetweenlands:items_plant_drop:20>, boneMeal, boneMeal
+	],
+	<minecraft:dye:15> * 5 : [
+		<minecraft:bone> | <thebetweenlands:items_misc:14>
 	]
 };
 

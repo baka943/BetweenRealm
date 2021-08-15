@@ -1,0 +1,22 @@
+{
+	"name": "大地菌丝",
+	"icon": "roots:terra_moss",
+	"category": "herbs",
+	"priority": true,
+	"pages": [
+		{
+			"type": "spotlight",
+			"item": "roots:terra_moss",
+			"link_recipe": true,
+			"text": "在魔法植物中，最常见的莫过于大地菌丝了，很少有人能够认识到它体内所蕴含的魔力。$(p)大地菌丝可以从那些自然生成的苔藓上刮取下来。"
+		},
+		{
+			"type": "relations",
+			"entries": [
+				"apparatus/knives",
+				"rituals/ritual_overgrowth",
+				"basics/resources"
+			]
+		}
+	]
+}

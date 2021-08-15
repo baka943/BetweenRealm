@@ -8,13 +8,5 @@ import loottweaker.vanilla.loot.LootPool;
 val common_chest_loot as LootTable = LootTweaker.getTable("thebetweenlands:loot/common_chest_loot");
 var pool as LootPool = common_chest_loot.getPool("common_chest");
 pool.removeEntry("scroll");
-pool.addItemEntryJson(<thebetweenlands:items_misc:40>, 8, 0, [], [], "scroll_");
-pool.addItemEntryJson(<magicalsculpture:relic>, 8, 0, [
-	{
-		"function": "set_data",
-		"data": {
-			"min": 0.0,
-			"max": 49.0
-		}
-	}
-], [], "relic");
+pool.addItemEntry(<thebetweenlands:items_misc:40>, 8, 0, [], [], "scroll_new");
+pool.addLootTableEntry("betweenrealms:loot/relics", 8, 0, "relic");

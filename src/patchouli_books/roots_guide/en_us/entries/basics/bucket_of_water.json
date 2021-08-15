@@ -1,0 +1,20 @@
+{
+	"name": "A Bucket of Water",
+	"icon": "thebetweenlands:bl_bucket{Fluid:{FluidName:'water',Amount:1000}}",
+	"category": "basics",
+	"sortnum": 7,
+	"pages": [
+		{
+			"type": "spotlight",
+			"item": "thebetweenlands:bl_bucket{Fluid:{FluidName:'water',Amount:1000}}",
+			"title": "Water Bucket",
+			"text": "A versatile tool, buckets of water will cancel any $(l:basics/pyre)pyre ritual$() in progress, quenching the flames and immediately settling the magical energy.$(p)$(info) The ingredients used for the ritual are still consumed.$(p)$(info) Any container with a cool liquid in it is suitable."
+		},
+		{
+			"type": "relations",
+			"entries": [
+				"basics/pyre"
+			]
+		}
+	]
+}

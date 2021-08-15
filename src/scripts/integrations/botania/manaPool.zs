@@ -14,7 +14,9 @@ val removeRecipes as IIngredient[] = [
 	<botania:grassseeds:1>,
 	<botania:grassseeds:2>,
 	<botania:manaresource>,
-	<botania:manaresource:1>
+	<botania:manaresource:1>,
+	<botania:manaresource:23>,
+	<minecraft:leather>
 ];
 
 botania.removeManaPool(removeRecipes);
@@ -55,6 +57,11 @@ val infusionRecipes as IIngredient[][IItemStack][int] = {
 	6500 : {
 		<botania:grassseeds:2> : [
 			<ore:foodMushroom>
+		]
+	},
+	27000 : {
+		<botania:storage> : [
+			block.syrmorite
 		]
 	}
 };

@@ -1,0 +1,23 @@
+{
+	"name": "Infernal Bulb",
+	"icon": "roots:infernal_bulb",
+	"category": "herbs",
+	"pages": [
+		{
+			"type": "spotlight",
+			"item": "roots:infernal_bulb",
+			"link_recipe": true,
+			"text": "A tough-budded flower which never seems to bloom. The bulbs from which these flowers bud are warm to the touch even after they are removed from the main plant.$(p)$(info) Can only be grown on $(l:resources/elemental_soil#fire)Magmatic Soil.$()"
+		},
+		{
+			"type": "ritual_crafting_template",
+			"recipe": "roots/infernal_bulb"
+		},
+		{
+			"type": "relations",
+			"entries": [
+			"resources/elemental_soil"
+			]
+		}
+	]
+}

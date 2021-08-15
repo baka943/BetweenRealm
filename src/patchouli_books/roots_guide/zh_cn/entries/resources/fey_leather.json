@@ -1,0 +1,30 @@
+{
+	"name": "精灵皮革",
+	"icon": "roots:fey_leather",
+	"category": "resources",
+	"pages": [
+		{
+			"type": "spotlight",
+			"item": "roots:fey_leather",
+			"link_recipe": true,
+			"text": "使用$(l:apparatus/runic_shears)符文剪刀$()与世界进行交互，你可以获得许多只有精灵才有的物品，其中包括这些精灵们免费送给我们的东西 - 这些东西等价于我们的世界当中的动物皮革。"
+		},
+		{
+			"type": "text",
+			"text": "$(info_cn) 你无法无间断地获得精灵皮革，因为每一个实体产生精灵皮革所需的能量都不一样，而且有时候实体会厌倦于为你不断地产出皮革。"
+		},
+		{
+			"type": "entity",
+			"entity": "thebetweenlands:lurker",
+			"name": "潜尾鳄",
+			"scale": 0.6,
+			"text": "潜尾鳄是精灵皮革的来源之一，对着它使用$(l:apparatus/runic_shears)符文剪刀$()即可获得精灵皮革。"
+		},
+		{
+			"type": "relations",
+			"entries": [
+				"apparatus/sylvan_armor"
+			]
+		}
+	]
+}

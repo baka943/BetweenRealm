@@ -1,0 +1,19 @@
+{
+	"name": "野木弓",
+	"icon": "roots:wildwood_bow",
+	"category": "apparatus",
+	"pages": [
+		{
+			"type": "crafting",
+			"recipe": "crafttweaker:roots/wildwood_bow",
+			"text": "以野木进行强化，这把长弓是所有冒险家的趁手之物。"
+		},
+		{
+			"type": "relations",
+			"entries": [
+				"basics/other_imbuer",
+				"rituals/ritual_wild_growth"
+			]
+		}
+	]
+}

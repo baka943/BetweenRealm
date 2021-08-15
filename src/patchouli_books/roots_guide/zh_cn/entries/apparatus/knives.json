@@ -1,0 +1,40 @@
+{
+	"name": "小刀",
+	"icon": "roots:wood_knife",
+	"category": "apparatus",
+	"pages": [
+		{
+			"type": "spotlight",
+			"item": "roots:wood_knife",
+			"link_recipe": true,
+			"text": "小刀轻便又灵活，既可用作匕首，也可用于切割木头。$(info_cn) 使用小刀破坏原木，会掉落$(l:resources/bark)树皮$()，这些树皮是一些德鲁伊仪式中的关键材料。$(p)紧急情况下，它们也可以充当一种伤害较低但攻击速度较快的武器。"
+		},
+		{
+			"type": "crafting",
+			"recipe": "crafttweaker:roots/wood_knife",
+			"recipe2": "crafttweaker:roots/stone_knife"
+		},
+		{
+			"type": "crafting",
+			"recipe": "crafttweaker:mysticalworld/copper_knife",
+			"recipe2": "crafttweaker:roots/iron_knife"
+		},
+		{
+			"type": "crafting",
+			"recipe": "crafttweaker:mysticalworld/silver_knife",
+			"recipe2": "crafttweaker:roots/gold_knife"
+		},
+		{
+			"type": "crafting",
+			"recipe": "crafttweaker:roots/diamond_knife",
+			"recipe2": "crafttweaker:mysticalworld/amethyst_knife"
+		},
+		{
+			"type": "relations",
+			"entries": [
+				"resources/bark",
+				"herbs/terra_moss"
+			]
+		}
+	]
+}

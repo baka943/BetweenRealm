@@ -1,4 +1,3 @@
-#no_fix_recipe_book
 #Name: paraglider.zs
 #Author: baka943
 

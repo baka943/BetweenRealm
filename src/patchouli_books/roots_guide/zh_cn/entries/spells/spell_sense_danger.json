@@ -1,0 +1,16 @@
+{
+	"name": "危险感知",
+	"icon": "roots:spell_dust",
+	"category": "spells",
+	"flag": "roots:spell_sense_danger",
+	"pages": [
+		{
+			"type": "text",
+			"text": "揭示出邪恶气场以及怪物的意图，使得附近的生物发光。$(p)$(info_cn) 你可以透过固体方块看到发光生物。"
+		},
+		{
+			"type": "spell_template",
+			"spell": "spell_sense_danger"
+		}
+	]
+}

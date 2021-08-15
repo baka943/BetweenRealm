@@ -18,11 +18,6 @@ global siltGlass as IItemStack = <thebetweenlands:silt_glass>;
 global swampMeal as IItemStack = <thebetweenlands:items_crushed:17>;
 global lurkerSkin as IItemStack = <thebetweenlands:items_misc:4>;
 
-<ore:limestone>.add(
-	<thebetweenlands:limestone>,
-	<thebetweenlands:polished_limestone>
-);
-
 <ore:dentrothyst>.add(
 	<thebetweenlands:dentrothyst>,
 	<thebetweenlands:dentrothyst:1>
@@ -50,6 +45,7 @@ global lurkerSkin as IItemStack = <thebetweenlands:items_misc:4>;
 
 <ore:cobblestone>.remove(betweenstone);
 <ore:stone>.remove(<thebetweenlands:smooth_betweenstone>);
+<ore:bone>.remove(<thebetweenlands:items_misc:14>);
 
 for item in <ore:logWood>.items {
 	if(item.definition.owner == "thebetweenlands") {
@@ -99,20 +95,3 @@ for item in <ore:vine>.items {
 		<ore:vine>.remove(item);
 	}
 }
-
-global azuwynn as IItemStack = <thebetweenlands:aspectrus_fruit>.withTag({blHerbloreAspects: {container: [{aspect: {type: "Azuwynn"}, storage: {hasStoredStatic: 0 as byte, storedStatic: 0, dynamic: 250}}]}});
-global armaniis as IItemStack = <thebetweenlands:aspectrus_fruit>.withTag({blHerbloreAspects: {container: [{aspect: {type: "Armaniis"}, storage: {hasStoredStatic: 0 as byte, storedStatic: 0, dynamic: 250}}]}});
-global byariis as IItemStack = <thebetweenlands:aspectrus_fruit>.withTag({blHerbloreAspects: {container: [{aspect: {type: "Byariis"}, storage: {hasStoredStatic: 0 as byte, storedStatic: 0, dynamic: 250}}]}});
-global byrginaz as IItemStack = <thebetweenlands:aspectrus_fruit>.withTag({blHerbloreAspects: {container: [{aspect: {type: "Byrginaz"}, storage: {hasStoredStatic: 0 as byte, storedStatic: 0, dynamic: 250}}]}});
-global celawynn as IItemStack = <thebetweenlands:aspectrus_fruit>.withTag({blHerbloreAspects: {container: [{aspect: {type: "Celawynn"}, storage: {hasStoredStatic: 0 as byte, storedStatic: 0, dynamic: 250}}]}});
-global dayuniis as IItemStack = <thebetweenlands:aspectrus_fruit>.withTag({blHerbloreAspects: {container: [{aspect: {type: "Dayuniis"}, storage: {hasStoredStatic: 0 as byte, storedStatic: 0, dynamic: 250}}]}});
-global fergalaz as IItemStack = <thebetweenlands:aspectrus_fruit>.withTag({blHerbloreAspects: {container: [{aspect: {type: "Fergalaz"}, storage: {hasStoredStatic: 0 as byte, storedStatic: 0, dynamic: 250}}]}});
-global firnalaz as IItemStack = <thebetweenlands:aspectrus_fruit>.withTag({blHerbloreAspects: {container: [{aspect: {type: "Firnalaz"}, storage: {hasStoredStatic: 0 as byte, storedStatic: 0, dynamic: 250}}]}});
-global freiwynn as IItemStack = <thebetweenlands:aspectrus_fruit>.withTag({blHerbloreAspects: {container: [{aspect: {type: "Freiwynn"}, storage: {hasStoredStatic: 0 as byte, storedStatic: 0, dynamic: 250}}]}});
-global geoliirgaz as IItemStack = <thebetweenlands:aspectrus_fruit>.withTag({blHerbloreAspects: {container: [{aspect: {type: "Geoliirgaz"}, storage: {hasStoredStatic: 0 as byte, storedStatic: 0, dynamic: 250}}]}});
-global ordaniis as IItemStack = <thebetweenlands:aspectrus_fruit>.withTag({blHerbloreAspects: {container: [{aspect: {type: "Ordaniis"}, storage: {hasStoredStatic: 0 as byte, storedStatic: 0, dynamic: 250}}]}});
-global yeowynn as IItemStack = <thebetweenlands:aspectrus_fruit>.withTag({blHerbloreAspects: {container: [{aspect: {type: "Yeowynn"}, storage: {hasStoredStatic: 0 as byte, storedStatic: 0, dynamic: 250}}]}});
-global yunugaz as IItemStack = <thebetweenlands:aspectrus_fruit>.withTag({blHerbloreAspects: {container: [{aspect: {type: "Yunugaz"}, storage: {hasStoredStatic: 0 as byte, storedStatic: 0, dynamic: 250}}]}});
-global yihinren as IItemStack = <thebetweenlands:aspectrus_fruit>.withTag({blHerbloreAspects: {container: [{aspect: {type: "Yihinren"}, storage: {hasStoredStatic: 0 as byte, storedStatic: 0, dynamic: 250}}]}});
-global wodren as IItemStack = <thebetweenlands:aspectrus_fruit>.withTag({blHerbloreAspects: {container: [{aspect: {type: "Wodren"}, storage: {hasStoredStatic: 0 as byte, storedStatic: 0, dynamic: 250}}]}});
-global uduriis as IItemStack = <thebetweenlands:aspectrus_fruit>.withTag({blHerbloreAspects: {container: [{aspect: {type: "Uduriis"}, storage: {hasStoredStatic: 0 as byte, storedStatic: 0, dynamic: 250}}]}});

@@ -1,0 +1,24 @@
+{
+	"name": "研钵和研杵",
+	"icon": "roots:mortar",
+	"category": "apparatus",
+	"priority": true,
+	"pages": [
+		{
+			"type": "text",
+			"text": "研钵可以放置在世界中，最多可以向其中添加5种材料，当添加完毕后，$(info_cn) 手持研杵右键，就可以合成出你想要的物品了。$(p)你可以在本书中找到所有需要使用到研钵和研杵的配方。$(p)$(info_cn) 此外，你也可以将研杵放置在空的研钵内。"
+		},
+		{
+			"type":"crafting",
+			"recipe": "crafttweaker:roots/pestle",
+			"recipe2": "crafttweaker:roots/mortar",
+			"title": "研钵和研杵"
+		},
+		{
+			"type": "relations",
+			"entries": [
+				"basics/spells"
+			]
+		}
+	]
+}

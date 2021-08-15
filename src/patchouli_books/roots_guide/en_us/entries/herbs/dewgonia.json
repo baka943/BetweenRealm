@@ -1,0 +1,23 @@
+{
+	"name": "Dewgonia",
+	"icon": "roots:dewgonia",
+	"category": "herbs",
+	"pages": [
+		{
+			"type": "spotlight",
+			"item": "roots:dewgonia",
+			"link_recipe": true,
+			"text": "Dewgonia grows in stalks ending in flowers, which look similar to barely-contained water and yet are less delicate than they appear.$(p)$(info) Can only be grown on $(l:resources/elemental_soil#water)Aqueous Soil.$()"
+		},
+		{
+			"type": "ritual_crafting_template",
+			"recipe": "roots/dewgonia"
+		},
+		{
+			"type": "relations",
+			"entries": [
+				"resources/elemental_soil"
+			]
+		}
+	]
+}

@@ -1,0 +1,22 @@
+{
+	"name": "Terra Moss",
+	"icon": "roots:terra_moss",
+	"category": "herbs",
+	"priority": true,
+	"pages": [
+		{
+			"type": "spotlight",
+			"item": "roots:terra_moss",
+			"link_recipe": true,
+			"text": "Terra Moss is one of the most commonly available magical herbs, it is simply that few recognise its potential.$(p)Scraping a number of other mossy blocks with a knife will give you terra moss."
+		},
+		{
+			"type": "relations",
+			"entries": [
+				"apparatus/knives",
+				"rituals/ritual_overgrowth",
+				"basics/resources"
+			]
+		}
+	]
+}

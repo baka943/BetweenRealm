@@ -1,0 +1,20 @@
+{
+	"name": "水桶",
+	"icon": "thebetweenlands:bl_bucket{Fluid:{FluidName:'water',Amount:1000}}",
+	"category": "basics",
+	"sortnum": 7,
+	"pages": [
+		{
+			"type": "spotlight",
+			"item": "thebetweenlands:bl_bucket{Fluid:{FluidName:'water',Amount:1000}}",
+			"title": "水桶",
+			"text": "永远可靠的万金油。你可以用这桶水来停止任何正在进行中的$(l:basics/pyre)柴堆合成仪式$()，浇熄火焰，平复魔能。$(p)$(info_cn) 即便如此，柴堆合成仪式的耗材仍然无法回收。$(p)$(info_cn) 任何装有温度较低的液体的容器均可实现这一操作。"
+		},
+		{
+			"type": "relations",
+			"entries": [
+				"basics/pyre"
+			]
+		}
+	]
+}

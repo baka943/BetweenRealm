@@ -30,3 +30,4 @@ for item in <ore:leather>.items {
 }
 
 <ore:dyeBlack>.remove(<mysticalworld:ink_bottle>);
+<ore:string>.remove(<mysticalworld:silk_thread>);

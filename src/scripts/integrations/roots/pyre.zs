@@ -35,16 +35,16 @@ val pyreRecipes as IIngredient[][IItemStack] = {
 		<ore:betweenLeaves>, <ore:dentrothystShard>, <thebetweenlands:weeping_blue_petal>, <ore:rootsBark>, <ore:rootsBark>
 	],
 	<roots:cloud_berry> * 3 : [
-		swampTallgrass, <thebetweenlands:items_plant_drop:11>, <roots:runic_dust>, terraMoss, terraMoss
+		swampTallgrass, <thebetweenlands:items_plant_drop:11>, <thebetweenlands:items_plant_drop:11>, terraMoss, terraMoss
 	],
 	<roots:infernal_bulb> * 3 : [
-		wildroot, <thebetweenlands:items_plant_drop:15>, <roots:runic_dust>, nugget.octine, redstone
+		wildroot, <thebetweenlands:items_plant_drop:15>, <thebetweenlands:items_plant_drop:15>, nugget.octine, redstone
 	],
 	<roots:dewgonia> * 3 : [
-		swampTallgrass, <thebetweenlands:items_plant_drop:4>, <roots:runic_dust>, terraMoss, terraMoss
+		swampTallgrass, <thebetweenlands:items_plant_drop:4>, <thebetweenlands:items_plant_drop:4>, terraMoss, terraMoss
 	],
 	<roots:stalicripe> * 3 : [
-		terraMoss, <thebetweenlands:items_plant_drop:14>, <roots:runic_dust>, wildroot, redstone
+		terraMoss, <thebetweenlands:items_plant_drop:14>, <thebetweenlands:items_plant_drop:14>, wildroot, redstone
 	],
 	<roots:pereskia> * 3 : [
 		wildroot, <ore:dentrothystShard>, redstone, <thebetweenlands:items_plant_drop:31>, swampReed
@@ -80,7 +80,7 @@ val modifyRituals as IIngredient[][string] = {
 		wildroot, spiritHerb, moonglowLeaf, wildroot, wildroot
 	],
 	"ritual_flower_growth" : [
-		wildroot, <ore:runeSpringB>, <botania:petal:10>, <botania:petal:5>, <botania:petal:13>
+		wildroot, <thebetweenlands:items_plant_drop:11>, <thebetweenlands:items_plant_drop:15>, <thebetweenlands:items_plant_drop:4>, <thebetweenlands:items_plant_drop:14>
 	],
 	"ritual_gathering" : [
 		<roots:wildewheet>, <ore:runeAirB>, <botania:petal:7>, <botania:petal:7>, <botania:petal:8>

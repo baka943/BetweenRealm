@@ -1,0 +1,40 @@
+{
+	"name": "Living Tools",
+	"icon": "roots:living_pickaxe",
+	"category": "apparatus",
+	"pages": [
+		{
+			"type": "text",
+			"text": "Enlivened with the magic contained within herbs and tipped with precious metals, living tools will literally regrow any damage that they take, although slowly.$(p)$(info) It has the effectiveness of an equivalent iron tool, but is as enchantable as the golden version."
+		},
+		{
+			"type": "crafting",
+			"recipe": "crafttweaker:roots/living_pickaxe",
+			"recipe2": "crafttweaker:roots/living_axe"
+		},
+		{
+			"type": "crafting",
+			"recipe": "crafttweaker:roots/living_shovel",
+			"recipe2": "crafttweaker:roots/living_hoe"
+		},
+		{
+			"type": "crafting",
+			"recipe": "crafttweaker:roots/living_sword",
+			"recipe2": "crafttweaker:roots/living_arrow"
+		},
+		{
+			"type": "spotlight",
+			"item": "roots:living_arrow",
+			"link_recipe": true,
+			"text": "While too brittle to regrow themselves, these sturdy arrows pack a punch."
+		},
+		{
+			"type": "relations",
+			"entries": [
+				"basics/other_imbuer",
+				"apparatus/wildwood_bow",
+				"apparatus/wildwood_quiver"
+			]
+		}
+	]
+}

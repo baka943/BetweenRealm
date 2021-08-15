@@ -1,0 +1,34 @@
+{
+	"name": "Essential Resources",
+	"icon": "roots:wildroot",
+	"category": "basics",
+	"sortnum": 5,
+	"pages": [
+		{
+			"type": "text",
+			"text": "Druids need access to various natural resources to produce their magical effects. This includes magical herbs, each of which have ties to nature in different ways. Discovering a herb will unlock many mysteries hidden in nature, and provide access to new tools, spells and rituals for the aspiring druid."	
+		},
+		{
+			"type": "spotlight",
+			"item": "roots:wildroot",
+			"title": "Mundane",
+			"text": "Other resources are far more mundane, but still critical to unlocking the full potential of the natural arts. Resources like $(l:resources/bark)bark$() and $(l:resources/aubergine)aubergine$() allow a druid access to the energies of nature itself. All of these resources are documented within this book."
+		},
+		{
+			"type": "spotlight",
+			"item": "roots:elemental_soil",
+			"title": "Renewables",
+			"text": "Almost every resource a druid has access to is a renewable one. Wildroot and almost every herb you discover $(info) can be planted and grown on farmland, although those herbs which touch the elemental plains require special support."
+		},
+		{
+			"type": "relations",
+			"entries": [
+				"basics/introduction",
+				"rituals/ritual_germination",
+				"spells/spell_harvest",
+				"spells/spell_rampant_growth",
+				"resources/elemental_soil"
+			]
+		}
+	]
+}

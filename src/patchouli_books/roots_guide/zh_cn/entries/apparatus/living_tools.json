@@ -1,0 +1,40 @@
+{
+	"name": "蕴生工具",
+	"icon": "roots:living_pickaxe",
+	"category": "apparatus",
+	"pages": [
+		{
+			"type": "text",
+			"text": "以魔法药草中的魔力赋予其活力，并缀以些许珍贵金属，蕴生工具恰如其名，能够修补自身所受到的损伤。尽管这一过程比较缓慢。$(p)$(info_cn) 这套工具的性能与铁套相当，但它们却与金质工具有着相同的附魔能力。"
+		},
+		{
+			"type": "crafting",
+			"recipe": "crafttweaker:roots/living_pickaxe",
+			"recipe2": "crafttweaker:roots/living_axe"
+		},
+		{
+			"type": "crafting",
+			"recipe": "crafttweaker:roots/living_shovel",
+			"recipe2": "crafttweaker:roots/living_hoe"
+		},
+		{
+			"type": "crafting",
+			"recipe": "crafttweaker:roots/living_sword",
+			"recipe2": "crafttweaker:roots/living_arrow"
+		},
+		{
+			"type": "spotlight",
+			"item": "roots:living_arrow",
+			"link_recipe": true,
+			"text": "这纤细的木条过于脆弱，因而不能自我再生，但它仍能以其锋芒对目标施以致命打击。"
+		},
+		{
+			"type": "relations",
+			"entries": [
+				"basics/other_imbuer",
+				"apparatus/wildwood_bow",
+				"apparatus/wildwood_quiver"
+			]
+		}
+	]
+}

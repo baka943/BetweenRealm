@@ -1,4 +1,3 @@
-#no_fix_recipe_book
 #Name: betweenlands.zs
 #Author: baka943
 
@@ -12,7 +11,9 @@ import crafttweaker.item.IItemStack;
 val removeRecipes as IItemStack[] = [
 	<thebetweenlands:swamp_talisman:0>,
 	<thebetweenlands:weedwood_ladder>,
-	<thebetweenlands:rope_item>
+	<thebetweenlands:rope_item>,
+	<thebetweenlands:items_misc:42>,
+	<thebetweenlands:items_misc:41>
 ];
 
 iRecipes.remove(removeRecipes);
@@ -22,13 +23,6 @@ iRecipes.remove(removeRecipes);
 //==================================
 
 val shapedRecipes as IIngredient[][][][IItemStack] = {
-	<thebetweenlands:sulfur_furnace> : [
-		[
-			[betweenstone, betweenstone, betweenstone],
-			[betweenstone, sulfur, betweenstone],
-			[betweenstone, betweenstone, betweenstone]
-		]
-	],
 	<thebetweenlands:weedwood_ladder> * 8 : [
 		[
 			[reedRope, null, reedRope],
@@ -41,6 +35,30 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 			[reedRope],
 			[reedRope],
 			[reedRope]
+		]
+	],
+	<thebetweenlands:items_misc:11> : [
+		[
+			[<thebetweenlands:items_misc:41>, <thebetweenlands:items_misc:41>, <thebetweenlands:items_misc:41>],
+			[<thebetweenlands:items_misc:41>, null, <thebetweenlands:items_misc:41>],
+			[<thebetweenlands:items_misc:41>, <thebetweenlands:items_misc:41>, <thebetweenlands:items_misc:41>]
+		]
+	],
+	<thebetweenlands:octine_ingot> : [
+		[
+			[<thebetweenlands:items_misc:42>, <thebetweenlands:items_misc:42>, <thebetweenlands:items_misc:42>],
+			[<thebetweenlands:items_misc:42>, null, <thebetweenlands:items_misc:42>],
+			[<thebetweenlands:items_misc:42>, <thebetweenlands:items_misc:42>, <thebetweenlands:items_misc:42>]
+		]
+	],
+	<thebetweenlands:items_misc:41> * 8 : [
+		[
+			[<thebetweenlands:items_misc:11>]
+		]
+	],
+	<thebetweenlands:items_misc:42> * 8 : [
+		[
+			[<thebetweenlands:octine_ingot>]
 		]
 	],
 	<minecraft:fishing_rod> : [
@@ -58,10 +76,13 @@ iRecipes.add(shapedRecipes, false);
 ######## Shapeless recipes ########
 //==================================
 
-val shapelessRecipes as IIngredient[][][IItemStack] = {
-	<realmtweaks:octine_flintstones> : [
-		[nugget.octine, <minecraft:flint>]
-	]
-};
+iRecipes.add(<realmtweaks:octine_flintstones>, [nugget.octine, <minecraft:flint>]);
 
-iRecipes.add(shapelessRecipes);
+//==================================
+######## Furnace recipes ########
+//==================================
+
+furnace.remove(<thebetweenlands:items_misc:11>);
+furnace.remove(<thebetweenlands:octine_ingot>);
+furnace.addRecipe(<thebetweenlands:items_misc:41> * 8, <thebetweenlands:syrmorite_ore>);
+furnace.addRecipe(<thebetweenlands:items_misc:42> * 8, <thebetweenlands:octine_ore>);

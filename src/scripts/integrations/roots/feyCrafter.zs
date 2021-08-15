@@ -5,6 +5,36 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 
 //==================================
+######## Remove Fey Crafter recipes ########
+//==================================
+
+val removeRecipes as IItemStack[] = [
+	<roots:living_arrow>,
+	<roots:living_axe>,
+	<roots:living_hoe>,
+	<roots:living_pickaxe>,
+	<roots:living_shovel>,
+	<roots:living_sword>,
+	<roots:elemental_soil>,
+	<roots:wildwood_helmet>,
+	<roots:wildwood_chestplate>,
+	<roots:wildwood_leggings>,
+	<roots:wildwood_boots>,
+	<roots:wildwood_bow>,
+	<roots:sylvan_helmet>,
+	<roots:sylvan_chestplate>,
+	<roots:sylvan_leggings>,
+	<roots:sylvan_boots>,
+	<roots:runic_shears>,
+	<roots:runestone>,
+	<roots:unending_bowl>,
+	<roots:wildwood_quiver>,
+	<roots:apothecary_pouch>
+];
+
+roots.removeFey(removeRecipes);
+
+//==================================
 ######## Add Fey Crafter recipes ########
 //==================================
 
@@ -18,59 +48,23 @@ val feyCrafterRecipes as IIngredient[][IItemStack] = {
 	<roots:unending_bowl> : [
 		<fluid:water> * 1000, dewgonia, dewgonia, <roots:mortar>, terraMoss
 	],
-	<roots:living_axe> : [
-		ingot.iron, <thebetweenlands:weedwood_axe>, wildroot, <ore:rootsBark>, <ore:rootsBark>
-	],
-	<roots:living_hoe> : [
-		ingot.iron, <thebetweenlands:weedwood_shovel>, wildroot, <roots:wildewheet>, <ore:rootsBark>
-	],
-	<roots:living_pickaxe> : [
-		ingot.iron, <thebetweenlands:weedwood_pickaxe>, wildroot, <ore:rootsBark>, <ore:rootsBark>
-	],
-	<roots:living_shovel> : [
-		ingot.iron, <thebetweenlands:weedwood_shovel>, wildroot, <ore:rootsBark>, <ore:rootsBark>
-	],
-	<roots:living_sword> : [
-		ingot.iron, <thebetweenlands:weedwood_sword>, wildroot, <ore:rootsBark>, <ore:rootsBark>
-	],
-	<roots:wildwood_bow> : [
-		<thebetweenlands:weedwood_bow>, bark.wildwood, bark.wildwood, terraMoss, spiritHerb
-	],
-	<roots:sylvan_helmet> : [
-		<ore:feyLeather>, <ore:betweenVine>, <ore:rootsBark>, gem.diamond, <thebetweenlands:syrmorite_helmet>
-	],
-	<roots:sylvan_chestplate> : [
-		<ore:feyLeather>, <ore:betweenVine>, <ore:rootsBark>, gem.diamond, <thebetweenlands:syrmorite_chestplate>
-	],
-	<roots:sylvan_leggings> : [
-		<ore:feyLeather>, <ore:betweenVine>, <ore:rootsBark>, gem.diamond, <thebetweenlands:syrmorite_leggings>
-	],
-	<roots:sylvan_boots> : [
-		<ore:feyLeather>, <ore:betweenVine>, <ore:rootsBark>, gem.diamond, <thebetweenlands:syrmorite_boots>
-	],
-	<roots:wildwood_helmet> : [
-		<thebetweenlands:syrmorite_helmet>, bark.wildwood, bark.wildwood, <roots:wildwood_planks>, gem.valonite
-	],
-	<roots:wildwood_chestplate> : [
-		<thebetweenlands:syrmorite_chestplate>, bark.wildwood, bark.wildwood, <roots:wildwood_planks>, gem.valonite
-	],
-	<roots:wildwood_leggings> : [
-		<thebetweenlands:syrmorite_leggings>, bark.wildwood, bark.wildwood, <roots:wildwood_planks>, gem.valonite
-	],
-	<roots:wildwood_boots> : [
-		<thebetweenlands:syrmorite_boots>, bark.wildwood, bark.wildwood, <roots:wildwood_planks>, gem.valonite
-	],
-	<roots:living_arrow> * 6 : [
-		<ore:betweenLeaves>, <ore:betweenLeaves>, <ore:rootsBark>, wildroot, <thebetweenlands:items_misc:21>
-	],
-	<roots:elemental_soil> * 4 : [
-		<thebetweenlands:swamp_dirt>, terraMoss, wildroot, <thebetweenlands:silt>, swampMeal
-	],
 	<roots:wildwood_quiver> : [
 		<ore:chestWeed>, <roots:bark_wildwood>, <roots:bark_wildwood>, terraMoss, spiritHerb
 	],
 	<roots:apothecary_pouch> : [
 		<ore:chestWeed>, bark.wildwood, bark.wildwood, spiritHerb, <roots:component_pouch>
+	],
+	<roots:elemental_soil_air> : [
+		<thebetweenlands:swamp_dirt>, cloudBerry, spiritHerb, cloudBerry, spiritHerb
+	],
+	<roots:elemental_soil_earth> : [
+		<thebetweenlands:swamp_dirt>, stalicripe, spiritHerb, stalicripe, spiritHerb
+	],
+	<roots:elemental_soil_fire> : [
+		<thebetweenlands:swamp_dirt>, infernalBulb, spiritHerb, infernalBulb, spiritHerb
+	],
+	<roots:elemental_soil_water> : [
+		<thebetweenlands:swamp_dirt>, dewgonia, spiritHerb, dewgonia, spiritHerb
 	]
 };
 

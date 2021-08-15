@@ -1,0 +1,16 @@
+{
+	"name": "Second Wind",
+	"icon": "roots:spell_dust",
+	"category": "spells",
+	"flag": "roots:spell_second_wind",
+	"pages": [
+		{
+			"type": "text",
+			"text": "It is next to impossible to explore the ocean unless one can take the form of an aquatic creature.$(p)This spell greatly helps with any aquatic adventure: casting it, $(info) even while underwater, will refill the caster's breath to full."
+		},
+		{
+			"type": "spell_template",
+			"spell": "spell_second_wind"
+		}
+	]
+}

@@ -8,3 +8,5 @@ import loottweaker.vanilla.loot.LootPool;
 val common_pot_loot as LootTable = LootTweaker.getTable("thebetweenlands:loot/common_pot_loot");
 var pool as LootPool = common_pot_loot.getPool("common_pot");
 pool.removeEntry("scroll");
+pool.addItemEntry(<thebetweenlands:items_misc:40>, 8, 0, [], [], "scroll_new");
+pool.addLootTableEntry("betweenrealms:loot/relics", 8, 0, "relic");

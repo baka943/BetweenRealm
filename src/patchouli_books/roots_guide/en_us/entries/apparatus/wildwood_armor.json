@@ -1,0 +1,28 @@
+{
+	"name": "Wildwood Armor",
+	"icon": "roots:wildwood_helmet",
+	"category": "apparatus",
+	"pages": [
+		{
+			"type": "text",
+			"text": "While mastering the process of scraping bark from wildwood logs, you have come up with a design for a set of strong armor.$(p)While it does not have the self-repairing quality of $(l:apparatus/living_tools)Living Tools$(), it does have the nurturing nature of the forest. $(info) Wearing it will occasionally heal you, with the chance to be healed increasing with each piece worn."
+		},
+		{
+			"type": "crafting",
+			"recipe": "crafttweaker:roots/wildwood_helmet",
+			"recipe2": "crafttweaker:roots/wildwood_chestplate"
+		},
+		{
+			"type": "crafting",
+			"recipe": "crafttweaker:roots/wildwood_leggings",
+			"recipe2": "crafttweaker:roots/wildwood_boots"
+		},
+		{
+			"type": "relations",
+			"entries": [
+				"basics/other_imbuer",
+				"rituals/ritual_wild_growth"
+			]
+		}
+	]
+}

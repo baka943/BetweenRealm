@@ -1,4 +1,3 @@
-#no_fix_recipe_book
 #Name: botania.zs
 #Author: baka943
 
@@ -27,10 +26,17 @@ iRecipes.remove("botania:dye_.*", false);
 //==================================
 
 val shapedRecipes as IIngredient[][][][IItemStack] = {
+	<realmtweaks:between_altar> : [
+		[
+			[<thebetweenlands:betweenstone_slab>, <botania:petal:*>, <thebetweenlands:betweenstone_slab>],
+			[null, betweenstone],
+			[betweenstone, betweenstone, betweenstone]
+		]
+	],
 	<botania:altar:0> : [
 		[
-			[<roots:runestone_slab>, <botania:petal:*>, <roots:runestone_slab>],
-			[null, <ore:runestone>],
+			[<ore:runestone>, <ore:runestone>, <ore:runestone>],
+			[<ore:runestone>, <realmtweaks:between_altar>, <ore:runestone>],
 			[<ore:runestone>, <ore:runestone>, <ore:runestone>]
 		]
 	],
@@ -200,9 +206,9 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 	],
 	<botania:baublebox> : [
 		[
-			[null, mana.steel],
-			[mana.steel, <ore:chestWeed>, ingot.gold],
-			[null, mana.steel]
+			[mana.steel, mana.steel, mana.steel],
+			[mana.steel, <ore:chestWeed>, mana.steel],
+			[mana.steel, mana.steel, mana.steel]
 		]
 	],
 	<botania:redstringinterceptor> : [
@@ -226,10 +232,52 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 			[livingrock, livingrock, livingrock]
 		]
 	],
+	<botania:monocle> : [
+		[
+			[<botania:managlass>, <botania:manaresource:17>],
+			[mana.steel, <botania:manaresource:17>],
+			[null, <botania:manaresource:17>]
+		]
+	],
+	<botania:pylon> : [
+		[
+			[null, ingot.octine],
+			[mana.steel, mana.diamond, mana.steel],
+			[null, ingot.octine]
+		]
+	],
+	<botania:pylon:1> : [
+		[
+			[null, nugget.terrasteel],
+			[nugget.terrasteel, <botania:pylon>, nugget.terrasteel],
+			[null, nugget.terrasteel]
+		]
+	],
+	<botania:itemfinder> : [
+		[
+			[null, mana.steel],
+			[mana.steel, null, mana.steel],
+			[mana.steel, gem.emerald, mana.steel]
+		]
+	],
+	<botania:alchemycatalyst> : [
+		[
+			[livingrock, ingot.octine, livingrock],
+			[ingot.octine, mana.valonite, ingot.octine],
+			[livingrock, ingot.octine, livingrock]
+		]
+	],
+	<botania:hourglass> : [
+		[
+			[ingot.octine, <botania:managlass>, ingot.octine],
+			[redstone, mana.steel, redstone],
+			[ingot.octine, <botania:managlass>, ingot.octine]
+		]
+	],
 	<minecraft:beacon> : [
 		[
 			[siltGlass, siltGlass, siltGlass],
-			[siltGlass, <thebetweenlands:glowing_betweenstone_tile>, siltGlass],
+			[siltGlass, <botania:blazeblock>, siltGlass],
 			[<roots:runestone_brick>, <roots:runestone_brick>, <roots:runestone_brick>]
 		]
 	]
@@ -244,7 +292,7 @@ iRecipes.addCompress(<botania:vineball>, <ore:betweenVine>);
 for i in 0 .. 16 {
 	iRecipes.add(<botania:miniisland>.definition.makeStack(i),
 		[
-			[<botania:shinyflower>.definition.makeStack(i)],
+			[<botania:flower>.definition.makeStack(i)],
 			[<botania:grassseeds>],
 			[<thebetweenlands:swamp_dirt>]
 		],
@@ -281,7 +329,7 @@ for i in 0 .. 8 {
 
 val shapelessRecipes as IIngredient[][][IItemStack] = {
 	<botania:fertilizer> : [
-		[<thebetweenlands:items_plant_drop:4>, <thebetweenlands:items_plant_drop:12>, <thebetweenlands:items_plant_drop:20>, swampMeal]
+		[<botania:dye:*> | <thebetweenlands:items_plant_drop:4>, <botania:dye:*> | <thebetweenlands:items_plant_drop:12>, <botania:dye:*> | <thebetweenlands:items_plant_drop:20>, boneMeal]
 	],
 	<botania:grassseeds:3> : [
 		[<botania:grassseeds>, <thebetweenlands:dead_weedwood_bush>]
@@ -315,23 +363,13 @@ val shapelessRecipes as IIngredient[][][IItemStack] = {
 	],
 	<botania:corporeafunnel> : [
 		[<botania:opencrate>, <botania:corporeaspark>]
+	],
+	<botania:lens:10> : [
+		[<botania:lens>, redstone, gem.lapis]
+	],
+	<botania:phantomink> * 4 : [
+		[mana.valonite, <botania:dye>, <botania:dye>, <ore:dentrothystVial>, <ore:dentrothystVial>, <ore:dentrothystVial>, <ore:dentrothystVial>]
 	]
 };
 
 iRecipes.add(shapelessRecipes);
-
-iRecipes.add(stageBotania.stage, <botania:fertilizer>,
-	[
-		<botania:dye:0> | <botania:dye:1> | <botania:dye:2> | <botania:dye:3> | <botania:dye:4> | <botania:dye:5> | <botania:dye:6> | <botania:dye:7> | <botania:dye:8> | <botania:dye:9> | <botania:dye:10> | <botania:dye:11> | <botania:dye:12> | <botania:dye:13> | <botania:dye:14> | <botania:dye:15>,
-		<botania:dye:1> | <botania:dye:2> | <botania:dye:3> | <botania:dye:4> | <botania:dye:5> | <botania:dye:6> | <botania:dye:7> | <botania:dye:8> | <botania:dye:9> | <botania:dye:10> | <botania:dye:11> | <botania:dye:12> | <botania:dye:13> | <botania:dye:14> | <botania:dye:15> | <botania:dye:0>,
-		<botania:dye:2> | <botania:dye:3> | <botania:dye:4> | <botania:dye:5> | <botania:dye:6> | <botania:dye:7> | <botania:dye:8> | <botania:dye:9> | <botania:dye:10> | <botania:dye:11> | <botania:dye:12> | <botania:dye:13> | <botania:dye:14> | <botania:dye:15> | <botania:dye:0> | <botania:dye:1>,
-		swampMeal
-	]
-);
-
-val categoryList as string[] = [
-	"botania.orechid",
-	"botania.orechid_ignem"
-];
-
-jei.hide(categoryList);

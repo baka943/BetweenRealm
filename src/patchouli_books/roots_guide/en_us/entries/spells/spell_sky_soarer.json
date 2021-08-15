@@ -1,0 +1,16 @@
+{
+	"name": "Sky Soarer",
+	"icon": "roots:spell_dust",
+	"category": "spells",
+	"flag": "roots:spell_sky_soarer",
+	"pages": [
+		{
+			"type": "text",
+			"text": "A burst of air draws you in the direction that you're looking, up, down, or in any direction.$(p)$(warning) If you fly up too far, you will most likely take damage from the fall."
+		},
+		{
+			"type": "spell_template",
+			"spell": "spell_sky_soarer"
+		}
+	]
+}

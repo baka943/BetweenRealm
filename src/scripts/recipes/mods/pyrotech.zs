@@ -1,5 +1,4 @@
 #priority 100
-#no_fix_recipe_book
 #Name: pyrotech.zs
 #Author: baka943
 
@@ -19,6 +18,8 @@ iRecipes.remove(removeRecipes, true);
 //==================================
 ######## Shaped recipes ########
 //==================================
+
+iRecipes.add(<primalboat:primal_boat>, [[<thebetweenlands:log_weedwood> | <thebetweenlands:log_weedwood:12>, <thebetweenlands:log_weedwood> | <thebetweenlands:log_weedwood:12>, <thebetweenlands:log_weedwood> | <thebetweenlands:log_weedwood:12>]], false);
 
 val shapedRecipes as IIngredient[][][][IItemStack] = {
 	<pyrotech:worktable> : [

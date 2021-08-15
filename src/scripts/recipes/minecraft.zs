@@ -1,4 +1,3 @@
-#no_fix_recipe_book
 #Name: minecraft.zs
 #Author: baka943
 
@@ -12,7 +11,8 @@ import crafttweaker.item.IItemStack;
 val removeRecipes as IItemStack[] = [
 	<minecraft:iron_nugget>,
 	<minecraft:gold_nugget>,
-	<minecraft:flint>
+	<minecraft:flint>,
+	<minecraft:dye:15>
 ];
 
 iRecipes.remove(removeRecipes);
@@ -31,6 +31,12 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 		[
 			[<minecraft:gold_ingot>]
 		]
+	],
+	<minecraft:redstone_torch> : [
+		[
+			[redstone],
+			[<ore:stickWood> | <ore:stickWeed>]
+		]
 	]
 };
 
@@ -40,7 +46,7 @@ iRecipes.add(shapedRecipes, false);
 ######## Shapeless recipes ########
 //==================================
 
-
+iRecipes.add(<minecraft:dye:15> * 3, [<minecraft:bone> | <thebetweenlands:items_misc:14>]);
 
 //==================================
 ######## Furnace recipes ########

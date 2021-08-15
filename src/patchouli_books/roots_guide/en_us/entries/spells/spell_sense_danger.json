@@ -1,0 +1,16 @@
+{
+	"name": "Sense Danger",
+	"icon": "roots:spell_dust",
+	"category": "spells",
+	"flag": "roots:spell_sense_danger",
+	"pages": [
+		{
+			"type": "text",
+			"text": "Reveals the evil aura and intent of monstrous creatures, causing all nearby to glow brightly.$(p)$(info) Glowing creatures can be seen through all solid objects."
+		},
+		{
+			"type": "spell_template",
+			"spell": "spell_sense_danger"
+		}
+	]
+}

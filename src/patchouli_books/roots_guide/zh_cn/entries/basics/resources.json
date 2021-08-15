@@ -1,0 +1,34 @@
+{
+	"name": "重要资源",
+	"icon": "roots:wildroot",
+	"category": "basics",
+	"sortnum": 5,
+	"pages": [
+		{
+			"type": "text",
+			"text": "德鲁伊所施放的各种魔法效果，都需要自然资源作为支撑。这些资源包括了各种魔法药草，这些药草中的每一个都以其独特的方式与自然产生关联。每发现一些新的药草，大自然的神秘谜团就会越发显露其真容，善于钻研的德鲁伊往往可以借此机会发现新的工具，咒术，以及仪式。"	
+		},
+		{
+			"type": "spotlight",
+			"item": "roots:wildroot",
+			"title": "普通资源",
+			"text": "相比之前，其它的资源就要平凡的多，但如果想要彻底挖掘出这门自然艺术的全部潜力，那么这些资源也同样十分重要。一些资源，譬如$(l:resources/bark)树皮$()以及$(l:resources/aubergine)茄子$()，能够使得德鲁伊更好地了解到自然能量的相关知识。所有的关于这些资源的知识，都已经记录在了本书之中。"
+		},
+		{
+			"type": "spotlight",
+			"item": "roots:elemental_soil",
+			"title": "可再生资源",
+			"text": "几乎所有的资源都是可再生的，这里的可再生指的是可以通过种植等方式重复获得。野根以及那些你所找到的其它药草，几乎$(info_cn) 都可以在田地里种植并生长，但那些具有了明显元素倾向的植物，在种植时还需要使用到一些额外的辅助资源。"
+		},
+		{
+			"type": "relations",
+			"entries": [
+				"basics/introduction",
+				"rituals/ritual_germination",
+				"spells/spell_harvest",
+				"spells/spell_rampant_growth",
+				"resources/elemental_soil"
+			]
+		}
+	]
+}

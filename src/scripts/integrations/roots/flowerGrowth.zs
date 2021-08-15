@@ -2,9 +2,6 @@
 #Author: baka943
 
 import crafttweaker.block.IBlockState;
-import mods.roots.FlowerGrowth;
-
-import scripts.functions.getItemName;
 
 //==================================
 ######## Remove Flowers ########
@@ -42,10 +39,3 @@ var newFlowers as IBlockState[string] = {
 };
 
 roots.addFlower(newFlowers);
-
-//Add Botania Flowers
-for i in 0 .. 16 {
-	var name as string = <botania:flower>.definition.makeStack(i).name;
-
-	FlowerGrowth.addRecipeBlock(name, <botania:flower>.asBlock(), i);
-}

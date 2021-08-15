@@ -1,0 +1,40 @@
+{
+	"name": "Knives",
+	"icon": "roots:wood_knife",
+	"category": "apparatus",
+	"pages": [
+		{
+			"type": "spotlight",
+			"item": "roots:wood_knife",
+			"link_recipe": true,
+			"text": "Knives are a simple and lightweight tool, suitable as both a dagger and a tool for cutting wood. $(info) Logs broken with a knife will drop $(l:resources/bark)Bark$(), which is necessary for many druidic rituals.$(p)In a pinch, they can be used as a weaker but faster weapon."
+		},
+		{
+			"type": "crafting",
+			"recipe": "crafttweaker:roots/wood_knife",
+			"recipe2": "crafttweaker:roots/stone_knife"
+		},
+		{
+			"type": "crafting",
+			"recipe": "crafttweaker:mysticalworld/copper_knife",
+			"recipe2": "crafttweaker:roots/iron_knife"
+		},
+		{
+			"type": "crafting",
+			"recipe": "crafttweaker:mysticalworld/silver_knife",
+			"recipe2": "crafttweaker:roots/gold_knife"
+		},
+		{
+			"type": "crafting",
+			"recipe": "crafttweaker:roots/diamond_knife",
+			"recipe2": "crafttweaker:mysticalworld/amethyst_knife"
+		},
+		{
+			"type": "relations",
+			"entries": [
+				"resources/bark",
+				"herbs/terra_moss"
+			]
+		}
+	]
+}

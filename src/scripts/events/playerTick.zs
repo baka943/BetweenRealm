@@ -8,6 +8,7 @@ import crafttweaker.item.IItemDefinition;
 import crafttweaker.player.IPlayer;
 import crafttweaker.world.IWorld;
 import crafttweaker.text.ITextComponent;
+import crafttweaker.entity.IEntityEquipmentSlot;
 
 import mods.zenutils.ItemHandler;
 import mods.ctintegration.bloodmagic.SoulNetork;
@@ -24,6 +25,12 @@ events.onPlayerTick(function(event as PlayerTickEvent) {
 
 		if(dimension == "betweenlands" && !player.hasGameStage(stageBetweenlands.stage)) {
 			player.addGameStage(stageBetweenlands.stage);
+			player.give(<thebetweenlands:sulfur_torch> * 16);
+			player.update({"PlayerPersisted": {"NoFallDamage": 1}} as IData);
+
+			if(!player.hasItemInSlot(IEntityEquipmentSlot.head())) {
+				player.setItemToSlot(IEntityEquipmentSlot.head(), world.getRandom().nextBoolean() ? <mysticalworld:beetle_mask>.withTag({Unbreakable: 1}) : <mysticalworld:antler_hat>.withTag({Unbreakable: 1}));
+			}
 		}
 
 		if(dimension == "overworld" && !player.hasGameStage(stageAtlantis.stage)) {
@@ -73,26 +80,26 @@ function replaceTool(player as IPlayer, dimension as string) {
 			var toolTypes as string[] = stack.toolClasses as string[];
 			//Overworld && Nether
 			if(!(overoworlds has dimension) && (replacedList.overworld has item || (toolTypes.length > 0 && item.owner == "minecraft"))) {
-				setItemWith(player, index, <realmtweaks:paper_tool>.withTag({originalStack: stack.asData(), travel: "overworld", type: toolTypes.length > 0 ? toolTypes[0] : "pickaxe"}));
+				setItemWith(player, index, <realmtweaks:paper_tool>.withTag({originalStack: stack.asData(), realmTravel: "overworld", type: toolTypes.length > 0 ? toolTypes[0] : "pickaxe"}));
 			}
 
-			if(overoworlds has dimension && item.id == "realmtweaks:paper_tool" && !isNull(stack.tag.travel) && stack.tag.travel == "overworld") {
+			if(overoworlds has dimension && item.id == "realmtweaks:paper_tool" && !isNull(stack.tag.realmTravel) && stack.tag.realmTravel == "overworld") {
 				setItemWith(player, index, IItemStack.fromData(stack.tag.originalStack));
 			}
 			//The End
 			if(dimension != "the_end" && (replacedList.the_end has item || (toolTypes.length > 0 && item.owner == "bloodmagic"))) {
-				setItemWith(player, index, <realmtweaks:paper_tool>.withTag({originalStack: stack.asData(), travel: "the_end", type: toolTypes.length > 0 ? toolTypes[0] : "pickaxe"}));
+				setItemWith(player, index, <realmtweaks:paper_tool>.withTag({originalStack: stack.asData(), realmTravel: "the_end", type: toolTypes.length > 0 ? toolTypes[0] : "pickaxe"}));
 			}
 			//The Betweenlands
 			if(dimension != "betweenlands" && (replacedList.betweenlands has item || (toolTypes.length > 0 && item.owner == "thebetweenlands"))) {
-				setItemWith(player, index, <realmtweaks:paper_tool>.withTag({originalStack: stack.asData(), travel: "betweenlands", type: toolTypes.length > 0 ? toolTypes[0] : "pickaxe"}));
+				setItemWith(player, index, <realmtweaks:paper_tool>.withTag({originalStack: stack.asData(), realmTravel: "betweenlands", type: toolTypes.length > 0 ? toolTypes[0] : "pickaxe"}));
 			}
 			//Lost Cities
 			if(dimension != "lostcities" && (replacedList.lostcities has item || (toolTypes.length > 0 && item.owner == "pyrotech"))) {
-				setItemWith(player, index, <realmtweaks:paper_tool>.withTag({originalStack: stack.asData(), travel: "lostcities", type: toolTypes.length > 0 ? toolTypes[0] : "pickaxe"}));
+				setItemWith(player, index, <realmtweaks:paper_tool>.withTag({originalStack: stack.asData(), realmTravel: "lostcities", type: toolTypes.length > 0 ? toolTypes[0] : "pickaxe"}));
 			}
 			//Rechange Tools
-			if(item.id == "realmtweaks:paper_tool" && !isNull(stack.tag.travel) && stack.tag.travel == dimension) {
+			if(item.id == "realmtweaks:paper_tool" && !isNull(stack.tag.realmTravel) && stack.tag.realmTravel == dimension) {
 				setItemWith(player, index, IItemStack.fromData(stack.tag.originalStack));
 			}
 		}

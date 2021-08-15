@@ -63,8 +63,7 @@ zenClass Roots {
 	function addFey(recipes as IIngredient[][IItemStack]) {
 		for output, inputs in recipes {
 			var name as string = getItemName(output);
-
-			Fey.removeRecipe(output);
+			
 			Fey.addRecipe(name, output, inputs, 0);
 		}
 	}

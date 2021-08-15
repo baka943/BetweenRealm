@@ -1,4 +1,3 @@
-#no_fix_recipe_book
 #Name: refinedStorage.zs
 #Author: baka943
 

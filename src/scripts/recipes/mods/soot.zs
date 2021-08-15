@@ -1,4 +1,3 @@
-#no_fix_recipe_book
 #Name: soot.zs
 #Author: baka943
 

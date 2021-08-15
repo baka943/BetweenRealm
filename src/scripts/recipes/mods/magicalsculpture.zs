@@ -1,4 +1,3 @@
-#no_fix_recipe_book
 #Name: magicalsculpture.zs
 #Author: baka943
 
@@ -36,39 +35,11 @@ val shapedRecipes as IIngredient[][][][IItemStack] = {
 			[<ore:stickWeed>]
 		]
 	],
-	<magicalsculpture:amplifier> : [
-		[
-			[ingot.iron, gem.diamond, ingot.iron],
-			[gem.diamond, gem.valonite, gem.diamond],
-			[ingot.iron, gem.diamond, ingot.iron]
-		]
-	],
-	<magicalsculpture:amplifier:1> : [
-		[
-			[ingot.iron, redstone, ingot.iron],
-			[redstone, gem.valonite, redstone],
-			[ingot.iron, redstone, ingot.iron]
-		]
-	],
-	<magicalsculpture:amplifier:2> : [
-		[
-			[ingot.iron, gem.valonite, ingot.iron],
-			[gem.valonite, <magicalsculpture:amplifier:1>, gem.valonite],
-			[ingot.iron, gem.valonite, ingot.iron]
-		]
-	],
-	<magicalsculpture:amplifier:3> : [
-		[
-			[<magicalsculpture:amplifier>, gem.valonite, <magicalsculpture:amplifier>],
-			[gem.valonite, <magicalsculpture:amplifier:2>, gem.valonite],
-			[<magicalsculpture:amplifier>, gem.valonite, <magicalsculpture:amplifier>]
-		]
-	],
 	<magicalsculpture:reverser> : [
 		[
-			[redstone, redstone, redstone],
-			[redstone, gem.valonite, redstone],
-			[redstone, redstone, redstone]
+			[<ore:powderBlaze>, <ore:powderBlaze>, <ore:powderBlaze>],
+			[<ore:powderBlaze>, gem.valonite, <ore:powderBlaze>],
+			[<ore:powderBlaze>, <ore:powderBlaze>, <ore:powderBlaze>]
 		]
 	]
 };
