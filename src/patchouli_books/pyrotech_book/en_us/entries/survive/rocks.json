@@ -1,0 +1,34 @@
+{
+	"name": "Rocks",
+	"icon": "pyrotech:rock:0",
+	"category": "survive_tools",
+	"pages": [
+		{
+			"type": "image",
+			"border": true,
+			"images": [
+				"pyrotech:textures/gui/book/photo/rock_00.png"
+			]
+		},
+		{
+			"type": "spotlight",
+			"item": "pyrotech:rock:0",
+			"link_recipe": true,
+			"text": "$(item)Stone Rocks$() can be found on the ground in most areas.$(p)$(item)Rocks$() can be crafted on the $(item)Worktable$()."
+		},
+		{
+			"type": "text",
+			"text": "If you ever find yourself under attack - $(italic)a phrase which here means subject to aggressive, violent, or harmful action$() - it would be wise to remember this:$(p)$(info) The act of throwing a $(item)Rock$() can also be an aggressive, violent, or harmful action.$(p)$(info) Placing a $(item)Rock$() to decorate a path, however, is not an aggressive, violent, or harmful action."
+		},
+		{
+			"type": "relations",
+			"entries": [
+				"adapt/anvil_granite",
+				"adapt/tools_hammers",
+				"bloom/anvil_ironclad",
+				"gather/stone_cobbled",
+				"gather/limestone"
+			]
+		}
+	]
+}

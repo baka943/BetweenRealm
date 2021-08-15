@@ -1,0 +1,16 @@
+{
+	"name": "Anvil, Ironclad",
+	"icon": "pyrotech:anvil_iron_plated",
+	"category": "bloom_bloom",
+	"pages": [
+		{
+			"type": "spotlight",
+			"item": "pyrotech:anvil_iron_plated",
+			"link_recipe": true,
+			"text": "$(info) When used for hammering a $(item)Bloom$(), an $(item)Ironclad Anvil$() will last considerably longer than its granite counterpart."
+		},
+		{
+			"type": "empty"
+		}
+	]
+}

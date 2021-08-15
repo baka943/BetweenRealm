@@ -2,7 +2,6 @@
 #Author: baka943
 
 import crafttweaker.event.PlayerTickEvent;
-import crafttweaker.event.PlayerCraftedEvent;
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IItemDefinition;
 import crafttweaker.player.IPlayer;
@@ -48,7 +47,11 @@ events.onPlayerTick(function(event as PlayerTickEvent) {
 
 		if(dimension == "lostcities" && !player.hasGameStage(stageCities.stage)) {
 			player.addGameStage(stageCities.stage);
-			player.give(<pyrotech:book>);
+			player.give(<patchouli:guide_book>.withTag({"patchouli:book": "patchouli:pyrotech_book"}));
+
+			if(!player.hasItemInSlot(IEntityEquipmentSlot.head())) {
+				player.setItemToSlot(IEntityEquipmentSlot.head(), <needtobreathe:protectivehelmet>.withTag({Unbreakable: 1}));
+			}
 		}
 
 		//Time is Life
@@ -63,10 +66,6 @@ events.onPlayerTick(function(event as PlayerTickEvent) {
 			network.hurtPlayer(player, (essence == 0 && player.health >= 1.0F ? 1.0F : 0.0F));
 		}
 	}
-});
-
-events.onPlayerCrafted(function(event as PlayerCraftedEvent) {
-// To-do
 });
 
 function replaceTool(player as IPlayer, dimension as string) {

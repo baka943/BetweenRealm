@@ -1,0 +1,20 @@
+{
+	"name": "Stone, Cobbled",
+	"icon": "minecraft:cobblestone",
+	"category": "gather",
+	"pages": [
+		{
+			"type": "image",
+			"text": "$(item)Cobbled Stone$() can almost always be found by mining its stone complement.",
+			"images": [
+				"pyrotech:textures/gui/book/illustration/cobbled_stone_00.png"
+			]
+		},
+		{
+			"type": "relations",
+			"entries": [
+				"survive/rocks"
+			]
+		}
+	]
+}

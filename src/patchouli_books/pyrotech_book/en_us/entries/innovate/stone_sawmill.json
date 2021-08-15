@@ -1,0 +1,21 @@
+{
+	"name": "Stone Sawmill",
+	"icon": "pyrotech:stone_sawmill",
+	"category": "innovate_machines",
+	"pages": [
+		{
+			"type": "spotlight",
+			"item": "pyrotech:stone_sawmill",
+			"link_recipe": true,
+			"text": "A $(item)Stone Sawmill$() performs the same tasks as a $(item)Chopping Block$(), but faster."
+		},
+		{
+			"type": "relations",
+			"entries": [
+				"innovate/stone_brick",
+				"innovate/sawblade_basic",
+				"survive/chopping_block"
+			]
+		}
+	]
+}

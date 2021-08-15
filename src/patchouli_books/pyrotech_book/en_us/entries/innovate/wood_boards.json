@@ -1,0 +1,20 @@
+{
+	"name": "Wood, Boards",
+	"icon": "pyrotech:material:20",
+	"category": "innovate",
+	"pages": [
+		{
+			"type": "rrt_stone_sawmill_recipe",
+			"header": true,
+			"recipe": "crafttweaker:board_from_planks/stone",
+			"recipe2": "crafttweaker:board_from_planks/flint"
+		},
+		{
+			"type": "relations",
+			"entries": [
+				"innovate/stone_sawmill",
+				"bloom/refractory_sawmill"
+			]
+		}
+	]
+}

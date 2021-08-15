@@ -1,0 +1,13 @@
+{
+	"name": "Compacting Bin",
+	"icon": "pyrotech:compacting_bin",
+	"category": "innovate",
+	"pages": [
+		{
+			"type": "spotlight",
+			"item": "pyrotech:compacting_bin",
+			"link_recipe": true,
+			"text": "To use, place ingredients in the top and $(use) with a $(thing)Shovel$().$(p)$(warning) Using may cause hunger. If it isn't working, you might be too hungry.$(p)$(info) Regarding automation, items can be inserted into the top and sides."
+		}
+	]
+}

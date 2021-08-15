@@ -1,0 +1,19 @@
+{
+	"name": "Twine",
+	"icon": "pyrotech:material:14",
+	"category": "adapt",
+	"pages": [
+		{
+			"type": "spotlight",
+			"item": "pyrotech:material:14",
+			"link_recipe": true,
+			"text": "$(item)Twine$() works well to bundle or fasten things securely."
+		},
+		{
+			"type": "relations",
+			"entries": [
+				"adapt/plant_fibers_dried"
+			]
+		}
+	]
+}

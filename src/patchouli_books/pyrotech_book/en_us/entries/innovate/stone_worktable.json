@@ -1,0 +1,19 @@
+{
+	"name": "Worktable, Stone",
+	"icon": "pyrotech:worktable_stone",
+	"category": "innovate",
+	"pages": [
+		{
+			"type": "spotlight",
+			"item": "pyrotech:worktable_stone",
+			"link_recipe": true,
+			"text": "The $(item)Stone Worktable$() is more durable than its wooden counterpart and allows items to stack.$(p)To use a $(item)Stone Worktable$(), place the recipe ingredients on top, and $(use) it with a $(thing)Hammer$()."
+		},
+		{
+			"type": "relations",
+			"entries": [
+				"survive/worktable"
+			]
+		}
+	]
+}

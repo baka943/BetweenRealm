@@ -1,0 +1,15 @@
+{
+	"name": "Ore, Fossil",
+	"icon": "pyrotech:fossil_ore",
+	"category": "gather",
+	"pages": [
+		{
+			"type": "spotlight",
+			"item": "pyrotech:fossil_ore",
+			"text": "$(item)Fossil Ore$() can be found almost everywhere underground."
+		},
+		{
+			"type": "empty"
+		}
+	]
+}

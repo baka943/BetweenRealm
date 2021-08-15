@@ -7,75 +7,102 @@
     "Item strings are in the format: (domain):(path):(meta)"
   ],
   "oreDict": {
+    "blockFuelCoke": [
+		"immersiveengineering:stone_decoration:3"
+    ],
     "blockGlass": [
-      "pyrotech:refractory_glass",
-      "pyrotech:slag_glass"
+		"pyrotech:refractory_glass",
+		"pyrotech:slag_glass"
     ],
     "blockWool": [
-      "minecraft:wool:0",
-      "minecraft:wool:1",
-      "minecraft:wool:2",
-      "minecraft:wool:3",
-      "minecraft:wool:4",
-      "minecraft:wool:5",
-      "minecraft:wool:6",
-      "minecraft:wool:7",
-      "minecraft:wool:8",
-      "minecraft:wool:9",
-      "minecraft:wool:10",
-      "minecraft:wool:11",
-      "minecraft:wool:12",
-      "minecraft:wool:13",
-      "minecraft:wool:14",
-      "minecraft:wool:15"
+		"minecraft:wool:0",
+		"minecraft:wool:1",
+		"minecraft:wool:2",
+		"minecraft:wool:3",
+		"minecraft:wool:4",
+		"minecraft:wool:5",
+		"minecraft:wool:6",
+		"minecraft:wool:7",
+		"minecraft:wool:8",
+		"minecraft:wool:9",
+		"minecraft:wool:10",
+		"minecraft:wool:11",
+		"minecraft:wool:12",
+		"minecraft:wool:13",
+		"minecraft:wool:14",
+		"minecraft:wool:15"
     ],
     "cobblestone": [
-      "pyrotech:cobblestone:0",
-      "pyrotech:cobblestone:1",
-      "pyrotech:cobblestone:2",
-      "pyrotech:cobblestone:3"
+		"pyrotech:cobblestone:0",
+		"pyrotech:cobblestone:1",
+		"pyrotech:cobblestone:2"
     ],
     "dustFlint": [
-      "pyrotech:material:31"
+		"pyrotech:material:31"
     ],
     "dustLimestone": [
-      "pyrotech:material:28"
+		"pyrotech:material:28"
     ],
     "fuelCoke": [
-      "pyrotech:material:1"
+		"immersiveengineering:material:6"
     ],
-    "mulchNitrogen": [
-      "minecraft:mutton",
-      "minecraft:rabbit",
-      "minecraft:rotten_flesh",
-      "minecraft:chicken",
-      "minecraft:beef",
-      "minecraft:fish:0",
-      "minecraft:fish:1",
-      "minecraft:fish:2",
-      "minecraft:fish:3",
-      "minecraft:porkchop",
-      "minecraft:dye:15"
+    "milk": [
+		"minecraft:milk_bucket"
     ],
     "rock": [
-      "pyrotech:rock:0"
+		"pyrotech:rock:0",
+		"pyrotech:rock:2",
+		"pyrotech:rock:1",
+		"pyrotech:rock:3",
+		"pyrotech:rock:6",
+		"pyrotech:rock:8",
+		"pyrotech:rock:10"
     ],
     "stickStone": [
-      "pyrotech:material:27"
+		"pyrotech:material:27"
     ],
     "stoneLimestone": [
-      "pyrotech:limestone"
+		"pyrotech:limestone"
     ],
     "toolAxe": [
-      "minecraft:stone_axe:*",
-      "minecraft:iron_axe:*",
-      "minecraft:golden_axe:*",
-      "minecraft:diamond_axe:*",
-	  "immersiveengineering:axe_steel:*"
+		"minecraft:stone_axe:*",
+		"minecraft:iron_axe:*",
+		"minecraft:golden_axe:*",
+		"minecraft:diamond_axe:*",
+		"immersiveengineering:axe_steel:*"
     ],
+    "toolSharp": [
+		"minecraft:stone_axe:*",
+		"minecraft:iron_axe:*",
+		"minecraft:golden_axe:*",
+		"minecraft:diamond_axe:*",
+		"immersiveengineering:axe_steel:*",
+		"minecraft:stone_sword:*",
+		"minecraft:iron_sword:*",
+		"minecraft:golden_sword:*",
+		"minecraft:diamond_sword:*",
+		"immersiveengineering:sword_steel:*"
+    ],
+	"toolHammer": [
+		"pyrotech:crude_hammer:*",
+		"pyrotech:stone_hammer:*",
+		"pyrotech:bone_hammer:*",
+		"pyrotech:flint_hammer:*",
+		"pyrotech:iron_hammer:*",
+		"pyrotech:gold_hammer:*",
+		"pyrotech:diamond_hammer:*",
+		"pyrotech:obsidian_hammer:*"
+	],
     "twine": [
-      "pyrotech:material:14",
-      "pyrotech:material:26"
+		"pyrotech:material:14",
+		"pyrotech:material:26"
+    ],
+	"hardenedClay": [
+		"minecraft:hardened_clay",
+		"minecraft:stained_hardened_clay:*"
+	],
+	"blockCharcoal": [
+		"pyrotech:charcoal_block"
 	]
   }
 }

@@ -1,0 +1,15 @@
+{
+	"name": "Masonry Brick",
+	"icon": "pyrotech:material:16",
+	"category": "innovate_stone",
+	"pages": [
+		{
+			"type": "rt_stone_kiln_recipe",
+			"recipe": "crafttweaker:stone_kiln/brick",
+			"text": "The $(item)Masonry Brick$() is the true cornerstone of a stonemason's craft."
+		},
+		{
+			"type": "empty"
+		}
+	]
+}

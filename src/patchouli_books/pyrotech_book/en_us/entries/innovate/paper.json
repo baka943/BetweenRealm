@@ -1,0 +1,26 @@
+{
+	"name": "Paper",
+	"icon": "minecraft:paper",
+	"category": "innovate_soaking",
+	"pages": [
+		{
+			"type": "rt_soaking_pot_recipe",
+			"header": true,
+			"recipe": "crafttweaker:pulp",
+			"text": "$(item)Pulp$() can be made by soaking $(item)Sugar Canes$() or $(item)Wood Chips$() in water."
+		},
+		{
+			"type": "rt_drying_recipe",
+			"header": true,
+			"recipe": "crafttweaker:crude_drying_rack/paper",
+			"text": "$(item)Pulp$() can then be dried to create $(item)Paper$()."
+		},
+		{
+			"type": "relations",
+			"entries": [
+				"innovate/soaking_pot",
+				"adapt/drying_rack"
+			]
+		}
+	]
+}

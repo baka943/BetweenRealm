@@ -1,0 +1,20 @@
+{
+	"name": "Tongs",
+	"icon": "pyrotech:tongs_iron",
+	"category": "bloom_bloom",
+	"pages": [
+		{
+			"type": "spotlight",
+			"item": "pyrotech:tongs_iron",
+			"link_recipe": true,
+			"text": "$(item)Tongs$() will allow you to safely handle $(item)Blooms$().$(p)$(info) To pick up a $(item)Bloom$(), $(use) the $(item)Bloom$() with $(item)Tongs$().$(p)$(info) $(item)Tongs$() held in either hand will pick up a $(item)Bloom$() when it enters your inventory.$(p)$(info) $(item)Tongs$() can be used with the $(item)Bloomery$() and $(item)Wither Forge$()."
+		},
+		{
+			"type": "relations",
+			"entries": [
+				"innovate/stone_brick",
+				"innovate/stone_rod"
+			]
+		}
+	]
+}

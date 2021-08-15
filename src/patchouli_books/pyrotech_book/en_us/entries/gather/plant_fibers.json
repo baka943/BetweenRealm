@@ -1,0 +1,21 @@
+{
+	"name": "Plant Fibers",
+	"icon": "pyrotech:material:12",
+	"category": "gather",
+	"pages": [
+		{
+			"type": "spotlight",
+			"item": "pyrotech:material:12",
+			"link_recipe": true,
+			"text": "$(item)Plant Fibers$() can be found by breaking tall grass.$(p)$(item)Plant Fibers$() can also be crafted."
+		},
+		{
+			"type": "relations",
+			"entries": [
+				"adapt/plant_fibers_dried",
+				"adapt/drying_rack",
+				"survive/hammer_crude"
+			]
+		}
+	]
+}

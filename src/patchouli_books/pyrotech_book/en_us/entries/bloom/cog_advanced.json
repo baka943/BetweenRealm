@@ -1,0 +1,22 @@
+{
+	"name": "Cog, Advanced",
+	"icon": "pyrotech:cog_iron",
+	"category": "bloom_cog_machines",
+	"pages": [
+		{
+			"type": "spotlight",
+			"item": "pyrotech:cog_iron",
+			"link_recipe": true,
+			"recipe": "$(thing)Cogs$() serve to activate $(thing)Mechanical Devices$().$(p)$(info) Each type of $(thing)Cog$() may vary in performance in different devices."
+		},
+		{
+			"type": "relations",
+			"entries": [
+				"bloom/mechanical_bellows",
+				"bloom/mechanical_compactor",
+				"bloom/mechanical_mulcher",
+				"innovate/mechanical_hopper"
+			]
+		}
+	]
+}

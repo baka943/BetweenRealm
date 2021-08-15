@@ -20,6 +20,33 @@
     "Output item strings are in the format: (domain):(path):(meta)"
   ],
   "oredict": {
+    "oreAluminum": {
+      "slagColor": "e2e2e3",
+      "langKey": [
+        "immersiveengineering:tile.immersiveengineering.ore.aluminum"
+      ],
+      "output": [
+        "immersiveengineering:metal:21"
+      ]
+    },
+    "oreCopper": {
+      "slagColor": "ffaa1c",
+      "langKey": [
+        "immersiveengineering:tile.immersiveengineering.ore.copper"
+      ],
+      "output": [
+        "immersiveengineering:metal:20"
+      ]
+    },
+    "oreGold": {
+      "slagColor": "fcee4b",
+      "langKey": [
+        "minecraft:tile.oreGold"
+      ],
+      "output": [
+        "minecraft:gold_nugget:0"
+      ]
+    },
     "oreIron": {
       "slagColor": "d8af93",
       "langKey": [
@@ -27,6 +54,42 @@
       ],
       "output": [
         "minecraft:iron_nugget:0"
+      ]
+    },
+    "oreLead": {
+      "slagColor": "95afee",
+      "langKey": [
+        "immersiveengineering:tile.immersiveengineering.ore.lead"
+      ],
+      "output": [
+        "immersiveengineering:metal:22"
+      ]
+    },
+    "oreNickel": {
+      "slagColor": "e4e5d8",
+      "langKey": [
+        "immersiveengineering:tile.immersiveengineering.ore.nickel"
+      ],
+      "output": [
+        "immersiveengineering:metal:24"
+      ]
+    },
+    "oreSilver": {
+      "slagColor": "e8f6fd",
+      "langKey": [
+        "immersiveengineering:tile.immersiveengineering.ore.silver"
+      ],
+      "output": [
+        "immersiveengineering:metal:23"
+      ]
+    },
+    "oreUranium": {
+      "slagColor": "5c734b",
+      "langKey": [
+        "immersiveengineering:tile.immersiveengineering.ore.uranium"
+      ],
+      "output": [
+        "immersiveengineering:metal:25"
       ]
     }
   }

@@ -80,3 +80,8 @@ function setItemWith(player as IPlayer, index as int, stack as IItemStack) {
 		player.setItemToSlot(IEntityEquipmentSlot.offhand(), stack);
 	} else player.replaceItemInInventory(index, stack);
 }
+
+#Damage / 2
+function itemDamage(item as IItemStack) as IItemStack {
+	return item.withDamage(item.maxDamage / 2);
+}

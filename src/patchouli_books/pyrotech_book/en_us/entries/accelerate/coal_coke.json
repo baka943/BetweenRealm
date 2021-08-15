@@ -1,0 +1,21 @@
+{
+	"name": "Coal Coke",
+	"icon": "immersiveengineering:material:6",
+	"category": "accelerate",
+	"pages": [
+		{
+			"type": "rt_pit_burn_recipe",
+			"header": true,
+			"recipe": "crafttweaker:coal_coke",
+			"text": "$(item)Coal Coke$() is the result of carbonizing $(item)Coal Blocks$() in a $(thing)Refractory Burn$().$(p)$(info) $(item)Coal Coke$() is more efficient than $(item)Charcoal$() or $(item)Coal$().$(p)$(info) $(item)Block of Coal Coke$() have increased efficiency when used in a $(item)Bloomery$() or $(item)Wither Forge$()."
+		},
+		{
+			"type": "relations",
+			"entries": [
+				"accelerate/refractory_burn",
+				"accelerate/bloomery",
+				"bloom/wither_forge"
+			]
+		}
+	]
+}

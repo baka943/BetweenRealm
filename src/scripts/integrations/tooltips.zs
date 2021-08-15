@@ -1,0 +1,1 @@
+<immersiveengineering:ore:*>.addTooltip("基岩中生成");

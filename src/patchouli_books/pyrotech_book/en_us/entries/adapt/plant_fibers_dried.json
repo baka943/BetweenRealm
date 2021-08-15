@@ -1,0 +1,19 @@
+{
+	"name": "Plant Fibers, Dried",
+	"icon": "pyrotech:material:13",
+	"category": "adapt",
+	"pages": [
+		{
+			"type": "spotlight",
+			"item": "pyrotech:material:13",
+			"text": "$(item)Dried Plant Fibers$() can sometimes be found by breaking tall grass.$(p)$(item)Dried Plant Fibers$() can be crafted by drying $(item)Plant Fibers$()."
+		},
+		{
+			"type": "relations",
+			"entries": [
+				"adapt/drying_rack",
+				"gather/plant_fibers"
+			]
+		}
+	]
+}

@@ -1,6 +1,7 @@
 #priority 10086
 #Name: base.zs
 #Author: baka943
+#disable_search_tree
 
 import crafttweaker.item.IItemStack;
 import crafttweaker.oredict.IOreDictEntry;

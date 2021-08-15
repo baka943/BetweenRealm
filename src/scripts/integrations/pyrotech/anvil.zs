@@ -3,30 +3,14 @@
 
 #modloaded pyrotech
 
-import crafttweaker.item.IItemStack;
-import crafttweaker.item.IIngredient;
+import mods.pyrotech.GraniteAnvil;
+import mods.pyrotech.IroncladAnvil;
+import mods.pyrotech.Stages;
 
-pyrotech.removeAnvil();
-
-val anvilRecipes as IIngredient[][IItemStack] = {
-	<immersiveengineering:metal:39> * 3 : [
-		<ore:blockIron>
-	],
-	<pyrotech:material:28> * 8 : [
-		<pyrotech:cobblestone:3>
-	],
-	<pyrotech:material:10> * 3 : [
-		<minecraft:flint>
-	],
-	<pyrotech:material:11> * 3 : [
-		<minecraft:bone>
-	],
-	<pyrotech:material:16> * 4 : [
-		<minecraft:stonebrick:*>
-	],
-	<pyrotech:material:31> * 3 : [
-		<pyrotech:material:10>
-	]
-};
-
-pyrotech.addAnvil(anvilRecipes);
+GraniteAnvil.removeAllRecipes();
+GraniteAnvil.addRecipe("cobbled_limestone_to_crushed_limestone", <pyrotech:material:28> * 8, <pyrotech:cobblestone:3>, 8, "hammer", false);
+GraniteAnvil.addRecipe("crushed_flint_from_flint", <pyrotech:material:31> * 8, <minecraft:flint>, 8, "hammer", false);
+GraniteAnvil.addRecipe("flint_from_gravel", <minecraft:flint>, <minecraft:gravel>, 8, "hammer", false);
+GraniteAnvil.addRecipe("gravel_from_cobblestone", <minecraft:gravel>, <ore:cobblestone>, 8, "hammer", false);
+GraniteAnvil.setGameStages(Stages.and([stageCities.stage]));
+IroncladAnvil.setGameStages(Stages.and([stageCities.stage]));

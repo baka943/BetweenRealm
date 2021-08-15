@@ -1,0 +1,21 @@
+{
+	"name": "Stone Crucible",
+	"icon": "pyrotech:stone_crucible",
+	"category": "innovate_machines",
+	"pages": [
+		{
+			"type": "spotlight",
+			"item": "pyrotech:stone_crucible",
+			"link_recipe": true,
+			"text": "A $(item)Stone Crucible$() melts solids into fluids.$(p)$(warning) Filling the $(item)Stone Crucible$() with a hot fluid, like lava, will break the machine."
+		},
+		{
+			"type": "relations",
+			"entries": [
+				"innovate/stone_brick",
+				"innovate/stone_bricks",
+				"innovate/stone_tank"
+			]
+		}
+	]
+}

@@ -3,177 +3,67 @@
 
 #modloaded pyrotech
 
-import crafttweaker.item.IItemStack;
-import crafttweaker.item.IIngredient;
+import mods.pyrotech.PitKiln;
+import mods.pyrotech.StoneKiln;
+import mods.pyrotech.BrickKiln;
+import mods.pyrotech.StoneOven;
+import mods.pyrotech.BrickOven;
+import mods.pyrotech.Stages;
 
-//==================================
-######## Remove recipes ########
-//==================================
+PitKiln.removeAllRecipes();
+PitKiln.addRecipe("brick", <pyrotech:material:16>, <pyrotech:material:24>, 200, 0.33, [<pyrotech:material>], false);
+PitKiln.setGameStages(Stages.and([stageCities.stage]));
 
-pyrotech.removeKiln();
+StoneKiln.removeAllRecipes();
+StoneKiln.addRecipe("stone_kiln/quicklime", <pyrotech:material:22>, <pyrotech:material:28>, 200, 0.05, [<pyrotech:material>], false);
+StoneKiln.addRecipe("stone_kiln/brick", <pyrotech:material:16>, <pyrotech:material:24>, 200, 0.05, [<pyrotech:material>], false);
+StoneKiln.addRecipe("stone_kiln/refractory_brick", <pyrotech:material:5>, <pyrotech:material:9>, 200, 0.05, [<pyrotech:material>], false);
+StoneKiln.setGameStages(Stages.and([stageCities.stage]));
 
-//==================================
-######## Add Kiln recipes ########
-//==================================
+BrickKiln.removeAllRecipes();
+BrickKiln.addRecipe("brick_kiln/quicklime", <pyrotech:material:22>, <pyrotech:material:28>, 200, 0.01, [<pyrotech:material>]);
+BrickKiln.addRecipe("brick_kiln/brick", <pyrotech:material:16>, <pyrotech:material:24>, 200, 0.01, [<pyrotech:material>]);
+BrickKiln.addRecipe("brick_kiln/refractory_brick", <pyrotech:material:5>, <pyrotech:material:9>, 200, 0.01, [<pyrotech:material>]);
+BrickKiln.setGameStages(Stages.and([stageCities.stage]));
 
-val pitKilnRecipes as IIngredient[][string][IItemStack] = {
-	<minecraft:brick> : {
-		inputs : [<pyrotech:material:24>],
-		failure : [<pyrotech:material>]
-	},
-	<minecraft:stone> : {
-		inputs : [<minecraft:cobblestone>],
-		failure : [<pyrotech:material>]
-	},
-	<minecraft:stone:1> : {
-		inputs : [<pyrotech:cobblestone:2>],
-		failure : [<pyrotech:material>]
-	},
-	<minecraft:stone:3> : {
-		inputs : [<pyrotech:cobblestone:1>],
-		failure : [<pyrotech:material>]
-	},
-	<minecraft:stone:5> : {
-		inputs : [<pyrotech:cobblestone>],
-		failure : [<pyrotech:material>]
-	},
-	<pyrotech:limestone> : {
-		inputs : [<pyrotech:cobblestone:3>],
-		failure : [<pyrotech:material>]
-	}
-};
+StoneOven.blacklistAllSmeltingRecipes();
+StoneOven.removeRecipes(<minecraft:cooked_fish>);
+StoneOven.removeRecipes(<minecraft:cooked_fish:1>);
+StoneOven.removeRecipes(<minecraft:cooked_chicken>);
+StoneOven.removeRecipes(<minecraft:cooked_beef>);
+StoneOven.removeRecipes(<minecraft:cooked_rabbit>);
+StoneOven.removeRecipes(<minecraft:cooked_mutton>);
+StoneOven.removeRecipes(<minecraft:cooked_porkchop>);
+StoneOven.removeRecipes(<minecraft:baked_potato>);
+StoneOven.removeRecipes(<minecraft:sponge>);
+StoneOven.removeRecipes(<minecraft:paper>);
+StoneOven.removeRecipes(<pyrotech:apple_baked>);
+StoneOven.removeRecipes(<pyrotech:carrot_roasted>);
+StoneOven.removeRecipes(<pyrotech:beetroot_roasted>);
+StoneOven.removeRecipes(<pyrotech:mushroom_brown_roasted>);
+StoneOven.removeRecipes(<pyrotech:mushroom_red_roasted>);
+StoneOven.removeRecipes(<pyrotech:egg_roasted>);
+StoneOven.removeRecipes(<pyrotech:material:2>);
+StoneOven.removeRecipes(<pyrotech:material:13>);
+StoneOven.setGameStages(Stages.and([stageDisable.stage]));
 
-pyrotech.addKilnP(pitKilnRecipes);
-
-val kilnRecipes as IIngredient[][string][IItemStack] = {
-	<minecraft:brick> : {
-		inputs : [<pyrotech:material:24>],
-		failure : [<pyrotech:material>]
-	},
-	<minecraft:stone> : {
-		inputs : [<minecraft:cobblestone>],
-		failure : [<pyrotech:material>]
-	},
-	<minecraft:stone:1> : {
-		inputs : [<pyrotech:cobblestone:2>],
-		failure : [<pyrotech:material>]
-	},
-	<minecraft:stone:3> : {
-		inputs : [<pyrotech:cobblestone:1>],
-		failure : [<pyrotech:material>]
-	},
-	<minecraft:stone:5> : {
-		inputs : [<pyrotech:cobblestone>],
-		failure : [<pyrotech:material>]
-	},
-	<pyrotech:limestone> : {
-		inputs : [<pyrotech:cobblestone:3>],
-		failure : [<pyrotech:material>]
-	},
-	<pyrotech:material:5> : {
-		inputs : [<pyrotech:material:9>],
-		failure : [<pyrotech:material>]
-	},
-	<pyrotech:material:22> : {
-		inputs : [<pyrotech:material:28>],
-		failure : [<pyrotech:material>]
-	},
-	<pyrotech:slag_glass> : {
-		inputs : [<pyrotech:pile_slag>],
-		failure : [<pyrotech:material:32> * 4, <pyrotech:material>]
-	},
-	<minecraft:hardened_clay> : {
-		inputs : [<minecraft:clay>],
-		failure : [<pyrotech:material>]
-	},
-	<minecraft:white_glazed_terracotta> : {
-		inputs : [<minecraft:stained_hardened_clay>],
-		failure : [<pyrotech:material>]
-	},
-	<minecraft:orange_glazed_terracotta> : {
-		inputs : [<minecraft:stained_hardened_clay:1>],
-		failure : [<pyrotech:material>]
-	},
-	<minecraft:magenta_glazed_terracotta> : {
-		inputs : [<minecraft:stained_hardened_clay:2>],
-		failure : [<pyrotech:material>]
-	},
-	<minecraft:light_blue_glazed_terracotta> : {
-		inputs : [<minecraft:stained_hardened_clay:3>],
-		failure : [<pyrotech:material>]
-	},
-	<minecraft:yellow_glazed_terracotta> : {
-		inputs : [<minecraft:stained_hardened_clay:4>],
-		failure : [<pyrotech:material>]
-	},
-	<minecraft:lime_glazed_terracotta> : {
-		inputs : [<minecraft:stained_hardened_clay:5>],
-		failure : [<pyrotech:material>]
-	},
-	<minecraft:pink_glazed_terracotta> : {
-		inputs : [<minecraft:stained_hardened_clay:6>],
-		failure : [<pyrotech:material>]
-	},
-	<minecraft:gray_glazed_terracotta> : {
-		inputs : [<minecraft:stained_hardened_clay:7>],
-		failure : [<pyrotech:material>]
-	},
-	<minecraft:silver_glazed_terracotta> : {
-		inputs : [<minecraft:stained_hardened_clay:8>],
-		failure : [<pyrotech:material>]
-	},
-	<minecraft:cyan_glazed_terracotta> : {
-		inputs : [<minecraft:stained_hardened_clay:9>],
-		failure : [<pyrotech:material>]
-	},
-	<minecraft:purple_glazed_terracotta> : {
-		inputs : [<minecraft:stained_hardened_clay:10>],
-		failure : [<pyrotech:material>]
-	},
-	<minecraft:blue_glazed_terracotta> : {
-		inputs : [<minecraft:stained_hardened_clay:11>],
-		failure : [<pyrotech:material>]
-	},
-	<minecraft:brown_glazed_terracotta> : {
-		inputs : [<minecraft:stained_hardened_clay:12>],
-		failure : [<pyrotech:material>]
-	},
-	<minecraft:green_glazed_terracotta> : {
-		inputs : [<minecraft:stained_hardened_clay:13>],
-		failure : [<pyrotech:material>]
-	},
-	<minecraft:red_glazed_terracotta> : {
-		inputs : [<minecraft:stained_hardened_clay:14>],
-		failure : [<pyrotech:material>]
-	},
-	<minecraft:black_glazed_terracotta> : {
-		inputs : [<minecraft:stained_hardened_clay:15>],
-		failure : [<pyrotech:material>]
-	},
-	<immersiveengineering:metal> : {
-		inputs : [ore.copper],
-		failure : [<pyrotech:material>]
-	},
-	<immersiveengineering:metal:1> : {
-		inputs : [ore.aluminium],
-		failure : [<pyrotech:material>]
-	},
-	<immersiveengineering:metal:2> : {
-		inputs : [ore.lead],
-		failure : [<pyrotech:material>]
-	},
-	<immersiveengineering:metal:3> : {
-		inputs : [ore.silver],
-		failure : [<pyrotech:material>]
-	},
-	<immersiveengineering:metal:4> : {
-		inputs : [ore.nickel],
-		failure : [<pyrotech:material>]
-	},
-	<immersiveengineering:metal:5> : {
-		inputs : [ore.uranium],
-		failure : [<pyrotech:material>]
-	},
-};
-
-pyrotech.addKiln(kilnRecipes);
+BrickOven.blacklistAllSmeltingRecipes();
+BrickOven.removeRecipes(<minecraft:cooked_fish>);
+BrickOven.removeRecipes(<minecraft:cooked_fish:1>);
+BrickOven.removeRecipes(<minecraft:cooked_chicken>);
+BrickOven.removeRecipes(<minecraft:cooked_beef>);
+BrickOven.removeRecipes(<minecraft:cooked_rabbit>);
+BrickOven.removeRecipes(<minecraft:cooked_mutton>);
+BrickOven.removeRecipes(<minecraft:cooked_porkchop>);
+BrickOven.removeRecipes(<minecraft:baked_potato>);
+BrickOven.removeRecipes(<minecraft:sponge>);
+BrickOven.removeRecipes(<minecraft:paper>);
+BrickOven.removeRecipes(<pyrotech:apple_baked>);
+BrickOven.removeRecipes(<pyrotech:carrot_roasted>);
+BrickOven.removeRecipes(<pyrotech:beetroot_roasted>);
+BrickOven.removeRecipes(<pyrotech:mushroom_brown_roasted>);
+BrickOven.removeRecipes(<pyrotech:mushroom_red_roasted>);
+BrickOven.removeRecipes(<pyrotech:egg_roasted>);
+BrickOven.removeRecipes(<pyrotech:material:2>);
+BrickOven.removeRecipes(<pyrotech:material:13>);
+BrickOven.setGameStages(Stages.and([stageDisable.stage]));

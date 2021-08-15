@@ -1,0 +1,19 @@
+{
+	"name": "Sawmill Blade, Basic",
+	"icon": "pyrotech:sawmill_blade_stone",
+	"category": "innovate_machines",
+	"pages": [
+		{
+			"type": "spotlight",
+			"item": "pyrotech:sawmill_blade_stone",
+			"link_recipe": true,
+			"text": "A $(item)Sawmill$() needs a $(item)Sawmill Blade$() to work"
+		},
+		{
+			"type": "relations",
+			"entries": [
+				"survive/rocks"
+			]
+		}
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"name": "Cog, Basic",
+	"icon": "pyrotech:cog_wood",
+	"category": "innovate",
+	"pages": [
+		{
+			"type": "spotlight",
+			"item": "pyrotech:cog_wood",
+			"link_recipe": true,
+			"text": "$(thing)Cogs$() serve to activate $(thing)Mechanical Devices$().$(p)$(info) Each type of $(thing)Cog$() may vary in performance in different devices.$(p)Basic $(thing)Cogs$() are made with basic materials."
+		},
+		{
+			"type": "relations",
+			"entries": [
+				"survive/rocks",
+				"innovate/stone_rod"
+			]
+		}
+	]
+}
