@@ -1,1 +1,1 @@
-<immersiveengineering:ore:*>.addTooltip("基岩中生成");
+<immersiveengineering:ore:*>.addTooltip(game.localize("misc.betweenrealms.bedrock_ore.name"));
